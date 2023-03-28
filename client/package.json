@@ -1,7 +1,14 @@
 {
-  "name": "client",
+  "name": "lauwo-web",
+  "description": "Lauwo Adventures Website",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "homepage": "github.com/Annastacia-dev/lauwo-adventures",
+  "engines":{
+    "node": ">=18.6.0",
+    "npm": ">=8.19.2"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
