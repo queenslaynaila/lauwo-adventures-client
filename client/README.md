@@ -53,3 +53,6 @@ In the project directory, you can run:
  `npm run lint` to check for linting errors
  `npm run prettier` to format code
 
+## Additional Information
+Add underscores to unused vars before making commits as husky checks for unused vars and will fail the commit if there are any.
+
