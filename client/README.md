@@ -53,6 +53,8 @@ In the project directory, you can run:
  `npm run lint` to check for linting errors
  `npm run prettier` to format code
 
-## Additional Information
-Add underscores to unused vars before making commits as husky checks for unused vars and will fail the commit if there are any.
+## Debbugging
+If you're on vs code, click the little "bug & play icon" on the left of VS Code or press Ctrl + Shift + D to access the debugging menu. You can select which script you want to run and start/stop it with the start/stop buttons.
+
+On other environments cross-dev runs when you `npm run dev` which allows you to log server data in the browser while working in dev mode, making it easier to debug issues.
 
