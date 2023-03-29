@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import PageLayOut from '../components/PageLayOut';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="font-bold text-4xl">Welcome to Lauwo Adventures</h1>
+        <PageLayOut />
       </main>
     </>
   );
