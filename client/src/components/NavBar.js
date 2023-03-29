@@ -16,7 +16,7 @@ const NavBar = () => {
       <div className='absolute right-6 md:hidden top-6 scale-150'>
         <HiOutlineMenuAlt2 onClick={toggle} />
       </div>
-      <ul className='hidden md:flex gap-8 p-6 font-poly text-base'>
+      <ul className='hidden md:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold'>
         <li><Link href='/#about'>About</Link></li>
         <li><Link href='/#gallery'>Gallery</Link></li>
         <li><Link href='/'>Adventures</Link></li>
