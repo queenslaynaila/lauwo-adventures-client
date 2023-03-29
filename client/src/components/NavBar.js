@@ -20,10 +20,14 @@ const NavBar = () => {
         <HiOutlineMenuAlt2 onClick={toggle} />
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <ul className='hidden md:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold'>
 =======
       <ul className='hidden md:flex gap-8 p-6 font-poly text-xl'>
 >>>>>>> 25521ec (build: desktop view navbar)
+=======
+      <ul className='hidden md:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold'>
+>>>>>>> f67f672 (build: header)
         <li><Link href='/#about'>About</Link></li>
         <li><Link href='/#gallery'>Gallery</Link></li>
         <li><Link href='/'>Adventures</Link></li>
