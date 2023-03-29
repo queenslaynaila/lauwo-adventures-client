@@ -3,7 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { HiOutlineMenuAlt2 } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
+<<<<<<< HEAD
 import MobileMenu from './MobileMenu'
+=======
+>>>>>>> 25521ec (build: desktop view navbar)
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,7 +19,11 @@ const NavBar = () => {
       <div className='absolute right-6 md:hidden top-6 scale-150'>
         <HiOutlineMenuAlt2 onClick={toggle} />
       </div>
+<<<<<<< HEAD
       <ul className='hidden md:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold'>
+=======
+      <ul className='hidden md:flex gap-8 p-6 font-poly text-xl'>
+>>>>>>> 25521ec (build: desktop view navbar)
         <li><Link href='/#about'>About</Link></li>
         <li><Link href='/#gallery'>Gallery</Link></li>
         <li><Link href='/'>Adventures</Link></li>
@@ -27,7 +34,11 @@ const NavBar = () => {
           <li><BiSearch className='ml-8 w-6 h-6' /></li>
         </div>
       </ul>
+<<<<<<< HEAD
       <MobileMenu isOpen={isOpen} toggle={toggle} /> 
+=======
+      
+>>>>>>> 25521ec (build: desktop view navbar)
     </nav>
   )
 }
