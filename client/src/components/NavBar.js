@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { HiOutlineMenuAlt2 } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
+import MobileMenu from './MobileMenu'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -26,7 +27,7 @@ const NavBar = () => {
           <li><BiSearch className='ml-8 w-6 h-6' /></li>
         </div>
       </ul>
-      
+      <MobileMenu isOpen={isOpen} toggle={toggle} /> 
     </nav>
   )
 }
