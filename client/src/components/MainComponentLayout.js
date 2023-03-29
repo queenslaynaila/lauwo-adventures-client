@@ -1,8 +1,9 @@
-import React from 'react'
+import NavBar from "./NavBar"
 
 const MainComponentLayout = ({children}) => {
   return (
     <div>
+      <NavBar />
       {children}
     </div>
   )
