@@ -4,8 +4,8 @@ import InquiryForm from './InquiryForm'
 const PageLayOut = () => {
   return (
     <div>
-      <PopularAdventure />
-      <InquiryForm/>
+      <PopularAdventure/>
+      <InquiryForm></InquiryForm>
     </div>
   )
 }
