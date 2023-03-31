@@ -15,8 +15,6 @@ module.exports = {
         rubik: ['Rubik', 'sans-serif'],
         poly: ['Poly', 'sans-serif']
       }
-      
-
     },
   },
   plugins: [],
