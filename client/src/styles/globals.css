@@ -4,7 +4,8 @@
 
 @layer base {
   html {
-    fscroll-behavior: smooth;
-    @apply font-rubik;
+    scroll-behavior: smooth;
+    @apply font-poppins;
+    
   }
 }
