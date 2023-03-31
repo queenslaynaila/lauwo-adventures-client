@@ -16,7 +16,7 @@ function About() {
             </div>
             <div className="px-8 py-10 text-center">
               <h2 className="text-5xl text-white font-bold">About Us</h2>
-              <p className="text-white font-sans  py-5  text-base md:text-4xl">
+              <p className="text-white font-medium  py-5  text-base md:text-4xl">
                 Lauwo Adventures is a local tour company operating in Kilimanjaro originating from the mountaineer family of 'Yohani Kinyala Lauwo' who was the first African guide to climb and conquer the summit of Mount Kilimanjaro 5895M/19341Ft 'AMSL' in 1889 with Hans Mayer, a German geologist. As grandsons, we are committed to providing excellent and safe tours infused with vibrant local cultural experiences to our clients with professional and competent guides and porters.
               </p>
               <p className="text-white text-xl py-5 font-sans md:text-4xl">
