@@ -1,4 +1,3 @@
-//import safari from '../assets/safari.jpg';
 
 import { GiBinoculars } from 'react-icons/gi';
 
