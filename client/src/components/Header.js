@@ -1,4 +1,5 @@
 import { IoIosArrowDropdownCircle } from 'react-icons/io'
+import Link from 'next/link'
 
 
 const Header = () => {
@@ -11,7 +12,9 @@ const Header = () => {
           </p>
         </div>
         <div className='flex flex-col items-center gap-4 mt-12'>
-          <IoIosArrowDropdownCircle className='text-yellow-500 text-4xl animate-bounce' />
+          <Link href="/#about">
+            <IoIosArrowDropdownCircle className='text-yellow-500 text-4xl animate-bounce' />
+          </Link>
         </div>
     </header>
   )
