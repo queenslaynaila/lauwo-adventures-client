@@ -5,6 +5,28 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    @apply font-poppins;  
+    @apply font-poppins;
   }
 }
+ 
+@media (max-width: 650px) {
+  .image {
+    width: 174px;
+    height: 240px;
+  }
+  
+}
+@media (max-width: 560px) {
+  .image {
+    width: 250px;
+    height: 100px;
+  }
+}
+@media (max-width: 560px) {
+  .image {
+    width: 250px;
+    height: 100px;
+  }
+}
+
+
