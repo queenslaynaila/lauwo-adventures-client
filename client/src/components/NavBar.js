@@ -8,8 +8,18 @@ import MobileMenu from './MobileMenu'
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
+  // on scroll add background to navbar
+  const [navbar, setNavbar] = useState(false)
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+  window.addEventListener('scroll', changeBackground)
   return (
-    <nav className='fixed w-full shadow-sm flex justify-between p-4 items-center text-white'>
+    < nav className={navbar ? 'fixed w-full shadow-sm flex justify-between p-4 items-center text-white bg-black/50' : 'fixed w-full shadow-sm flex justify-between p-4 items-center text-white'} >
       <div className='flex items-center'>
         <Image src='/logo.png' width={50} height={50} alt='logo' />
       </div>
