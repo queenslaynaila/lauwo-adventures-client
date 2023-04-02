@@ -12,7 +12,7 @@ const PopularAdventure = () => {
              <div className="border-t border-black w-1/3"></div>
           </div>
         </div>
-        <h1 className="font-bold text-center my-2 text-lg lg:text-3xl">Popular Expeditures</h1>
+        <h1 className="font-bold text-center my-2 text-lg lg:text-3xl">Popular Adventures</h1>
         <div className="grid grid-cols-3 gap-x-6 mx-4 sm:mx-20 ">
             <div className=' rounded-lg h-32 sm:h-60 md:h-50 popularcont' > 
                 <Image src="/safari-1.jpg" alt='nnn' height={500} width={500} className="w-full  h-full object-cover  rounded-lg"/> 
