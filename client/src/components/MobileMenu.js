@@ -4,7 +4,7 @@ import Link from 'next/link'
 const MobileMenu = ({isOpen, toggle}) => {
   return (
       isOpen && (
-    <ul className='flex-col flex items-center fixed inset-0 left-1/4 bg-white/95 gap-8 justify-center p-8 md:hidden'>
+    <ul className='flex-col flex items-center fixed inset-0 left-1/4 bg-white gap-8 justify-center p-8 md:hidden text-black'>
       <div className='absolute right-6 top-6 scale-150'>
         <IoCloseSharp onClick={toggle} />
       </div>
