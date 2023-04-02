@@ -1,7 +1,7 @@
 import { AiOutlineSend}  from 'react-icons/ai';
 const InquiryForm = () => {
     return (
-      <div className='my-12'>
+      <div className='mb-12 mt-12 lg:mt-20'>
          <div className="lg:text-2xl sm:text-sm px-4 font-poly ">
             <div className="lg:w-1/2 mx-auto">
                 <h1 className="text-center my-4 font-extralight">GOT ANY INQUIRY ?</h1>
