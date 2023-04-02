@@ -5,7 +5,6 @@ function About() {
   return (
     <>
       <div className="flex items-center justify-center min-h-screen bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(/lauwosafari.jpg)` }} id="about">
-        <div className="relative top-0  left-0 right-0 bottom-0 bg-black/70 z-20 " />
         <div className="p-5 z-30 -mt-10 md:mt-0 flex items-center justify-center h-full">
           <div className="bg-yellow-800 opacity-90 w-full md:w-10/12 rounded-xl sm:mt-0 mt-16">
             <div className="flex justify-center overflow-x-scroll  mt-6 md:overflow-x-hidden  ">

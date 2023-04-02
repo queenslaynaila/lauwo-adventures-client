@@ -9,7 +9,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   return (
-    <nav className='fixed w-full shadow-sm flex justify-between p-4 items-center'>
+    <nav className='fixed w-full shadow-sm flex justify-between p-4 items-center text-white'>
       <div className='flex items-center'>
         <Image src='/logo.png' width={50} height={50} alt='logo' />
       </div>
@@ -23,7 +23,7 @@ const NavBar = () => {
         <li><Link href='/#contact'>Contact</Link></li>
         <li><Link href='/#blog'>Blog</Link></li>
         <li><Link href='/'>Guide</Link></li>
-        <div className='border-l-2 border-black'>
+        <div className='border-l-2 border-white'>
           <li><BiSearch className='ml-8 w-6 h-6' /></li>
         </div>
       </ul>
