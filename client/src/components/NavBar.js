@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { HiOutlineMenuAlt2 } from 'react-icons/hi'
@@ -9,17 +9,22 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   // on scroll add background to navbar
-  const [navbar, setNavbar] = useState(false)
-  const changeBackground = () => {
-    if (window.scrollY >= 80) {
-      setNavbar(true)
-    } else {
-      setNavbar(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY
+      if (offset > 200) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
     }
-  }
-  window.addEventListener('scroll', changeBackground)
+    window.addEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    < nav className={navbar ? 'fixed w-full shadow-sm flex justify-between p-4 items-center text-white bg-black/50' : 'fixed w-full shadow-sm flex justify-between p-4 items-center text-white'} >
+    < nav className={isScrolled ? 'fixed w-full shadow-sm flex justify-between p-4 items-center text-white bg-black/50' : 'fixed w-full shadow-sm flex justify-between p-4 items-center text-white'} >
       <div className='flex items-center'>
         <Image src='/logo.png' width={50} height={50} alt='logo' />
       </div>
@@ -28,11 +33,11 @@ const NavBar = () => {
       </div>
       <ul className='hidden md:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold'>
         <li><Link href='/#about'>About</Link></li>
-        <li><Link href='/#gallery'>Gallery</Link></li>
-        <li><Link href='/'>Adventures</Link></li>
+        <li><Link href='/gallery'>Gallery</Link></li>
+        <li><div>Adventures</div></li>
         <li><Link href='/#contact'>Contact</Link></li>
         <li><Link href='/#blog'>Blog</Link></li>
-        <li><Link href='/'>Guide</Link></li>
+        <li><div>Guide</div></li>
         <div className='border-l-2 border-white'>
           <li><BiSearch className='ml-8 w-6 h-6' /></li>
         </div>

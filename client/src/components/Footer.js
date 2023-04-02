@@ -7,7 +7,7 @@ import { RiCopyrightLine } from "react-icons/ri"
 
 const Footer = () => {
   return (
-    <footer className="bg-black w-full ">
+    <footer className="bg-black w-full" id="contact">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-5">
         <div className="col-span-1 mt-4 mb-4 sm:border-r-2 sm:border-gray-200 flex justify-center items-center">
           <Image src='/logo.png' width={50} height={50} alt='logo' />
