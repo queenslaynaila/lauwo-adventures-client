@@ -5,7 +5,7 @@ const PageLayOut = () => {
   return (
     <div>
       <PopularAdventure/>
-      <InquiryForm></InquiryForm>
+      <InquiryForm/>
     </div>
   )
 }
