@@ -7,7 +7,7 @@ const PopularAdventure = () => {
          <div className="flex justify-center items-center">
              <div className="border-t border-black w-1/3"></div>
                 <div className="text-center">
-                    <AiOutlineCompass className='lg:text-8xl sm:text-2xl inline-block'/>
+                    <AiOutlineCompass className='lg:text-5xl sm:text-2xl inline-block'/>
                </div>
              <div className="border-t border-black w-1/3"></div>
           </div>
