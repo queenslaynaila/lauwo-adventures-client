@@ -24,7 +24,7 @@ const PopularAdventure = () => {
 
           <div>
             <div class="shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover mb-6 lg:h-96 sm:h-60">
-                <Image src="/kilimanjaro.jpg" alt='nnn' height={500} width={500} class="w-full h-full object-cover image" /> 
+                <Image src="/kilimanjaro.jpg" alt='nnn'  priority={true} height={500} width={500} class="w-full h-full object-cover image" /> 
             </div>
             <h3 class="sm:text-sm lg:text-2xl  font-bold mb-3">Kilimanjaro</h3>
           </div>
