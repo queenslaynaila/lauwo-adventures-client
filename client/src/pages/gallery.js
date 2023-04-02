@@ -2,7 +2,7 @@ import Image from "next/image"
 const Gallery = () =>{
  return (
 <div className="m-4">
-   <h1 className="text-center my-4 lg:text-4xl sm:text-lg font-bold">OUR GALLERY</h1>
+<h1 className="text-center lg:text-4xl sm:text-lg font-bold lg:hidden sm:block">OUR GALLERY</h1>
    <div className="container  mx-auto">
      <div className="grid-cols-4  lg:space-y-0 grid gap-3 grid-rows-3">
          <div className="w-full col-span-2 row-span-2 rounded">
