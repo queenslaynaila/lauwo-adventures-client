@@ -4,6 +4,8 @@
 
 @layer base {
   html {
+    scroll-behavior: smooth;
+    @apply font-poppins;
     fscroll-behavior: smooth;
     @apply font-poppins;
   }
@@ -28,3 +30,5 @@
     height: 100px;
   }
 }
+
+

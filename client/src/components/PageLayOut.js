@@ -1,11 +1,11 @@
-import React from 'react'
-import PopularAdventure from './PopularAdventure'
-import InquiryForm from './InquiryForm'
+import Header from "./Header"
+import About from './About'
+
 const PageLayOut = () => {
   return (
     <div>
-      <PopularAdventure/>
-      <InquiryForm/>
+      <Header />
+      <About/>
     </div>
   )
 }
