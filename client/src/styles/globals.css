@@ -6,8 +6,6 @@
   html {
     scroll-behavior: smooth;
     @apply font-poppins;
-    fscroll-behavior: smooth;
-    @apply font-poppins;
   }
 }
  
