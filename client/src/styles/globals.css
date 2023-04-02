@@ -5,7 +5,6 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    @apply font-poppins;
-    
+    @apply font-poppins;  
   }
 }
