@@ -10,13 +10,3 @@
 }
  
 
-@media screen and (min-width: 250px) and (max-width: 350px) {
-  .popularcont{
-    height:80px;
-    width: 70px;
-  }
-  .des{
-    font-size:small;
-  }
-}
-
