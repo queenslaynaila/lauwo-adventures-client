@@ -6,7 +6,7 @@ function Statement() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 md:m-11">
       <div className="w-full px-6 sm:px-12 lg:px-24 xl:px-48">
-        <div className=" relative flex justify-center items-center w-full mt-6 md:mt-10  top-0 left-0 z-10">
+        <div className=" relative flex justify-center items-center w-full mt-6 md:mt-10  top-0 left-0">
           <hr className="h-px m-2 w-1/4 md:w-1/3 font-bold bg-black border-0 dark:bg-black-700" />
           <BsBookHalf className="w-12 h-12 md:w-16 md:h-16" />
           <hr className="h-px m-2 w-1/4 md:w-1/3 font-bold bg-black  border-0 dark:bg-gray-700" />
