@@ -1,3 +1,4 @@
+
 import Header from "./Header"
 import About from './About'
 import PopularAdventure from "./PopularAdventure"
@@ -7,6 +8,7 @@ const PageLayOut = () => {
     <div>
       <Header />
       <About/>
+       <Statement/>
       <PopularAdventure/>
       <InquiryForm/>
     </div>
