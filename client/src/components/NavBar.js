@@ -4,11 +4,12 @@ import Link from 'next/link'
 import { HiOutlineMenuAlt2 } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
 import MobileMenu from './MobileMenu'
+import AdventuresDropDown from './AdventuresDropDown'
+import GuideDropDown from './GuideDropDown'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
-  // on scroll add background to navbar
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -34,10 +35,10 @@ const NavBar = () => {
       <ul className='hidden md:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold'>
         <li><Link href='/#about'>About</Link></li>
         <li><Link href='/gallery'>Gallery</Link></li>
-        <li><div>Adventures</div></li>
+        <li><AdventuresDropDown setIsOpen={setIsOpen} /></li>
         <li><Link href='/#contact'>Contact</Link></li>
         <li><Link href='/#blog'>Blog</Link></li>
-        <li><div>Guide</div></li>
+        <li><GuideDropDown setIsOpen={setIsOpen} /></li>
         <div className='border-l-2 border-white'>
           <li><BiSearch className='ml-8 w-6 h-6' /></li>
         </div>
