@@ -14,7 +14,7 @@ function Statement() {
 
 
 
-        <div className="w-full  pt-28">
+        <div className="w-full  pt-12">
           <div className="flex flex-col justify-center items-center ">
             <h1 className="font-bold font-poly text-5xl md:text-6xl text-center m-9">
               Our Statements
