@@ -21,7 +21,7 @@ function Statement() {
             </h1>
 
             <div className=" mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2  gap-6">
-              <div className="flex flex-col justify-center items-center sm:h-[700px]  bg-white border border-gray-200 rounded-lg shadow-2xl p-6 sm:p-10">
+              <div className="flex flex-col justify-center items-center sm:h-[500px]  bg-white border border-gray-200 rounded-lg shadow-2xl p-6 sm:p-10">
                 <div className="flex justify-center items-center mb-6 w-16 h-16 mt-2  rounded-full bg-gray-100 dark:bg-gray-800">
                   <FaGlobeAfrica className="w-8 h-8 md:w-10 md:h-10 text-gray-500 dark:text-gray-400" />
                 </div>
@@ -29,7 +29,7 @@ function Statement() {
                   MISSION
                 </h1>
                 <hr className="border-t-2 font-gray border-gray-700 my-4 w-16" />
-                <p className="text-base md:text-3xl font-normal text-gray-700 dark:text-gray-400 text-center leading-relaxed">
+                <p className="text-base md:text-xl font-normal text-gray-700 dark:text-gray-400 text-center leading-relaxed">
                   To improve the life of potters and communities around mountain
                   Kilimanjaro through giving scholarships and investing in
                   community development projects.
@@ -43,7 +43,7 @@ function Statement() {
                   VALUES
                 </h1>
                 <hr className="border-t-2 font-gray border-gray-700 my-4 w-16" />
-                <p className="text-lg md:text-3xl font-normal text-gray-700 dark:text-gray-400 text-center leading-relaxed">
+                <p className="text-lg md:text-xl font-normal text-gray-700 dark:text-gray-400 text-center leading-relaxed">
                   We believe in fair and ethical treatment of our guides,
                   porters and all our crew members.
                 </p>
