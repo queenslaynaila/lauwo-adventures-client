@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { blogs } from './Data.js/data';
+import { blogsData } from '../data/blogData';
 
 function Blogs() {
   return (
@@ -8,7 +8,7 @@ function Blogs() {
         <h1 className="font-bold text-center text-4xl mt-5">RECENT BLOGS</h1>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {blogs.map((val, index) => (
+        {blogsData.map((val, index) => (
           <div className="p-4" key={val.title}>
             <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-[460px] max-w-[800px]">
               <Image
