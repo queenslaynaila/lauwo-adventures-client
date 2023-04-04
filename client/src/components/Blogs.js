@@ -11,7 +11,13 @@ function Blogs() {
         {blogs.map((val, index) => (
           <div className="p-4" key={val.title}>
             <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-[460px] max-w-[800px]">
-              <Image src={val.image} alt="/" width={800} height={600} className="h-48 w-full object-cover rounded-t-lg" />
+              <Image
+                src={val.image}
+                alt="/"
+                width={800}
+                height={600}
+                className="h-48 w-full object-cover rounded-t-lg"
+              />
               <div className="p-5 h-48">
                 <h2 className="px-4 mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
                   {val.title}
