@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :itineries
   resources :route_durations
   resources :routes
   resources :mountains
