@@ -1,7 +1,7 @@
 class CreateItineries < ActiveRecord::Migration[7.0]
   def change
     create_table :itineries do |t|
-      t.integer :routeduration_id
+      t.integer  :route_duration_id
       t.string :title
       t.text :description
       t.string :meals
