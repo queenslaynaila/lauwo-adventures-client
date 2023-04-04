@@ -1,10 +1,21 @@
-import React from 'react'
-import Blogs from './Blogs'
 
+import Header from "./Header"
+import About from './About'
+import Statement from "./Statement"
+import PopularAdventure from "./PopularAdventure"
+import InquiryForm from "./InquiryForm"
+import Gallery from "./gallery"
 const PageLayOut = () => {
   return (
     <div>
-      <Blogs/>
+      <Header />
+      <About/>
+      <Statement/>
+      <PopularAdventure/>
+      <InquiryForm/>
+        <Blogs/>
+      <Gallery/>
+
     </div>
   )
 }
