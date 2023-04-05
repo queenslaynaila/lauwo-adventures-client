@@ -1,17 +1,18 @@
 import Image from 'next/image';
 import { blogsData } from '../data/blogData';
 import {BsArrowRight} from 'react-icons/bs';
+import { truncate } from '@/utils/truncate';
 
 function Blogs() {
   return (
-    <div className="m-4">
+    <div className="m-4 h-screen mt-20 mb-20">
       <div>
-        <h1 className="font-bold text-center text-4xl mt-5">RECENT BLOGS</h1>
+        <h1 className="font-light font-poly text-center text-3xl 2xl:text-4xl mt-5 mb-8">RECENT BLOGS</h1>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {blogsData.map((val, index) => (
+        {blogsData.map((val) => (
           <div className="p-4" key={val.title}>
-            <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-[460px] max-w-[800px]">
+            <div className="relative bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-[460px] max-w-[800px]">
               <Image
                 src={val.image}
                 alt="/"
@@ -20,26 +21,19 @@ function Blogs() {
                 className="h-48 w-full object-cover rounded-t-lg"
               />
               <div className="p-5 h-48">
-                <h2 className="px-4 mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                <h2 className="mb-2 text-lg font-bold font-poly tracking-wide text-gray-900 capitalize">
                   {val.title}
                 </h2>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-24 overflow-hidden">
-                  {val.description}
+                <p className="mb-3 mt-2 text-gray-800 2xl:text-base 2xl:leading-10 lg:text-sm lg:leading-7">
+                  {truncate(val.description, 100)}
                 </p>
-                <div className="flex justify-between mt-3">
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-1.5 py-2  text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                <div className="flex justify-between gap-20 absolute bottom-2">
+                  <a href="#" className="inline-flex items-center text-sm font-medium text-center text-gray-600"
                   >
                     Read more
-                    <BsArrowRight
-                     className= 'w-5 h-5 py-0.5'>
-                      
-                    </BsArrowRight>
+                    <BsArrowRight className= 'w-5 h-5 py-0.5'/>   
                   </a>
-                  <div className="">
-                    <p>{val.date}</p>
-                  </div>
+                    <p className="inline-flex items-center text-sm text-center text-gray-600">{val.date}</p>
                 </div>
               </div>
             </div>
@@ -47,7 +41,7 @@ function Blogs() {
         ))}
       </div>
       <div className="mt-8 grid place-items-center">
-        <button className="bg-yellow-500 font-bold py-2 px-4 mt-3 rounded items-center">
+        <button className="bg-yellow-400 font-light  font-poly py-4 px-8 mt-3 rounded items-center">
           View All
         </button>
       </div>
