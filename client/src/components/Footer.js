@@ -8,11 +8,11 @@ import { RiCopyrightLine } from "react-icons/ri"
 const Footer = () => {
   return (
     <footer className="bg-black w-full" id="contact">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-5">
+      <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-5 gap-4 p-5">
         <div className="col-span-1 mt-4 mb-4 sm:border-r-2 sm:border-gray-200 flex justify-center items-center">
           <Image src='/logo.png' width={50} height={50} alt='logo' />
         </div>
-        <div className="col-span-1 mt-4 mb-8 sm:border-r-2 sm:border-gray-200">
+        <div className="lg:col-span-1 sm:col-span-2 col-span-1 mt-4 mb-8 sm:border-r-2 sm:border-gray-200">
           <h1 className="text-white font-poly font-bold text-xl uppercase text-center">contact us</h1>
           <div className="flex flex-col justify-center sm:items-start items-center mt-4 gap-4 text-white font-poly">
             <Link href="mailto:info@lauwoadventures.com" className="flex justify-center items-center gap-5">
