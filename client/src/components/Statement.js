@@ -4,7 +4,7 @@ import { FaPenFancy } from 'react-icons/fa';
 
 function Statement() {
   return (
-    <div className="h-screen bg-white dark:bg-gray-900 md:m-11">
+    <div className="h-screen bg-white dark:bg-gray-900 md:m-11 sm:mt-0 mt-10">
       <div className="w-full px-6 sm:px-12 lg:px-24 xl:px-48">
         <div className=" relative flex justify-center items-center w-full mt-6 md:mt-10  top-0 left-0">
           <hr className="h-px m-2 w-1/4 md:w-1/3 font-bold bg-black border-0 dark:bg-black-700" />
@@ -13,10 +13,10 @@ function Statement() {
         </div>
         <div className="w-full  2xl:pt-12">
           <div className="flex flex-col justify-center items-center ">
-            <h1 className="font-bold font-poly text-5xl md:text-4xl 2xl:text-6xl text-center m-9">
+            <h1 className="font-bold font-poly text-2xl md:text-4xl 2xl:text-6xl text-center m-9">
               Our Statements
             </h1>
-            <div className=" 2xl:mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2  gap-8">
+            <div className=" 2xl:mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 sm:gap-8 gap-16">
               <div className="flex flex-col justify-center items-center 2xl:h-[500px] w- bg-white border border-gray-200 rounded-lg shadow-2xl p-6 sm:p-8">
                 <div className="flex justify-center items-center mb-6 w-16 h-16 mt-2  rounded-full bg-gray-100 dark:bg-gray-800">
                   <FaGlobeAfrica className="w-8 h-8 md:w-10 md:h-10 text-gray-500 dark:text-gray-400" />
