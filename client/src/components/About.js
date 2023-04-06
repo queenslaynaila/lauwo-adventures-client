@@ -17,7 +17,7 @@ function About() {
           Lauwo Adventures is a local tour company operating in Kilimanjaro originating from the mountaineer family of &apos;Yohani Kinyala Lauwo&apos; who was the first African guide to climb and conquer the summit of Mount Kilimanjaro 5895M/19341Ft &apos;AMSL&apos; in 1889 with Hans Mayer, a German geologist. As grandsons, we are committed to providing excellent and safe tours infused with vibrant local cultural experiences to our clients with professional and competent guides and porters.
           <br />
           <br />
-          With more than a decade&apos;s experience in the Tanzanian tourism industry, we take pride in our unparalleled services. Our company has a porter support program through which we select and employ porters from local communities located at the foot of the mountain and provide them with scholarships and vocational training. This is to help combat poverty by supporting their dreams and goals.
+          With more than a decade&apos;s experience in the Tanzanian tourism industry, we take pride in our unparalleled adventures. Our company has a porter support program through which we select and employ porters from local communities located at the foot of the mountain and provide them with scholarships and vocational training. This is to help combat poverty by supporting their dreams and goals.
         </p>
       </div>
     </div>
