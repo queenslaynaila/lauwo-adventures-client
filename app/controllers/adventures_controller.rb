@@ -28,7 +28,7 @@ class AdventuresController < ApplicationController
   private
 
   def adventure_params
-    params.permit(:name)
+    params.require(:adventure).permit(:name)
   end
 
   def set_adventure

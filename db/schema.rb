@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_05_223040) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_06_101344) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,6 +32,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_223040) do
     t.integer "route_duration_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "cultural_tours", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "location"
+    t.string "price"
+    t.string "image_url"
+    t.text "itinerary"
+    t.text "inclusions"
+    t.text "exclusions"
+    t.bigint "adventure_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["adventure_id"], name: "index_cultural_tours_on_adventure_id"
   end
 
   create_table "itineries", force: :cascade do |t|
@@ -82,5 +97,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_223040) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "cultural_tours", "adventures"
   add_foreign_key "mountains", "adventures"
 end
