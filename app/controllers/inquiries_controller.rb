@@ -1,5 +1,5 @@
 class InquiriesController < ApplicationController
-  before_action :set_inquiry, only: [:show, :edit, :update, :destroy]
+  before_action :set_inquiry, only: [:show, :edit, :destroy]
 
   def index
     @inquiries = Inquiry.all
@@ -12,11 +12,6 @@ class InquiriesController < ApplicationController
 
   def create
     @inquiry = Inquiry.create!(inquiry_params)
-    render json: @inquiry, status: :ok
-  end
-
-  def update 
-    @inquiry.update!(inquiry_params)
     render json: @inquiry, status: :ok
   end
 
