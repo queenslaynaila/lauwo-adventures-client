@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :inquiries
+  resources :blogs
   resources :day_trips
   resources :cultural_tours
   resources :adventures

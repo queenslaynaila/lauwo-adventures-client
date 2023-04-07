@@ -3,26 +3,26 @@ class CulturalToursController < ApplicationController
 
   def index
     @cultural_tours = CulturalTour.all
-    render json: @cultural_tours
+    render json: @cultural_tours, status: :ok
   end
 
   def show
-    render json: @cultural_tour, serializer: SingleCulturalTourSerializer
+    render json: @cultural_tour, serializer: SingleCulturalTourSerializer, status: :ok
   end
 
   def create
     @cultural_tour = CulturalTour.create!(cultural_tour_params)
-    render json: @cultural_tour
+    render json: @cultural_tour, status: :created
   end
 
   def update
     @cultural_tour.update!(cultural_tour_params)
-    render json: @cultural_tour
+    render json: @cultural_tour, status: :ok
   end
 
   def destroy
     @cultural_tour.destroy!
-    render json: @cultural_tour
+    render json: { message: "#{@cultural_tour.name} has been deleted." }, status: :ok
   end
 
   private

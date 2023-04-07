@@ -3,26 +3,26 @@ class AdventuresController < ApplicationController
 
   def index
     @adventures = Adventure.all
-    render json: @adventures
+    render json: @adventures, status: :ok
   end
 
   def show
-    render json: @adventure, serializer: SingleAdventureSerializer
+    render json: @adventure, serializer: SingleAdventureSerializer, status: :ok
   end
 
   def create
     @adventure = Adventure.create!(adventure_params)
-    render json: @adventure
+    render json: @adventure, status: :created
   end
 
   def update
     @adventure.update!(adventure_params)
-    render json: @adventure
+    render json: @adventure, status: :ok
   end
 
   def destroy
     @adventure.destroy!
-    render json: @adventure
+    render json: { message: "#{@adventure.name} has been deleted" }, status: :ok
   end
 
   private

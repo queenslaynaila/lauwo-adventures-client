@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_07_075830) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_07_085617) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "adventures", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "blogs", force: :cascade do |t|
+    t.string "image_url"
+    t.string "title"
+    t.text "content"
+    t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -61,6 +70,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_07_075830) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["adventure_id"], name: "index_day_trips_on_adventure_id"
+  end
+
+  create_table "inquiries", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "itineries", force: :cascade do |t|
