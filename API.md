@@ -47,7 +47,8 @@ Updates a single planning form.
   "when_to_travel": "string",
   "how_many_travelers": "string",
   "no_of_adults": "string",
-  "no_of_children": "string"
+  "no_of_children": "string",
+  "extra_info":"string"
 }
 ### DELETE /planningforms/:id
 http://localhost:3000/planningforms/1
