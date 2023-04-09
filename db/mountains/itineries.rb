@@ -434,13 +434,13 @@
   #Machame 7 day itineries
     machame_7 = RouteDuration.find_by(route_id: machame_route.id, duration_days: 7)
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no: '01',
       title: 'ARRIVAL',
       description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.'
     )
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no:'02',
       title: 'Machame gate to Machame camp ',
       description: 'Upon completion of necessary registration formalities at the Machame National Park gate, the trek begins through a beautiful and lush forest. A picnic lunch is served to all at the national park gate. The first day is relatively challenging due to high altitude but the trails pass through a deep forest and adequate time to acclimatize to the high altitude is offered upon reaching the camp site. The route is the considered the best for understanding one’s body as they gradually adapt to the high altitude. The day ends with setting up camp at Machame campsite. ',
@@ -452,7 +452,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no:'03',
       title: 'Machame Camp to Shira cave  ',
       description: 'We soon leave the forest behind and enter the moorland zone of giant heather. The trail climbs steadily through rocky hills with wide views of the Shira Plateau. From our camp near Shira Hut, we take in the formidable views of Mt. Meru as she floats atop the clouds. The short day hike provides hot lunch in the afternoon at Shira cave and an opportunity for a leisure walk around the camp site in the cool evenings while enjoying the sunsets.',
@@ -464,7 +464,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no:'03',
       title: ' Machame Camp to Shira cave  ',
       description: 'We soon leave the forest behind and enter the moorland zone of giant heather. The trail climbs steadily through rocky hills with wide views of the Shira Plateau. From our camp near Shira Hut, we take in the formidable views of Mt. Meru as she floats atop the clouds. The short day hike provides hot lunch in the afternoon at Shira cave and an opportunity for a leisure walk around the camp site in the cool evenings while enjoying the sunsets.',
@@ -476,7 +476,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no: '04',
       title: 'Shira Camp to Barranco camp',
       description: 'Experience a morning of gradual ascent and sweeping views of Kilimanjaro which brings us near the Lava Tower (14,900 ft) where we will have lunch. The trail then descends to the bottom of the Barranco wall (12,800 ft), where we will stay in the spectacular Barranco Camp sheltered by towering cliffs with extensive views of the plains far below. Barranco camp offers a spectacular view of Kibo Peak; one of the three faces of Kilimanajrao.      ',
@@ -488,7 +488,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no: '05',
       title: 'Baranko Camp to Karanga Camp ',
       description: 'Descending from the top of Barranco wall, experience the thrill of climbing the ridges of the wall steadily and gradually as you descend into the last water point at Karanga Valley. Barranco wall offers a mountain climbing experience for beginners due to its scramble nature which allows climbers with limited or no rock-climbing experience to use all limbs to successfully climb the wall to Karanga valley. From the valley, enjoy a bird’s eye view of Moshi town at the foot of the mountain. Get well rested, acclimatize with a perfect view of Kibo peak at Karanga camp.      ',
@@ -500,7 +500,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no: '06',
       title: 'Karanga Camp to Barafu Camp (Summit Night)',
       description: 'After breakfast, begin the hike to Barafu Camp. On the way to Barafu, view several of Kibo/s glaciers as well as the junction that connects the descent Mweka route with the Machame trail.When we reach to Barafu base camp, start our ascent by torchlight about 1 a.m. so that we can be up on the crater rim by sunrise. The steep climb over loose volcanic screen has some well-graded zigzags and a slow but steady pace will take us to Stella Point (18,800 ft), in about five or six hours. We will rest there for a short time to enjoy the sunrise over Mawenzi. Those who are still feeling strong can make the one-hour round trip from here along the crater rim to Uhuru Peak (19,345 ft). We spend few minutes at the summit for photos and then we begin the descent down to the base camp.      ',
@@ -512,7 +512,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no: '07',
       title: 'Barafu camp to Mweka camp ',
       description: 'Passing close to the spectacular glaciers and ice cliffs that still occupy most of the summit area, the descent to Barafu is surprisingly fast, and after some refreshments, we continue to descend to reach our final campsite, Mweka Camp. We recommend clients to head down to Mweka camp for quicker recovery from the high altitude. ',
@@ -523,7 +523,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no: '08',
       title: 'Mweka Camp to Moshi Kilimanjaro',
       description: 'The last day on the descending route will expose you to thick canopy forests characterized by thick undergrowth. The route winds down to the Kilimanjaro National Park gate at Mweka where our climb of Mount Kilimanjaro ends. This is followed by farewells as we transfer you back to your accommodation in Moshi Kilimanjaro.',
@@ -534,7 +534,7 @@
       meals: 'Half board'
     )
     Itinery.create(
-      route_duration_id: machame_6.id,
+      route_duration_id: machame_7.id,
       day_no: '09',
       title: ' Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings. ',
       description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.'
@@ -797,16 +797,16 @@
 
 #RONGAI ITINERIES
   rongai_route = Route.find_by(route_name: "Rongai Route")
-  #Create Rongai 8 day itinery
-    rongai_8 = RouteDuration.find_by(route_id: rongai_route.id, duration_days: 8)
+  #Create Rongai 7 day itinery
+    rongai_7 = RouteDuration.find_by(route_id: rongai_route.id, duration_days: 7)
     Itinery.create(
-      route_duration_id: rongai_8.id,
+      route_duration_id: rongai_7.id,
       day_no: '01',
       title: 'Arrival and Pick-Up',
       description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.  '
     )
     Itinery.create(
-      route_duration_id: rongai_8.id,
+      route_duration_id: rongai_7.id,
       day_no:'02',
       title: 'Rongai Gate to Simba Camp site',
       description: 'After an early breakfast in Moshi or Arusha, drive to Rongai Gate near the Kenya border. After registering at the gate, begin your climb to Uhuru Peak also known as the roof of Africa. Hike through forests where you may see and hear wildlife. Eat lunch on the trail before continuing to the first campsite. Rongai ascends via the less forested northern side of the mountain. The Rongai Route is one of the least crowded routes on Kilimanjaro because of the long drive to the gate. The Rongai trail is thought to have the best chance of viewing wildlife.      ',
@@ -818,7 +818,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: rongai_8.id,
+      route_duration_id: rongai_7.id,
       day_no:'03',
       title: 'Simba camp to Kikelewa Camp',
       description: 'Trek through Mount Kilimanjaro/s moorland on this day and enjoy the view of Mawenzi peak. The Rongai route is relatively short and steep, making for shorter hiking times. Caves, rolling hills and valleys provide the perfect backdrop for this days’ trek towards Kikelewa camp.',
@@ -830,7 +830,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: rongai_8.id,
+      route_duration_id: rongai_7.id,
       day_no: '04',
       title: 'Kikelewa Camp to Mawenzi Tarn Hut. ',
       description: 'Take time to acclimatization to the high altitude by hiking in the beginning of the day and resting in the afternoon and evening. The hike is relatively short but steep. The Mawenzi Tarn campsite is situated below Mawenzi Peak and offers stunning views of both Mawenzi and Kibo. ',
@@ -842,7 +842,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: rongai_8.id,
+      route_duration_id: rongai_7.id,
       day_no: '05',
       title: 'Mawenzi  Camp to Kibo base Camp',
       description: 'Cross the lunar landscape of the saddle on this day to arrive at the final campsite. Kibo Camp is situated directly below the Kibo cone, giving you views of your final destination. A briefing for the upcoming summit night trek will be held followed by a recommended nap before the night trek.      ',
@@ -854,7 +854,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: rongai_8.id,
+      route_duration_id: rongai_7.id,
       day_no: '06',
       title: ' Horombo to National Park Gate ',
       description: 'We will retrace our steps with a pleasant moorland walk to Mandara followed by a lovely forest walk to the National Park gates. After farewells, we will board the company vehicles and head back to Moshi town marking the end of a successful summit on Mount Kilimanjaro.      ',
@@ -866,7 +866,7 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: rongai_8.id,
+      route_duration_id: rongai_7.id,
       day_no: '07',
       title: 'Horombo to National Park Gate ',
       description: 'We will retrace our steps with a pleasant moorland walk to Mandara followed by a lovely forest walk to the National Park gates. After farewells, we will board the company vehicles and head back to Moshi town marking the end of a successful summit on Mount Kilimanjaro.',
@@ -878,16 +878,144 @@
       accomodation: 'Camping'
     )
     Itinery.create(
-      route_duration_id: rongai_8.id,
+      route_duration_id: rongai_7.id,
       day_no: '08',
       title: 'Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings. ',
       description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.',
     )
      
-    
+   #Create Rongai 9 day itinery
+   rongai_9 = RouteDuration.find_by(route_id: rongai_route.id, duration_days: 9)
+   Itinery.create(
+     route_duration_id: rongai_9 .id,
+     day_no: '01',
+     title: 'Arrival and Pick-Up',
+     description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.  '
+   )
+   Itinery.create(
+     route_duration_id:rongai_9 .id,
+     day_no:'02',
+     title: 'Rongai Gate to Simba Camp site',
+     description: 'After completing the necessary registration formalities at Rongai gate, we will start our climb from Nale Moru (1950m) on a small path winding through fields of maize and potatoes. The trail will then lead us through a pine forest, where we may spot a variety of wildlife, including colobus monkeys. These monkeys are black with long capes of white hair and following white tails. As we climb higher, the forest will start to thin out, and we will arrive at our first camp, Rongai one, located at the edge of the moorland zone (2600m). 
+     ',
+     hiking_time:'3-4 hours',
+     distance: '7 km',
+     max_altitude: '1950',
+     vegatation: 'Moorland',
+     meals: ' Full board',
+     accomodation: 'Camping'
+   )
+   Itinery.create(
+     route_duration_id: rongai_9 .id,
+     day_no:'03',
+     title: 'Simba camp to Third Cave',
+     description: 'On the second day, continue your ascent up to the third Cave (3,450m) on a steady ascent. Enjoy the superb views of Kibo and the Eastern ice fields on the crater rim. After lunch, continue your hike up to the Third Cave (3,900m).      ',
+     hiking_time:'6 hours',
+     distance: '17 km',
+     max_altitude: '3540m',
+     vegatation: 'Moorland',
+     meals: ' Full board',
+     accomodation: 'Camping'
+   )
+   Itinery.create(
+     route_duration_id: rongai_9 .id,
+     day_no: '04',
+     title: 'Third Cave to Buffalo Camp  ',
+     description: 'On the third day, leave the main trail that climbs up to Kibo Hut and head eastwards on the small and seldom used Northern Circuit Route from the Third Cave. Cross a landscape with sparse bushes, which then becomes very dry and barren before vegetation returns as you near Pofu, where a small spring is located. From here, hike up to the top of "Buffalo Ridge" and then down the other side to reach Buffalo Camp (4,150m). Enjoy the huge feeling of space as the Kenyan plains stretch out far below to the north. This part of the journey should take approximately
+     ',
+     hiking_time:'5-6 hours',
+     distance: '8 km',
+     vegatation: 'Moorland',
+     meals: ' Full board',
+     accomodation: 'Camping'
+   )
+   Itinery.create(
+     route_duration_id: rongai_9 .id,
+     day_no: '05',
+     title: 'Buffalo camp to Moir Camp      ',
+     description: 'On day 4, your hiking adventure on Kilimanjaro continues along the Northern Circuit trail, taking you to an altitude of over 4,300 meters. As you hike, you/ll be surrounded by a beautiful field of rock slabs that create a unique and enjoyable hiking experience.This section of the trail offers an exciting opportunity for hikers to take a small detour to reach the summit of Little Lent Hill, standing at an impressive 4,375 meters. From the top, you/ll have a wide view down into the stunning Moir Valley.
+     After taking in the breathtaking views from Little Lent Hill, you/ll descend into the Moir Valley on the final leg of your hike. The descent will lead you to Moir Camp, located at an altitude of 4,200 meters. The hike is expected to take 4-7 hours, depending on your pace and fitness level.Don/t miss out on this unforgettable hiking experience on Kilimanjaro/s Northern Circuit, where you can explore stunning landscapes, climb Little Lent Hill, and trek to Moir Camp',
+     hiking_time:'6 hours',
+     distance: '8 km',
+     max_altitude: '13200m',
+     vegatation: 'Desert',
+     meals: ' Full board',
+     accomodation: 'Camping'
+   )
+   Itinery.create(
+     route_duration_id: rongai_9 .id,
+     day_no: '06',
+     title: '  Moir Camp to Baranco Camp',
+     description: 'On day 5, your Kilimanjaro hiking adventure takes you on a gentle ascent with panoramic views. You/ll walk on lava ridges beneath the glaciers of the Western Breach, offering a unique and unforgettable hiking experience. After reaching the Lava Tower campsite (4,550 m), you/ll enjoy lunch before embarking on a steep and spectacular afternoon walk on the rocky lower slopes of the Western Breach. This excursion is highly recommended for acclimatization purposes, and the hike is expected to take 4-6 hours.',
+     hiking_time:'7 hours',
+     distance: '7 km',
+     vegatation: 'Moorland',
+     meals: ' Full board',
+     accomodation: 'Camping'
+   )
+   Itinery.create(
+     route_duration_id: rongai_9 .id,
+     day_no: '07',
+     title: 'Baranko Camp to Karanga Camp  ',
+     description: 'Descending from the top of Barranco wall, experience the thrill of climbing the ridges of the wall steadily and gradually as you descend into the last water point at Karanga Valley. Barranco wall offers a mountain climbing experience for beginners due to its scramble nature which allows climbers with limited or no rock-climbing experience to use all limbs to successfully climb the wall to Karanga valley. From the valley, enjoy a bird’s eye view of Moshi town at the foot of the mountain. Get well rested, acclimatize with a perfect view of Kibo peak at Karanga camp.
+     ',
+     hiking_time:'4-5 hours',
+     distance: '6 km',
+     max_altitude: '3960-4035m',
+     vegatation: 'Moorland',
+     meals: ' Full board',
+     accomodation: 'Camping'
+   )
+   Itinery.create(
+    route_duration_id: rongai_9 .id,
+    day_no: '08',
+    title: 'Karanga Camp to Barafu Camp (Summit Night)',
+    description: 'After breakfast, begin the hike to Barafu Camp. On the way to Barafu, view several of Kibo/s glaciers as well as the junction that connects the descent Mweka route with the Machame trail.When we reach to Barafu base camp, start our ascent by torchlight about 1 a.m. so that we can be up on the crater rim by sunrise. The steep climb over loose volcanic screen has some well-graded zigzags and a slow but steady pace will take us to Stella Point (18,800 ft), in about five or six hours. We will rest there for a short time to enjoy the sunrise over Mawenzi. Those who are still feeling strong can make the one-hour round trip from here along the crater rim to Uhuru Peak (19,345 ft). We spend few minutes at the summit for photos and then we begin the descent down to the base camp.
 
-#UMBWE ITINERIES 
- umbwe_route = Route.find_by(route_name: "Umbwe Route")
+    ',
+    hiking_time:'7 hours',
+    distance: '4 km',
+    max_altitude: '5895m',
+    vegatation: 'Allpine Desert',
+    meals: ' Full board',
+    accomodation: 'Camping'
+  )
+  Itinery.create(
+    route_duration_id: rongai_9 .id,
+    day_no: '09',
+    title: 'Barafu camp to Mweka camp ',
+    description: 'Passing close to the spectacular glaciers and ice cliffs that still occupy most of the summit area, the descent to Barafu is surprisingly fast, and after some refreshments, we continue to descend to reach our final campsite, Mweka Camp. We recommend clients to head down to Mweka camp for quicker recovery from the high altitude. ',
+    hiking_time:'4 hours',
+    distance: '11km',
+    max_altitude: '4600m',
+    meals: ' Full board',
+    accomodation: 'Camping'
+  )
+  Itinery.create(
+    route_duration_id: rongai_9 .id,
+    day_no: '10',
+    title: 'Mweka Camp to Moshi Kilimanjaro gaate',
+    description: 'The last day on the descending route will expose you to thick canopy forests characterized by thick undergrowth. The route winds down to the Kilimanjaro National Park gate at Mweka where our climb of Mount Kilimanjaro ends. This is followed by farewells as we transfer you back to your accommodation in Moshi Kilimanjaro. ',
+    hiking_time:'3-4 hours',
+    distance: '11km',
+    vegatation: 'Forest',
+    meals: ' Half board',
+  
+  )
+  Itinery.create(
+    route_duration_id: rongai_9 .id,
+    day_no: '11',
+    title: 'Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings.',
+    description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.'
+   
+  
+  )
+   
+   
+
+    #UMBWE ITINERIES 
+ 
+    umbwe_route = Route.find_by(route_name: "Umbwe Route")
  #Create umbwe 6 day itinery
    umbwe_6 = RouteDuration.find_by(route_id: umbwe_route.id, duration_days: 6)
    Itinery.create(
@@ -971,4 +1099,8 @@
     title: ' Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings.     ',
     description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.' 
   )
- 
+  route_durations = RouteDuration.all
+  puts "Route durations with itinerary count:"
+  route_durations.each do |rd|
+    puts "#{rd.route.route_name} - #{rd.duration_days} days: #{rd.itineries.count} itineraries"
+  end

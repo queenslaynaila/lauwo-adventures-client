@@ -49,4 +49,13 @@ umbwe_route = Route.create(
      image_URL: "https://www.shadowsofafrica.com/media/wysiwyg/pages/Umbwe.jpg", 
      mountain: kilimanjaro
 )
- 
+routes = Route.all
+total_routes = routes.count
+routes_per_mountain = routes.group_by(&:mountain_id)
+
+puts "Total routes: #{total_routes}"
+
+routes_per_mountain.each do |mountain_id, routes|
+  mountain = Mountain.find(mountain_id)
+  puts "#{mountain.mountain_name}: #{routes.count} route#{'s' if routes.count > 1}"
+end

@@ -8,4 +8,7 @@ kilimanjaro = Mountain.create(
     description: "Mount Kilimanjaro is a dormant volcano in Tanzania. It has three volcanic cones...",
     overview:"Climb Mount Kilimanjaro with Lauwo adventures, a trusted local trekking tour operator. We offer hikes on the Lemosho route, Machame route, Marangu route,  Rongai route and Umbwe route ranging from 5 to 8 days."
 )
- 
+mountains = Mountain.all
+total_mountains = mountains.count
+puts "Total number of mountains: #{total_mountains}"
+puts "Mountain names: #{mountains.pluck(:mountain_name).join(", ")}"
