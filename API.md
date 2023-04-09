@@ -1,3 +1,59 @@
+## PLANNING FORMS
+These are the endpoints for managing planning forms.
+
+### GET /planningforms
+http://localhost:3000/planningforms
+
+Returns a list of all planning forms.
+
+### GET /planningforms/:id
+http://localhost:3000/planningforms/1
+
+Returns a single planning form.
+
+### POST /planningforms
+http://localhost:3000/planningforms
+
+Creates a new planning form.
+
+{
+  "adventure": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "email": "string",
+  "phone_number": "string",
+  "country_or_residence": "string",
+  "tour_duration_in_days": "string",
+  "budget": "string",
+  "when_to_travel": "string",
+  "how_many_travelers": "string",
+  "no_of_adults": "string",
+  "no_of_children": "string"
+}
+### PATCH /planningforms/:id
+http://localhost:3000/planningforms/1
+
+Updates a single planning form.
+
+{
+  "adventure": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "email": "string",
+  "phone_number": "string",
+  "country_or_residence": "string",
+  "tour_duration_in_days": "string",
+  "budget": "string",
+  "when_to_travel": "string",
+  "how_many_travelers": "string",
+  "no_of_adults": "string",
+  "no_of_children": "string"
+}
+### DELETE /planningforms/:id
+http://localhost:3000/planningforms/1
+
+Deletes a single planning form.
+
 ## ADVENTURES
 
 These are the adventures that lauwo offers.
@@ -224,6 +280,13 @@ http://localhost:3000/mountains/1
 Deletes a single mountain.
 
 ## ROUTES
+### GET /mountains/:id/routes
+http://localhost:3000/mountains/1/routes
+Returns a list of all routes for a specific mountain.
+### GET /routes/:id/route_durations
+http://localhost:3000/routes/1/route_durations
+Returns a list of all route durations for a specific route.
+ 
 ### GET /routes
 http://localhost:3000/routes
 Returns a list of all routes.
@@ -266,6 +329,10 @@ Returns a list of all route durations.
 ### GET /route_durations/:id
 http://localhost:3000/route_durations/1
 Returns a single route duration.
+### GET /route_durations/:id/itineries
+http://localhost:3000/route_durations/1/itineries
+Returns a list of all itineries for a given route duration.
+
 
 ### POST /route_durations
 http://localhost:3000/route_durations
@@ -349,13 +416,7 @@ json body:
 http://localhost:3000/itineries/1
 Deletes a single itinery.
 
-### GET /route_durations/:id/itineries
-http://localhost:3000/route_durations/1/itineries
-Returns a list of all itineries for a given route duration.
-
-### GET /route_durations/:id/itineries/:itinerary_id
-http://localhost:3000/route_durations/1/itineries/1
-Returns a single itinerary for a given route duration.
+ns a single itinerary for a given route duration.
 
 ### POST /route_durations/:id/itineries
 http://localhost:3000/route_durations/1/itineries
