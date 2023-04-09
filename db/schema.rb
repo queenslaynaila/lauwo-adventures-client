@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_07_085617) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_09_025438) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -99,10 +99,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_07_085617) do
     t.string "mountain_name"
     t.text "description"
     t.string "overview"
-    t.bigint "adventure_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["adventure_id"], name: "index_mountains_on_adventure_id"
+  end
+
+  create_table "planningforms", force: :cascade do |t|
+    t.string "adventure"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone_number"
+    t.string "country_of_residence"
+    t.string "tour_duration_in_days"
+    t.string "budget"
+    t.string "when_to_travel"
+    t.string "how_many_travelers"
+    t.string "no_of_adults"
+    t.string "no_of_children"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "route_durations", force: :cascade do |t|
@@ -130,5 +145,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_07_085617) do
 
   add_foreign_key "cultural_tours", "adventures"
   add_foreign_key "day_trips", "adventures"
-  add_foreign_key "mountains", "adventures"
 end

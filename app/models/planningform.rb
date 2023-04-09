@@ -1,0 +1,2 @@
+class Planningform < ApplicationRecord
+end
