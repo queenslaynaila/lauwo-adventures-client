@@ -52,7 +52,7 @@
   Itinery.create(
     route_duration_id:momela_4.id,
     day_no: '05',
-    title: ' Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings.     ',
+    title: ' Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings.     ',
     description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.'
   )
 
@@ -64,7 +64,7 @@
     route_duration_id:lemosho_6.id,
     day_no: '01',
     title: 'Arrival and Pick – Up',
-    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.    ',
+    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive.    ',
     meals: 'Breakfast',
     accomodation: 'Panama hotel ',
   )
@@ -137,7 +137,7 @@
   Itinery.create(
     route_duration_id:lemosho_6.id,
     day_no: '08',
-    title: ' Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings.  ',
+    title: ' Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings.  ',
     description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.',
   )
 
@@ -149,7 +149,7 @@
     route_duration_id:lemosho_7.id,
     day_no: '01',
     title: ' Arrival and Pick – Up',
-    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.',
+    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive.',
   )
   Itinery.create(
     route_duration_id:lemosho_7.id,
@@ -232,7 +232,7 @@
   Itinery.create(
     route_duration_id:lemosho_7.id,
     day_no: '09',
-    title: 'Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings',
+    title: 'Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings',
     description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.    '
   )
 
@@ -242,7 +242,7 @@
     route_duration_id:lemosho_8.id,
     day_no: '06',
     title: 'Arrival and Pick – Up',
-    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive..',
+    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive..',
     meals: 'Breakfast',
     accomodation: 'Hotel'
   )
@@ -339,7 +339,7 @@
   Itinery.create(
     route_duration_id:lemosho_8.id,
     day_no: '10',
-    title: 'Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings. ',
+    title: 'Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings. ',
     description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip. '
   )
  
@@ -352,7 +352,7 @@
       route_duration_id: machame_6.id,
       day_no: '01',
       title: 'Arrival',
-      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.' 
+      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive.' 
     )
     Itinery.create(
       route_duration_id: machame_6.id,
@@ -427,7 +427,7 @@
     Itinery.create(
       route_duration_id: machame_6.id,
       day_no: '08',
-      title: 'Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings. ',
+      title: 'Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings. ',
       description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.'
     )
     
@@ -437,7 +437,7 @@
       route_duration_id: machame_7.id,
       day_no: '01',
       title: 'ARRIVAL',
-      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.'
+      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive.'
     )
     Itinery.create(
       route_duration_id: machame_7.id,
@@ -536,7 +536,7 @@
     Itinery.create(
       route_duration_id: machame_7.id,
       day_no: '09',
-      title: ' Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings. ',
+      title: ' Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings. ',
       description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.'
     )
 
@@ -548,7 +548,7 @@
       route_duration_id: marangu_5.id,
       day_no: '01',
       title: 'Arrival and Pick-up',
-      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive'
+      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive'
     )
     Itinery.create(
       route_duration_id: marangu_5.id,
@@ -612,7 +612,7 @@
     Itinery.create(
       route_duration_id: marangu_5.id,
       day_no: '07',
-      title: 'Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings. ',
+      title: 'Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings. ',
       description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.'
     )
   #Creatte marangu 6 day itinery
@@ -621,7 +621,7 @@
       route_duration_id: marangu_6.id,
       day_no: '01',
       title: 'Arrival and Pick-up',
-      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.' 
+      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive.' 
     )
     Itinery.create(
       route_duration_id: marangu_6.id,
@@ -693,7 +693,7 @@
     Itinery.create(
       route_duration_id: marangu_6.id,
       day_no: '08',
-      title: ' Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings. ',
+      title: ' Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings. ',
       description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.'
     )
    
@@ -705,7 +705,7 @@
     route_duration_id: londos_7.id,
     day_no: '01',
     title: ' Arrival and Pick – Up',
-    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.    ',
+    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive.    ',
     meals: 'Breakfast',
     accomodation: 'Hotel'
    )
@@ -791,7 +791,7 @@
    Itinery.create(
     route_duration_id: londos_7.id,
     day_no: '09',
-    title: 'Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings. ',
+    title: 'Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings. ',
     description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.',
    )
 
@@ -803,7 +803,7 @@
       route_duration_id: rongai_7.id,
       day_no: '01',
       title: 'Arrival and Pick-Up',
-      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.  '
+      description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive.  '
     )
     Itinery.create(
       route_duration_id: rongai_7.id,
@@ -880,7 +880,7 @@
     Itinery.create(
       route_duration_id: rongai_7.id,
       day_no: '08',
-      title: 'Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings. ',
+      title: 'Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings. ',
       description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.',
     )
      
@@ -1022,7 +1022,7 @@
     route_duration_id: umbwe_6.id,
     day_no: '01',
     title: 'Arrival and Pick-up',
-    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional service from the moment you arrive.    '
+    description: 'When you land at Kilimanjaro International Airport, Lauwo Adventure staff will be there to welcome you and accompany you throughout your entire Kilimanjaro experience. Your guide will assist you with settling in and provide you with a brief orientation, before driving you to your accommodation for the first night in Kilimanjaro. As a top-ranked Kilimanjaro tour company, we are committed to providing you with exceptional adventure from the moment you arrive.    '
   )
   Itinery.create(
     route_duration_id: umbwe_6.id,
@@ -1096,7 +1096,7 @@
   Itinery.create(
     route_duration_id: umbwe_6.id,
     day_no: '08',
-    title: ' Departure day or Alternate fun activities *A 10% discount offered for mountain + 1 other safari bookings.     ',
+    title: ' Departure day or Alternate fun adventures *A 10% discount offered for mountain + 1 other safari bookings.     ',
     description: 'One can opt for a holiday safari at the white sandy beaches in Zanzibar, local project visits, cultural tours, cycling day tours or an exclusive safari trip.' 
   )
   route_durations = RouteDuration.all

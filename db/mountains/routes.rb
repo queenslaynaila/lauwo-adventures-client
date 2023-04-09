@@ -30,7 +30,7 @@ marangu_route = Route.create(
   
 londos_route = Route.create(
     route_name: "Londos Route", 
-    description: "The Londos Route on Mount Kilimanjaro's western side is a preferred choice for climbers with limited time. It offers moderate difficulty with ample acclimatization, allowing for a high summit success rate. Highlights include the abundance of wildlife during dry seasons and clear views of the Shira Plateau. The route passes through a fascinating man-made forest with local agricultural activities, and is also popular for cyclists and runners. With its unique cultural experience and adventurous nature, the Londorossi Route is favored by those seeking a rewarding climb.",
+    description: "The Londos Route on Mount Kilimanjaro's western side is a preferred choice for climbers with limited time. It offers moderate difficulty with ample acclimatization, allowing for a high summit success rate. Highlights include the abundance of wildlife during dry seasons and clear views of the Shira Plateau. The route passes through a fascinating man-made forest with local agricultural adventures, and is also popular for cyclists and runners. With its unique cultural experience and adventurous nature, the Londorossi Route is favored by those seeking a rewarding climb.",
     image_URL: "https://www.shadowsofafrica.com/media/wysiwyg/Itineraries/Kilimanjaro_climbing/Machame/shutterstock_277812548.jpg", 
     mountain: kilimanjaro
 )
