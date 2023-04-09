@@ -13,7 +13,7 @@ class CreatePlanningforms < ActiveRecord::Migration[7.0]
       t.string :how_many_travelers
       t.string :no_of_adults
       t.string :no_of_children
-
+      t.string :extra_info
       t.timestamps
     end
   end

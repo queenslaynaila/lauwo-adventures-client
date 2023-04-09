@@ -116,6 +116,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_09_025438) do
     t.string "how_many_travelers"
     t.string "no_of_adults"
     t.string "no_of_children"
+    t.string "extra_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
