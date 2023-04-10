@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  routeduration_id: 1
+  title: MyString
+  description: MyText
+  meals: MyString
+  distance: MyString
+  image_URL: MyString
+  accomodation: MyString
+  vegatation: MyString
+  elevation: MyString
+
+two:
+  routeduration_id: 1
+  title: MyString
+  description: MyText
+  meals: MyString
+  distance: MyString
+  image_URL: MyString
+  accomodation: MyString
+  vegatation: MyString
+  elevation: MyString

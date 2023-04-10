@@ -1,3 +1,4 @@
+
 puts 'seeding safaris..'
  three = Safari.create!(name:"3 day safari", duration: "3 days", image_url:"https://images.unsplash.com/photo-1662003905953-f2aa253c48df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80")
 
@@ -432,3 +433,20 @@ puts 'seeding safaris..'
  puts "safari itineries"
 
  puts "ending"
+require_relative 'adventures/adventures'
+require_relative 'mountains/mountains'
+require_relative 'mountains/routes'
+require_relative 'mountains/route_durations'
+require_relative 'mountains/itineries'
+require_relative 'cultural_tours/cultural_tours'
+require_relative 'day_trips/day_trips'
+
+
+
+
+
+
+
+
+
+
