@@ -15,7 +15,7 @@ Returns a single planning form.
 http://localhost:3000/planningforms
 
 Creates a new planning form.
-
+``` json
 {
   "adventure": "string",
   "first_name": "string",
@@ -30,11 +30,12 @@ Creates a new planning form.
   "no_of_adults": "string",
   "no_of_children": "string"
 }
+```
 ### PATCH /planningforms/:id
 http://localhost:3000/planningforms/1
 
 Updates a single planning form.
-
+``` json
 {
   "adventure": "string",
   "first_name": "string",
@@ -50,6 +51,7 @@ Updates a single planning form.
   "no_of_children": "string",
   "extra_info":"string"
 }
+```
 ### DELETE /planningforms/:id
 http://localhost:3000/planningforms/1
 
@@ -70,18 +72,20 @@ Returns a single adventure.
 ### POST /adventures
 http://localhost:3000/adventures
 Creates a new adventure.
-json body:
+``` json:
 {
   "name": "string"
 }
+```
 
 ### PATCH /adventures/:id
 http://localhost:3000/adventures/1
 Updates a single adventure.
-json body:
+``` json:
 {
   "name": "string"
 }
+```
 
 ### DELETE /adventures/:id
 http://localhost:3000/adventures/1
@@ -102,7 +106,7 @@ Returns a single cultural tour.
 ### POST /cultural_tours
 http://localhost:3000/cultural_tours
 Creates a new cultural tour.
-json body:
+``` json
 {
   "adventure_id": "integer",
   "name": "string",
@@ -114,11 +118,12 @@ json body:
   "inclusions": "text",
   "exclusions": "text"
 }
+```
 
 ### PATCH /cultural_tours/:id
 http://localhost:3000/cultural_tours/1
 Updates a single cultural tour.
-json body:
+``` json
 {
   "name": "string",
   "description": "text",
@@ -129,6 +134,7 @@ json body:
   "inclusions": "text",
   "exclusions": "text"
 }
+```
 
 ### DELETE /cultural_tours/:id
 http://localhost:3000/cultural_tours/1
@@ -149,7 +155,7 @@ Returns a single day trip.
 ### POST /day_trips
 http://localhost:3000/day_trips
 Creates a new day trip.
-json body:
+``` json
 {
   "adventure_id": "integer",
   "name": "string",
@@ -160,11 +166,12 @@ json body:
   "inclusions": "text",
   "exclusions": "text"
 }
+```
 
 ### PATCH /day_trips/:id
 http://localhost:3000/day_trips/1
 Updates a single day trip.
-json body:
+``` json
 {
   "name": "string",
   "description": "text",
@@ -174,6 +181,7 @@ json body:
   "inclusions": "text",
   "exclusions": "text"
 }
+```
 
 ### DELETE /day_trips/:id
 http://localhost:3000/day_trips/1
@@ -194,24 +202,26 @@ Returns a single blog.
 ### POST /blogs
 http://localhost:3000/blogs
 Creates a new blog.
-json body:
+``` json
 {
   "title": "string",
   "content": "text",
-  "image_url": "string"
+  "image_url": "string",
   "author": "string"
 }
+```
 
 ### PATCH /blogs/:id
 http://localhost:3000/blogs/1
 Updates a single blog.
-json body:
+``` json:
 {
   "title": "string",
   "content": "text",
-  "image_url": "string"
+  "image_url": "string",
   "author": "string"
 }
+```
 
 ### DELETE /blogs/:id
 http://localhost:3000/blogs/1
@@ -232,12 +242,13 @@ Returns a single inquiry.
 ### POST /inquiries
 http://localhost:3000/inquiries
 Creates a new inquiry.
-json body:
+``` json:
 {
   "name": "string",
   "email": "string",
   "message": "text"
 }
+```
 
 ### DELETE /inquiries/:id
 http://localhost:3000/inquiries/1
@@ -257,24 +268,26 @@ Returns a single mountain.
 ### POST /mountains
 http://localhost:3000/mountains
 Creates a new mountain.
-json body:
+``` json:
 {
 "mountain_name": "string",
 "description": "text",
 "overview": "string",
 "adventure_id": "integer"
 }
+```
 
 ### PATCH /mountains/:id
 http://localhost:3000/mountains/1
 Updates a single mountain.
-json body:
+``` json:
 {
 "mountain_name": "string",
 "description": "text",
 "overview": "string",
 "adventure_id": "integer"
 }
+```
 
 ### DELETE /mountains/:id
 http://localhost:3000/mountains/1
@@ -299,24 +312,25 @@ Returns a single route.
 ### POST /routes
 http://localhost:3000/routes
 Creates a new route.
-json body:
+``` json:
 {
 "route_name": "string",
 "mountain_id": "integer",
 "description": "text",
 "image_URL": "string"
 }
-
+```
 ### PATCH /routes/:id
 http://localhost:3000/routes/1
 Updates a single route.
-json body:
+``` json:
 {
 "route_name": "string",
 "mountain_id": "integer",
 "description": "text",
 "image_URL": "string"
 }
+```
 
 ### DELETE /routes/:id
 http://localhost:3000/routes/1
@@ -338,7 +352,7 @@ Returns a list of all itineries for a given route duration.
 ### POST /route_durations
 http://localhost:3000/route_durations
 Creates a new route duration.
-json body:
+``` json:
 {
 "route_id": "integer",
 "title": "string",
@@ -350,11 +364,12 @@ json body:
 "premium_inclusive": "text",
 "premium_exclusive": "text"
 }
+```
 
 ### PATCH /route_durations/:id
 http://localhost:3000/route_durations/1
 Updates a single route duration.
-json body:
+``` json:
 {
 "route_id": "integer",
 "title": "string",
@@ -366,6 +381,7 @@ json body:
 "premium_inclusive": "text",
 "premium_exclusive": "text"
 }
+```
 
 ### DELETE /route_durations/:id
 http://localhost:3000/route_durations/1
@@ -382,7 +398,7 @@ Returns a single itinerary.
 
 ### POST /itineries
  Creates a new itinery.
-json body:
+``` json:
 {
 "route_duration_id": "integer",
 "day_no": "string",
@@ -395,11 +411,12 @@ json body:
 "meals": "string",
 "accomodation": "string"
 }
+```
 
 ### PATCH /itineries/:id
 http://localhost:3000/itineries/1
 Updates a single itinery.
-json body:
+``` json:
 {
 "route_duration_id": "integer",
 "day_no": "string",
@@ -412,6 +429,7 @@ json body:
 "meals": "string",
 "accomodation": "string"
 }
+```
 
 ### DELETE /itineries/:id
 http://localhost:3000/itineries/1
@@ -422,7 +440,7 @@ ns a single itinerary for a given route duration.
 ### POST /route_durations/:id/itineries
 http://localhost:3000/route_durations/1/itineries
 Creates a new itinerary for a given route duration.
-json body:
+``` json:
 {
 "day_no": "string",
 "title": "string",
@@ -434,11 +452,12 @@ json body:
 "meals": "string",
 "accomodation": "string"
 }
+```
 
 ### PATCH /route_durations/:id/itineries/:itinerary_id
 http://localhost:3000/route_durations/1/itineries/1
 Updates a single itinerary for a given route duration.
-json body:
+``` json:
 {
 "day_no": "string",
 "title": "string",
@@ -450,6 +469,7 @@ json body:
 "meals": "string",
 "accomodation": "string"
 }
+```
 
 ### DELETE /route_durations/:id/itineries/:itinerary_id
 http://localhost:3000/route_durations/1/itineries/1
@@ -467,8 +487,7 @@ Returns a single booking by ID.
 ### POST /bookings
 Creates a new booking.
 JSON request body format:
-
-json:
+``` json
 {
   "first_name": "string",
   "last_name": "string",
@@ -480,12 +499,11 @@ json:
   "additional_info": "string",
   "route_duration_id": "integer"
 }
+```
 ### PATCH /bookings/:id
 Updates a single booking by ID.
 JSON request body format:
-
-json
- 
+``` json
 {
   "first_name": "string",
   "last_name": "string",
@@ -497,5 +515,6 @@ json
   "additional_info": "string",
   "route_duration_id": "integer"
 }
+```
 ### DELETE /bookings/:id
 Deletes a single booking by ID.
