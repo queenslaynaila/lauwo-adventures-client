@@ -131,7 +131,7 @@ RouteDuration.create(
   rongai_route = Route.find_by(route_name: "Rongai Route")
   RouteDuration.create(
     route_id: rongai_route.id, title: "Rongai Route - 8 Day", 
-    duration_days: 8, 
+    duration_days: 7, 
     standard_price: 3000, 
     standard_inclusive: "Transfer From Jro Airport To The Hotel
     ,Return Transfer From Accommodation To The Airport 
@@ -181,3 +181,18 @@ RouteDuration.create(
     premium_inclusive:"Transfer From Jro Airport To The Hotel With A Comfortable Car ,Return Transfer From Accommodation To The Airport With A Private Car,Transfer To The Kilimanjaro Gate ,All National Park Fees (Rescue Fees),Accommodation In Luxury Hotel (One Night Before And One Night After Climbing ,All Camping Facilities  ,Meals (All Meals During Hiking),Safety Equipment (Medical Kit) ,Professional Mountain Guides With Wfr Certificate  ,Assistant Guide, Porters And Cook Salaries ,Personal Oxygen ,Warm Water For Washing Each Day At The Mountain ,Clean Purified Drinking Water ,Waterproof Tents, Mess Tents, Crew Tents,Government Tax ,Private Toilet,Comfortable Sleeping Tents With Safari Chairs ,Personal Porter ,Full Body Hotel Before And After Climbing  ",
     premium_exclusive:"Tip,Porters 10$ A Day ,Cook's 15$ A Day,Guides 20$ ,Tanzania Visa On Arrival (100$ For American Citizen And 50 For The Others) ,Mountain Insurance (This Supposed To Be Cover 6000m),Personal Gear ,Personal Expenses(Laundry)  ,Flight "
 )
+puts "Routes with available durations:"
+
+routes = Route.all.includes(:route_durations)
+
+total_route_durations = 0
+
+routes.each do |route|
+  route_durations = route.route_durations.pluck(:duration_days).sort
+  num_route_durations = route_durations.count
+  total_route_durations += num_route_durations
+
+  puts "- #{route.route_name}: #{num_route_durations} route duration(s) available (#{route_durations.join(", ")} days)."
+end
+
+puts "\nTotal number of route durations: #{total_route_durations}."

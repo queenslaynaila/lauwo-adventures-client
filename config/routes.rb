@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :planningforms
   resources :inquiries
   resources :blogs
   resources :day_trips
