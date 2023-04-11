@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins, defaults: { format: :json }
 
   resources :safari_itineries
   resources :safaris
