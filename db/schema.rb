@@ -10,29 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema[7.0].define(version: 2023_04_10_102150) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "safari_itineries", force: :cascade do |t|
-    t.integer "day"
-    t.string "title"
-    t.string "description"
-    t.string "mealplan"
-    t.string "image_url"
-    t.integer "safari_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "distance"
-  end
-
-  create_table "safaris", force: :cascade do |t|
-    t.string "name"
-    t.string "duration"
-    t.string "image_url"
-=======
-ActiveRecord::Schema[7.0].define(version: 2023_04_09_025438) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -121,8 +99,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_09_025438) do
     t.string "mountain_name"
     t.text "description"
     t.string "overview"
+    t.bigint "adventure_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["adventure_id"], name: "index_mountains_on_adventure_id"
   end
 
   create_table "planningforms", force: :cascade do |t|
@@ -162,14 +142,31 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_09_025438) do
     t.integer "mountain_id"
     t.text "description"
     t.string "image_URL"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "safari_itineries", force: :cascade do |t|
+    t.integer "day"
+    t.string "title"
+    t.string "description"
+    t.string "mealplan"
+    t.string "image_url"
+    t.integer "safari_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "distance"
+  end
 
+  create_table "safaris", force: :cascade do |t|
+    t.string "name"
+    t.string "duration"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   add_foreign_key "cultural_tours", "adventures"
   add_foreign_key "day_trips", "adventures"
-
+  add_foreign_key "mountains", "adventures"
 end
