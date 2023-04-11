@@ -30,6 +30,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem 'foreman'
+
+gem 'devise'
+
 
 gem 'active_model_serializers'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -48,5 +52,5 @@ group :development do
   # gem "spring"
 end
 
-gem 'foreman'
+
 
