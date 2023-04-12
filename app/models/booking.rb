@@ -1,5 +1,9 @@
 class Booking < ApplicationRecord
-    belongs_to :route_duration
+    belongs_to :route_duration 
+    belongs_to :safari 
+    validates :safari_id, presence: true, unless: :route_duration_id?
+    validates :route_duration_id, presence: true, unless: :safari_id?
+
     validates :first_name, :last_name, :email, :phone_number, :country, :travel_period, :no_of_travellers, presence: true
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
     validates :phone_number, format: { with: /\A\+?\d{1,3}[- ]?\d{9,11}\z/, message: "should be a valid phone number with country code" }
