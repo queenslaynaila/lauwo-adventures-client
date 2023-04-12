@@ -1,8 +1,5 @@
 class Booking < ApplicationRecord
-    belongs_to :route_duration 
-    belongs_to :safari 
-    validates :safari_id, presence: true, unless: :route_duration_id?
-    validates :route_duration_id, presence: true, unless: :safari_id?
+    belongs_to :bookable, polymorphic: true
 
     validates :first_name, :last_name, :email, :phone_number, :country, :travel_period, :no_of_travellers, presence: true
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP,message: "must be a valid email address" }
