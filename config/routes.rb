@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :admins, defaults: { format: :json }
+  devise_for :admins,
+             controllers: {
+                 sessions: 'admins/sessions',
+                 registrations: 'admins/registrations'
+             }
+
 
   resources :safari_itineries
   resources :safaris

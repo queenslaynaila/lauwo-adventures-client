@@ -38,6 +38,8 @@ gem 'devise-jwt'
 
 gem 'rack-cors'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 gem 'active_model_serializers'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]

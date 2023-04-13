@@ -1,5 +1,6 @@
 class AdventuresController < ApplicationController
   before_action :set_adventure, only: [:show, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   def index
     @adventures = Adventure.all
