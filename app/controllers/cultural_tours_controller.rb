@@ -1,5 +1,6 @@
 class CulturalToursController < ApplicationController 
   before_action :set_cultural_tour, only: [:show, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   def index
     @cultural_tours = CulturalTour.all

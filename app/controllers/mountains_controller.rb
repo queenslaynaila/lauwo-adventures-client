@@ -1,5 +1,6 @@
 class MountainsController < ApplicationController
   before_action :set_mountain, only: %i[ show update destroy ]
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   # GET /mountains
   def index

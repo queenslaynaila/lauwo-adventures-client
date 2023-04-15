@@ -1,5 +1,6 @@
 class RouteDurationsController < ApplicationController
   before_action :set_route_duration, only: %i[ show update destroy ]
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   # GET /route_durations
   def index

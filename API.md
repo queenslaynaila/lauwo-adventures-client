@@ -518,3 +518,52 @@ JSON request body format:
 ```
 ### DELETE /bookings/:id
 Deletes a single booking by ID.
+
+## ADMIN
+
+### Sign Up
+POST /admins
+``` json
+{
+    "admin":{
+        "email": "string",
+        "password": "string"
+    }
+}
+```
+Response: 200 OK
+``` json
+{
+    "message": "Signed up successfully."
+}
+```
+
+### Sign In
+POST /admins/sign_in
+``` json
+{
+    "admin":{
+        "email": "string",
+        "password": "string"
+    }
+}
+```
+Response: 200 OK
+``` json
+{
+    "message": "Logged in successfully."
+}
+```
+Check the response headers for the authentication token.
+`Authorization Bearer <token>`
+
+### Sign Out
+DELETE /admins/sign_out
+Include the authentication token in the request headers.
+Response: 200 OK
+``` json
+{
+    "message": "Logged out successfully."
+}
+```
+

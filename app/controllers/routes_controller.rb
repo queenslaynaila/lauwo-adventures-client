@@ -1,5 +1,6 @@
 class RoutesController < ApplicationController
   before_action :set_route, only: %i[ show update destroy ]
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   # GET /routes
   def index

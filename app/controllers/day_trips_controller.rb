@@ -1,5 +1,6 @@
 class DayTripsController < ApplicationController
   before_action :set_day_trip, only: [:show, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   def index 
     @day_trips = DayTrip.all
