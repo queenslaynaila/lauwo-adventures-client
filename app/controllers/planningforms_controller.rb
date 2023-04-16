@@ -18,9 +18,9 @@ class PlanningformsController < ApplicationController
     @planningform = Planningform.new(planningform_params)
 
     if @planningform.save
-      render json: @planningform, status: :created, location: @planningform
+      render json: { status: "success", location: @planningform }, status: :created
     else
-      render json: @planningform.errors, status: :unprocessable_entity
+      render json: { status: "error", errors: @planningform.errors }, status: :unprocessable_entity
     end
   end
 
