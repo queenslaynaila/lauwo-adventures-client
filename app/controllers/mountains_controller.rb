@@ -37,13 +37,17 @@ class MountainsController < ApplicationController
   # DELETE /mountains/1
   def destroy
     @mountain.destroy
+    render json: { message: "Mountain was successfully deleted." }
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_mountain
       @mountain = Mountain.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: "Mountain not found" }, status: :not_found
     end
+
 
     # Only allow a list of trusted parameters through.
     def mountain_params

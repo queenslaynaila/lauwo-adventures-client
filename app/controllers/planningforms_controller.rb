@@ -36,6 +36,7 @@ class PlanningformsController < ApplicationController
   # DELETE /planningforms/1
   def destroy
     @planningform.destroy
+    render json: { message: "Planning form was successfully deleted." }
   end
 
   private
