@@ -47,8 +47,8 @@ function Statement() {
             </div>
           </div>
         </div>
-      </div> 
+      </div>
     </div>
   );
 }
-export default Statement;  
+export default Statement;

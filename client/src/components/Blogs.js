@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import { blogsData } from '../data/blogData';
-import {BsArrowRight} from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs';
 import { truncate } from '@/utils/truncate';
 
 function Blogs() {
   return (
     <div className="m-4 h-screen mt-20 lg:mb-20 md:mb-48 mb-[66em]">
       <div>
-      <h1 className="text-center lg:text-3xl sm:text-lg font-bold font-poly mb-10 uppercase"> recent blogs</h1>
-
+        <h1 className="text-center lg:text-3xl sm:text-lg font-bold font-poly mb-10 uppercase">
+          {' '}
+          recent blogs
+        </h1>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogsData.map((val) => (
@@ -29,12 +31,16 @@ function Blogs() {
                   {truncate(val.description, 100)}
                 </p>
                 <div className="flex justify-between sm:gap-20 gap-8 absolute bottom-2">
-                  <a href="#" className="inline-flex items-center sm:text-sm text-xs font-medium text-center text-gray-600"
+                  <a
+                    href="#"
+                    className="inline-flex items-center sm:text-sm text-xs font-medium text-center text-gray-600"
                   >
                     Read more
-                    <BsArrowRight className= 'w-5 h-5 py-0.5'/>   
+                    <BsArrowRight className="w-5 h-5 py-0.5" />
                   </a>
-                    <p className="inline-flex items-center sm:text-sm text-xs text-center text-gray-600">{val.date}</p>
+                  <p className="inline-flex items-center sm:text-sm text-xs text-center text-gray-600">
+                    {val.date}
+                  </p>
                 </div>
               </div>
             </div>
