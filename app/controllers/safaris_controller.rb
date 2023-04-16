@@ -6,7 +6,7 @@ class SafarisController < ApplicationController
     # GET /safaris
     def index
       safaris = Safari.all
-      render json: safaris
+      render json: safaris, include: :safari_itineries
     end
 
     # POST /safaris
