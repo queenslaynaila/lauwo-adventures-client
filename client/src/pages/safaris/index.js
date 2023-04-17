@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Safaris = ({ safaris }) => {
-  console.log(safaris);
   return (
     <div
       className="h-full bg-no-repeat bg-center bg-cover"
