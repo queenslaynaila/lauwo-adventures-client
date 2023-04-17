@@ -12,7 +12,7 @@ const AdventuresDropDown = ({ setIsOpen }) => {
         {isDropdownOpen ? <AiOutlineCaretUp className='ml-1'/> : <AiOutlineCaretDown className='ml-1'/>}
         </button>
         <div className={`absolute top-10 bg-white text-black text-center w-52 h-64 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light ${isDropdownOpen ? 'block' : 'hidden'}`}>
-            <Link href='/mountaintrekking'onClick={() => {
+            <Link href='/mountains'onClick={() => {
               setIsDropdownOpen(false)
               setIsOpen(false)
               }}>mountain trekking</Link>
