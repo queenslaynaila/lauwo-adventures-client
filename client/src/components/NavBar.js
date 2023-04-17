@@ -34,7 +34,7 @@ const NavBar = () => {
       </div>
       <ul className='hidden md:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold'>
         <li><Link href='/#about'>About</Link></li>
-        <li><Link href='/gallery'>Gallery</Link></li>
+        <li><Link href='/#gallery'>Gallery</Link></li>
         <li><AdventuresDropDown setIsOpen={setIsOpen} /></li>
         <li><Link href='/#contact'>Contact</Link></li>
         <li><Link href='/#blog'>Blog</Link></li>
