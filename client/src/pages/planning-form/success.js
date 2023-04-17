@@ -9,7 +9,7 @@ export default function success() {
         <p className='font-poly w-8/12 sm:w-6/12 text-white text-center'>Our team will review your submission and get back to you shortly.Expect a mail and a Whatsapp message from us.</p>
         <div className="mt-8">
         <Link href="/">
-          <button className="px-4 py-2 bg-white text-black font-bold rounded-md hover:bg-gray-200">Return to homepage</button>
+          <button className="px-4 py-2 bg-white text-black font-bold rounded-md hover:bg-yellow-400">Return to homepage</button>
         </Link>
       </div>
       </div>
