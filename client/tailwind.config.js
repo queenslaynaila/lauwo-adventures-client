@@ -13,15 +13,12 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         rubik: ['Rubik', 'sans-serif'],
-        poly: ['Poly', 'sans-serif']
+        poly: ['Poly', 'sans-serif'],
+      },
       colors: {
         primary: '#FFCE3C',
         sand: '#FDECBA'
       },
-      colors: {
-        primary: '#FFCE3C',
-      },
-    },
   },
 },
 plugins: [],
