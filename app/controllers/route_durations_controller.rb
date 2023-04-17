@@ -37,6 +37,7 @@ class RouteDurationsController < ApplicationController
   # DELETE /route_durations/1
   def destroy
     @route_duration.destroy
+    render json: { message: "Route duration was successfully deleted." }
   end
 
   private

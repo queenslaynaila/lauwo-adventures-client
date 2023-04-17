@@ -37,12 +37,15 @@ class RoutesController < ApplicationController
   # DELETE /routes/1
   def destroy
     @route.destroy
+    render json: { message: "Route was successfully deleted." }
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_route
       @route = Route.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: "Route not found" }, status: :not_found
     end
 
     # Only allow a list of trusted parameters through.

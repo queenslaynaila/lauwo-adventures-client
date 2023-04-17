@@ -45,9 +45,8 @@ const Header = () => {
           <Link href="/#about">
             <IoIosArrowDropdownCircle className="text-yellow-500 text-4xl animate-bounce" />
           </Link>
-        </div>
-      </div>
-    </header>
+         </div>
+       </header>
   );
 };
 
