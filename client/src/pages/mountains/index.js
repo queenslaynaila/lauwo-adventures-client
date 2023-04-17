@@ -24,7 +24,7 @@ export default function index({mountains}) {
           <h1 className="font-poppins font-extrabold text-white text-4xl md:text-7xl mx-4 hover:text-yellow-500">
             {mountain.mountain_name}
           </h1>
-          <p className="text-white my-8 mx-8 text-center font-medium text-xl md:text-2xl leading-7 tracking-tighter">
+          <p className="text-white my-8 mx-8 md:mx-16 text-center font-medium text-xl md:text-2xl leading-7 tracking-tighter">
             {mountain.description}
           </p>
           <button
