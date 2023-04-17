@@ -4,8 +4,8 @@ Adventure.create!(
     {name: "mountain trekking"},
     {name: "safaris"},
     {name: "cultural tours"},
-    {name: "cycling tours"},
     {name: "day trips"},
+    {name: "zanzibar"},
   ]
 )
 puts "Created #{Adventure.count} adventures/adventures"
