@@ -18,7 +18,7 @@ module.exports = {
         primary: '#FFCE3C',
         sand: '#FDECBA'
       },
-      colors:{
+      colors: {
         primary: '#FFCE3C',
       },
     },

@@ -32,7 +32,7 @@ const NavBar = () => {
           : 'fixed w-full shadow-sm flex justify-between p-4 items-center text-white z-10'
       }
     >
-      <Link href='/' className="flex items-center">
+      <Link href="/" className="flex items-center">
         <Image src="/logo.png" width={50} height={50} alt="logo" />
       </Link>
       <div className="absolute right-6 md:hidden top-6 scale-150">
