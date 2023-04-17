@@ -15,7 +15,7 @@ module.exports = {
         rubik: ['Rubik', 'sans-serif'],
         poly: ['Poly', 'sans-serif'],
       },
-      colors:{
+      colors: {
         primary: '#FFCE3C',
       },
     },

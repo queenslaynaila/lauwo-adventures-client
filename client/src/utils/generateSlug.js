@@ -3,5 +3,4 @@ export const generateSlug = (str) => {
     .toLowerCase()
     .replace(/ /g, '-')
     .replace(/[^\w-]+/g, '');
-}
-
+};
