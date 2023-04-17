@@ -3,7 +3,7 @@ class SafariItineriesController < ApplicationController
 
     # GET
     def index
-      safari_itineries = SafariItinery.all.order(day: :asc)
+      safari_itineries = SafariItinery.all
       render json: safari_itineries
     end
 
