@@ -6,9 +6,9 @@ const Safari = ({ safari }) => {
   return (
     <div className="bg-primary px-4">
       <div className="border-l-2 border-black h-full">
-        <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl xl font-poly capitalize text-center text-black py-32">
+          <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl xl font-poly capitalize text-center text-black py-32">
           {safari.name} experience
-        </h3>
+          </h3>
         <div className="flex flex-col items-center px-8 sm:-mt-8 -mt-24">
           {safari.safari_itineries.map((itinerary, index) => (
             <div
@@ -27,13 +27,17 @@ const Safari = ({ safari }) => {
                   alt={itinerary.title}
                   width={600}
                   height={400}
-                  className="rounded-lg mb-4 h-96 object-cover object-center"
+                  className="rounded-lg  h-96 object-cover object-center"
                 />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-xl font-bold mb-2 font-poly capitalize">
                   Day {itinerary.day}: {itinerary.title}
                 </h3>
+                <div className='flex items-center gap-2'>
+                  <div className=" w-1/6 mt-4 mb-4 border border-dashed border-black"></div>
+                  <p className='text-sm font-semibold'>Distance: {itinerary.distance} kms</p>
+                </div>
                 <p className="mb-4 text-sm leading-6">
                   {itinerary.description}
                 </p>
@@ -47,6 +51,11 @@ const Safari = ({ safari }) => {
               )}
             </div>
           ))}
+          <div className="flex  items-center justify-center">
+          <button className='bg-black text-white px-8 rounded-md py-4 ml-auto mb-16 hover:border-black hover:border hover:text-black hover:bg-transparent'>
+            Book
+          </button>
+        </div>
         </div>
       </div>
     </div>
