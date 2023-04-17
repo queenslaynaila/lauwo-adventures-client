@@ -14,7 +14,11 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         rubik: ['Rubik', 'sans-serif'],
         poly: ['Poly', 'sans-serif']
-      }
+      },
+      colors: {
+        primary: '#FFCE3C',
+        sand: '#FDECBA'
+      },
     },
   },
   plugins: [],
