@@ -1,13 +1,18 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { generateSlug } from '@/utils/generateSlug';
+
+
 export default function index({mountains}) {
+    const router = useRouter();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const handlePrevClick = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? mountains.length - 1 : prevIndex - 1));
-  }
-  const handleNextClick = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === mountains.length - 1 ? 0 : prevIndex + 1));
-  };
+    const handlePrevClick = () => {
+      setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? mountains.length - 1 : prevIndex - 1));
+    }
+    const handleNextClick = () => {
+      setCurrentImageIndex((prevIndex) => (prevIndex === mountains.length - 1 ? 0 : prevIndex + 1));
+    };
   return (
     <div className="h-screen bg-gray-100 flex items-center justify-center relative font-poly">
     {mountains.map((mountain, index) => (
@@ -30,6 +35,10 @@ export default function index({mountains}) {
           <button
             type="button"
             className="py-2.5 px-5 mr-2 mb-2 text-xl font-medium text-white focus:outline-none hover:bg-white rounded-full border border-gray-200 hover:text-yellow-500 focus:z-10"
+            onClick={() => {
+              const slug = generateSlug(mountain.mountain_name);
+              router.push(`/mountains/${slug}`);
+            }}
           >
             Discover More
           </button>
