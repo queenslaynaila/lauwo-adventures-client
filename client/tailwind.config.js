@@ -20,5 +20,6 @@ module.exports = {
         sand: '#FDECBA'
       },
   },
-  plugins: [],
-};
+},
+plugins: [],
+}
