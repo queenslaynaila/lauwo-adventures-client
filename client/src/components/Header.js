@@ -34,6 +34,11 @@ const Header = () => {
             <p className='font-poly w-8/12 sm:w-6/12'>As a third-generation family owned tour company run by locals, Lauwo Adventure offers authentic Tanzanian experiences ranging from beautiful summits atop the Kilimanjaro to local vibrant cultures and the vast Savannah plain fields in the Serengeti.
             </p>
           </div>
+          <div className='flex flex-col items-center mt-4 '>
+            <Link href="/planning-form" className='w-2/4 md:w-40 sm:w-auto'>
+                <button className="text-white bg-yellow-500  hover:bg-yellow-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Lets Plan Your Trip </button> 
+            </Link>
+          </div>
           <div className='flex flex-col items-center gap-4 mt-16'>
             <Link href="/#about">
               <IoIosArrowDropdownCircle className='text-yellow-500 text-4xl animate-bounce' />
