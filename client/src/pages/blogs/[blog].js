@@ -3,7 +3,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import Link from "next/link";
 import Image from "next/image";
 export default function blog({blog}) {
-  console.log(blog.image_url)
+ 
   return (
  
       <main className="font-poly ">
@@ -51,3 +51,5 @@ export async function getStaticProps({ params }) {
     props: { blog },
   };
 }
+
+ 
