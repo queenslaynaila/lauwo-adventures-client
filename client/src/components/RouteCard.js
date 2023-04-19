@@ -1,13 +1,13 @@
  
 import Image from 'next/image'
 export default function RouteCard({RouteData}) {
-    console.log('my',RouteData)
+    
   return (
      
       <div className='bg-sand font-poly'>
       <div className="flex items-center justify-center">
            <Image src="/peakfinder.png" alt='nnn' height={50} width={50} className='mr-2' />
-           <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl text-xl capitalize text-center text-black py-32 ">{RouteData.route_name} | 8 Days </h3>
+           <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl text-xl capitalize text-center text-black py-32 ">{RouteData.route_name} |  </h3>
       </div>
       <div class="flex flex-col items-center px-8 -mt-24">
         <div class="flex relative flex-col md:flex-row md:items-center mb-28">
