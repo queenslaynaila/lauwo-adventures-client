@@ -7,6 +7,7 @@ const nextConfig = {
       'upload.wikimedia.org',
       'i.pinimg.com',
       'plus.unsplash.com',
+      'img.traveltriangle.com'
     ],
   },
 };
