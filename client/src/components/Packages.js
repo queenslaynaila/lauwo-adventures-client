@@ -93,16 +93,4 @@ export default function Packages({ packages }) {
     </div>
   );
 }
-
- {/* <tr>
-             <td className="py-4 px-8 text-center table-cell"> <span className="list-disc"></span>Transfer from JRO Airport to the hotel</td>
-             <td className="py-4 px-8 text-center table-cell">Flights</td>
-           </tr>
-           <tr>
-             <td className="py-4 px-8 text-center table-cell"> <span className="list-disc"></span>Transfer from JRO Airport to the hotel</td>
-             <td className="py-4 px-8 text-center table-cell">Flights</td>
-           </tr>
-           <tr>
-             <td className="py-4 px-8 text-center table-cell"> <span className="list-disc"></span>Transfer from JRO Airport to the hotel</td>
-             <td className="py-4 px-8 text-center table-cell">Flights</td>
-           </tr> */}
+ 
