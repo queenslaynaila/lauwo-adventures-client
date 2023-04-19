@@ -1,11 +1,23 @@
 import { generateSlug } from "@/utils/generateSlug";
-
+import Image from "next/image";
 export default function blog({blog}) {
-  console.log(blog)
+  console.log(blog.image_url)
   return (
-    <div>
-      single blog
-    </div>
+ 
+      <main className="font-poly ">
+       <header className="w-full h-64   bg-cover bg-center flex justify-center items-center font-poly" style={{ backgroundImage: `url(${blog.image_url})`}}></header>
+        <div class=" mx-4 lg:px-0">
+            <h2 class="text-4xl font-semibold leading-tight my-2">
+               {blog.title}
+            </h2>
+        </div>
+        <div>
+          {blog.content.split("\n").map((paragraph, index) => (
+            <p key={index} className="pb-2 mx-4">{paragraph}</p>
+          ))}
+       </div>
+      </main> 
+ 
   )
 }
 
