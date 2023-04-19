@@ -52,7 +52,7 @@ const NavBar = () => {
           <Link href="/#contact">Contact</Link>
         </li>
         <li>
-          <Link href="/blog">Blog</Link>
+          <Link href="/blogs">Blog</Link>
         </li>
         <li>
           <GuideDropDown setIsOpen={setIsOpen} />
