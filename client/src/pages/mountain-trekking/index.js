@@ -14,7 +14,7 @@ export default function index({mountains}) {
       setCurrentImageIndex((prevIndex) => (prevIndex === mountains.length - 1 ? 0 : prevIndex + 1));
     };
   return (
-    <div className="h-screen bg-gray-100 flex items-center justify-center relative font-poly">
+    <div className="h-screen mb-2 bg-gray-100 flex items-center justify-center relative font-poly">
     {mountains.map((mountain, index) => (
       <div
           key={index}
