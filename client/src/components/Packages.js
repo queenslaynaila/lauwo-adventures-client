@@ -47,15 +47,15 @@ export default function Packages({ packages }) {
 
     standardTableRows.push(
       <tr key={i}>
-        <td className="py-4 px-4 text-center table-cell">{standardInclusiveItem}</td>
-        <td className="py-4 px-4 text-center table-cell">{standardExclusiveItem}</td>
+        <td className="py-4 px-4 text-center table-cell capitalize">{standardInclusiveItem}</td>
+        <td className="py-4 px-4 text-center table-cell capitalize">{standardExclusiveItem}</td>
       </tr>
     );
 
     premiumTableRows.push(
       <tr key={i}>
-        <td className="py-4 px-4 text-center table-cell">{premiumInclusiveItem}</td>
-        <td className="py-4 px-4 text-center table-cell">{premiumExclusiveItem}</td>
+        <td className="py-4 px-4 text-center table-cell capitalize">{premiumInclusiveItem}</td>
+        <td className="py-4 px-4 text-center table-cell capitalize">{premiumExclusiveItem}</td>
       </tr>
     );
   }
