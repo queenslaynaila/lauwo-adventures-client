@@ -1,6 +1,6 @@
  
 
-export default function [blog]() {
+export default function blog() {
   return (
     <div>
       single blog
