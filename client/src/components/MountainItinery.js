@@ -1,4 +1,9 @@
- 
+import { GiMeal } from 'react-icons/gi';
+import {GiHiking } from 'react-icons/gi';
+import {GiMountainClimbing } from 'react-icons/gi';
+import {GiGrassMushroom} from 'react-icons/gi';
+import {GiPathDistance} from 'react-icons/gi';
+import {FaBed} from 'react-icons/gi'
 
 export default function MountainItinery({itinery,index}) {
   console.log(index)
@@ -18,6 +23,54 @@ export default function MountainItinery({itinery,index}) {
       
        
         <p>{itinery.description}</p>
+     
+        {itinery.hiking_time && (
+  <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
+    <GiHiking className="text-xl" />
+    Hiking time: {itinery.hiking_time}
+  </p>
+)}
+{itinery.max_altitude && (
+  <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
+    <GiMountainClimbing className="text-xl" />
+    Max Altitude: {itinery.max_altitude}
+  </p>
+)}
+
+{itinery.vegatation && (
+  <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
+    <GiGrassMushroom className="text-xl" />
+    Vegatation: {itinery.vegatation}
+  </p>
+)}
+                
+{itinery.meals && (
+  <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
+    <GiMeal className="text-xl" />
+    Meals: {itinery.meals}
+  </p>
+)}
+{itinery.hut && (
+  <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
+    <FaBed className="text-xl" />
+    Accomodation: {itinery.accomodation}
+  </p>
+)}
+
+                
+{itinery.distance && (
+  <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
+    <GiPathDistance className="text-xl" />
+    Distance: {itinery.distance}
+  </p>
+)}
+ 
+
+
+
+
+
+
       </div>
     </div>
   </div>
