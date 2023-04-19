@@ -1,7 +1,7 @@
  
 import Image from 'next/image'
 export default function RouteCard({route,duration}) {
-    console.log(duration)
+    
   return (
      
       <div className='bg-sand font-poly'>
