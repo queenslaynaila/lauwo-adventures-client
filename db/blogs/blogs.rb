@@ -1,6 +1,6 @@
 Blog.create([
     {
-        image_url:"https://www.tranquilkilimanjaro.com/wp-content/uploads/safari-beer-600x450.jpeg",
+        image_url:"http://africainvestmentconference.com/wp-content/uploads/2020/04/wil-stewart-UErWoQEoMrc-unsplash.jpg",
         title:"Safari Lager: The Wild Adventure for Your Taste Buds",
         content:"Are you a beer lover traveling to Tanzania? Well, you're in luck because Tanzania has some of the best beers you'll ever taste! But, let's be real, when it comes to beer, what you really want to know is which one is going to knock your socks off. So, without further ado, let me introduce you to one of Tanzania's finest brews: Safari Lager.(Note: Just to clarify, we are not affiliated with Safari Lager in any way. We're simply big fans of the beer and want to share our thoughts with fellow beer enthusiasts!)/n
 
@@ -15,7 +15,7 @@ Blog.create([
         author:"Queenslay Jema"
     },
     {
-        image_url:"https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/tanzania-shopping-cover.jpg",
+        image_url:"https://www.discoverafricablog.com/dab_content/uploads/2022/06/baskets-1024x681.webp",
         title:"How to Shop Like a Tanzanian: Fun Swahili Phrases for Market Bargaining.",
         content:"When in Tanzania, do as the Tanzanians do! That's the best advice I can give you when it comes to shopping in local markets. And what better way to blend in than by learning a few fun Swahili phrases? Not only will it make shopping more enjoyable, but it'll also impress the locals and give you some good laughs along the way./n
         
