@@ -36,11 +36,11 @@ export default function index({mountain}) {
               <div class="absolute inset-0 bg-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div class="absolute inset-0 flex flex-col items-center justify-center">
                   <h2 class="text-lg font-bold text-black mb-4">{route.route_name}</h2>
-                  <div class="space-y-2">
+                  <div  >
                   {route.durations.map((duration) => (
                     <Link   href={`/mountain-trekking/${generateSlug(mountain.mountain_name)}/${generateSlug(route.route_name)}-${duration}-days`}>
                     <button
-                class="w-full mb-2  py-2 border border-black bg-yellow-400 text-black font-bold hover:bg-black hover:text-yellow-400"
+                class="w-full mb-2 px-2  py-2 border border-black bg-yellow-400 text-black font-bold hover:bg-black hover:text-yellow-400"
                 key={duration}
               >
                 {duration} days
