@@ -10,7 +10,7 @@ const RouteSection = ({route,duration,itineries,packages}) => {
     <RouteCard route={route} duration={duration}/>
     <div className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2 ">ITINERY</div>
     <div className='relative'>
-    <div class="vl absolute  border-l-2 border-black ml-[-3px] left-1/2 " style={{height:"99%",top:"1%"}}></div>
+    <div className="vl absolute  border-l-2 border-black ml-[-3px] left-1/2 " style={{height:"99%",top:"1%"}}></div>
     {itineries.map((itinery,index) => (
       
       <MountainItinery key={itinery.id} index={index} itinery={itinery} />

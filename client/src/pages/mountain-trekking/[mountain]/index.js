@@ -22,25 +22,25 @@ export default function index({mountain}) {
           </div>
         </div>
 
-       <div class="flex flex-wrap">
+       <div className="flex flex-wrap">
           {mountain.routes.map((route)=>(
-            <div class="w-full md:w-1/3 p-4">
-            <div class="relative bg-white overflow-hidden shadow-lg group">
+            <div className="w-full md:w-1/3 p-4">
+            <div className="relative bg-white overflow-hidden shadow-lg group">
                <div>
                   <Image src={route.image_URL} alt="Mount Kilimanjaro" width={500} height={333} />
                </div>
              
-              <div class="absolute bottom-0 bg-yellow-400 text-black p-2 w-full" style={{objectFit:"cover"}}>
-                <h2 class="text-lg font-bold text-center">{route.route_name}</h2>
+              <div className="absolute bottom-0 bg-yellow-400 text-black p-2 w-full" style={{objectFit:"cover"}}>
+                <h2 className="text-lg font-bold text-center">{route.route_name}</h2>
               </div>
-              <div class="absolute inset-0 bg-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute inset-0 flex flex-col items-center justify-center">
-                  <h2 class="text-lg font-bold text-black mb-4">{route.route_name}</h2>
+              <div className="absolute inset-0 bg-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <h2 className="text-lg font-bold text-black mb-4">{route.route_name}</h2>
                   <div  >
                   {route.durations.map((duration) => (
                     <Link   href={`/mountain-trekking/${generateSlug(mountain.mountain_name)}/${generateSlug(route.route_name)}-${duration}-days`}>
                     <button
-                class="w-full mb-2 px-2  py-2 border border-black bg-yellow-400 text-black font-bold hover:bg-black hover:text-yellow-400"
+                className="w-full mb-2 px-2  py-2 border border-black bg-yellow-400 text-black font-bold hover:bg-black hover:text-yellow-400"
                 key={duration}
               >
                 {duration} days
