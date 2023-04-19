@@ -11,7 +11,8 @@ export default function BlogCard({blog}) {
       <div className="flex justify-between mt-4">
         <span className="font-thin text-sm">{blog.date}</span>
         <Link  href={`/blogs/${generateSlug(blog.title)}`} passHref={true} legacyBehavior={true}>
-  <a className="flex items-center bg-yellow-400 rounded py-2 px-2 font-bold hover:bg-yellow-700 hover:text-white">
+  <a className="flex items-center bg-yellow-400 rounded py-2 px-2 font-bold 
+  hover:bg-yellow-700 hover:text-white">
     <span>Read more</span>
     <FiArrowRight className="ml-2" />
   </a>
