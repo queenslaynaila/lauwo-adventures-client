@@ -1,80 +1,14 @@
  
-import Image from 'next/image';
 import { generateSlug } from '@/utils/generateSlug';
 import RouteCard from '@/components/RouteCard';
-const RouteSection = ({RouteData}) => {
+import MountainItinery from '@/components/MountainItinery';
+import Packages from '@/components/Packages';
+const RouteSection = ({route,duration}) => {
   return (
  <div className='font-poly'>
-    <RouteCard RouteData={RouteData}/>
-
-    <div class="relative">
-      <div class="vl absolute  border-l-2 border-black ml-[-3px] left-1/2 " style={{height:"95%",top:"5%"}}>
-      </div>
-     <div class="flex justify-center bg-sand">
-        <div class="w-1/2 m-4 relative">
-          <div class="absolute top-0 left-0   flex items-center justify-center w-16 h-16   text-white text-6xl font-bold">01
-          </div>
-          <div class="h-full flex items-center justify-center text-black rounded-full">
-              <h1 className='text-2xl font-bold'>Arrival and Pickup</h1>
-          </div>
-        </div>
-        <div class="w-1/2 m-4">
-          <p >We trekn across picturesque moorland meadows, making our way to the Shira 1 Camp where we'll enjoy a delicious dinner and spend the night. Along the way, we'll be treated to breathtaking views of the valleys, cathedral like structures that make up the Shira caldera and plane land of Western Kilimanjaro. As the sun sets, temperatures will drop significantly, making for a much chillier night than the previous one.</p>
-        </div>
-     </div>
-      <div class="flex justify-center" style={{backgroundColor:"#FFF4D2"}}>
-        <div class="w-1/2 m-4  ">
-          <p>We trek across picturesque moorland meadows, making our way to the Shira 1 Camp where we'll enjoy a delicious dinner and spend the night. Along the way, we'll be treated to breathtaking views of the valleys, cathedral like structures that make up the Shira caldera and plane land of Western Kilimanjaro. As the sun sets, temperatures will drop significantly, making for a much chillier night than the previous one.</p>
-        </div>
-        <div class="w-1/2 m-4 relative">
-          <div class="absolute top-0 left-0   flex items-center justify-center w-16 h-16   text-white text-6xl font-bold  ">01</div>
-            <div class="h-full flex items-center justify-center text-black rounded-full">
-              <h1 className='text-2xl font-bold'>Arrival and Pickup</h1>
-            </div>
-        </div>
-      </div>
-      <div class="flex justify-center bg-sand">
-        <div class="w-1/2 m-4 relative">
-          <div class="absolute top-0 left-0   flex items-center justify-center w-16 h-16   text-white text-6xl font-bold">01
-          </div>
-          <div class="h-full flex items-center justify-center text-black rounded-full">
-              <h1 className='text-2xl font-bold'>Arrival and Pickup</h1>
-          </div>
-        </div>
-        <div class="w-1/2 m-4">
-          <p >We trekn across picturesque moorland meadows, making our way to the Shira 1 Camp where we'll enjoy a delicious dinner and spend the night. Along the way, we'll be treated to breathtaking views of the valleys, cathedral like structures that make up the Shira caldera and plane land of Western Kilimanjaro. As the sun sets, temperatures will drop significantly, making for a much chillier night than the previous one.</p>
-        </div>
-      </div>
-    
-    </div>
-
-    <div>
-     <div className="bg-white py-8 text-center text-3xl font-bold uppercase mt-4">PACKAGES</div>
-      <div className="bg-sand px-8 py-12">
-        <table className="w-full mx-auto border-collapse text-black">
-            <thead>
-                <tr style={{backgroundColor:"#FFF4D2"}}>
-                  <th className="bg-background py-4 px-8 font-bold uppercase">Includes</th>
-                  <th className="bg-background py-4 px-8 font-bold uppercase">Excludes</th>
-                </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="py-4 px-8 text-center table-cell"> <span className="list-disc"></span>Transfer from JRO Airport to the hotel</td>
-              <td className="py-4 px-8 text-center table-cell">Flights</td>
-            </tr>
-            <tr>
-              <td className="py-4 px-8 text-center table-cell"> <span className="list-disc"></span>Transfer from JRO Airport to the hotel</td>
-              <td className="py-4 px-8 text-center table-cell">Flights</td>
-            </tr>
-            <tr>
-              <td className="py-4 px-8 text-center table-cell"> <span className="list-disc"></span>Transfer from JRO Airport to the hotel</td>
-              <td className="py-4 px-8 text-center table-cell">Flights</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <RouteCard route={route} duration={duration}/>
+    <MountainItinery />
+    <Packages/>
  </div>
   );
 };
@@ -103,38 +37,50 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({params}) {
-  const { mountain, route } = params;
-  const words = route.split('-');
-  const routeName = words.slice(0, -2).join(' ');
-  const duration = words.slice(-2, -1)[0];
-  
  
-  const res = await fetch('http://localhost:3000/mountains');
-  const mountains = await res.json();
 
+  export async function getStaticProps({ params }) {
+    const { mountain, route } = params;
+    
+    // Extract route name and duration from route string
+    const words = route.split('-');
+    const routeName = words.slice(0, -2).join(' ');
+    const duration = words.slice(-2, -1)[0];
+    
+    // Fetch all mountains
+    const res = await fetch('http://localhost:3000/mountains');
+    const mountains = await res.json();
   
-  // Find the mountain with the matching slug
-  const mountainData = mountains.find(
-    (mtn) => generateSlug(mtn.mountain_name) === mountain
-  );
-//Find the route 
-  const RouteData = mountainData.routes.find(
-    (route) =>  route.route_name.toLowerCase() === routeName
-  );
-
-   
-  const res2 =   await fetch('http://localhost:3000/route_durations');
-  const data2 = await res2.json();
-
-  const dur = data2.find((dur) => {
-    return dur.duration_days === parseInt(duration) && dur.route_name === RouteData.route_name;
-  });
+    // Find the mountain that matches the slug in the URL
+    const mountainData = mountains.find(
+      (mtn) => generateSlug(mtn.mountain_name) === mountain
+    );
+    
+    // Find the route that matches the route name in the URL
+    const RouteData = mountainData.routes.find(
+      (route) => route.route_name.toLowerCase() === routeName
+    );
+    
+    // Fetch all route durations
+    const res2 = await fetch('http://localhost:3000/route_durations');
+    const routeDurations = await res2.json();
+    
+    // Find the route duration that matches the duration and route name in the URL
+    const routeDuration = routeDurations.find((routeDuration) => {
+      return routeDuration.duration_days === parseInt(duration) && routeDuration.route_name === RouteData.route_name;
+    });
+    
+    // Extract the itineraries from the route duration
+    const { itineries, ...routeDetails } = routeDuration;
+    
+    // Return the props with separate route and itinerary objects
+    return {
+      props: {
+        route:  RouteData,
+        itineries: itineries,
+        routeDetails: routeDetails,
+        duration: duration
+      },
+    };
+  }
   
-
-  console.log(dur)  
-  console.log(duration)
-  console.log(RouteData.route_name)
-  return {
-    props: {RouteData},
-  }}
