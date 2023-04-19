@@ -26,7 +26,7 @@ export default function index({mountains}) {
           }}
         >
         <div className="bg-black/50 h-full flex flex-col justify-center items-center">
-          <h1 className="font-poppins font-extrabold text-white text-4xl md:text-7xl mx-4 hover:text-yellow-500">
+          <h1 className="font-poppins font-extrabold  text-4xl md:text-7xl mx-4 text-yellow-500">
             {mountain.mountain_name}
           </h1>
           <p className="text-white my-8 mx-8 md:mx-16 text-center font-medium text-xl md:text-2xl leading-7 tracking-tighter">
