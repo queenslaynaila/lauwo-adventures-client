@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
  
 export default function index({mountain}) {
-   
+  
   return (
      <div  className='font-poly'>
-        <header className="w-full h-64  bg-[url('/kilimanjaro.jpg')] bg-cover bg-center flex justify-center items-center">
-              <h1 className='text-4xl mt-8 text-white  text-center font-bold w-8/12 sm:w-6/12 leading-[50px]'>{mountain.mountain_name}</h1>
+        <header className="w-full h-64  bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${mountain.image_url})` }} >
+              <h1 className='text-4xl mt-8 text-white  text-center font-bold w-8/12 sm:w-6/12 leading-[50px] hover:text-yellow-500'>{mountain.mountain_name}</h1>
         </header>
 
         <div className="p-4 mb-4">
