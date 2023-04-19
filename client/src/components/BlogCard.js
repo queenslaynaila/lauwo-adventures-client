@@ -1,4 +1,6 @@
 import { FiArrowRight } from 'react-icons/fi';
+import { generateSlug } from '@/utils/generateSlug';
+import Link from 'next/link';
 export default function BlogCard({blog}) {
   return (
     <div key={blog.id} className="my-8">
@@ -8,9 +10,13 @@ export default function BlogCard({blog}) {
       <p className="text-gray-700 mb-2">{blog.content.split(" ").slice(0, 40).join(" ") + "..."}</p>
       <div className="flex justify-between mt-4">
         <span className="font-thin text-sm">{blog.date}</span>
-        <button className="flex items-center bg-yellow-500  rounded  py-2 px-2 font-bold" type="button">
-          Read more <FiArrowRight className="ml-2" />
-        </button>
+        <Link  href={`/blogs/${generateSlug(blog.title)}`} passHref={true} legacyBehavior={true}>
+  <a className="flex items-center bg-yellow-400 rounded py-2 px-2 font-bold hover:bg-yellow-700 hover:text-white">
+    <span>Read more</span>
+    <FiArrowRight className="ml-2" />
+  </a>
+</Link>
+  
       </div>
     </div>
   </div>
