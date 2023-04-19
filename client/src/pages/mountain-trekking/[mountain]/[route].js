@@ -3,13 +3,23 @@ import { generateSlug } from '@/utils/generateSlug';
 import RouteCard from '@/components/RouteCard';
 import MountainItinery from '@/components/MountainItinery';
 import Packages from '@/components/Packages';
-const RouteSection = ({route,duration}) => {
+const RouteSection = ({route,duration,itineries,packages}) => {
+  
   return (
- <div className='font-poly'>
+    <div className='font-poly'>
     <RouteCard route={route} duration={duration}/>
-    <MountainItinery />
-    <Packages/>
- </div>
+    <div className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2">ITINERY</div>
+    <div className='relative'>
+    <div class="vl absolute  border-l-2 border-black ml-[-3px] left-1/2 " style={{height:"99%",top:"1%"}}></div>
+    {itineries.map((itinery,index) => (
+      
+      <MountainItinery key={itinery.id} index={index} itinery={itinery} />
+    ))}
+    </div>
+    
+   
+    <Packages packages={packages}/>
+  </div>
   );
 };
 
@@ -78,7 +88,7 @@ export async function getStaticPaths() {
       props: {
         route:  RouteData,
         itineries: itineries,
-        routeDetails: routeDetails,
+        packages: routeDetails,
         duration: duration
       },
     };
