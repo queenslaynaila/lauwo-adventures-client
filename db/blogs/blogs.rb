@@ -1,6 +1,6 @@
 Blog.create([
     {
-        image_url:"http://africainvestmentconference.com/wp-content/uploads/2020/04/wil-stewart-UErWoQEoMrc-unsplash.jpg",
+        image_url:"https://www.tranquilkilimanjaro.com/wp-content/uploads/safari-beer-600x450.jpeg",
         title:"Safari Lager: The Wild Adventure for Your Taste Buds",
         content:"Are you a beer lover traveling to Tanzania? Well, you're in luck because Tanzania has some of the best beers you'll ever taste! But, let's be real, when it comes to beer, what you really want to know is which one is going to knock your socks off. So, without further ado, let me introduce you to one of Tanzania's finest brews: Safari Lager.(Note: Just to clarify, we are not affiliated with Safari Lager in any way. We're simply big fans of the beer and want to share our thoughts with fellow beer enthusiasts!)/n
 
