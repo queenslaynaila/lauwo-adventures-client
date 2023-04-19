@@ -109,8 +109,7 @@ export async function getStaticProps({params}) {
   const routeName = words.slice(0, -2).join(' ');
   const duration = words.slice(-2, -1)[0];
   
-  console.log(routeName); // 'machame route'
-  console.log(duration); // '6'
+ 
   const res = await fetch('http://localhost:3000/mountains');
   const mountains = await res.json();
 
@@ -124,7 +123,18 @@ export async function getStaticProps({params}) {
     (route) =>  route.route_name.toLowerCase() === routeName
   );
 
-  console.log(RouteData)
+   
+  const res2 =   await fetch('http://localhost:3000/route_durations');
+  const data2 = await res2.json();
+
+  const dur = data2.find((dur) => {
+    return dur.duration_days === parseInt(duration) && dur.route_name === RouteData.route_name;
+  });
+  
+
+  console.log(dur)  
+  console.log(duration)
+  console.log(RouteData.route_name)
   return {
     props: {RouteData},
   }}
