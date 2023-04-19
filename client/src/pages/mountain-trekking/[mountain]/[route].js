@@ -1,30 +1,11 @@
  
 import Image from 'next/image';
 import { generateSlug } from '@/utils/generateSlug';
-const RouteSection = () => {
+import RouteCard from '@/components/RouteCard';
+const RouteSection = ({RouteData}) => {
   return (
  <div className='font-poly'>
-    <div className='bg-sand font-poly'>
-      <div className="flex items-center justify-center">
-           <Image src="/peakfinder.png" alt='nnn' height={50} width={50} className='mr-2' />
-           <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl text-xl capitalize text-center text-black py-32 "> Lemosho Route | 8 Days </h3>
-      </div>
-      <div class="flex flex-col items-center px-8 -mt-24">
-        <div class="flex relative flex-col md:flex-row md:items-center mb-28">
-          <div class="md:w-1/2">
-              <img src="/kilimanjaro.jpg" alt="Route" class="rounded-lg mb-4 h-96 object-cover object-center" />
-          </div>
-          <div class="md:w-1/2 md:ml-8">
-                <p class="mb-4 text-lg leading-6">Lemosho “wine route” is located on the Western side of Mount Kilimanjaro. It is a unique route for its abundance of wild animals on Mount Kilimanjaro during the dry seasons and its clear view of Shira plateau which is the first peak to be formed and currently one of the three faces of Kilimanjaro. It offers a moderately challenging hike with adequate acclimatization period before conquering the summit and is the most favored route to reach the peak with a high summit success rate.</p>
-                <div class="text-center h-24">
-                  <button class="mt-auto bg-yellow-400 text-black py-2 px-4 md:w-1/5">
-                    Book Slot
-                  </button>
-                </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <RouteCard RouteData={RouteData}/>
 
     <div class="relative">
       <div class="vl absolute  border-l-2 border-black ml-[-3px] left-1/2 " style={{height:"95%",top:"5%"}}>
@@ -99,5 +80,51 @@ const RouteSection = () => {
 };
 
 export default RouteSection;
-
  
+
+export async function getStaticPaths() {
+  const res = await fetch('http://localhost:3000/mountains');
+  const mountains = await res.json();
+
+  const allPaths = mountains.flatMap((mountain) =>
+    mountain.routes.flatMap((route) =>
+      route.durations.map((duration) => ({
+        params: {
+          mountain: generateSlug(mountain.mountain_name),  
+          route: generateSlug(route.route_name) + `-${duration}-days`,
+        },
+      }))
+    )
+  );
+  
+  return {
+    paths: allPaths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({params}) {
+  const { mountain, route } = params;
+  const words = route.split('-');
+  const routeName = words.slice(0, -2).join(' ');
+  const duration = words.slice(-2, -1)[0];
+  
+  console.log(routeName); // 'machame route'
+  console.log(duration); // '6'
+  const res = await fetch('http://localhost:3000/mountains');
+  const mountains = await res.json();
+
+  
+  // Find the mountain with the matching slug
+  const mountainData = mountains.find(
+    (mtn) => generateSlug(mtn.mountain_name) === mountain
+  );
+//Find the route 
+  const RouteData = mountainData.routes.find(
+    (route) =>  route.route_name.toLowerCase() === routeName
+  );
+
+  console.log(RouteData)
+  return {
+    props: {RouteData},
+  }}
