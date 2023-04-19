@@ -18,7 +18,7 @@ export default function index({mountains}) {
     {mountains.map((mountain, index) => (
       <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat`}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat object-cover  `}
           style={{
             backgroundImage: `url(${mountain.image_url})`,
             opacity: currentImageIndex === index ? 1 : 0,
