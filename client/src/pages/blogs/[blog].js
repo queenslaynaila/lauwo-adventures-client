@@ -1,4 +1,6 @@
 import { generateSlug } from "@/utils/generateSlug";
+import { FiArrowRight } from 'react-icons/fi';
+import Link from "next/link";
 import Image from "next/image";
 export default function blog({blog}) {
   console.log(blog.image_url)
@@ -15,6 +17,15 @@ export default function blog({blog}) {
           {blog.content.split("\n").map((paragraph, index) => (
             <p key={index} className="pb-2 mx-4">{paragraph}</p>
           ))}
+          <div className="flex item-center justify-center py-4 ">
+             <Link  href='/blogs' passHref={true} legacyBehavior={true}>
+                <a className="flex items-center bg-yellow-400 rounded py-2 px-2 font-bold 
+                hover:bg-yellow-700 hover:text-white">
+                  <span>Read more</span>
+                  <FiArrowRight className="ml-2" />
+                </a>
+            </Link>
+         </div>
        </div>
       </main> 
  
