@@ -1,44 +1,25 @@
-import { blogsData } from '../../data/blogData';
-import Image from 'next/image';
-import { truncate } from '@/utils/truncate';
+import BlogCard from '@/components/BlogCard';
 export default function index({blogs}) {
-    console.log(blogs)
+     
   return (
-    <div>
-      {blogsData.map(val=>(
-        <div className="p-4" key={val.title}>
-            <div className="relative bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-[460px] max-w-[800px]">
-              <Image
-                src={val.image}
-                alt="/"
-                width={800}
-                height={600}
-                className="h-48 w-full object-cover rounded-t-lg"
-              />
-              <div className="p-5 h-48">
-                <h2 className="mb-2 sm:text-lg font-bold font-poly tracking-wide text-gray-900 capitalize">
-                  {val.title}
-                </h2>
-                <p className="mb-3 mt-2 text-gray-800 text-xs 2xl:text-base 2xl:leading-10 lg:text-sm lg:leading-7">
-                  {truncate(val.description, 100)}
-                </p>
-                <div className="flex justify-between sm:gap-20 gap-8 absolute bottom-2">
-                  <a
-                    href="#"
-                    className="inline-flex items-center sm:text-sm text-xs font-medium text-center text-gray-600"
-                  >
-                    Read more
-                    
-                  </a>
-                  <p className="inline-flex items-center sm:text-sm text-xs text-center text-gray-600">
-                    {val.date}
-                  </p>
-                </div>
-              </div>
-            </div>
+      <div className='font-poly'>
+        <header className="w-full h-64 lg:h-96 bg-[url('/safari-1.jpg')] bg-cover bg-center flex justify-center items-center font-poly">
+          <div role="main" class="flex flex-col items-center justify-center">
+            <h1 class="text-2xl font-semibold leading-9 text-center lg:w-1/2 md:w-10/12 w-11/12 ml-4"> Explore Our Latest Travel Stories</h1>
+            <p class="text-base leading-normal text-center mt-4 lg:w-1/2 md:w-10/12 w-11/12">Discover the hidden gems of Tanzania with our expert guides. From the majestic peaks of Kilimanjaro to thrilling safaris and cultural experiences, our blog has it all</p>
           </div>
-      ))}
-    </div>
+        </header>
+        <main class="lg:relative  lg:-top-40    py-12 md:px-20 sm:px-14 px-6">
+          <div class="mt-2 md:flex space-x-6">
+                {blogs.map((blog) => (
+                  <BlogCard blog={blog} />
+            ))}
+          </div>
+        </main>
+     </div>
+
+ 
+
   )
 }
 
@@ -51,4 +32,3 @@ export async function getStaticProps() {
       props: { blogs },
     };
   }
-  
