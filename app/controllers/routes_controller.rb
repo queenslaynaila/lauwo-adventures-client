@@ -4,9 +4,9 @@ class RoutesController < ApplicationController
 
   # GET /routes
   def index
-    @routes = Route.all
+    routes = Route.all
 
-    render json: @routes
+    render json: routes, include: :route_durations
   end
 
   # GET /routes/1

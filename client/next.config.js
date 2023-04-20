@@ -7,6 +7,9 @@ const nextConfig = {
       'upload.wikimedia.org',
       'i.pinimg.com',
       'plus.unsplash.com',
+      'explorerspassage.com',
+      'www.shadowsofafrica.com',
+'media-cdn.tripadvisor.com'
     ],
   },
 };

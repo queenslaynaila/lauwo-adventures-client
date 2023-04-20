@@ -1,3 +1,5 @@
+ 
+
 class CreateJwtDenylist < ActiveRecord::Migration[7.0]
   def up
     create_table :jwt_denylist do |t|
@@ -8,6 +10,6 @@ class CreateJwtDenylist < ActiveRecord::Migration[7.0]
   end
 
   def down
-    drop_table :jwt_denylists
+    drop_table :jwt_denylist
   end
 end
