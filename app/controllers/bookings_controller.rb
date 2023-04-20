@@ -19,9 +19,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
 
     if @booking.save
-      render json: @booking, status: :created, location: @booking
+      render json: { message: 'Booking was successful.' }, status: :created, location: @booking
     else
-      render json: @booking.errors, status: :unprocessable_entity
+      render json: { errors: @booking.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
