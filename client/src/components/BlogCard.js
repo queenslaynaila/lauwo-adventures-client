@@ -1,11 +1,12 @@
 import { FiArrowRight } from 'react-icons/fi';
 import { generateSlug } from '@/utils/generateSlug';
 import Link from 'next/link';
+
 export default function BlogCard({blog}) {
   return (
     <div key={blog.id} className="my-8">
     <img src={blog.image_url} alt="" className='object-cover'/>
-    <div>
+    <div className='border rounded-b-lg p-4'>
       <h1 className="mt-3 text-gray-800 text-2xl font-bold my-2">{blog.title}</h1>
       <p className="text-gray-700 mb-2">{blog.content.split(" ").slice(0, 40).join(" ") + "..."}</p>
       <div className="flex justify-between mt-4">
