@@ -1,5 +1,7 @@
 import { generateSlug } from "@/utils/generateSlug";
 import { FiArrowRight } from 'react-icons/fi';
+import { BsFillPersonFill} from 'react-icons/bs';
+import {AiFillClockCircle} from 'react-icons/ai';
 import Link from "next/link";
 import Image from "next/image";
 export default function blog({blog}) {
@@ -14,6 +16,15 @@ export default function blog({blog}) {
             </h2>
         </div>
         <div>
+        <div class="flex items-center pb-2 mx-6">
+           <AiFillClockCircle  />
+            <p>{blog.created_at}</p>
+        </div>
+        <div class="flex items-center pb-2 mx-6">
+          <BsFillPersonFill  />
+          <p>{blog.author}</p>
+        </div>
+
         {blog.content.split('\n').map((paragraph, index) => (
             <p key={index} className="pb-2 mx-4">{paragraph.replace('/n', '')}</p>
          ))}
