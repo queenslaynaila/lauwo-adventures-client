@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import { generateSlug } from '@/utils/generateSlug';
 import { GiMeal } from 'react-icons/gi';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import SafariBookingForm from '@/components/SafariBookingForm';
 
 const Safari = ({ safari }) => {
   return (
@@ -52,9 +55,15 @@ const Safari = ({ safari }) => {
             </div>
           ))}
           <div className="flex  items-center justify-center">
-          <button className='bg-black text-white px-8 rounded-md py-4 ml-auto mb-16 hover:border-black hover:border hover:text-black hover:bg-transparent'>
-            Book
-          </button>
+          <Popup
+            trigger={
+              <button className='bg-black text-white px-8 rounded-md py-4 ml-auto mb-16 hover:border-black hover:border hover:text-black hover:bg-transparent'
+              > Book Safari</button>}
+            modal
+            nested
+          >
+            <SafariBookingForm  safari={safari} />
+          </Popup>
         </div>
         </div>
       </div>
