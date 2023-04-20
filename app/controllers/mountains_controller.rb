@@ -19,7 +19,7 @@ class MountainsController < ApplicationController
     @mountain = Mountain.new(mountain_params)
 
     if @mountain.save
-      render json: @mountain, status: :created, location: @mountain
+      render json: { message: 'Mountain was successfully created.' }, status: :created, location: @mountain
     else
       render json: @mountain.errors, status: :unprocessable_entity
     end
@@ -28,9 +28,9 @@ class MountainsController < ApplicationController
   # PATCH/PUT /mountains/1
   def update
     if @mountain.update(mountain_params)
-      render json: @mountain
+      render json: { message: 'Mountain was successfully updated.' }
     else
-      render json: @mountain.errors, status: :unprocessable_entity
+      render json: { errors: @mountain.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
