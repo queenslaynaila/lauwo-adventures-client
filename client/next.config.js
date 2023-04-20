@@ -9,13 +9,9 @@ const nextConfig = {
       'plus.unsplash.com',
       'explorerspassage.com',
       'www.shadowsofafrica.com',
-      'media-cdn.tripadvisor.com'
-       
-      
+'media-cdn.tripadvisor.com'
     ],
   },
 };
 
 module.exports = nextConfig;
-
- 
