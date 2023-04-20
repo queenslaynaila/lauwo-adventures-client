@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 export default function BlogCard({blog}) {
   return (
-    <div key={blog.id} className="my-8">
+    <div key={blog.id} className="my-8 bg-white shadow  rounded-lg max-w-sm ">
     <img src={blog.image_url} alt="" className='object-cover'/>
-    <div className='border rounded-b-lg p-4'>
+    <div  className=' p-4 '>
       <h1 className="mb-2 text-gray-800 text-2xl font-bold ">{blog.title}</h1>
       <p className="text-gray-700 mb-2">{blog.content.split(" ").slice(0, 40).join(" ") + "..."}</p>
       <div className="flex justify-between mt-4">
