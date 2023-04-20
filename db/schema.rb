@@ -117,6 +117,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_163243) do
     t.string "mountain_name"
     t.text "description"
     t.string "overview"
+    t.string "image_url"
     t.bigint "adventure_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
