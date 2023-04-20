@@ -23,8 +23,21 @@ Creates a new planning form.
     "bookable_id": 2, //THis can either be a safari id or a route durations id or day trips id or cultural ids 
 }
 ```
-
-
+On succesful post response 
+  ``` json
+  {
+      "message": "Booking was successful."
+  }
+  ```
+On failed post response
+ ``` json
+{
+    "errors": [
+        "Email must be a valid email address",
+        "No of travellers must be at least 1"
+    ]
+}
+  ```
 ## PLANNING FORMS
 These are the endpoints for managing planning forms.
 
