@@ -26,7 +26,7 @@ export default function blog({blog}) {
         </div>
 
         {blog.content.split('\n').map((paragraph, index) => (
-            <p key={index} className="pb-2 mx-4">{paragraph.replace('/n', '')}</p>
+            <p key={index} className="pb-2 mx-6">{paragraph.replace('/n', '')}</p>
          ))}
           <div className="flex item-center justify-center py-4 ">
              <Link  href='/blogs' passHref={true} legacyBehavior={true}>
