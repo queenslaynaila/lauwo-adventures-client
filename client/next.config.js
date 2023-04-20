@@ -9,6 +9,8 @@ const nextConfig = {
       'plus.unsplash.com',
       'explorerspassage.com',
       'www.shadowsofafrica.com',
+      'www.discoverafricablog.com',
+      'www.willflyforfood.net',
 'media-cdn.tripadvisor.com'
     ],
   },
