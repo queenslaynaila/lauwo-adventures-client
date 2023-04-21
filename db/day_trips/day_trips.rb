@@ -6,7 +6,9 @@ DayTrip.create!([
     description: "This is a popular one-day hike option for those who want to experience the beautiful rainforest on Mount Kilimanjaro and get a taste of what it's like to hike on the mountain. Take time to hike up to Mandara Hut, which is the first camp on the Marangu Route of Mount Kilimanjaro, and then descending back to Marangu Gate.",
     itinerary: "We will pick you up at around 8:00 am from your hotel in Moshi and transfer you to Marangu Gate. After registering, we will begin the hike. The one-day trip leads you up to Mandara Hut and back to the entry gate. If you choose the Marangu route, you will enjoy the tropical wilderness of the rainforest. Later, you will proceed to descend through the forest trail back to the gate. From there, we will transfer you back to your hotel.",
     inclusions: "All taxes and VAT applicable, all park fees, picnic lunch on the 1-day trip, transfer from Moshi and back to Moshi, professional english guides licenced by Kilimanjaro national park",
-    exclusions: "Tips for the guides and crew, accommodation and meals, insurance, international flights"
+    exclusions: "Tips for the guides and crew, accommodation and meals, insurance, international flights",
+    image_url:"https://www.shadowsofafrica.com/media/catalog/product/cache/1/small_image/500x/040ec09b1e35df139433887a97daa66f/3/s/3sq_3.jpg",
+    price:"$1000"
   },
   {
     adventure_id: Adventure.find_by(name: "day trips").id,
@@ -14,7 +16,13 @@ DayTrip.create!([
     description: "Arusha National park located in northern Tanzania, is in a protected area near the town of Arusha. It covers an area of about 137 square kilometers (52.9 square miles) and is known for its diverse landscapes, including forests, grasslands, and volcanic mountains. The park is home to a variety of wildlife, including giraffes, buffalos, zebras, and colobus monkeys, as well as over 400 species of birds.
     One of the unique features of Arusha National Park is the presence of Mount Meru, which is the fifth-highest mountain in Africa, and the second-highest peak in Tanzania after Mount Kilimanjaro. The mountain can be climbed in 3-4 days and offers spectacular views of the surrounding areas.
     Arusha National Park is also home to several lakes, including Momela Lake, which is known for its large population of flamingos. Visitors can also enjoy activities such as game drives, and hiking in the park.
-    "
+    ", 
+    itinerary: "We will pick you up at around 8:00 am from your hotel in Moshi and transfer you to Marangu Gate. After registering, we will begin the hike. The one-day trip leads you up to Mandara Hut and back to the entry gate. If you choose the Marangu route, you will enjoy the tropical wilderness of the rainforest. Later, you will proceed to descend through the forest trail back to the gate. From there, we will transfer you back to your hotel.",
+    inclusions: "All taxes and VAT applicable, all park fees, picnic lunch on the 1-day trip, transfer from Moshi and back to Moshi, professional english guides licenced by Kilimanjaro national park",
+    exclusions: "Tips for the guides and crew, accommodation and meals, insurance, international flights",
+    image_url:"https://www.shadowsofafrica.com/media/catalog/product/cache/1/small_image/500x/040ec09b1e35df139433887a97daa66f/s/h/shutterstock_1210366159_sq_1.jpg" ,
+    price:"$1500"
+
   },
   {
     adventure_id: Adventure.find_by(name: "day trips").id,
@@ -29,6 +37,8 @@ DayTrip.create!([
     ",
     inclusions:"Transportation to and from Kikuletwa Hot Springs, English-speaking driver/guide, Picnic lunch, Bottled water",
     exclusions: "Gratuities (optional), Personal expenses and souvenir purchases"
+    image_url: "https://www.shadowsofafrica.com/media/catalog/product/cache/1/small_image/500x/040ec09b1e35df139433887a97daa66f/l/a/lake-manyara-sq.jpg" ,
+    price:"$1500"
   },
   {
     adventure_id: Adventure.find_by(name: "day trips").id,
@@ -39,6 +49,8 @@ DayTrip.create!([
     ",
     inclusions:"Transport, Village fees , 1 night accommodation in a traditional Maasai hut, Driver guide, local English speaking Maasai guide and cook, 1 traditional lunch, 1 BBQ dinner, 1 breakfast, 1.5L bottle of water",
     exclusions: "Personal items, Gratuities/tip for guides, Sodas and alcoholic beverages, Travel insurance"
+    image_url:"https://www.shadowsofafrica.com/media/catalog/product/cache/1/small_image/500x/040ec09b1e35df139433887a97daa66f/t/w/two_white_rhinos_grazing_in_ol_pejeta_conservancy_kenya_2.jpg",
+    price:"$800"
   }
 ])
 
