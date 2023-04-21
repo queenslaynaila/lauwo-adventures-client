@@ -10,7 +10,8 @@ const AdventuresDropDown = ({ setIsOpen }) => {
   useEffect(() => {
     fetch('http://localhost:3000/adventures')
       .then((res) => res.json())
-      .then((data) => setAdventures(data));
+      .then((data) => setAdventures(data)); 
+      //.then((data)=> console.log(data))  
   }, []);
 
   return (

@@ -8,7 +8,7 @@ class CulturalToursController < ApplicationController
   end
 
   def show
-    render json: @cultural_tour, serializer: SingleCulturalTourSerializer, status: :ok
+    render json: @cultural_tour,  status: :ok
   end
 
   def create

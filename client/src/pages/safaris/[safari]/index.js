@@ -3,6 +3,7 @@ import { generateSlug } from '@/utils/generateSlug';
 import { GiMeal } from 'react-icons/gi';
 
 const Safari = ({ safari }) => {
+  
   return (
     <div className="bg-primary px-4">
       <div className="border-l-2 border-black h-full">
