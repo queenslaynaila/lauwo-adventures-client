@@ -1,3 +1,43 @@
+## BOOKINGS
+These are the endpoints for managing bookings.
+
+## POST /planningforms
+http://localhost:3000/planningforms
+
+Creates a new planning form.
+``` json
+{
+    "id": 3,
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "johndoe@example.com",
+    "phone_number": "555-555-5555",
+    "country": "United States",
+    "travel_period": "June 2023",
+    "no_of_travellers": 3,
+    "additional_info": "Special dietary needs",
+    "no_of_adults": 1,
+    "no_of_children": 1,  //this always defaults to zero if no value is pased
+    "no_of_small_children": 1, //this always defaults to zero if no value is pased
+    "bookable_type": "Safari", //the name of the model your booking for either Safari, RouteDuration ,DayTrip, CulturalTrip
+    "bookable_id": 2, //THis can either be a safari id or a route durations id or day trips id or cultural ids 
+}
+```
+On succesful post response 
+  ``` json
+  {
+      "message": "Booking was successful."
+  }
+  ```
+On failed post response
+ ``` json
+{
+    "errors": [
+        "Email must be a valid email address",
+        "No of travellers must be at least 1"
+    ]
+}
+  ```
 ## PLANNING FORMS
 These are the endpoints for managing planning forms.
 

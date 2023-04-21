@@ -32,7 +32,7 @@ const NavBar = () => {
           : 'fixed w-full shadow-sm flex justify-between p-4 items-center  text-white z-10'
       }
     >
-      <Link href="/" className="flex items-center">
+      <Link href="/" className="flex items-center ml-10">
         <Image src="/logo.png" width={50} height={50} alt="logo" />
       </Link>
       <div className="absolute right-6 md:hidden top-6 scale-150">
@@ -52,7 +52,7 @@ const NavBar = () => {
           <Link href="/#contact">Contact</Link>
         </li>
         <li>
-          <Link href="/#blog">Blog</Link>
+          <Link href="/blogs">Blog</Link>
         </li>
         <li>
           <GuideDropDown setIsOpen={setIsOpen} />

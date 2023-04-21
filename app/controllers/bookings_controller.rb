@@ -19,9 +19,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
 
     if @booking.save
-      render json: @booking, status: :created, location: @booking
+      render json: { message: 'Booking was successful.' }, status: :created, location: @booking
     else
-      render json: @booking.errors, status: :unprocessable_entity
+      render json: { errors: @booking.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -47,6 +47,6 @@ class BookingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def booking_params
-      params.require(:booking).permit(:first_name, :second_name, :email)
+      params.require(:booking).permit(:first_name, :last_name, :email, :phone_number, :country, :travel_period, :no_of_travellers, :additional_info, :no_of_adults, :no_of_children, :no_of_small_children, :bookable_type, :bookable_id)
     end
 end

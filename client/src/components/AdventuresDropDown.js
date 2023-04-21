@@ -35,7 +35,10 @@ const AdventuresDropDown = ({ setIsOpen }) => {
         {adventures.map((adventure) => (
           <div key={adventure.id} className="mb-2 py-1">
             <Link href={`/${generateSlug(adventure.name)}`} className="capitalize"
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false)
+              setIsDropdownOpen(false)
+            }}
             >
               {adventure.name}
             </Link>

@@ -255,7 +255,7 @@ SafariItinery.create! ([
        mealplan:"Breakfast and Lunch",
        distance:0,
        image_url: "https://images.unsplash.com/photo-1557456170-0cf4f4d0d362?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-       safari_id: Safari.find_by(duration: '6 days').id
+       safari_id: Safari.find_by(duration: '7 days').id
     },
 
      {
@@ -265,7 +265,7 @@ SafariItinery.create! ([
         mealplan:"Breakfast, Lunch & Dinner",
         distance:0,
         image_url: "https://i.pinimg.com/564x/d4/17/bf/d417bf9fed5a0f9156320eeabd1e4d94.jpg",
-        safari_id: Safari.find_by(duration: '6 days').id
+        safari_id: Safari.find_by(duration: '7 days').id
      },
      {
         day: 3,
@@ -274,7 +274,7 @@ SafariItinery.create! ([
         mealplan:"Breakfast, Lunch & Dinner",
         distance:0,
         image_url: "https://images.unsplash.com/photo-1635514398607-8ab476aed84d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-        safari_id: Safari.find_by(duration: '6 days').id
+        safari_id: Safari.find_by(duration: '7 days').id
      },
      {
         day: 4,
@@ -283,7 +283,7 @@ SafariItinery.create! ([
         mealplan:"Breakfast, Lunch and Dinner",
         distance:0,
         image_url: "https://images.unsplash.com/photo-1628100611772-87b500d254f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-        safari_id: Safari.find_by(duration: '6 days').id
+        safari_id: Safari.find_by(duration: '7 days').id
      },
      {
         day: 5,
@@ -292,7 +292,7 @@ SafariItinery.create! ([
         mealplan:"Breakfast,Lunch and Dinner",
         distance:0,
         image_url: "https://plus.unsplash.com/premium_photo-1666433611166-949ea5d9c3c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
-        safari_id: Safari.find_by(duration: '6 days').id
+        safari_id: Safari.find_by(duration: '7 days').id
      },
      {
         day: 6,
@@ -301,7 +301,7 @@ SafariItinery.create! ([
         mealplan:"Breakfast, Lunch and Dinner",
         distance:0,
         image_url: "https://images.unsplash.com/photo-1563204996-8965f0a4a860?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2lyYWZmZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        safari_id: Safari.find_by(duration: '6 days').id
+        safari_id: Safari.find_by(duration: '7 days').id
      },
      {
       day: 7,
@@ -310,7 +310,7 @@ SafariItinery.create! ([
       mealplan:"Breakfast",
       distance:0,
       image_url: "https://images.unsplash.com/photo-1535284616907-29a0e221d893?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
-      safari_id: Safari.find_by(duration: '6 days').id
+      safari_id: Safari.find_by(duration: '7 days').id
    }
 
 
