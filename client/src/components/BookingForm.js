@@ -18,6 +18,8 @@ const BookingForm = ({ adventure }) => {
     additionalInfo: '',
   })
 
+  const bookableTypes = ['Safari', 'Mountain', 'Day Trip', 'Zanzibar', 'Cultural']
+
   const [errors, setErrors] = useState({})
 
   const handleSubmit = (e) => {
@@ -34,7 +36,7 @@ const BookingForm = ({ adventure }) => {
       no_of_children: formData.noOfChildren,
       no_of_small_children: formData.noOfSmallChildren,
       additional_info: formData.additionalInfo,
-      bookable_type: adventure.name.split('').slice(6).join(''),
+      bookable_type: bookableTypes[0],
       bookable_id: adventure.id,
     }
     console.log(booking)
@@ -231,6 +233,7 @@ const BookingForm = ({ adventure }) => {
               focus:outline-none focus:border-yellow-500"
               type="number"
               name="noOfTravellers"
+              min={0}
               value={formData.noOfTravellers}
               onChange={handleChange}
               required
@@ -244,6 +247,7 @@ const BookingForm = ({ adventure }) => {
               className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="number"
+              min={0}
               name="noOfAdults"
               value={formData.noOfAdults}
               onChange={handleChange}
@@ -259,6 +263,7 @@ const BookingForm = ({ adventure }) => {
               className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="number"
+              min={0}
               name="noOfChildren"
               value={formData.noOfChildren}
               onChange={handleChange}
@@ -272,6 +277,7 @@ const BookingForm = ({ adventure }) => {
               className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="number"
+              min={0}
               name="noOfSmallChildren"
               value={formData.noOfSmallChildren}
               onChange={handleChange}
