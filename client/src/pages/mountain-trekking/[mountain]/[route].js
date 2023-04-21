@@ -4,10 +4,10 @@ import RouteCard from '@/components/RouteCard';
 import MountainItinery from '@/components/MountainItinery';
 import Packages from '@/components/Packages';
 const RouteSection = ({route,duration,itineries,packages}) => {
-  
+  const bookableType = 'Mountain' 
   return (
     <div className='font-poly mb-4'>
-    <RouteCard route={route} duration={duration}/>
+    <RouteCard route={route} duration={duration} bookableType={bookableType}/>
     <div className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2 ">ITINERY</div>
     <div className='relative'>
     <div className="vl absolute  border-l-2 border-black ml-[-3px] left-1/2 " style={{height:"99%",top:"1%"}}></div>
