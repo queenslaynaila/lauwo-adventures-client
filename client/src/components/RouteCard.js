@@ -1,6 +1,6 @@
  
 import Image from 'next/image'
-export default function RouteCard({route,duration}) {
+export default function RouteCard({route,duration,bookableType}) {
     
   return (
      
