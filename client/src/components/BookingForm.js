@@ -40,7 +40,7 @@ const BookingForm = ({ adventure }) => {
       bookable_id: adventure.id,
     }
     console.log(booking)
-    fetch('http://localhost:3000/planningforms', {
+    fetch('http://localhost:3000/bookings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
