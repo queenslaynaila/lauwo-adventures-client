@@ -8,4 +8,6 @@ Adventure.create!(
     {name: "zanzibar"},
   ]
 )
+
+
 puts "Created #{Adventure.count} adventures/adventures"
