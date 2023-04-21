@@ -6,7 +6,6 @@ import {GiPathDistance} from 'react-icons/gi';
 import {FaBed} from 'react-icons/gi'
 
 export default function MountainItinery({itinery,index}) {
-  console.log(index)
   return (
     
     <div>
