@@ -48,11 +48,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_163243) do
     t.string "phone_number"
     t.string "country"
     t.string "travel_period"
-    t.string "no_of_travellers"
+    t.integer "no_of_travellers"
     t.string "additional_info"
-    t.integer "route_duration_id"
+    t.integer "no_of_adults"
+    t.integer "no_of_children", default: 0
+    t.integer "no_of_small_children", default: 0
+    t.string "bookable_type"
+    t.bigint "bookable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["bookable_type", "bookable_id"], name: "index_bookings_on_bookable"
   end
 
   create_table "cultural_tours", force: :cascade do |t|
