@@ -6,6 +6,10 @@ import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 
 const Safari = ({ safari }) => {
+
+  const contentStyle = {  width: '80%', maxHeight: '85%', overflow: 'auto', margin: 'auto'};
+
+
   return (
     <div className="bg-primary px-4">
       <div className="border-l-2 border-black h-full">
@@ -61,6 +65,8 @@ const Safari = ({ safari }) => {
               > Book Safari</button>}
             modal
             nested
+            closeOnDocumentClick
+            contentStyle={contentStyle}
           >
             {
               close => (

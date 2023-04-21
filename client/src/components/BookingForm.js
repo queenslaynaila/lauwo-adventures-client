@@ -104,7 +104,7 @@ const BookingForm = ({ adventure }) => {
         className="flex flex-col items-center justify-center"
         onSubmit={handleSubmit}
       >
-        <div className="flex items-center justify-center mt-10 gap-10">
+        <div className="flex sm:flex-row flex-col items-center justify-center mt-10 gap-10">
           <div className='relative'>
             <label className="font-poly text-xs absolute -top-4 left-0" htmlFor="firstName">
               First Name
@@ -134,7 +134,7 @@ const BookingForm = ({ adventure }) => {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center mt-10 gap-10">
+        <div className="flex sm:flex-row flex-col items-center justify-center mt-10 gap-10">
           <div className='relative'>
             <label className="font-poly text-xs absolute -top-4 left-0" htmlFor="email">
               Email
@@ -164,7 +164,7 @@ const BookingForm = ({ adventure }) => {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center mt-10 gap-10">
+        <div className="flex sm:flex-row flex-col items-center justify-center mt-10 gap-10">
           <div className='relative'>
             <label className="font-poly text-xs absolute -top-4 left-0" htmlFor="country">
               Country
@@ -194,7 +194,7 @@ const BookingForm = ({ adventure }) => {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center mt-10 gap-10">
+        <div className="flex sm:flex-row flex-col items-center justify-center mt-10 gap-10">
           <div className='relative'>
             <label className="font-poly text-xs absolute -top-4 left-0" htmlFor="noOfTravellers">
               No. of Travellers
