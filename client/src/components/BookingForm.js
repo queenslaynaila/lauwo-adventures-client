@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import { ToastContainer, toast } from 'react-toastify'
-import { GrFormClose } from 'react-icons/gr'
+import 'react-toastify/dist/ReactToastify.css'
 
-const SafariBookingForm = ({ safari }) => {
+const BookingForm = ({ adventure }) => {
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -28,8 +28,9 @@ const SafariBookingForm = ({ safari }) => {
       travel_period: formData.travelPeriod,
       no_of_travellers: formData.noOfTravellers,
       additional_info: formData.additionalInfo,
-      route_duration_id: safari.id,
+      route_duration_id: adventure.id,
     }
+    console.log(booking)
     fetch('http://localhost:3000/bookings', {
       method: 'POST',
       headers: {
@@ -52,17 +53,24 @@ const SafariBookingForm = ({ safari }) => {
               additional_info: '',
               route_duration_id: 0,
             })
+            // setTimeout(() => {
+            //   window.location.reload()
+            // }, 2000)
           })
         } else {
           r.json().then((err) => {
             setErrors(err.errors)
+            console.error(err)
             notifyError()
+            // setTimeout(() => {
+            //   window.location.reload()
+            // }, 2000)
           })
         }
       })
   }
 
-  const notifySuccess = () => toast.success('Booking received successfully', {
+  const notifySuccess = () => toast.success('Booking received successfully.Look out for an email from us on payment.', {
     position: 'top-center',
     autoClose: 5000,
     hideProgressBar: false,
@@ -77,7 +85,7 @@ const SafariBookingForm = ({ safari }) => {
     },
   })
 
-  const notifyError = () => toast.error('Booking failed', {
+  const notifyError = () => toast.error('Booking failed, Please try again.', {
     theme: 'colored'
   })
 
@@ -91,8 +99,7 @@ const SafariBookingForm = ({ safari }) => {
   return (
     <div className="flex flex-col items-center justify-center font-poly h-full p-6 relative">
       < ToastContainer />
-      <h5 className="text-2xl mb-4 font-bold font-poly capitalize">Book {safari.name}</h5>
-        <GrFormClose className="text-2xl absolute right-4 top-0"/>
+      <h5 className="text-2xl mb-4 font-bold font-poly capitalize">Book {adventure.name}</h5>
       <form
         className="flex flex-col items-center justify-center"
         onSubmit={handleSubmit}
@@ -224,4 +231,4 @@ const SafariBookingForm = ({ safari }) => {
   )
 }
 
-export default SafariBookingForm
+export default BookingForm

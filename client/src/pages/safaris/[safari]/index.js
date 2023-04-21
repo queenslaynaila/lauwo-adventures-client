@@ -3,7 +3,7 @@ import { generateSlug } from '@/utils/generateSlug';
 import { GiMeal } from 'react-icons/gi';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import SafariBookingForm from '@/components/SafariBookingForm';
+import BookingForm from '@/components/BookingForm';
 
 const Safari = ({ safari }) => {
   return (
@@ -62,7 +62,16 @@ const Safari = ({ safari }) => {
             modal
             nested
           >
-            <SafariBookingForm  safari={safari} />
+            {
+              close => (
+                <div className="modal">
+                  <button className="close" onClick={close}>
+                    &times;
+                  </button>
+                  < BookingForm adventure={safari} />
+                </div>
+              )
+            }
           </Popup>
         </div>
         </div>
