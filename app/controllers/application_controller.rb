@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
     render json: { message: 'Lauwo Adventures API' }
   end
 
-  private 
+  private
 
   def render_unprocessable_entity_response(exception)
     render json: { errors: exception.record.errors }, status: :unprocessable_entity
