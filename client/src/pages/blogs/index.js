@@ -27,7 +27,6 @@ export default function index({blogs}) {
 export async function getStaticProps() {
     const res = await fetch('http://localhost:3000/blogs');
     const blogs = await res.json();
-     console.log(blogs)
     return {
       props: { blogs },
     };
