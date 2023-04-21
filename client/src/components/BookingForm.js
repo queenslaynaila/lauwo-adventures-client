@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const BookingForm = ({ adventure , bookableType}) => {
+ 
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
