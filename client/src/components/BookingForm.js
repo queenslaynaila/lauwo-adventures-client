@@ -3,15 +3,18 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const BookingForm = ({ adventure }) => {
-
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     phoneNumber: '',
     country: '',
-    travelPeriod: '',
-    noOfTravellers: '',
+    travelPeriodStart: '',
+    travelPeriodEnd: '',
+    noOfTravellers: 0,
+    noOfAdults: 0,
+    noOfChildren: 0,
+    noOfSmallChildren: 0,
     additionalInfo: '',
   })
 
@@ -25,13 +28,17 @@ const BookingForm = ({ adventure }) => {
       email: formData.email,
       phone_number: formData.phoneNumber,
       country: formData.country,
-      travel_period: formData.travelPeriod,
+      travel_period: formData.travelPeriodStart + ' to ' + formData.travelPeriodEnd,
       no_of_travellers: formData.noOfTravellers,
+      no_of_adults: formData.noOfAdults,
+      no_of_children: formData.noOfChildren,
+      no_of_small_children: formData.noOfSmallChildren,
       additional_info: formData.additionalInfo,
-      route_duration_id: adventure.id,
+      bookable_type: adventure.name.split('').slice(6).join(''),
+      bookable_id: adventure.id,
     }
     console.log(booking)
-    fetch('http://localhost:3000/bookings', {
+    fetch('http://localhost:3000/planningforms', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -44,27 +51,30 @@ const BookingForm = ({ adventure }) => {
             notifySuccess()
             setFormData({
               firstName: '',
-              last_name: '',
+              lastName: '',
               email: '',
-              phone_number: '',
+              phoneNumber: '',
               country: '',
-              travel_period: '',
-              no_of_travellers: '',
-              additional_info: '',
+              travelPeriod: '',
+              noOfTravellers: 0,
+              noOfAdults: 0,
+              noOfChildren: 0,
+              noOfSmallChildren: 0,
+              additionalInfo: '',
               route_duration_id: 0,
             })
-            // setTimeout(() => {
-            //   window.location.reload()
-            // }, 2000)
+            setTimeout(() => {
+              window.location.reload()
+            }, 2000)
           })
         } else {
           r.json().then((err) => {
             setErrors(err.errors)
             console.error(err)
             notifyError()
-            // setTimeout(() => {
-            //   window.location.reload()
-            // }, 2000)
+            setTimeout(() => {
+              window.location.reload()
+            }, 2000)
           })
         }
       })
@@ -110,7 +120,7 @@ const BookingForm = ({ adventure }) => {
               First Name
             </label>
             <input
-              className="border-b-2 border-black w-64 h-10  font-poly
+              className="border-b-2 border-black sm:w-96 w-64 h-10  font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="firstName"
@@ -124,7 +134,7 @@ const BookingForm = ({ adventure }) => {
               Last Name
             </label>
             <input
-              className="border-b-2 border-black w-64 h-10 font-poly
+              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="lastName"
@@ -140,7 +150,7 @@ const BookingForm = ({ adventure }) => {
               Email
             </label>
             <input
-              className="border-b-2 border-black w-64 h-10 font-poly
+              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="email"
@@ -154,7 +164,7 @@ const BookingForm = ({ adventure }) => {
               Phone Number
             </label>
             <input
-              className="border-b-2 border-black w-64 h-10 font-poly
+              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="phoneNumber"
@@ -170,7 +180,7 @@ const BookingForm = ({ adventure }) => {
               Country
             </label>
             <input
-              className="border-b-2 border-black w-64 h-10 font-poly
+              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="country"
@@ -180,18 +190,35 @@ const BookingForm = ({ adventure }) => {
             />
           </div>
           <div className='relative'>
-            <label className="font-poly text-xs absolute -top-4 left-0" htmlFor="travelPeriod">
+            <label className="font-poly text-xs absolute -top-8 left-0" htmlFor="travelPeriod">
               Travel Period
             </label>
+            <div className="flex relative items-center justify-center gap-3">
+              <label className="font-poly text-xs absolute -top-3 left-0" htmlFor="travelPeriod">
+              From
+            </label>
             <input
-              className="border-b-2 border-black w-64 h-10 font-poly
+              className="border-b-2 border-black sm:w-48 w-32 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
-              type="text"
+              type="date"
               name="travelPeriod"
-              value={formData.travelPeriod}
-              onChange={handleChange}
+              value={formData.travelPeriodStart}
+              onChange={(e) => setFormData((prevFormData) => ({ ...prevFormData, travelPeriodStart: e.target.value }))}
               required
             />
+            <label className="font-poly text-xs absolute -top-4 left-32" htmlFor="travelPeriod">
+              To
+            </label>
+            <input
+              className="border-b-2 border-black sm:w-48 w-32 h-10 font-poly
+              focus:outline-none focus:border-yellow-500"
+              type="date"
+              name="travelPeriod"
+              value={formData.travelPeriodEnd}
+              onChange={(e) => setFormData((prevFormData) => ({ ...prevFormData, travelPeriodEnd: e.target.value }))}
+              required
+            />
+            </div>
           </div>
         </div>
         <div className="flex sm:flex-row flex-col items-center justify-center mt-10 gap-10">
@@ -200,9 +227,9 @@ const BookingForm = ({ adventure }) => {
               No. of Travellers
             </label>
             <input
-              className="border-b-2 border-black w-64 h-10 font-poly
+              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
-              type="text"
+              type="number"
               name="noOfTravellers"
               value={formData.noOfTravellers}
               onChange={handleChange}
@@ -210,13 +237,56 @@ const BookingForm = ({ adventure }) => {
             />
           </div>
           <div className='relative'>
+            <label className="font-poly text-xs absolute -top-4 left-0" htmlFor="noOfAdults">
+              No. of Adults
+            </label>
+            <input
+              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              focus:outline-none focus:border-yellow-500"
+              type="number"
+              name="noOfAdults"
+              value={formData.noOfAdults}
+              onChange={handleChange}
+              />
+          </div>
+        </div>
+        <div className="flex sm:flex-row flex-col items-center justify-center mt-10 gap-10">
+          <div className='relative'>
+            <label className="font-poly text-xs absolute -top-4 left-0" htmlFor="noOfChildren">
+              No. of Children
+            </label>
+            <input
+              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              focus:outline-none focus:border-yellow-500"
+              type="number"
+              name="noOfChildren"
+              value={formData.noOfChildren}
+              onChange={handleChange}
+              />
+          </div>
+          <div className='relative'>
+            <label className="font-poly text-xs absolute -top-4 left-0" htmlFor="noOfSmallChildren">
+              No. of Small Children
+            </label>
+            <input
+              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              focus:outline-none focus:border-yellow-500"
+              type="number"
+              name="noOfSmallChildren"
+              value={formData.noOfSmallChildren}
+              onChange={handleChange}
+              />
+          </div>
+        </div>
+        <div className="flex sm:flex-row flex-col items-center justify-center mt-10 gap-10">
+          <div className='relative'>
             <label className="font-poly text-xs absolute -top-4 left-0" htmlFor="additionalInfo">
               Additional Info
             </label>
-            <input
-              className="border-b-2 border-black w-64 h-10 font-poly
+            <textarea
+              className="border-b-2 border-black sm:w-[800px] w-64 h-20 font-poly
               focus:outline-none focus:border-yellow-500"
-              type="textarea"
+              type="text"
               name="additionalInfo"
               value={formData.additionalInfo}
               onChange={handleChange}

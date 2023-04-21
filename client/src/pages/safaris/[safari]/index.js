@@ -7,8 +7,7 @@ import BookingForm from '@/components/BookingForm';
 
 const Safari = ({ safari }) => {
 
-  const contentStyle = {  width: '80%', maxHeight: '85%', overflow: 'auto', margin: 'auto'};
-
+  const contentStyle = {  width: '85%', maxHeight: '85%', overflow: 'auto', margin: 'auto'};
 
   return (
     <div className="bg-primary px-4">
@@ -38,7 +37,7 @@ const Safari = ({ safari }) => {
                 />
               </div>
               <div className="md:w-1/2">
-                <h3 className="text-xl font-bold mb-2 font-poly capitalize">
+                <h3 className="text-xl font-bold mb-2 mt-4 font-poly capitalize">
                   Day {itinerary.day}: {itinerary.title}
                 </h3>
                 <div className='flex items-center gap-2'>
