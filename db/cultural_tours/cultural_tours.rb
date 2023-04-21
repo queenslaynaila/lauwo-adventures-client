@@ -21,4 +21,5 @@ CulturalTour.create!(
     }
   ]
 )
+
 puts "Created #{CulturalTour.count} cultural tours"
