@@ -2,7 +2,8 @@ import {useState} from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-const BookingForm = ({ adventure }) => {
+const BookingForm = ({ adventure , bookableType}) => {
+ 
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -18,7 +19,7 @@ const BookingForm = ({ adventure }) => {
     additionalInfo: '',
   })
 
-  const bookableTypes = ['Safari', 'Mountain', 'Day Trip', 'Zanzibar', 'Cultural']
+   
 
   const [errors, setErrors] = useState({})
 
@@ -36,11 +37,11 @@ const BookingForm = ({ adventure }) => {
       no_of_children: formData.noOfChildren,
       no_of_small_children: formData.noOfSmallChildren,
       additional_info: formData.additionalInfo,
-      bookable_type: bookableTypes[0],
+      bookable_type: bookableType,
       bookable_id: adventure.id,
     }
     console.log(booking)
-    fetch('http://localhost:3000/planningforms', {
+    fetch('http://localhost:3000/bookings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -251,6 +252,7 @@ const BookingForm = ({ adventure }) => {
               name="noOfAdults"
               value={formData.noOfAdults}
               onChange={handleChange}
+              required
               />
           </div>
         </div>

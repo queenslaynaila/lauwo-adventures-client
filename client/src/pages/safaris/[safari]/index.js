@@ -6,7 +6,7 @@ import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 
 const Safari = ({ safari }) => {
-
+  const bookableType = 'Safari' 
   const contentStyle = {  width: '85%', maxHeight: '85%', overflow: 'auto', margin: 'auto'};
 
   return (
@@ -73,7 +73,7 @@ const Safari = ({ safari }) => {
                   <button className="close" onClick={close}>
                     &times;
                   </button>
-                  < BookingForm adventure={safari} />
+                  < BookingForm adventure={safari}  bookableType={bookableType}/>
                 </div>
               )
             }
