@@ -252,6 +252,7 @@ const BookingForm = ({ adventure , bookableType}) => {
               name="noOfAdults"
               value={formData.noOfAdults}
               onChange={handleChange}
+              required
               />
           </div>
         </div>
