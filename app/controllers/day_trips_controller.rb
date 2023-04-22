@@ -8,7 +8,7 @@ class DayTripsController < ApplicationController
   end
 
   def show
-    render json: @day_trip, serializer: SingleDayTripSerializer, status: :ok
+    render json: @day_trip
   end
 
   def create

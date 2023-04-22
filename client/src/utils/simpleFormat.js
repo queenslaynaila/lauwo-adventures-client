@@ -12,9 +12,3 @@ export default function simpleFormat(text) {
     .join('');
   return <div dangerouslySetInnerHTML={{ __html: formattedText }} />;
 }
-
-
-
-
-
-

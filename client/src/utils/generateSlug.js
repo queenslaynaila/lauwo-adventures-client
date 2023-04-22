@@ -5,4 +5,3 @@ export const generateSlug = (str) => {
     .replace(/-+$/g, '')
     .replace(/[^\w-]+/g, '');
 };
-

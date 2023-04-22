@@ -66,8 +66,6 @@ const InquiryForm = () => {
     (errors && errors.email && errors.email[0]) ||
     (errors && errors.message && errors.message[0]);
 
-  console.log(error);
-
   const notifyError = () => toast.error(error, { theme: 'colored' });
 
   return (

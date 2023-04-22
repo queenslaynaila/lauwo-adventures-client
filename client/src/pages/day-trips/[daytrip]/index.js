@@ -4,7 +4,15 @@ import Image from 'next/image';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
-export default function Index({ dayTrip }) {
+export default function trip({ trips }) {
+  const router = useRouter();
+  const path = router.query.trip;
+  const trip = trips.find((trip) => generateSlug(trip.name) === path);
+  const bookableType = 'trip';
+  const adventure = {
+    name: `${trip.name}  day trip`,
+    id: trip.id,
+  };
   const bookableType = 'DayTrip';
   const adventure = {
     name: `${dayTrip.name}  day trip`,
@@ -16,7 +24,6 @@ export default function Index({ dayTrip }) {
     overflow: 'auto',
     margin: 'auto',
   };
-
   return (
 <div className='poly'>
   <div
@@ -26,19 +33,27 @@ export default function Index({ dayTrip }) {
     <div className="inset bg-black/80">
       <div className="border-l-2 border-black h-1/2 text-white ">
         <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl xl font-poly capitalize text-center  pt-32 pb-12 z-0">
-          {dayTrip.name} trip
+          {trip.name} trip
+        </h3>
+        <div key={trip.id} className="flex relative flex-col md:flex-row mx-16  gap-4">
+          <div className='mb-6'>
+            <Image
+              src={trip.image_url}
+              alt={trip.name}
+          {trip.name} trip
         </h3>
         <div key={dayTrip.id} className="flex relative flex-col md:flex-row mx-16  gap-4">
           <div className='mb-6'>
             <Image
-              src={dayTrip.image_url}
-              alt={dayTrip.name}
+              src={trip.image_url}
+              alt={trip.name}
               width={600}
               height={400}
               className="rounded-lg h-96 object-cover object-center "
             />
           </div>
           <div className="md:w-1/2">
+            <p className="mb-4 text-lg">{trip.description}</p>
             <p className="mb-4 text-lg">{dayTrip.description}</p>
             <div className="text-center h-24">
               <Popup
@@ -76,12 +91,12 @@ export default function Index({ dayTrip }) {
             <FaDollarSign className="mr-1" />
             {dayTrip.price.replace('$', '')}
             </div>
-          
         </div>
       </li>
       <li className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
         <div className="lg:ml-6 font-semibold">Inclusions:</div>
         <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">
+          {trip.inclusions.split(",").map((inclusion) => (
           {dayTrip.inclusions.split(",").map((inclusion) => (
             <div key={inclusion} className="w-full capitalize p-2 flex items-center">
               <FaCheck className="mr-1" />
@@ -108,9 +123,9 @@ export default function Index({ dayTrip }) {
 
   );
 }
-
-export async function getStaticPaths() {
+export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/day_trips');
+  const trips = await res.json();
   const dayTrips = await res.json();
   const paths = dayTrips.map((day) => ({
     params: { daytrip: generateSlug(day.name), id: day.id },
@@ -123,8 +138,9 @@ export async function getStaticProps({ params }) {
   const dayTrips = await res.json();
   const dayTrip = dayTrips.find(
     (day) => generateSlug(day.name) === params.daytrip
-  );
   return {
-    props: { dayTrip },
+    props: {
+      trips,
+    },
   };
 }
