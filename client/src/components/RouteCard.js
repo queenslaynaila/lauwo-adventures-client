@@ -34,10 +34,11 @@ export default function RouteCard({ route, duration, routeDuration }) {
       <div className="flex flex-col items-center px-8 -mt-24">
         <div className="flex relative flex-col md:flex-row md:items-center mb-28">
           <div className="md:w-1/2">
-            <img
+            <Image
               src={route.image_URL}
               alt="Route"
               className="rounded-lg mb-4 h-96 object-cover object-center"
+              height={500} width={500}
             />
           </div>
           <div className="md:w-1/2 md:ml-8">
