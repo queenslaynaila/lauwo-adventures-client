@@ -3,13 +3,14 @@ import Popup from "reactjs-popup";
 import BookingForm from "@/components/BookingForm";
 import { generateSlug } from "@/utils/generateSlug";
 import { useRouter } from "next/router";
+import { FaCheck, FaTimes,FaDollarSign  } from 'react-icons/fa';
 
 export default function Trip({ trips }) {
   const router = useRouter();
   const path = router.query.daytrip;
   const trip = trips.find((trip) => generateSlug(trip.name) === path);
   console.log(trip)
-  const bookableType = 'trip';
+  const bookableType = 'DayTrip';
   const adventure = {
     name: `${trip.name} day trip`,
     id: trip.id,
@@ -19,6 +20,7 @@ export default function Trip({ trips }) {
     maxHeight: '85%',
     overflow: 'auto',
     margin: 'auto',
+    backgroundColor:"white"
   };
   return (
     <>
@@ -43,11 +45,10 @@ export default function Trip({ trips }) {
             </div>
             <div className="md:w-1/2">
               <p className="mb-4 text-lg">{trip.description}</p>
-              <p className="mb-4 text-lg">{trip.description}</p>
               <div className="text-center h-24">
                 <Popup
                   trigger={
-                    <button className="bg-yellow-500 text-white px-8 rounded-md py-4 ml-auto mb-16 hover:border-black hover:border hover:text-black hover:bg-transparent">
+                    <button className="bg-yellow-500 text-white px-8 rounded-md py-4 ml-auto mb-16 hover:bg-yellow-700">
                       Book Slot
                     </button>
                   }
@@ -72,6 +73,42 @@ export default function Trip({ trips }) {
       </div>
       <div>
       </div>
+    </div>
+    <div>
+      <ul>
+        <li className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
+          <div className="lg:ml-6 font-semibold">Price:</div>
+          <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">
+              <div  className="w-full capitalize p-2 flex items-center">
+              <FaDollarSign className="mr-1" />
+              {trip.price.replace('$', '')}
+              </div>
+            
+          </div>
+        </li>
+        <li className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
+          <div className="lg:ml-6 font-semibold">Inclusions:</div>
+          <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">
+            {trip.inclusions.split(",").map((inclusion) => (
+              <div key={inclusion} className="w-full capitalize p-2 flex items-center">
+                <FaCheck className="mr-1" />
+                {inclusion.trim()}
+              </div>
+            ))}
+          </div>
+        </li>
+        <li className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
+          <div className="font-semibold lg:ml-6">Exclusions:</div>
+          <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">
+            {trip.exclusions.split(",").map((exclusion) => (
+              <div key={exclusion} className="w-full capitalize p-2 flex items-center">
+                <FaTimes className="mr-1" />
+                {exclusion.trim()}
+              </div>
+            ))}
+          </div>
+        </li>
+      </ul>
     </div>
     </>
   );
