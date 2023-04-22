@@ -23,7 +23,7 @@ const GuideDropDown = ({ setIsOpen }) => {
         }`}
       >
         <Link
-          href="tips"
+          href="/tips"
           onClick={() => {
             setIsDropdownOpen(false);
             setIsOpen(false);

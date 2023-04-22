@@ -3,12 +3,19 @@ import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
 
-export default function RouteCard({ route, duration,routeDuration }) {
-  
-  const bookableType ='RouteDuration' 
- 
-  const adventure = {name:`${route.route_name} ${duration} day climb` ,id:routeDuration}
-  const contentStyle = {  width: '85%', maxHeight: '85%', overflow: 'auto', margin: 'auto'};
+export default function RouteCard({ route, duration, routeDuration }) {
+  const bookableType = 'RouteDuration';
+
+  const adventure = {
+    name: `${route.route_name} ${duration} day climb`,
+    id: routeDuration,
+  };
+  const contentStyle = {
+    width: '85%',
+    maxHeight: '85%',
+    overflow: 'auto',
+    margin: 'auto',
+  };
 
   return (
     <div className="bg-sand font-poly">
@@ -21,7 +28,7 @@ export default function RouteCard({ route, duration,routeDuration }) {
           className="mr-2"
         />
         <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl text-xl capitalize text-center text-black py-32 ">
-          {route.route_name} | {duration} Days{" "}
+          {route.route_name} | {duration} Days{' '}
         </h3>
       </div>
       <div className="flex flex-col items-center px-8 -mt-24">
@@ -52,7 +59,10 @@ export default function RouteCard({ route, duration,routeDuration }) {
                     <button className="close" onClick={close}>
                       &times;
                     </button>
-                    <BookingForm adventure={adventure} bookableType={bookableType}/>
+                    <BookingForm
+                      adventure={adventure}
+                      bookableType={bookableType}
+                    />
                   </div>
                 )}
               </Popup>

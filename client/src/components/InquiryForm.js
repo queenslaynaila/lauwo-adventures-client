@@ -4,14 +4,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const InquiryForm = () => {
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -29,46 +28,47 @@ const InquiryForm = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(inquiry),
-        })
-        .then( r => {
-          if (r.ok) {
-            r.json().then( (_data) => {
-              notifySuccess();
-              setFormData({ name: '', email: '', message: '' });
-            })
-          } else {
-            r.json().then( err => {
-              setErrors(err.errors)
-              notifyError();
-            })
-          }
-        })
+      },
+      body: JSON.stringify(inquiry),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((_data) => {
+          notifySuccess();
+          setFormData({ name: '', email: '', message: '' });
+        });
+      } else {
+        r.json().then((err) => {
+          setErrors(err.errors);
+          notifyError();
+        });
+      }
+    });
   };
 
-  const notifySuccess = () => toast.success('Inquiry received successfully',{
-    position: 'top-center',
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: 'colored',
-    style: {
-      backgroundColor: '#FFCE3C',
-      color: '#000',
-    }
-  });
+  const notifySuccess = () =>
+    toast.success('Inquiry received successfully', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
 
-const error = errors &&  errors.name && errors.name[0] || errors && errors.email && errors.email[0] || errors && errors.message && errors.message[0]
+  const error =
+    (errors && errors.name && errors.name[0]) ||
+    (errors && errors.email && errors.email[0]) ||
+    (errors && errors.message && errors.message[0]);
 
-console.log(error)
+  console.log(error);
 
-const notifyError = () => toast.error(error,{theme: 'colored',})
-
-
+  const notifyError = () => toast.error(error, { theme: 'colored' });
 
   return (
     <div className="sm:-mt-96 sm:mb-20 lg:mt-24 lg:mb-24 -mt-72">
@@ -82,7 +82,10 @@ const notifyError = () => toast.error(error,{theme: 'colored',})
             Feel free to contact us any time.We will get back to you as soon as
             we can.
           </p>
-          <form className="mb-4 mt-10 flex flex-col justify-center items-center" onSubmit={handleSubmit}>
+          <form
+            className="mb-4 mt-10 flex flex-col justify-center items-center"
+            onSubmit={handleSubmit}
+          >
             <div className="grid grid-cols-2 gap-6 my-4 w-3/4">
               <div className="relative z-0 w-full mb-12 group">
                 <input
@@ -136,7 +139,10 @@ const notifyError = () => toast.error(error,{theme: 'colored',})
                 Message
               </label>
             </div>
-              <button className="flex items-center mx-auto bg-yellow-400 font-poly font-medium rounded-lg px-8 py-4 text-center hover:bg-yellow-700" type="submit">
+            <button
+              className="flex items-center mx-auto bg-yellow-400 font-poly font-medium rounded-lg px-8 py-4 text-center hover:bg-yellow-700"
+              type="submit"
+            >
               Send
               <span className="ml-2">
                 <AiOutlineSend />
