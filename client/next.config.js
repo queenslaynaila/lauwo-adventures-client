@@ -9,8 +9,8 @@ const nextConfig = {
       'explorerspassage.com',
       'www.shadowsofafrica.com',
       'media-cdn.tripadvisor.com',
-      'www.discoverafricablog.com', 
-      'www.willflyforfood.net', 
+      'www.discoverafricablog.com',
+      'www.willflyforfood.net',
       'www.tranquilkilimanjaro.com',
       'img.traveltriangle.com',
     ],
@@ -18,4 +18,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-

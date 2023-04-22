@@ -8,7 +8,7 @@ class AdventuresController < ApplicationController
   end
 
   def show
-    render json: @adventure, serializer: SingleAdventureSerializer, status: :ok
+    render json: @adventure, status: :ok
   end
 
   def create
