@@ -1,8 +1,4 @@
-import { GiMeal } from 'react-icons/gi';
-import { GiHiking } from 'react-icons/gi';
-import { GiMountainClimbing } from 'react-icons/gi';
-import { GiGrassMushroom } from 'react-icons/gi';
-import { GiPathDistance } from 'react-icons/gi';
+import { GiMeal, GiHiking, GiMountainClimbing, GiGrassMushroom, GiPathDistance } from 'react-icons/gi';
 import { FaBed } from 'react-icons/fa';
 
 export default function MountainItinery({ itinery, index }) {
