@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
-
 export default function trip({ trips }) {
   const router = useRouter();
   const path = router.query.trip;
@@ -13,6 +12,11 @@ export default function trip({ trips }) {
   const adventure = {
     name: `${trip.name}  day trip`,
     id: trip.id,
+  };
+  const bookableType = 'DayTrip';
+  const adventure = {
+    name: `${dayTrip.name}  day trip`,
+    id: dayTrip.id,
   };
   const contentStyle = {
     width: '85%',
@@ -36,6 +40,13 @@ export default function trip({ trips }) {
             <Image
               src={trip.image_url}
               alt={trip.name}
+          {trip.name} trip
+        </h3>
+        <div key={dayTrip.id} className="flex relative flex-col md:flex-row mx-16  gap-4">
+          <div className='mb-6'>
+            <Image
+              src={trip.image_url}
+              alt={trip.name}
               width={600}
               height={400}
               className="rounded-lg h-96 object-cover object-center "
@@ -43,6 +54,7 @@ export default function trip({ trips }) {
           </div>
           <div className="md:w-1/2">
             <p className="mb-4 text-lg">{trip.description}</p>
+            <p className="mb-4 text-lg">{dayTrip.description}</p>
             <div className="text-center h-24">
               <Popup
                 trigger={
@@ -85,9 +97,21 @@ export default function trip({ trips }) {
         <div className="lg:ml-6 font-semibold">Inclusions:</div>
         <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">
           {trip.inclusions.split(",").map((inclusion) => (
+          {dayTrip.inclusions.split(",").map((inclusion) => (
             <div key={inclusion} className="w-full capitalize p-2 flex items-center">
               <FaCheck className="mr-1" />
               {inclusion.trim()}
+            </div>
+          ))}
+        </div>
+      </li>
+      <li className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
+        <div className="font-semibold lg:ml-6">Exclusions:</div>
+        <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">
+          {dayTrip.exclusions.split(",").map((exclusion) => (
+            <div key={exclusion} className="w-full capitalize p-2 flex items-center">
+              <FaTimes className="mr-1" />
+              {exclusion.trim()}
             </div>
           ))}
         </div>
@@ -102,7 +126,18 @@ export default function trip({ trips }) {
 export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/day_trips');
   const trips = await res.json();
+  const dayTrips = await res.json();
+  const paths = dayTrips.map((day) => ({
+    params: { daytrip: generateSlug(day.name), id: day.id },
+  }));
+  return { paths, fallback: false };
+}
 
+export async function getStaticProps({ params }) {
+  const res = await fetch('http://localhost:3000/day_trips');
+  const dayTrips = await res.json();
+  const dayTrip = dayTrips.find(
+    (day) => generateSlug(day.name) === params.daytrip
   return {
     props: {
       trips,
