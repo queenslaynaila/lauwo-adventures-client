@@ -9,6 +9,18 @@ export default function Index({ }) {
   );
 }
 
+export async function getStaticPaths() {
+  const res = await fetch('http://localhost:3000/day_trips');
+  const dayTrips = await res.json();
+  const paths = dayTrips.map((day) => ({
+    params: { daytrip: generateSlug(day.name) },
+  }));
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
 export async function getStaticProps({ params }) {
   const res = await fetch('http://localhost:3000/day_trips');
   const dayTrips = await res.json();
@@ -21,13 +33,3 @@ export async function getStaticProps({ params }) {
 }
 
 
-export async function getStaticProps({ params }) {
-  const res = await fetch('http://localhost:3000/day_trips');
-  const dayTrips = await res.json();
-  const dayTrip = dayTrips.find(
-    (day) => generateSlug(day.name) === params.daytrip
-  );
-  return {
-    props: { dayTrip },
-  };
-}
