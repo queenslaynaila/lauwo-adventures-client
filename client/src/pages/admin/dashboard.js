@@ -1,9 +1,26 @@
- 
+import { useState } from 'react';
+import { FaBars, FaTachometerAlt, FaShoppingCart } from 'react-icons/fa';
+import { RiArrowDownSFill } from 'react-icons/ri';
 
-export default function Dashboard() {
+const Dashboard = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const handleSidebarToggle = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <div>
-      ccc
-    </div>
-  )
-}
+    <>
+      <div
+        className="bg-cover bg-center bg-fixed h-screen"
+        style={{ backgroundImage: "url('/g-2.jpg')" }}
+      >
+       
+       
+      
+      </div> 
+       
+    </>
+  );
+};
+export default Dashboard
