@@ -1,6 +1,6 @@
 # app/controllers/fallback_controller.rb
 class FallbackController < ActionController::Base
   def index
-    redirect_to '/client'
+    render file: 'src/pages/_app.js'
   end
 end
