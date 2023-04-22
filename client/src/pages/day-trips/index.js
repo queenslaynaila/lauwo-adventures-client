@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import DayTripCard from '@/components/DayTripCard';
 
 const HeroSection = ({ dayTrips }) => {

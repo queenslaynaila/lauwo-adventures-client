@@ -18,7 +18,7 @@ export default function index({ blogs }) {
       <main class="lg:relative  lg:-top-40   sm:px-14 px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
           {blogs.map((blog) => (
-            <BlogCard blog={blog} />
+            <BlogCard blog={blog} key={blog.id} />
           ))}
         </div>
       </main>

@@ -18,8 +18,6 @@ const BookingForm = ({ adventure, bookableType }) => {
     additionalInfo: '',
   });
 
-  const [errors, setErrors] = useState({});
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const booking = {
@@ -69,7 +67,6 @@ const BookingForm = ({ adventure, bookableType }) => {
         });
       } else {
         r.json().then((err) => {
-          setErrors(err.errors);
           console.error(err);
           notifyError();
           setTimeout(() => {

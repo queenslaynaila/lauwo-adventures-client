@@ -28,7 +28,7 @@ export default function index({ mountain }) {
 
       <div className="flex flex-wrap">
         {mountain.routes.map((route) => (
-          <div className="w-full md:w-1/3 p-4">
+          <div className="w-full md:w-1/3 p-4" key={route.id}>
             <div className="relative bg-white overflow-hidden shadow-lg group">
               <div>
                 <Image
@@ -57,7 +57,9 @@ export default function index({ mountain }) {
                       <Link
                         href={`/mountain-trekking/${generateSlug(
                           mountain.mountain_name
-                        )}/${generateSlug(route.route_name)}-${duration}-days`}
+                        )}/${generateSlug(route.route_name)}-${duration}-days`
+                      }
+                      key={duration}
                       >
                         <button
                           className="w-full mb-2 px-2  py-2 border border-black bg-yellow-400 text-black font-bold hover:bg-black hover:text-yellow-400"

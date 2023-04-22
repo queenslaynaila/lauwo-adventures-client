@@ -1,8 +1,7 @@
 import React from 'react';
-import { TiTick } from 'react-icons/ti';
 import { generateSlug } from '@/utils/generateSlug';
 
-export default function Index({ dayTrip }) {
+export default function Index({ _dayTrip }) {
   return (
     <>
       <header className="w-full h-1/2 bg-[url('/g-3.jpg')]  lg:h-96 bg-cover bg-center flex justify-center items-center relative"></header>
