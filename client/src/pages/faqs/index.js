@@ -34,13 +34,15 @@ const Faqs = ({ faqs }) => {
                 <input
                   type="text"
                   placeholder="Search"
-                  className="bg-transparent border border-white text-white px-4 py-2 rounded-md"
+                  className="bg-transparent border-b border-white text-white px-4
+                    focus:outline-none focus:border-primary
+                  "
                   onChange={handleSearch}
                 />
               )}
             </div>
           </div>
-          <div className='w-3/4 mx-auto'>
+          <div className='w-3/4 mx-auto mt-10'>
             {filteredFaqs.map((faq) => (
               <FaqCard key={faq.id} question={faq.question} answer={faq.answer} />
             ))}
