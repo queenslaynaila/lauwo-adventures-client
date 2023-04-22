@@ -15,6 +15,7 @@ const nextConfig = {
       'img.traveltriangle.com',
     ],
   },
+   distDir: 'build',
 };
 
 module.exports = nextConfig;
