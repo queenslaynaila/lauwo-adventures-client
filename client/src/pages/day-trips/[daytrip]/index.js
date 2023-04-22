@@ -1,4 +1,4 @@
- import { generateSlug } from '@/utils/generateSlug';
+import { generateSlug } from '@/utils/generateSlug';
 import { FaCheck, FaTimes,FaDollarSign  } from 'react-icons/fa';
 import Image from 'next/image';
 import Popup from 'reactjs-popup';
