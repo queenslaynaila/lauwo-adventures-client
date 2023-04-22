@@ -1,5 +1,4 @@
- 
-
+import Link from 'next/link';
 export default function Zanzibar() {
   return (
     <div className='font-poly' >
@@ -9,8 +8,9 @@ export default function Zanzibar() {
         </div>
         <h1 className="text-5xl md:text-7xl text-white font-bold mb-8 z-0">Coming Soon</h1>
         <p className="text-white text-xl md:text-2xl">
-            We're working hard to bring you the ultimate Zanzibar experience. Stay tuned!
+            We&apos;re working hard to bring you the ultimate Zanzibar experience. Stay tuned!
         </p>
+        
       </div>
     </div>
   )
