@@ -43,7 +43,6 @@ export default function Trip({ trips }) {
             </div>
             <div className="md:w-1/2">
               <p className="mb-4 text-lg">{trip.description}</p>
-              <p className="mb-4 text-lg">{trip.description}</p>
               <div className="text-center h-24">
                 <Popup
                   trigger={
