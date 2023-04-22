@@ -3,7 +3,6 @@ import { FiArrowRight } from 'react-icons/fi';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { AiFillClockCircle } from 'react-icons/ai';
 import Link from 'next/link';
-import Image from 'next/image';
 export default function blog({ blog }) {
   return (
     <main className="font-poly ">

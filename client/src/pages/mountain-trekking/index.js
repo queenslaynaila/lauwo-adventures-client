@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { generateSlug } from '@/utils/generateSlug';
 
-export default function index({ mountains }) {
+export default function Mountains({ mountains }) {
   const router = useRouter();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const handlePrevClick = () => {
