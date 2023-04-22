@@ -6,13 +6,15 @@ import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 
 const Safari = ({ safari }) => {
-  const bookableType = 'Safari' 
+  const bookableType = 'Safari'
   const contentStyle = {  width: '85%', maxHeight: '85%', overflow: 'auto', margin: 'auto'};
 
   return (
-    <div className="bg-primary px-4">
-      <div className="border-l-2 border-black h-full">
-          <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl xl font-poly capitalize text-center text-black py-32">
+    <div className='bg-cover bg-center bg-no-repeat'
+        style={{backgroundImage: 'url(/lauwosafari.jpg)'}}>
+      <div className='inset bg-black/80'>
+      <div className="border-l-2 border-black h-full text-white">
+          <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl xl font-poly capitalize text-center py-32">
           {safari.name} experience
           </h3>
         <div className="flex flex-col items-center px-8 sm:-mt-8 -mt-24">
@@ -37,11 +39,11 @@ const Safari = ({ safari }) => {
                 />
               </div>
               <div className="md:w-1/2">
-                <h3 className="text-xl font-bold mb-2 mt-4 font-poly capitalize">
+                <h3 className="text-xl font-bold mb-2 mt-4 text-primary font-poly capitalize">
                   Day {itinerary.day}: {itinerary.title}
                 </h3>
                 <div className='flex items-center gap-2'>
-                  <div className=" w-1/6 mt-4 mb-4 border border-dashed border-black"></div>
+                  <div className=" w-1/6 mt-6 mb-6 border border-dashed border-white"></div>
                   <p className='text-sm font-semibold'>Distance: {itinerary.distance} kms</p>
                 </div>
                 <p className="mb-4 text-sm leading-6">
@@ -53,14 +55,14 @@ const Safari = ({ safari }) => {
                 </p>
               </div>
               {index !== safari.safari_itineries.length - 1 && (
-                <hr className="w-full border border-black absolute -bottom-8" />
+                <hr className="w-full border border-primary absolute -bottom-8" />
               )}
             </div>
           ))}
           <div className="flex  items-center justify-center">
           <Popup
             trigger={
-              <button className='bg-black text-white px-8 rounded-md py-4 ml-auto mb-16 hover:border-black hover:border hover:text-black hover:bg-transparent'
+              <button className='bg-black text-white px-8 rounded-md py-4 ml-auto mb-16 hover:border-white hover:border hover:text-white hover:bg-transparent'
               > Book Safari</button>}
             modal
             nested
@@ -80,6 +82,7 @@ const Safari = ({ safari }) => {
           </Popup>
         </div>
         </div>
+      </div>
       </div>
     </div>
   );

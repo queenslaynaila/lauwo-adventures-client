@@ -1,17 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
+import adventures from '@/data/adventures.json'
 
 const AdventuresDropDown = ({ setIsOpen }) => {
-  const [adventures, setAdventures] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/adventures')
-      .then((res) => res.json())
-      .then((data) => setAdventures(data));
-  }, []);
 
   return (
     <div className="relative flex flex-col items-center">
@@ -41,7 +35,7 @@ const AdventuresDropDown = ({ setIsOpen }) => {
             >
               {adventure.name}
             </Link>
-            <hr className="w-full mx-auto" />
+            <hr className="w-48 mx-auto" />
           </div>
         ))}
       </div>
