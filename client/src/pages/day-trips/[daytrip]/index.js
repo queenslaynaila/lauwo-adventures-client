@@ -10,7 +10,7 @@ export default function Trip({ trips }) {
   const path = router.query.daytrip;
   const trip = trips.find((trip) => generateSlug(trip.name) === path);
   console.log(trip)
-  const bookableType = 'trip';
+  const bookableType = 'DayTrip';
   const adventure = {
     name: `${trip.name} day trip`,
     id: trip.id,
