@@ -43,7 +43,7 @@ export default function Index({ dayTrip }) {
             <div className="text-center h-24">
               <Popup
                 trigger={
-                  <button className="bg-yellow-500 text-white px-8 rounded-md py-4 ml-auto mb-16 hover:border-black hover:border hover:text-black hover:bg-transparent">
+                  <button className="bg-yellow-500 text-white px-8 rounded-md py-4 ml-auto mb-16   hover:text-black hover:bg-yellow-700">
                     Book Slot
                   </button>
                 }
