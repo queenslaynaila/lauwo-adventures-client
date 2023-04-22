@@ -13,7 +13,7 @@ const FaqCard = ({ question, answer }) => {
         className="flex justify-between items-center px-4 py-3 cursor-pointer bg-black/50 shadow-xl"
         onClick={toggleCard}
       >
-        <h2 className="text-lg font-medium">{question}</h2>
+        <h2 className="text-md font-medium">{question}</h2>
         <FaAngleDown
           className={`text-xl transition-transform duration-500 ease-in-out transform ${
             isOpen ? 'rotate-180' : ''
