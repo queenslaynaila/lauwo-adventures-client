@@ -8,6 +8,7 @@ require_relative 'day_trips/day_trips'
 require_relative 'blogs/blogs'
 require_relative 'safaris/safaris'
 require_relative 'safaris/itineraries'
+require_relative 'frequently_asked_questions/frequently_asked_questions'
 
 
 
