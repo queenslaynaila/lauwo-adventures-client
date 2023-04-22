@@ -42,11 +42,15 @@ const Faqs = ({ faqs }) => {
               )}
             </div>
           </div>
-          <div className='w-3/4 mx-auto mt-10'>
+          <div className="w-3/4 mx-auto mt-10">
             {filteredFaqs.length > 0 ? (
               filteredFaqs.map((faq) => (
-              <FaqCard key={faq.id} question={faq.question} answer={faq.answer} />
-            ))
+                <FaqCard
+                  key={faq.id}
+                  question={faq.question}
+                  answer={faq.answer}
+                />
+              ))
             ) : (
               <div className="text-white text-center">
                 <h1 className="text-2xl font-semibold">No FAQs found</h1>
@@ -60,7 +64,7 @@ const Faqs = ({ faqs }) => {
 };
 
 export default Faqs;
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/frequently_asked_questions');
   const faqs = await res.json();
 

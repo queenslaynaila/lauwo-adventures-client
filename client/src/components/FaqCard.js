@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { FaAngleDown } from 'react-icons/fa';
-import  simpleFormat  from '@/utils/simpleFormat';
+import simpleFormat from '@/utils/simpleFormat';
 
 const FaqCard = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const toggleCard = () => setIsOpen(!isOpen);
 
   return (
@@ -20,9 +20,11 @@ const FaqCard = ({ question, answer }) => {
           }`}
         />
       </div>
-      {isOpen && <div className="px-4 py-3 bg-black/80 text-sm leading-7">
-        {simpleFormat(answer)}
-        </div>}
+      {isOpen && (
+        <div className="px-4 py-3 bg-black/80 text-sm leading-7">
+          {simpleFormat(answer)}
+        </div>
+      )}
     </div>
   );
 };

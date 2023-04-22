@@ -76,10 +76,13 @@ export default function Mountains({ mountains }) {
     </div>
   );
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/mountains');
   const mountains = await res.json();
+
   return {
-    props: { mountains },
+    props: {
+      mountains,
+    },
   };
 }
