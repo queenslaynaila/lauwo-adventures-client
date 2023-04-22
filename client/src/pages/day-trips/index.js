@@ -20,11 +20,14 @@ const HeroSection = ({ dayTrips }) => {
   );
 };
 export default HeroSection;
-export async function getStaticProps() {
+
+export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/day_trips');
   const dayTrips = await res.json();
 
   return {
-    props: { dayTrips },
+    props: {
+      dayTrips,
+    },
   };
 }

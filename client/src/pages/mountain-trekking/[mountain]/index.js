@@ -1,8 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
+import { useRouter } from 'next/router';
 
-export default function index({ mountain }) {
+export default function Mountain({ mountains }) {
+  const router = useRouter();
+  const path = router.query.mountain;
+  const mountain = mountains.find(
+    (mountain) => generateSlug(mountain.mountain_name) === path
+  );
+
   return (
     <div className="font-poly">
       <header
@@ -57,9 +64,8 @@ export default function index({ mountain }) {
                       <Link
                         href={`/mountain-trekking/${generateSlug(
                           mountain.mountain_name
-                        )}/${generateSlug(route.route_name)}-${duration}-days`
-                      }
-                      key={duration}
+                        )}/${generateSlug(route.route_name)}-${duration}-days`}
+                        key={duration}
                       >
                         <button
                           className="w-full mb-2 px-2  py-2 border border-black bg-yellow-400 text-black font-bold hover:bg-black hover:text-yellow-400"
@@ -80,23 +86,13 @@ export default function index({ mountain }) {
   );
 }
 
-export async function getStaticPaths() {
+export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/mountains');
   const mountains = await res.json();
-  const paths = mountains.map((mountain) => ({
-    params: { mountain: generateSlug(mountain.mountain_name), id: mountain.id },
-  }));
-  console.log(paths);
-  return { paths, fallback: false };
-}
 
-export async function getStaticProps({ params }) {
-  const res = await fetch('http://localhost:3000/mountains');
-  const mountains = await res.json();
-  const mountain = mountains.find(
-    (mountain) => generateSlug(mountain.mountain_name) === params.mountain
-  );
   return {
-    props: { mountain },
+    props: {
+      mountains,
+    },
   };
 }

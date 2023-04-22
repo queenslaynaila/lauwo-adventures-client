@@ -4,8 +4,9 @@ import { GiMeal } from 'react-icons/gi';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
+import { useRouter } from 'next/router';
 
-const Safari = ({ safari }) => {
+const Safari = ({ safaris }) => {
   const bookableType = 'Safari';
   const contentStyle = {
     width: '85%',
@@ -13,6 +14,10 @@ const Safari = ({ safari }) => {
     overflow: 'auto',
     margin: 'auto',
   };
+
+  const router = useRouter();
+  const path = router.query.safari;
+  const safari = safaris.find((safari) => generateSlug(safari.name) === path);
 
   return (
     <div
@@ -103,22 +108,13 @@ const Safari = ({ safari }) => {
 
 export default Safari;
 
-export async function getStaticPaths() {
+export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/safaris');
   const safaris = await res.json();
-  const paths = safaris.map((safari) => ({
-    params: { safari: generateSlug(safari.name), id: safari.id },
-  }));
-  return { paths, fallback: false };
-}
 
-export async function getStaticProps({ params }) {
-  const res = await fetch('http://localhost:3000/safaris');
-  const safaris = await res.json();
-  const safari = safaris.find(
-    (safari) => generateSlug(safari.name) === params.safari
-  );
   return {
-    props: { safari },
+    props: {
+      safaris,
+    },
   };
 }
