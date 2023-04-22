@@ -11,6 +11,8 @@ const nextConfig = {
       'media-cdn.tripadvisor.com',
       'www.discoverafricablog.com', 
       'www.willflyforfood.net', 
+      'www.tranquilkilimanjaro.com',
+      'img.traveltriangle.com',
     ],
   },
 };
