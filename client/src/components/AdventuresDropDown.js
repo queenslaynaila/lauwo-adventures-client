@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
-import adventures from '@/data/adventures.json'
+import adventures from '@/data/adventures.json';
 
 const AdventuresDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -27,11 +27,13 @@ const AdventuresDropDown = ({ setIsOpen }) => {
       >
         {adventures.map((adventure) => (
           <div key={adventure.id} className="mb-2 py-1">
-            <Link href={`/${generateSlug(adventure.name)}`} className="capitalize"
-            onClick={() => {
-              setIsOpen(false)
-              setIsDropdownOpen(false)
-            }}
+            <Link
+              href={`/${generateSlug(adventure.name)}`}
+              className="capitalize"
+              onClick={() => {
+                setIsOpen(false);
+                setIsDropdownOpen(false);
+              }}
             >
               {adventure.name}
             </Link>
