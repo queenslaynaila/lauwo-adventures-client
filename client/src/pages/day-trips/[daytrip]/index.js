@@ -1,5 +1,5 @@
  import { generateSlug } from '@/utils/generateSlug';
-import { FaCheck, FaTimes } from 'react-icons/fa';
+import { FaCheck, FaTimes,FaDollarSign  } from 'react-icons/fa';
 import Image from 'next/image';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
@@ -69,6 +69,16 @@ export default function Index({ dayTrip }) {
   </div>
   <div>
     <ul>
+      <li className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
+        <div className="lg:ml-6 font-semibold">Price:</div>
+        <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">
+            <div  className="w-full capitalize p-2 flex items-center">
+            <FaDollarSign className="mr-1" />
+            {dayTrip.price.replace('$', '')}
+            </div>
+          
+        </div>
+      </li>
       <li className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
         <div className="lg:ml-6 font-semibold">Inclusions:</div>
         <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">
