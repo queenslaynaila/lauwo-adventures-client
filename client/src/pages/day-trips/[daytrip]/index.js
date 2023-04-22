@@ -3,6 +3,7 @@ import Popup from "reactjs-popup";
 import BookingForm from "@/components/BookingForm";
 import { generateSlug } from "@/utils/generateSlug";
 import { useRouter } from "next/router";
+import { FaCheck, FaTimes,FaDollarSign  } from 'react-icons/fa';
 
 export default function Trip({ trips }) {
   const router = useRouter();
