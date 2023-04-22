@@ -40,6 +40,11 @@ const Faqs = ({ faqs }) => {
               )}
             </div>
           </div>
+          <div className='w-3/4 mx-auto'>
+            {filteredFaqs.map((faq) => (
+              <FaqCard key={faq.id} question={faq.question} answer={faq.answer} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
