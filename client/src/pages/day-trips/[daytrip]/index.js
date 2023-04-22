@@ -1,4 +1,3 @@
-import React from 'react';
 import { generateSlug } from '@/utils/generateSlug';
 
 export default function DayTrip() {
