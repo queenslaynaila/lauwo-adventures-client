@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-
+import Link from "next/link";
 export default function LoginPage() {
   const [formData, setFormData] = useState({
     email: '',
@@ -47,47 +47,87 @@ export default function LoginPage() {
       className="flex flex-col items-center justify-center h-screen font-poly"
       style={{ backgroundImage: 'url(/g-3.jpg)' }}
     >
-      <div className="bg-white p-6 lg:mt-20 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold mb-6">Login</h1>
-        <form className="lg:w-96 md:w-64 sm:w-48" onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="email" className="block font-bold mb-2">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              value={formData.email}
+        <div className="container mx-auto px-4 h-full ">
+        <div className="flex content-center items-center justify-center h-full ">
+          <div className="w-full lg:w-4/12 px-4 ">
+            <div className="relative flex flex-col lg:mt-24  bg-yellow-500 min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
+              <div className="rounded-t mb-0 px-6 py-6 ">
+                <div className="text-center mb-3">
+                  <h6 className="text-black text-lg font-bold">
+                    Sign in  
+                  </h6>
+                </div>
+              </div>
+              <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
+                
+                <form onSubmit={handleSubmit}>
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Email
+                    </label>
+                    <input
+                     name="email"
+                      type="email"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                      placeholder="Enter Email"
+                      value={formData.email}
+                       onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Password
+                    </label>
+                    <input
+                       value={formData.password}
               onChange={handleChange}
-              className="w-full border-2 border-black p-2 rounded-lg focus:outline-none focus:border-yellow-500"
-              required
-            />
+                    name="password"
+                      type="password"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                      placeholder="Enter your Password"
+                    />
+                  </div>
+                   
+                  <div className="text-center mt-6">
+                    <button
+                      className="bg-yellow-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                      type="submit"
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div className="flex flex-wrap mt-6 relative">
+              <div className="w-1/2">
+                <a
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                  className="text-white"
+                >
+                  <small>Forgot password?</small>
+                </a>
+              </div>
+              <div className="w-1/2 text-right">
+                <Link href="/auth/register" legacyBehavior>
+                  <a href="#pablo" className="text-white">
+                    <small>Create new account</small>
+                  </a>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="mb-4">
-            <label htmlFor="password" className="block font-bold mb-2">
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              value={formData.password}
-              onChange={handleChange}
-              className="w-full border-2 border-black p-2 rounded-lg focus:outline-none focus:border-yellow-500"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            className="bg-yellow-400 text-black p-2 rounded-lg hover:bg-yellow-600"
-          >
-            Login
-          </button>
-        </form>
+        </div>
       </div>
+    
     </div>
   );
 }
