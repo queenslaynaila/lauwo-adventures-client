@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tips
   devise_for :admins,
              controllers: {
                  sessions: 'admins/sessions',

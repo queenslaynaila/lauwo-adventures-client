@@ -9,6 +9,7 @@ require_relative 'blogs/blogs'
 require_relative 'safaris/safaris'
 require_relative 'safaris/itineraries'
 require_relative 'frequently_asked_questions/frequently_asked_questions'
+require_relative 'tips/tips'
 
 
 
