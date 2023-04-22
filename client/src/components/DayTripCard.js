@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
+import Image from 'next/image';
 export default function DayTripCard({ day }) {
   return (
     <div>
       <Link href={`/day-trips/${generateSlug(day.name)}`}>
         <div class="relative card overflow-hidden rounded-lg shadow-md hover:shadow-lg transform transition-transform hover:-translate-y-1 cursor-pointer h-80">
-          <img
+          <Image
             src={day.image_url}
             class="card__image w-full h-full object-cover"
+            height={500} width={500}
+            alt={day.name}
           />
           <div class="absolute inset-0 flex items-center justify-center text-left">
             <div class="text-white p-4">
