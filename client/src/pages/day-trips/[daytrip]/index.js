@@ -1,7 +1,7 @@
 import React from 'react';
 import { generateSlug } from '@/utils/generateSlug';
 
-export default function Index({ }) {
+export default function DayTrip() {
   return (
     <>
       <header className="w-full h-1/2 bg-[url('/g-3.jpg')]  lg:h-96 bg-cover bg-center flex justify-center items-center relative"></header>
