@@ -20,6 +20,7 @@ export default function Trip({ trips }) {
     maxHeight: '85%',
     overflow: 'auto',
     margin: 'auto',
+    backgroundColor:"white"
   };
   return (
     <>
