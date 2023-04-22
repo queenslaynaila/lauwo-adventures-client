@@ -26,7 +26,7 @@ export async function getStaticProps({ params }) {
   const dayTrips = await res.json();
   const dayTrip = dayTrips.find(
     (day) => generateSlug(day.name) === params.daytrip
-  ) ?? null;
+  )
   return {
     props: { dayTrip },
   };
