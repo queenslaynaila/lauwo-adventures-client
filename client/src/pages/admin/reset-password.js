@@ -166,18 +166,7 @@ export default function PasswordReset() {
                 </form>
               </div>
             </div>
-            <div className="flex flex-wrap mt-6 relative">
-              <div className="w-1/2">
-                <Link
-                  href=""
-                  onClick={(e) => e.preventDefault()}
-                  className="text-white"
-                >
-                  <small>Forgot password?</small>
-                </Link>
-              </div>
-              
-            </div>
+         
           </div>
         </div>
       </div>
