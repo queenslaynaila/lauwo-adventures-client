@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Head from 'next/head';
+ 
 import Popup from 'reactjs-popup';
 import BookingForm from '@/components/BookingForm';
 
