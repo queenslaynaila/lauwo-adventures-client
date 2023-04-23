@@ -153,21 +153,15 @@ export default function LoginPage() {
             </div>
             <div className="flex flex-wrap mt-6 relative">
               <div className="w-1/2">
-                <a
-                  href="#pablo"
+                <Link
+                  href=""
                   onClick={(e) => e.preventDefault()}
                   className="text-white"
                 >
                   <small>Forgot password?</small>
-                </a>
-              </div>
-              <div className="w-1/2 text-right">
-                <Link href="/auth/register" legacyBehavior>
-                  <a href="#pablo" className="text-white">
-                    <small>Create new account</small>
-                  </a>
                 </Link>
               </div>
+              
             </div>
           </div>
         </div>
