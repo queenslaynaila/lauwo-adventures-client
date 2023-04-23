@@ -1,9 +1,0 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  mountain_name: MyString
-  description: MyText
-
-two:
-  mountain_name: MyString
-  description: MyText
