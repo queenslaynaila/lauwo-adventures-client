@@ -15,14 +15,14 @@ export default function LoginPage() {
   };
 
   const handleSubmit = async (event) => {
-    console.log(formData)
     event.preventDefault();
+    const adminData = { admin: { email: formData.email, password: formData.password } };
     fetch('http://localhost:3000/admins/sign_in', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(adminData),
     })
       .then((response) => {
         if (!response.ok) {
@@ -34,7 +34,7 @@ export default function LoginPage() {
       .then((data) => {
         console.log(data);
         // navigate to dashboard here
-        router.push('/dashboard'); // replace "router" with your router library of choice
+        router.push('admin/dashboard'); // replace "router" with your router library of choice
       })
       .catch((error) => {
         console.log(error)
