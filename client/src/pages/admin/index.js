@@ -154,8 +154,8 @@ export default function LoginPage() {
             <div className="flex flex-wrap mt-6 relative">
               <div className="w-1/2">
                 <Link
-                  href=""
-                  onClick={(e) => e.preventDefault()}
+                  href="/admin/reset-password"
+                 
                   className="text-white"
                 >
                   <small>Forgot password?</small>
