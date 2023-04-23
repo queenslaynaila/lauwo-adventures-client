@@ -1,13 +1,7 @@
-import { useState } from 'react';
-import { FaBars, FaTachometerAlt, FaShoppingCart } from 'react-icons/fa';
-import { RiArrowDownSFill } from 'react-icons/ri';
+ 
 
 const Dashboard = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const handleSidebarToggle = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  
 
   return (
     <>
