@@ -1,3 +1,3 @@
 class CulturalTourSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name , :location, :image_url, :price, :description, :itinerary, :inclusions, :exclusions
 end
