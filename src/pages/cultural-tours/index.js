@@ -12,6 +12,7 @@ function Index({ culturalTours }) {
     maxHeight: '85%',
     overflow: 'auto',
     margin: 'auto',
+    backgroundColor:'white'
   };
   return (
     <>
