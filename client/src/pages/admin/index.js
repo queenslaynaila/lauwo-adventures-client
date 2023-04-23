@@ -1,11 +1,45 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from "next/link";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function LoginPage() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
+
+  const notifySuccess = () => {
+    toast.success('Login successful,Redirecting..!', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
+    
+  };
+
+
+  const notifyError = () =>
+    toast.error('Invalid email or password', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+    });
 
   const router = useRouter();
 
@@ -26,21 +60,30 @@ export default function LoginPage() {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          notifyError()
         }
-        // handle successful response
-        return response.json(); // parse response body as JSON
+
+        return response.json();
       })
       .then((data) => {
-        console.log(data);
-        // navigate to dashboard here
-        router.push('admin/dashboard'); // replace "router" with your router library of choice
+        setFormData({
+          password: '',
+          email: ''
+        });
+        console.log(data)
+        notifySuccess()
+        setTimeout(() => {
+          router.push('admin/dashboard')
+        }, 5000);
       })
+      
       .catch((error) => {
+        notifyError()
         console.log(error)
       });
   };
-  
+
+
 
   return (
     <div
@@ -52,7 +95,9 @@ export default function LoginPage() {
           <div className="w-full lg:w-4/12 px-4 ">
             <div className="relative flex flex-col lg:mt-24  bg-yellow-500 min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
               <div className="rounded-t mb-0 px-6 py-6 ">
+             
                 <div className="text-center mb-3">
+                <ToastContainer />
                   <h6 className="text-black text-lg font-bold">
                     Sign in  
                   </h6>
