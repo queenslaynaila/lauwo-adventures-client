@@ -5,6 +5,7 @@ import Statement from './Statement';
 import PopularAdventure from './PopularAdventure';
 import InquiryForm from './InquiryForm';
 import Gallery from './Gallery';
+import SocialsButtons from './SocialsButtons';
 const PageLayOut = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ const PageLayOut = () => {
       <InquiryForm />
       <Gallery />
       <Blogs />
+      <SocialsButtons />
     </div>
   );
 };
