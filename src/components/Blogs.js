@@ -7,7 +7,7 @@ import Link from 'next/link';
 function Blogs() {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:3000/blogs')
+    fetch('http://localhost:3000/latest_blogs')
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
