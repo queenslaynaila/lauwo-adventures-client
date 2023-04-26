@@ -6,8 +6,6 @@ const images = [
   '/mountain.jpg',
   '/safari.jpg',
   '/mountain2.jpg',
-  '/climbers.jpg',
-  'mountain3.jpg',
 ];
 
 const Header = () => {
