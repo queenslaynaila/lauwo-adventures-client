@@ -20,15 +20,15 @@ export default function Blog({ blogs }) {
         className="w-full h-64   bg-cover bg-center flex justify-center items-center font-poly"
         style={{ backgroundImage: `url(${image_url})` }}
       ></header>
-      <div class=" mx-4 lg:px-0">
-        <h2 class="text-4xl font-semibold leading-tight my-2">{title}</h2>
+      <div className=" mx-4 lg:px-0">
+        <h2 className="text-4xl font-semibold leading-tight my-2">{title}</h2>
       </div>
       <div>
-        <div class="flex items-center pb-2 mx-6">
+        <div className="flex items-center pb-2 mx-6">
           <AiFillClockCircle />
           <p>{created_at}</p>
         </div>
-        <div class="flex items-center pb-2 mx-6">
+        <div className="flex items-center pb-2 mx-6">
           <BsFillPersonFill />
           <p>{author}</p>
         </div>
