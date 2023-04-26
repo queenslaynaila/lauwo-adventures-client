@@ -26,9 +26,7 @@ function Blogs() {
         {blogs.map((blog) => (
           <div className="p-4" key={blog.id}>
             <div
-              className="relative bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700
-            "
-            >
+              className="relative bg-white border border-gray-200 rounded-lg shadow">
               <Image
                 src={blog.image_url}
                 alt="/"
