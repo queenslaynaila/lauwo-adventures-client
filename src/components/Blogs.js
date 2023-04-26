@@ -1,16 +1,20 @@
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { BsArrowRight } from 'react-icons/bs';
+ import { BsArrowRight } from 'react-icons/bs';
 import { truncate } from '@/utils/truncate';
 import { generateSlug } from '@/utils/generateSlug';
 import Link from 'next/link';
+import useSWR from 'swr';
 function Blogs() {
-  const [blogs, setBlogs] = useState([]);
-  useEffect(() => {
-    fetch('http://localhost:3000/latest_blogs')
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, []);
+  const url = 'http://localhost:3000/latest_blogs'
+  const fetcher = (url) => fetch(url).then((res) => res.json());
+  const { data: blogs, error } = useSWR(url, fetcher, {
+    fallback: true,
+    revalidateOnMount: true,
+  });
+
+  if (error) return <div className='m-4 font-poly font-semibold'>Something went wrong</div>;
+  if (!blogs) return <div className='m-4 font-poly font-semibold'>Loading...</div>;
+
   return (
     <div className="m-4 font-poly">
       <div>
