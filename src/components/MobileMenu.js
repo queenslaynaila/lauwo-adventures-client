@@ -19,7 +19,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
           </Link>
         </li>
         <li>
-          <Link href="/#gallery" onClick={toggle}>
+          <Link href="/gallery" onClick={toggle}>
             Gallery
           </Link>
         </li>

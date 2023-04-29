@@ -4,7 +4,6 @@ import Blogs from './Blogs';
 import Statement from './Statement';
 import PopularAdventure from './PopularAdventure';
 import InquiryForm from './InquiryForm';
-import Gallery from './Gallery';
 import SocialsButtons from './SocialsButtons';
 const PageLayOut = () => {
   return (
@@ -14,7 +13,6 @@ const PageLayOut = () => {
       <Statement />
       <PopularAdventure />
       <InquiryForm />
-      <Gallery />
       <Blogs />
       <SocialsButtons />
     </div>

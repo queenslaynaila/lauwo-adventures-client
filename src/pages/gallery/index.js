@@ -1,12 +1,15 @@
 import Image from 'next/image';
 const Gallery = () => {
   return (
-    <div className="m-4 lg:mt-0 md:mt-10 mt-20" id="gallery">
-      <h1 className="text-center lg:text-3xl sm:text-lg font-bold font-poly mb-10">
+    <div className="bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: 'url(/background.jpg)' }}
+    >
+    <div className="inset bg-black/90">
+      <h1 className="text-center lg:text-3xl sm:text-lg font-bold font-poly mb-10 text-white pt-32">
         OUR GALLERY
       </h1>
       <div className="container  mx-auto">
-        <div className="grid-cols-4  lg:space-y-0 grid gap-3 grid-rows-3">
+        <div className="grid-cols-4  lg:space-y-0 grid gap-3 grid-rows-3 pb-10">
           <div className="w-full col-span-2 row-span-2 rounded">
             <Image
               src="/g-8.jpg"
@@ -82,6 +85,7 @@ const Gallery = () => {
         </div>
       </div>
     </div>
+  </div>
   );
 };
 
