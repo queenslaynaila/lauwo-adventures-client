@@ -124,7 +124,7 @@ const BookingForm = ({ adventure, bookableType }) => {
               First Name
             </label>
             <input
-              className="border-b-2 border-black sm:w-96 w-64 h-10  font-poly
+              className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10  font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="firstName"
@@ -141,7 +141,7 @@ const BookingForm = ({ adventure, bookableType }) => {
               Last Name
             </label>
             <input
-              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="lastName"
@@ -160,7 +160,7 @@ const BookingForm = ({ adventure, bookableType }) => {
               Email
             </label>
             <input
-              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="email"
@@ -177,7 +177,7 @@ const BookingForm = ({ adventure, bookableType }) => {
               Phone Number
             </label>
             <input
-              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="phoneNumber"
@@ -196,7 +196,7 @@ const BookingForm = ({ adventure, bookableType }) => {
               Country
             </label>
             <input
-              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="country"
@@ -220,7 +220,7 @@ const BookingForm = ({ adventure, bookableType }) => {
                 From
               </label>
               <input
-                className="border-b-2 border-black sm:w-48 w-32 h-10 font-poly
+                className="border-b-2 border-black lg:w-48 ms:w-32 xs:w-20 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
                 type="date"
                 name="travelPeriod"
@@ -240,7 +240,7 @@ const BookingForm = ({ adventure, bookableType }) => {
                 To
               </label>
               <input
-                className="border-b-2 border-black sm:w-48 w-32 h-10 font-poly
+                className="border-b-2 border-black lg:w-48 ms:w-32 xs:w-20 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
                 type="date"
                 name="travelPeriod"
@@ -265,7 +265,7 @@ const BookingForm = ({ adventure, bookableType }) => {
               No. of Travellers
             </label>
             <input
-              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="number"
               name="noOfTravellers"
@@ -283,7 +283,7 @@ const BookingForm = ({ adventure, bookableType }) => {
               No. of Adults
             </label>
             <input
-              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="number"
               min={0}
@@ -303,7 +303,7 @@ const BookingForm = ({ adventure, bookableType }) => {
               No. of Children
             </label>
             <input
-              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="number"
               min={0}
@@ -320,7 +320,7 @@ const BookingForm = ({ adventure, bookableType }) => {
               No. of Small Children
             </label>
             <input
-              className="border-b-2 border-black sm:w-96 w-64 h-10 font-poly
+              className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
               focus:outline-none focus:border-yellow-500"
               type="number"
               min={0}
@@ -339,7 +339,9 @@ const BookingForm = ({ adventure, bookableType }) => {
               Additional Info
             </label>
             <textarea
-              className="border-b-2 border-black sm:w-[800px] w-64 h-20 font-poly
+              className="border-b-2 border-black xl:w-[800px] md:w-[550px] ms:ms:w-64 xs:w-44 h-20
+               xs:w-44
+              font-poly
               focus:outline-none focus:border-yellow-500"
               type="text"
               name="additionalInfo"
