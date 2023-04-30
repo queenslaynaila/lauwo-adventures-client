@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { generateSlug } from '@/utils/generateSlug';
@@ -17,7 +18,22 @@ export default function Mountains({ mountains }) {
     );
   };
   return (
-    <div className="h-screen mb-2 bg-gray-100 flex items-center justify-center relative font-poly">
+    <>
+    
+    <Head>
+        <title>Mountain Trekking</title>
+        <meta name="description" content="Explore the beauty of mountains" />
+        <meta property="og:title" content="Mountain Trekking" />
+        <meta property="og:description" content="Explore the beauty of mountains" />
+        <meta property="og:image" content={mountains[currentImageIndex].image_url} />
+        <meta property="og:url" content={`https://example.com/mountain-trekking/${generateSlug(mountains[currentImageIndex].mountain_name)}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mountain Trekking" />
+        <meta name="twitter:description" content="Explore the beauty of mountains" />
+        <meta name="twitter:image" content={mountains[currentImageIndex].image_url} />
+      </Head>
+      
+      <div className="h-screen mb-2 bg-gray-100 flex items-center justify-center relative font-poly">
       {mountains.map((mountain, index) => (
         <div
           key={index}
@@ -74,6 +90,9 @@ export default function Mountains({ mountains }) {
         </div>
       </div>
     </div>
+   
+    </>
+    
   );
 }
 export async function getServerSideProps() {

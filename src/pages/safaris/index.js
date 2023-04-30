@@ -1,10 +1,20 @@
 import { generateSlug } from '@/utils/generateSlug';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Safaris = ({ safaris }) => {
   return (
-    <div
+    <>
+        <Head>
+        <title>Safaris -Lauwo Adventures</title>
+        <meta
+          name="description"
+          content="Discover amazing safari tours with Lauwo Adventures. Book your next adventure today!"
+        />
+      </Head>
+    
+      <div
       className="h-full bg-no-repeat bg-center bg-cover"
       style={{ backgroundImage: 'url(/serengeti.jpg)' }}
     >
@@ -43,6 +53,9 @@ const Safaris = ({ safaris }) => {
         </div>
       </div>
     </div>
+      
+    </>
+   
   );
 };
 

@@ -1,9 +1,15 @@
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Popup from 'reactjs-popup';
 import BookingForm from '@/components/BookingForm';
+import Head from 'next/head';
 
 function Tour({ culturalTour }) {
- console.log(culturalTour);
+    const router = useRouter();
+    console.log(router);
+   const path = router.query.culturaltour
+   console.log(path)
+  console.log(culturalTour);
   const tour = culturalTour[0];
   const bookableType = 'Cultural Tours';
   const contentStyle = {
@@ -15,6 +21,14 @@ function Tour({ culturalTour }) {
   };
   return (
     <>
+    <Head>
+        <title>{tour.name} - Cultural Tour</title>
+        <meta name="description" content={tour.description} />
+        <meta property="og:title" content={tour.name} />
+        <meta property="og:description" content={tour.description} />
+        <meta property="og:image" content="/culture.jpg" />
+        <meta property="og:url" content={`http://localhost:3000/cultural_tours/${tour.slug}`} />
+      </Head>
       <div className="bg-cover bg-center  inset-0 bg-black bg-opacity-100" style={{backgroundImage: `url(/background1.jpg)`}}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
           <div className="relative h-80 md:h-auto mt-20">

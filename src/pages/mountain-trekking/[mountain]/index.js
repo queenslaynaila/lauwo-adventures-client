@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Head from 'next/head';
+
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
 import { useRouter } from 'next/router';
@@ -12,6 +14,19 @@ export default function Mountain({ mountains }) {
 
   return (
     <div className="font-poly">
+       <Head>
+        <title>{mountain.mountain_name} - Mountain Trekking</title>
+        <meta name="description" content={mountain.overview} />
+        <meta property="og:title" content={`${mountain.mountain_name} - Mountain Trekking`} />
+        <meta property="og:description" content={mountain.overview} />
+        <meta property="og:image" content={mountain.image_url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://example.com/mountain-trekking/${generateSlug(mountain.mountain_name)}`} />
+        <meta name="twitter:title" content={`${mountain.mountain_name} - Mountain Trekking`} />
+        <meta name="twitter:description" content={mountain.overview} />
+        <meta name="twitter:image" content={mountain.image_url} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <header
         className="w-full h-64  bg-cover bg-center flex justify-center items-center"
         style={{ backgroundImage: `url(${mountain.image_url})` }}
