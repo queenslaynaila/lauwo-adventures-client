@@ -12,9 +12,7 @@ export default function BlogCard({ blog }) {
         <meta name="og:title" content={blog.title} />
         <meta name="og:description" content={blog.content.split(' ').slice(0, 40).join(' ')} />
         <meta name="og:image" content={blog.image_url} />
-        <meta name="twitter:title" content={blog.title} />
-        <meta name="twitter:description" content={blog.content.split(' ').slice(0, 40).join(' ')} />
-        <meta name="twitter:image" content={blog.image_url} />
+       
       </Head>
       <Image src={blog.image_url} alt={blog.title} className="object-cover" height={500} width={500} />
       <div className=" p-4 ">

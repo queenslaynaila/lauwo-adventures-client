@@ -19,7 +19,6 @@ export default function index({ blogs }) {
           content="Discover the hidden gems of Tanzania with our expert guides. From the majestic peaks of Kilimanjaro to thrilling safaris and cultural experiences, our blog has it all"
         />
         <meta property="og:image" content="/safari-1.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
           content="Explore Our Latest Travel Stories - Lauwo Travel Blog"

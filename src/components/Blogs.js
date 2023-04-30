@@ -28,13 +28,7 @@ function Blogs() {
         <meta
           property="og:description"
           content="Check out our latest blog posts for tips, news, and insights on a variety of tours, safaris and mountain climbing."
-        />
-        <meta name="twitter:title" content="Recent Blogs - Lauwo Tours" />
-        <meta
-          name="twitter:description"
-          content="Check out our latest blog posts for tips, news, and insights on a variety of tours ,trips and safaris."
-        />
-        <meta name="twitter:card" content="summary_large_image" />
+        />     
       </Head>
       <div>
         <h1 className="text-center text-lg mt-4 lg:mt-8 lg:text-3xl font-bold uppercase">

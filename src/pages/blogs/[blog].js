@@ -24,9 +24,6 @@ export default function Blog({ blogs }) {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={content} />
         <meta property="og:type" content="article" />
-        <meta name="twitter:title" content={blogPost.title} />
-        <meta name="twitter:description" content={content} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <main className="font-poly ">
       <header

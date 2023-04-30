@@ -25,7 +25,6 @@ export default function Mountain({ mountains }) {
         <meta name="twitter:title" content={`${mountain.mountain_name} - Mountain Trekking`} />
         <meta name="twitter:description" content={mountain.overview} />
         <meta name="twitter:image" content={mountain.image_url} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header
         className="w-full h-64  bg-cover bg-center flex justify-center items-center"
