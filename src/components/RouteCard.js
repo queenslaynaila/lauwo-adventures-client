@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 export default function RouteCard({ route, duration, routeDuration }) {
   const bookableType = 'RouteDuration';
-
+ 
   const adventure = {
     name: `${route.route_name} ${duration} day climb`,
-    id: routeDuration,
+    id: routeDuration.id,
   };
   const contentStyle = {
     width: '85%',
