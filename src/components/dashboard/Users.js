@@ -1,30 +1,29 @@
 import React, { useState } from 'react';
 
-const usersData = [
-  {
-    id: 1,
-    username: 'john_doe',
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    role: 'admin',
-  },
-  {
-    id: 2,
-    username: 'jane_doe',
-    name: 'Jane Doe',
-    email: 'jane.doe@example.com',
-    role: 'user',
-  },
-  {
-    id: 3,
-    username: 'bob_smith',
-    name: 'Bob Smith',
-    email: 'bob.smith@example.com',
-    role: 'user',
-  },
-];
-
 const Users = () => {
+  const usersData = [
+    {
+      id: 1,
+      username: 'john_doe',
+      name: 'John Doe',
+      email: 'john.doe@example.com',
+      role: 'admin',
+    },
+    {
+      id: 2,
+      username: 'jane_doe',
+      name: 'Jane Doe',
+      email: 'jane.doe@example.com',
+      role: 'user',
+    },
+    {
+      id: 3,
+      username: 'bob_smith',
+      name: 'Bob Smith',
+      email: 'bob.smith@example.com',
+      role: 'user',
+    },
+  ];
   const [search, setSearch] = useState('');
   const [selectedUsers, setSelectedUsers] = useState([]);
   const [users, setUsers] = useState(usersData);
@@ -91,73 +90,55 @@ const Users = () => {
         </div>
       </div>
 
-      <div class="relative shadow-md sm:rounded-lg    ">
-        <table class=" w-full text-sm text-left text-gray-500 ">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+      <div class="relative shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left   table-auto">
+          <thead class="text-xs  uppercase bg-gray-50">
             <tr>
               <th scope="col" class="px-6 py-3">
-                EMAIL
+                ACTION
               </th>
+              <th scope="col" class="px-6 py-3">
+                <div class="flex items-center">EMAIL</div>
+              </th>
+
               <th scope="col" class="px-6 py-3">
                 <div class="flex items-center">ROLE</div>
               </th>
-
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">ACTION</div>
-              </th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="bg-white border-b">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-              >
-                Apple MacBook Pro 17"
-              </th>
-              <td class="px-6 py-4">Silver</td>
-
-              <td class="px-6 py-4 ">
-                <a href="#" class="font-medium text-blue-600  hover:underline">
-                  Edit
-                </a>
-              </td>
-            </tr>
-            <tr class="bg-white border-b   ">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap  "
-              >
-                Microsoft Surface Pro
-              </th>
-              <td class="px-6 py-4">White</td>
-
-              <td class="px-6 py-4  ">
-                <a href="#" class="font-medium text-blue-600 hover:underline">
-                  Edit
-                </a>
-              </td>
-            </tr>
-            <tr class="bg-white  ">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-              >
-                Magic Mouse 2
-              </th>
-              <td class="px-6 py-4">Black</td>
-
-              <td class="px-6 py-4  ">
-                <a href="#" class="font-medium text-blue-600  hover:underline">
-                  Edit
-                </a>
-              </td>
-            </tr>
+          <tbody className="divide-y divide-white">
+            {filteredUsers.map((user) => (
+              <tr key={user.id}>
+                <td class="px-6 py-4 whitespace-nowrap ">
+                  <div class="flex items-center">
+                    <div class="flex items-center">
+                      <input
+                        type="checkbox"
+                        name="selectedUsers"
+                        value={user.id}
+                        onChange={(event) => handleCheckboxChange(event, user)}
+                      />
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <div>
+                      <div>{user.email}</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <div>{user.role}</div>
+                  </div>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
     </div>
   );
 };
-
 export default Users;

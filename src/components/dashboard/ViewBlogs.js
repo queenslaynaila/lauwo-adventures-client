@@ -1,4 +1,4 @@
-import { useEffect,React,useState } from 'react';
+import { useEffect, React, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ToastContainer, toast } from 'react-toastify';
@@ -27,17 +27,13 @@ export default function ViewBlogs() {
   }, []);
 
   const onDelete = (id) => {
-   
     fetch(`http://localhost:3000/blogs/${id}`, {
-      method: 'DELETE'
-    })
-    .then((response) => {
+      method: 'DELETE',
+    }).then((response) => {
       if (response.ok) {
-       
         const updatedList = blogs.filter((blog) => blog.id !== id);
         setBlogs(updatedList);
-  
-       
+
         toast.success('Blog post deleted successfully!', {
           position: 'top-center',
           autoClose: 5000,
@@ -53,7 +49,6 @@ export default function ViewBlogs() {
           },
         });
       } else {
-      
         toast.error('Failed to delete blog post. Please try again.', {
           position: 'top-center',
           autoClose: 5000,
@@ -67,38 +62,39 @@ export default function ViewBlogs() {
       }
     });
   };
-  
+
   return (
-    <div   className=" px-4 py-8">
-    <h1  className="text-2xl font-bold mb-4">Your Blogs</h1>
-    {blogs.length === 0 && (
-      <p className="text-gray-500">You have no blogs yet.</p>
-    )}
-    {blogs.map((blog) => (
-      <div key={blog.id} className="flex items-center mb-4">
-        <Image
-          width={500}
-          height={500}
-          src={blog.image_url}
-          alt={blog.title}
-          className="w-12 h-12 rounded-full object-cover mr-4"
-        />
-        <div>
-          <Link href={`/blogs/${blog.id}`} className="text-lg font-medium hover:text-yellow-800">
-            
+    <div className=" px-4 py-8">
+      <h1 className="text-2xl font-bold mb-4">Your Blogs</h1>
+      {blogs.length === 0 && (
+        <p className="text-gray-500">You have no blogs yet.</p>
+      )}
+      {blogs.map((blog) => (
+        <div key={blog.id} className="flex items-center mb-4">
+          <Image
+            width={500}
+            height={500}
+            src={blog.image_url}
+            alt={blog.title}
+            className="w-12 h-12 rounded-full object-cover mr-4"
+          />
+          <div>
+            <Link
+              href={`/blogs/${blog.id}`}
+              className="text-lg font-medium hover:text-yellow-800"
+            >
               {blog.title}
-           
-          </Link>
-          <p className="text-gray-500 text-sm">{blog.author}</p>
+            </Link>
+            <p className="text-gray-500 text-sm">{blog.author}</p>
+          </div>
+          <button
+            className="ml-auto text-red-600 hover:text-red-800"
+            onClick={() => onDelete(blog.id)}
+          >
+            <FaTrash />
+          </button>
         </div>
-        <button
-          className="ml-auto text-red-600 hover:text-red-800"
-          onClick={() => onDelete(blog.id)}
-        >
-          <FaTrash/>
-        </button>
-      </div>
-    ))}
-  </div>
-  )
+      ))}
+    </div>
+  );
 }

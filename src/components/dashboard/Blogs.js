@@ -7,14 +7,14 @@ export default function Blogs() {
     title: '',
     content: '',
     image_url: '',
-    author: ''
+    author: '',
   });
-  
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setPost((prevPost) => ({
       ...prevPost,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -37,7 +37,7 @@ export default function Blogs() {
       title: '',
       content: '',
       image_url: '',
-      author: ''
+      author: '',
     });
   };
 
@@ -58,23 +58,22 @@ export default function Blogs() {
     fetch('http://localhost:3000/blogs', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(post)
-    })
-      .then((r) => {
-        if (r.ok) {
-          r.json().then((_data) => {
-            notifySuccess();
-          });
-        } else {
-          r.json().then((err) => {
-            notifyError();
-          });
-        }
-      });
+      body: JSON.stringify(post),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((_data) => {
+          notifySuccess();
+        });
+      } else {
+        r.json().then((err) => {
+          notifyError();
+        });
+      }
+    });
   };
-  
+
   return (
     <div className=" px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">New Blog Post</h1>
@@ -134,7 +133,7 @@ export default function Blogs() {
             value={post.image_url}
             onChange={handleInputChange}
           />
-            <p className="text-gray-500 text-sm mt-1">
+          <p className="text-gray-500 text-sm mt-1">
             The link to the image placeholeder.
           </p>
         </div>

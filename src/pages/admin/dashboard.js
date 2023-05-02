@@ -8,9 +8,9 @@ import {
   BsFillPersonFill,
   BsListTask,
 } from 'react-icons/bs';
- 
+
 import { RiSafariFill } from 'react-icons/ri';
-import {  GiTakeMyMoney } from 'react-icons/gi';
+import { GiTakeMyMoney } from 'react-icons/gi';
 import { FaBlogger, FaMountain } from 'react-icons/fa';
 import Settings from '@/components/dashboard/Settings';
 import Blogs from '@/components/dashboard/Blogs';
@@ -35,7 +35,7 @@ const Dashboard = () => {
       <div className="grid grid-cols-1">
         <div className="mt-24">
           <div className="flex item-center justify-center flex-row   ">
-            <div className="text-gray-100 px-4  w-12 lg:w-64 ">
+            <div className="text-gray-100 px-4  w-1/6 ">
               <ul className="my-8 space-y-2 flex flex-col justify-center items-center lg:items-start py-8 lg:py-0">
                 <li className="flex-col">
                   <a
@@ -187,7 +187,7 @@ const Dashboard = () => {
               </ul>
             </div>
 
-            <div className="  px-4 flex-1">
+            <div className="w-5/6  px-4 flex-1   ">
               {activeSection === 'bookings' && <Bookings />}
               {activeSection === 'enquiries' && <Enquiries />}
               {activeSection === 'planning' && <Plannings />}
