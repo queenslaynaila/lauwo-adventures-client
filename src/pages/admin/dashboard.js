@@ -8,9 +8,9 @@ import {
   BsFillPersonFill,
   BsListTask,
 } from 'react-icons/bs';
-import { TiWeatherPartlySunny } from 'react-icons/ti';
+ 
 import { RiSafariFill } from 'react-icons/ri';
-import { GiAncientColumns, GiTakeMyMoney } from 'react-icons/gi';
+import {  GiTakeMyMoney } from 'react-icons/gi';
 import { FaBlogger, FaMountain } from 'react-icons/fa';
 import Settings from '@/components/dashboard/Settings';
 import Blogs from '@/components/dashboard/Blogs';
@@ -19,7 +19,7 @@ import Promotions from '@/components/dashboard/Promotions';
 import Plannings from '@/components/dashboard/Plannings';
 import Bookings from '@/components/dashboard/Bookings';
 import Enquiries from '@/components/dashboard/Enquiries';
-
+import ViewBlogs from '@/components/dashboard/ViewBlogs';
 const Dashboard = () => {
   const [activeSection, setActiveSection] = useState('bookings');
   const [showDropdown, setShowDropdown] = useState(false);
@@ -200,7 +200,7 @@ const Dashboard = () => {
               {activeSection === 'dayTrips' && <p>daytrips</p>}
               {activeSection === 'culturalTours' && <p>culturalToura</p>}
               {activeSection === 'blogs' && <Blogs />}
-              {activeSection === 'viewallblogs' && <Blogs />}
+              {activeSection === 'viewallblogs' && <ViewBlogs />}
             </div>
           </div>
         </div>
