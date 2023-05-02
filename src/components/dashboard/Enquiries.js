@@ -24,7 +24,7 @@ const usersData = [
   },
 ];
 
-const   Enquiries = () => {
+const Enquiries = () => {
   const [search, setSearch] = useState('');
   const [selectedUsers, setSelectedUsers] = useState([]);
   const [users, setUsers] = useState(usersData);
@@ -91,7 +91,7 @@ const   Enquiries = () => {
         </div>
       </div>
 
-      <div class="relative shadow-md sm:rounded-lg    "  >
+      <div class="relative shadow-md sm:rounded-lg    ">
         <table class=" w-full text-sm text-left text-gray-500 ">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
             <tr>
@@ -101,9 +101,9 @@ const   Enquiries = () => {
               <th scope="col" class="px-6 py-3">
                 <div class="flex items-center">ROLE</div>
               </th>
-              
+
               <th scope="col" class="px-6 py-3">
-              <div class="flex items-center">ACTION</div>
+                <div class="flex items-center">ACTION</div>
               </th>
             </tr>
           </thead>
@@ -116,12 +116,9 @@ const   Enquiries = () => {
                 Apple MacBook Pro 17"
               </th>
               <td class="px-6 py-4">Silver</td>
-               
+
               <td class="px-6 py-4 ">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600  hover:underline"
-                >
+                <a href="#" class="font-medium text-blue-600  hover:underline">
                   Edit
                 </a>
               </td>
@@ -134,12 +131,9 @@ const   Enquiries = () => {
                 Microsoft Surface Pro
               </th>
               <td class="px-6 py-4">White</td>
-               
+
               <td class="px-6 py-4  ">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 hover:underline"
-                >
+                <a href="#" class="font-medium text-blue-600 hover:underline">
                   Edit
                 </a>
               </td>
@@ -152,12 +146,9 @@ const   Enquiries = () => {
                 Magic Mouse 2
               </th>
               <td class="px-6 py-4">Black</td>
-              
+
               <td class="px-6 py-4  ">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600  hover:underline"
-                >
+                <a href="#" class="font-medium text-blue-600  hover:underline">
                   Edit
                 </a>
               </td>
@@ -169,4 +160,4 @@ const   Enquiries = () => {
   );
 };
 
-export default  Enquiries;
+export default Enquiries;

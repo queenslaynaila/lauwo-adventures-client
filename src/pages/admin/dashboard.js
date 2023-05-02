@@ -16,9 +16,9 @@ import Settings from '@/components/dashboard/Settings';
 import Blogs from '@/components/dashboard/Blogs';
 import Users from '@/components/dashboard/Users';
 import Promotions from '@/components/dashboard/Promotions';
-import Plannings from '@/components/dashboard/Plannings'
-import Bookings from '@/components/dashboard/Bookings'
-import Enquiries from '@/components/dashboard/Enquiries'
+import Plannings from '@/components/dashboard/Plannings';
+import Bookings from '@/components/dashboard/Bookings';
+import Enquiries from '@/components/dashboard/Enquiries';
 
 const Dashboard = () => {
   const [activeSection, setActiveSection] = useState('bookings');
@@ -37,7 +37,6 @@ const Dashboard = () => {
           <div className="flex item-center justify-center flex-row   ">
             <div className="text-gray-100 px-4  w-12 lg:w-64 ">
               <ul className="my-8 space-y-2 flex flex-col justify-center items-center lg:items-start py-8 lg:py-0">
-               
                 <li className="flex-col">
                   <a
                     href="#"
@@ -108,7 +107,7 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Users</span>
                   </a>
                 </li>
-                
+
                 <li className="flex-col">
                   <div
                     className={`flex items-center py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
@@ -118,7 +117,7 @@ const Dashboard = () => {
                     }`}
                     onClick={() => handleSectionClick('blogs')}
                   >
-                    <FaBlogger  className="inline-block mr-1 font-bold" />
+                    <FaBlogger className="inline-block mr-1 font-bold" />
                     <span className="hidden lg:inline-block">Blogs</span>
                     {showDropdown ? (
                       <BsChevronUp
@@ -147,7 +146,7 @@ const Dashboard = () => {
                           <FaMountain className="inline-block mr-1 font-bold" />
 
                           <span className="hidden lg:inline-block">
-                             Add New
+                            Add New
                           </span>
                         </a>
                       </li>
@@ -163,11 +162,11 @@ const Dashboard = () => {
                         >
                           <RiSafariFill className="inline-block mr-1 font-bold" />
 
-                          <span className="hidden lg:inline-block">View all</span>
+                          <span className="hidden lg:inline-block">
+                            View all
+                          </span>
                         </a>
                       </li>
-                      
-                      
                     </ul>
                   )}
                 </li>
@@ -189,10 +188,10 @@ const Dashboard = () => {
             </div>
 
             <div className="  px-4 flex-1">
-              {activeSection === 'bookings' &&  <Bookings/>}
-              {activeSection === 'enquiries' &&  <Enquiries/>}
-              {activeSection === 'planning' && <Plannings/>}
-              {activeSection === 'promotions' &&  <Promotions/>}
+              {activeSection === 'bookings' && <Bookings />}
+              {activeSection === 'enquiries' && <Enquiries />}
+              {activeSection === 'planning' && <Plannings />}
+              {activeSection === 'promotions' && <Promotions />}
               {activeSection === 'users' && <Users />}
               {activeSection === 'settings' && <Settings />}
               {activeSection === 'tours' && <p>tours</p>}
