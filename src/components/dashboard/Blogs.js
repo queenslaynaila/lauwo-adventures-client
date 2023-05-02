@@ -33,7 +33,7 @@ export default function Blogs() {
           <input
             id="title"
             type="text"
-            className="w-full border border-gray-400 p-2 rounded-lg"
+            className="w-full border border-white p-2 rounded-lg"
             value={title}
             onChange={handleTitleChange}
           />
@@ -47,7 +47,7 @@ export default function Blogs() {
           </label>
           <textarea
             id="content"
-            className="w-full border border-gray-400 p-2 rounded-lg"
+            className="w-full border border-white p-2 rounded-lg"
             value={content}
             onChange={handleContentChange}
           />
@@ -65,7 +65,7 @@ export default function Blogs() {
           <input
             id="imageURL"
             type="text"
-            className="w-full border border-gray-400 p-2 rounded-lg"
+            className="w-full border border-white p-2 rounded-lg"
             value={imageURL}
             onChange={handleImageURLChange}
           />
@@ -73,7 +73,7 @@ export default function Blogs() {
         <div className="mb-4">
           <button
             type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+            className="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
           >
             Submit
           </button>
