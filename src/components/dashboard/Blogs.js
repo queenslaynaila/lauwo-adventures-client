@@ -1,27 +1,80 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Blogs() {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [imageURL, setImageURL] = useState('');
-
-  const handleTitleChange = (event) => {
-    setTitle(event.target.value);
+  const [post, setPost] = useState({
+    title: '',
+    content: '',
+    image_url: '',
+    author: ''
+  });
+  
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setPost((prevPost) => ({
+      ...prevPost,
+      [name]: value
+    }));
   };
 
-  const handleContentChange = (event) => {
-    setContent(event.target.value);
+  const notifySuccess = () => {
+    toast.success('New Blog successfully created..!', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
+    setPost({
+      title: '',
+      content: '',
+      image_url: '',
+      author: ''
+    });
   };
 
-  const handleImageURLChange = (event) => {
-    setImageURL(event.target.value);
-  };
+  const notifyError = () =>
+    toast.error('Failed. Try again...', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+    });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // TODO: handle form submission
+    fetch('http://localhost:3000/blogs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(post)
+    })
+      .then((r) => {
+        if (r.ok) {
+          r.json().then((_data) => {
+            notifySuccess();
+          });
+        } else {
+          r.json().then((err) => {
+            notifyError();
+          });
+        }
+      });
   };
-
+  
   return (
     <div className=" px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">New Blog Post</h1>
@@ -34,8 +87,20 @@ export default function Blogs() {
             id="title"
             type="text"
             className="w-full border border-white p-2 rounded-lg"
-            value={title}
-            onChange={handleTitleChange}
+            value={post.title}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="title" className="block text-gray-700 font-bold mb-2">
+            Author
+          </label>
+          <input
+            id="title"
+            type="text"
+            className="w-full border border-white p-2 rounded-lg"
+            value={post.author}
+            onChange={handleInputChange}
           />
         </div>
         <div className="mb-4">
@@ -48,11 +113,11 @@ export default function Blogs() {
           <textarea
             id="content"
             className="w-full border border-white p-2 rounded-lg"
-            value={content}
-            onChange={handleContentChange}
+            value={post.content}
+            onChange={handleInputChange}
           />
           <p className="text-gray-500 text-sm mt-1">
-            Separate new paragraphs by a newline character.
+            Separate new paragraphs by a newline character=&gt; /n
           </p>
         </div>
         <div className="mb-4">
@@ -66,9 +131,12 @@ export default function Blogs() {
             id="imageURL"
             type="text"
             className="w-full border border-white p-2 rounded-lg"
-            value={imageURL}
-            onChange={handleImageURLChange}
+            value={post.image_url}
+            onChange={handleInputChange}
           />
+            <p className="text-gray-500 text-sm mt-1">
+            The link to the image placeholeder.
+          </p>
         </div>
         <div className="mb-4">
           <button
