@@ -15,6 +15,11 @@ import { FaBlogger, FaMountain } from 'react-icons/fa';
 import Settings from '@/components/dashboard/Settings';
 import Blogs from '@/components/dashboard/Blogs';
 import Users from '@/components/dashboard/Users';
+import Promotions from '@/components/dashboard/Promotions';
+import Plannings from '@/components/dashboard/Plannings'
+import Bookings from '@/components/dashboard/Bookings'
+import Enquiries from '@/components/dashboard/Enquiries'
+
 const Dashboard = () => {
   const [activeSection, setActiveSection] = useState('bookings');
   const [showDropdown, setShowDropdown] = useState(false);
@@ -32,98 +37,7 @@ const Dashboard = () => {
           <div className="flex item-center justify-center flex-row   ">
             <div className="text-gray-100 px-4  w-12 lg:w-64 ">
               <ul className="my-8 space-y-2 flex flex-col justify-center items-center lg:items-start py-8 lg:py-0">
-                <li className="flex-col">
-                  <div
-                    className={`flex items-center py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
-                      activeSection === 'tours'
-                        ? 'bg-gray-100 text-gray-900'
-                        : ''
-                    }`}
-                    onClick={() => handleSectionClick('tours')}
-                  >
-                    <TiWeatherPartlySunny className="inline-block mr-1 font-bold" />
-                    <span className="hidden lg:inline-block">Tours</span>
-                    {showDropdown ? (
-                      <BsChevronUp
-                        onClick={handleDropdownClick}
-                        className="ml-1"
-                      />
-                    ) : (
-                      <BsChevronDown
-                        onClick={handleDropdownClick}
-                        className="ml-1"
-                      />
-                    )}
-                  </div>
-                  {showDropdown && (
-                    <ul>
-                      <li className="mt-1">
-                        <a
-                          href="#"
-                          onClick={() => handleSectionClick('mountains')}
-                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
-                            activeSection === 'mountains'
-                              ? 'bg-gray-100 text-gray-900'
-                              : ''
-                          }`}
-                        >
-                          <FaMountain className="inline-block mr-1 font-bold" />
-
-                          <span className="hidden lg:inline-block">
-                            Mountain Trekking
-                          </span>
-                        </a>
-                      </li>
-                      <li className="mt-1">
-                        <a
-                          href="#"
-                          onClick={() => handleSectionClick('safaris')}
-                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
-                            activeSection === 'safaris'
-                              ? 'bg-gray-100 text-gray-900'
-                              : ''
-                          }`}
-                        >
-                          <RiSafariFill className="inline-block mr-1 font-bold" />
-
-                          <span className="hidden lg:inline-block">Safari</span>
-                        </a>
-                      </li>
-                      <li className="mt-1">
-                        <a
-                          href="#"
-                          onClick={() => handleSectionClick('dayTrips')}
-                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
-                            activeSection === 'dayTrips'
-                              ? 'bg-gray-100 text-gray-900'
-                              : ''
-                          }`}
-                        >
-                          <TiWeatherPartlySunny className="inline-block mr-1 font-bold" />
-                          <span className="hidden lg:inline-block">
-                            Day Trips
-                          </span>
-                        </a>
-                      </li>
-                      <li className="mt-1">
-                        <a
-                          href="#"
-                          onClick={() => handleSectionClick('culturalTours')}
-                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
-                            activeSection === 'culturalTours'
-                              ? 'bg-gray-100 text-gray-900'
-                              : ''
-                          }`}
-                        >
-                          <GiAncientColumns className="inline-block mr-1 font-bold" />
-                          <span className="hidden lg:inline-block">
-                            Cultural tours
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  )}
-                </li>
+               
                 <li className="flex-col">
                   <a
                     href="#"
@@ -194,19 +108,68 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Users</span>
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    onClick={() => handleSectionClick('blogs')}
-                    className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
+                
+                <li className="flex-col">
+                  <div
+                    className={`flex items-center py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
                       activeSection === 'blogs'
                         ? 'bg-gray-100 text-gray-900'
                         : ''
                     }`}
+                    onClick={() => handleSectionClick('blogs')}
                   >
-                    <FaBlogger className="inline-block mr-1 font-bold" />
+                    <FaBlogger  className="inline-block mr-1 font-bold" />
                     <span className="hidden lg:inline-block">Blogs</span>
-                  </a>
+                    {showDropdown ? (
+                      <BsChevronUp
+                        onClick={handleDropdownClick}
+                        className="ml-1"
+                      />
+                    ) : (
+                      <BsChevronDown
+                        onClick={handleDropdownClick}
+                        className="ml-1"
+                      />
+                    )}
+                  </div>
+                  {showDropdown && (
+                    <ul>
+                      <li className="mt-1">
+                        <a
+                          href="#"
+                          onClick={() => handleSectionClick('blogs')}
+                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
+                            activeSection === 'mountains'
+                              ? 'bg-gray-100 text-gray-900'
+                              : ''
+                          }`}
+                        >
+                          <FaMountain className="inline-block mr-1 font-bold" />
+
+                          <span className="hidden lg:inline-block">
+                             Add New
+                          </span>
+                        </a>
+                      </li>
+                      <li className="mt-1">
+                        <a
+                          href="#"
+                          onClick={() => handleSectionClick('viewallblogs')}
+                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
+                            activeSection === 'safaris'
+                              ? 'bg-gray-100 text-gray-900'
+                              : ''
+                          }`}
+                        >
+                          <RiSafariFill className="inline-block mr-1 font-bold" />
+
+                          <span className="hidden lg:inline-block">View all</span>
+                        </a>
+                      </li>
+                      
+                      
+                    </ul>
+                  )}
                 </li>
                 <li>
                   <a
@@ -226,10 +189,10 @@ const Dashboard = () => {
             </div>
 
             <div className="  px-4 flex-1">
-              {activeSection === 'bookings' && <p>bookings</p>}
-              {activeSection === 'enquiries' && <p>enquiries</p>}
-              {activeSection === 'planning' && <p>planning</p>}
-              {activeSection === 'promotions' && <p>promotions</p>}
+              {activeSection === 'bookings' &&  <Bookings/>}
+              {activeSection === 'enquiries' &&  <Enquiries/>}
+              {activeSection === 'planning' && <Plannings/>}
+              {activeSection === 'promotions' &&  <Promotions/>}
               {activeSection === 'users' && <Users />}
               {activeSection === 'settings' && <Settings />}
               {activeSection === 'tours' && <p>tours</p>}
@@ -238,6 +201,7 @@ const Dashboard = () => {
               {activeSection === 'dayTrips' && <p>daytrips</p>}
               {activeSection === 'culturalTours' && <p>culturalToura</p>}
               {activeSection === 'blogs' && <Blogs />}
+              {activeSection === 'viewallblogs' && <Blogs />}
             </div>
           </div>
         </div>
