@@ -31,7 +31,7 @@ export default function Settings() {
     <div>
       <div className="py-4 ">
         <h1 className="text-2xl font-bold">Account Settings</h1>
-        <div className="border-t border-gray-300 mt-4">
+        <div className="border-t border-white mt-4">
           <form onSubmit={handleEmailSubmit}>
             <h2 className="text-lg font-bold mb-2">Email</h2>
             <div className="mb-4">
@@ -44,7 +44,7 @@ export default function Settings() {
               <input
                 id="email"
                 type="email"
-                className="w-full border border-gray-400 p-2 rounded-lg"
+                className="w-full border border-white p-2 rounded-lg"
                 value={email}
                 onChange={handleEmailChange}
               />
@@ -59,13 +59,13 @@ export default function Settings() {
               <input
                 id="new-email"
                 type="email"
-                className="w-full border border-gray-400 p-2 rounded-lg"
+                className="w-full border border-white p-2 rounded-lg"
               />
             </div>
             <div className="mb-4">
               <button
                 type="submit"
-                className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                className="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
               >
                 Update email
               </button>
@@ -73,20 +73,20 @@ export default function Settings() {
           </form>
         </div>
 
-        <div className="border-t border-gray-300 mt-4">
+        <div className="border-t border-white mt-4">
           <form onSubmit={handlePasswordSubmit}>
             <h2 className="text-lg font-bold mb-2">Password</h2>
             <div className="mb-4">
               <label
                 htmlFor="password"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-black-500 font-bold mb-2"
               >
                 Current password
               </label>
               <input
                 id="password"
                 type="password"
-                className="w-full border border-gray-400 p-2 rounded-lg"
+                className="w-full border border-white p-2 rounded-lg"
                 value={password}
                 onChange={handlePasswordChange}
               />
@@ -101,7 +101,7 @@ export default function Settings() {
               <input
                 id="new-password"
                 type="password"
-                className="w-full border border-gray-400 p-2 rounded-lg"
+                className="w-full border border-white p-2 rounded-lg"
               />
             </div>
             <div className="mb-4">
@@ -114,13 +114,13 @@ export default function Settings() {
               <input
                 id="new-password"
                 type="password"
-                className="w-full border border-gray-400 p-2 rounded-lg"
+                className="w-full border border-white p-2 rounded-lg"
               />
             </div>
             <div className="mb-4">
               <button
                 type="submit"
-                className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                className="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
               >
                 Update password
               </button>
