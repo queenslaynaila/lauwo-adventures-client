@@ -1,7 +1,34 @@
 import BlogCard from '@/components/BlogCard';
+import Head from 'next/head';
+
 export default function index({ blogs }) {
   return (
     <div className="font-poly">
+      <Head>
+        <title>Explore Our Latest Travel Stories -  Lauwo Travel Blog</title>
+        <meta
+          name="description"
+          content="Discover the hidden gems of Tanzania with our expert guides. From the majestic peaks of Kilimanjaro to thrilling safaris and cultural experiences, our blog has it all"
+        />
+        <meta
+          property="og:title"
+          content="Explore Our Latest Travel Stories - Lauwo Travel Blog"
+        />
+        <meta
+          property="og:description"
+          content="Discover the hidden gems of Tanzania with our expert guides. From the majestic peaks of Kilimanjaro to thrilling safaris and cultural experiences, our blog has it all"
+        />
+        <meta property="og:image" content="/safari-1.jpg" />
+        <meta
+          name="twitter:title"
+          content="Explore Our Latest Travel Stories - Lauwo Travel Blog"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover the hidden gems of Tanzania with our expert guides. From the majestic peaks of Kilimanjaro to thrilling safaris and cultural experiences, our blog has it all"
+        />
+        <meta name="twitter:image" content="/safari-1.jpg" />
+      </Head>
       <header className="w-full h-64 lg:h-96 bg-[url('/safari-1.jpg')] bg-cover bg-center flex justify-center items-center font-poly">
         <div role="main" class="flex flex-col items-center justify-center">
           <h1 class="text-2xl  font-semibold leading-9 text-center lg:w-1/2 md:w-10/12 w-11/12 ml-4">

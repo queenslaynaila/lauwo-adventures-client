@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Head from 'next/head';
  import { BsArrowRight } from 'react-icons/bs';
 import { truncate } from '@/utils/truncate';
 import { generateSlug } from '@/utils/generateSlug';
@@ -17,6 +18,18 @@ function Blogs() {
 
   return (
     <div className="m-4 font-poly">
+       <Head>
+        <title>Recent Blogs - Lauwo Tours</title>
+        <meta
+          name="description"
+          content="Check out our latest blog posts for tips, news, and insights on a variety of tours and safaris."
+        />
+        <meta property="og:title" content="Recent Blogs - Lauwo Tours" />
+        <meta
+          property="og:description"
+          content="Check out our latest blog posts for tips, news, and insights on a variety of tours, safaris and mountain climbing."
+        />     
+      </Head>
       <div>
         <h1 className="text-center text-lg mt-4 lg:mt-8 lg:text-3xl font-bold uppercase">
           recent blogs

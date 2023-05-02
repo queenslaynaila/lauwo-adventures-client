@@ -1,4 +1,5 @@
 import { generateSlug } from '@/utils/generateSlug';
+import Head from 'next/head';
 import { FiArrowRight } from 'react-icons/fi';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { AiFillClockCircle } from 'react-icons/ai';
@@ -15,7 +16,16 @@ export default function Blog({ blogs }) {
   const { image_url, title, author, created_at, content } = blogPost;
 
   return (
-    <main className="font-poly ">
+
+    <>
+       <Head>
+        <title>{blogPost.title}</title>
+        <meta name="description" content={content} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={content} />
+        <meta property="og:type" content="article" />
+      </Head>
+      <main className="font-poly ">
       <header
         className="w-full h-64   bg-cover bg-center flex justify-center items-center font-poly"
         style={{ backgroundImage: `url(${image_url})` }}
@@ -51,6 +61,9 @@ export default function Blog({ blogs }) {
         </div>
       </div>
     </main>
+     
+    </>
+    
   );
 }
 

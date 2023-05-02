@@ -1,4 +1,5 @@
 import { generateSlug } from '@/utils/generateSlug';
+import Head from 'next/head';
 import RouteCard from '@/components/RouteCard';
 import MountainItinery from '@/components/MountainItinery';
 import Packages from '@/components/Packages';
@@ -48,6 +49,13 @@ const RouteSection = ({ mountains }) => {
 
   return (
     <>
+     <Head>
+        <title>{`${route.route_name} | ${mountain.mountain_name}`}</title>
+        <meta
+          name="description"
+          content={`Explore ${route.route_name} at ${mountain.mountain_name}.`}
+        />
+      </Head>
       <div className="font-poly mb-4">
         <RouteCard
           route={route}

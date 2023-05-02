@@ -3,12 +3,17 @@ import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
 import adventures from '@/data/adventures.json';
+import Head from 'next/head';
 
 const AdventuresDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <div className="relative flex flex-col items-center">
+      <Head>
+        <title>Adventures</title>
+        <meta name="description" content="Explore our adventures" />
+      </Head>
       <button
         className="flex flex-row items-center justify-center"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}

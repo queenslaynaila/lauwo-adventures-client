@@ -1,8 +1,14 @@
 import DayTripCard from '@/components/DayTripCard';
+import Head from 'next/head';
 
 const HeroSection = ({ dayTrips }) => {
   return (
     <div className="font-poly">
+      <Head>
+        <title>Discover Tanzania in a Day | Lauwo Tours</title>
+        <meta name="description" content="Join our day trips for a lightning-fast adventure! Warning: side effects may include unforgettable memories and a serious case of wanderlust." />
+        <meta name="keywords" content="Tanzania, day trips, adventure, wanderlust" />
+      </Head>
       <header className="w-full h-1/2 lg:h-96 bg-[url('/g-3.jpg')] bg-cover bg-center flex justify-center items-center relative">
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         <h1 className="text-white text-center text-lg lg:text-2xl font-semibold mt-16 mx-6 z-0">
