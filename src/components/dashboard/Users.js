@@ -75,7 +75,7 @@ const Users = () => {
         <div className="sm:mt-2">
           <button
             className={`px-5 py-3 mr-2 mb-2 ${
-              selectedUsers.length > 0 ? 'bg-red-500' : 'bg-gray-300'
+              selectedUsers.length > 0 ? 'bg-red-500' : 'bg-yellow-400'
             } text-white rounded-lg`}
             onClick={handleBulkDelete}
             disabled={selectedUsers.length === 0}
@@ -83,7 +83,7 @@ const Users = () => {
             Delete
           </button>
           <button
-            className="bg-blue-500 text-white px-5 py-3   rounded-lg hover:bg-blue-600"
+            className="bg-yellow-400 text-white px-5 py-3   rounded-lg hover:bg-yellow-600"
             onClick={handleAddUser}
           >
             Add user
