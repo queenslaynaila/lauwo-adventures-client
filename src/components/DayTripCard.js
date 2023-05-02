@@ -9,7 +9,8 @@ export default function DayTripCard({ day }) {
           <Image
             src={day.image_url}
             className="card__image w-full h-full object-cover"
-            height={500} width={500}
+            height={500}
+            width={500}
             alt={day.name}
           />
           <div className="absolute inset-0 flex items-center justify-center text-left">

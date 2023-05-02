@@ -8,13 +8,24 @@ export default function BlogCard({ blog }) {
     <div key={blog.id} className="my-8 bg-white shadow  rounded-lg max-w-sm ">
       <Head>
         <title>{blog.title}</title>
-        <meta name="description" content={blog.content.split(' ').slice(0, 40).join(' ')} />
+        <meta
+          name="description"
+          content={blog.content.split(' ').slice(0, 40).join(' ')}
+        />
         <meta name="og:title" content={blog.title} />
-        <meta name="og:description" content={blog.content.split(' ').slice(0, 40).join(' ')} />
+        <meta
+          name="og:description"
+          content={blog.content.split(' ').slice(0, 40).join(' ')}
+        />
         <meta name="og:image" content={blog.image_url} />
-       
       </Head>
-      <Image src={blog.image_url} alt={blog.title} className="object-cover" height={500} width={500} />
+      <Image
+        src={blog.image_url}
+        alt={blog.title}
+        className="object-cover"
+        height={500}
+        width={500}
+      />
       <div className=" p-4 ">
         <h1 className="mb-2 text-gray-800 text-2xl font-bold ">{blog.title}</h1>
         <p className="text-gray-700 mb-2">

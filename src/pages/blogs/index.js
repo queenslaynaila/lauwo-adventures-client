@@ -5,7 +5,7 @@ export default function index({ blogs }) {
   return (
     <div className="font-poly">
       <Head>
-        <title>Explore Our Latest Travel Stories -  Lauwo Travel Blog</title>
+        <title>Explore Our Latest Travel Stories - Lauwo Travel Blog</title>
         <meta
           name="description"
           content="Discover the hidden gems of Tanzania with our expert guides. From the majestic peaks of Kilimanjaro to thrilling safaris and cultural experiences, our blog has it all"

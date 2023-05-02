@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function RouteCard({ route, duration, routeDuration }) {
   const bookableType = 'RouteDuration';
- 
+
   const adventure = {
     name: `${route.route_name} ${duration} day climb`,
     id: routeDuration.id,
@@ -38,7 +38,8 @@ export default function RouteCard({ route, duration, routeDuration }) {
               src={route.image_URL}
               alt="Route"
               className="rounded-lg mb-4 h-96 object-cover object-center"
-              height={500} width={500}
+              height={500}
+              width={500}
             />
           </div>
           <div className="md:w-1/2 md:ml-8">
