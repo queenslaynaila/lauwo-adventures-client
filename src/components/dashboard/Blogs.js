@@ -67,7 +67,7 @@ export default function Blogs() {
           notifySuccess();
         });
       } else {
-        r.json().then((err) => {
+        r.json().then(() => {
           notifyError();
         });
       }

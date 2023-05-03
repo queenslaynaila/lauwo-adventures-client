@@ -46,16 +46,14 @@ export default function Enquiries() {
     getTableBodyProps,
     headerGroups,
     prepareRow,
-    page, // Instead of using the `rows` variable, use the `page` variable provided by `usePagination`
-    state: { pageIndex, pageSize },
-    setGlobalFilter,
-    gotoPage,
+    page,  
+    
+    
     previousPage,
     nextPage,
     canPreviousPage,
     canNextPage,
-    pageOptions,
-    setPageSize,
+    
   } = tableInstance;
 
   // State for search input

@@ -70,7 +70,7 @@ const Users = () => {
           method: 'DELETE',
         }).then((response) => {
           if (response.ok) {
-            return response.json().then((message) => {
+            return response.json().then(() => {
               setAdmins(
                 admins.filter(
                   (admin) =>
