@@ -62,10 +62,10 @@ const Plannings = () => {
     <div className="px-4 py-8 w-full ">
       <h1 className="text-2xl font-bold mb-4">Plannings</h1>
       <div className="mt-2 grid grid-cols-1 lg:grid-cols-2">
-        <div class="flex items-center mb-2">
+        <div className="flex items-center mb-2">
           <input
             type="text"
-            class="border p-2 rounded-md w-full sm:w-56"
+            className="border p-2 rounded-md w-full sm:w-56"
             placeholder="Search..."
             value={search}
             onChange={handleSearch}
@@ -91,28 +91,28 @@ const Plannings = () => {
         </div>
       </div>
 
-      <div class="relative shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left   table-auto">
-          <thead class="text-xs  uppercase bg-gray-50">
+      <div className="relative shadow-md sm:rounded-lg">
+        <table className="w-full text-sm text-left   table-auto">
+          <thead className="text-xs  uppercase bg-gray-50">
             <tr>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" className="px-6 py-3">
                 ACTION
               </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">EMAIL</div>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">EMAIL</div>
               </th>
 
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">ROLE</div>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">ROLE</div>
               </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-white">
             {filteredUsers.map((user) => (
               <tr key={user.id}>
-                <td class="px-6 py-4 whitespace-nowrap ">
-                  <div class="flex items-center">
-                    <div class="flex items-center">
+                <td className="px-6 py-4 whitespace-nowrap ">
+                  <div className="flex items-center">
+                    <div className="flex items-center">
                       <input
                         type="checkbox"
                         name="selectedUsers"
@@ -122,15 +122,15 @@ const Plannings = () => {
                     </div>
                   </div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="flex items-center">
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="flex items-center">
                     <div>
                       <div>{user.email}</div>
                     </div>
                   </div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="flex items-center">
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="flex items-center">
                     <div>{user.role}</div>
                   </div>
                 </td>

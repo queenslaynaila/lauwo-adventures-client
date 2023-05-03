@@ -64,7 +64,7 @@ export default function Enquiries() {
     <div className="px-4 py-8 w-full ">
       <input
         type="text"
-        class="border p-2 rounded-md w-2/5 "
+        className="border p-2 rounded-md w-2/5 "
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder="Search by name, email or message"
@@ -110,7 +110,7 @@ export default function Enquiries() {
               return (
                 <tr {...row.getRowProps()} key={row.id}>
                   {row.cells.map((cell) => (
-                    <td class="p-3 " key={cell.id} {...cell.getCellProps()}>
+                    <td className="p-3 " key={cell.id} {...cell.getCellProps()}>
                       {cell.render('Cell')}
                     </td>
                   ))}
@@ -119,16 +119,16 @@ export default function Enquiries() {
             })}
         </tbody>
       </table>
-      <div class="inline-flex  mt-2">
+      <div className="inline-flex  mt-2">
         <button
-          class="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4  "
+          className="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4  "
           onClick={() => previousPage()}
           disabled={!canPreviousPage}
         >
           Prev
         </button>
         <button
-          class="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4 "
+          className="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4 "
           onClick={() => nextPage()}
           disabled={!canNextPage}
         >

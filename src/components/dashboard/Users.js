@@ -174,7 +174,7 @@ const Users = () => {
               return (
                 <tr {...row.getRowProps()} key={row.id}>
                   {row.cells.map((cell) => (
-                    <td class="p-3 " key={cell.id} {...cell.getCellProps()}>
+                    <td className="p-3 " key={cell.id} {...cell.getCellProps()}>
                       {cell.render('Cell')}
                     </td>
                   ))}
