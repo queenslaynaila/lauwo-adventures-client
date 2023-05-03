@@ -66,6 +66,7 @@ export default function ViewBlogs() {
   return (
     <div className=" px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">Your Blogs</h1>
+      <ToastContainer />
       {blogs.length === 0 && (
         <p className="text-gray-500">You have no blogs yet.</p>
       )}

@@ -75,27 +75,31 @@ export default function Blogs() {
   };
 
   return (
-    <div className=" px-4 py-8">
+    <div className="px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">New Blog Post</h1>
+
       <form onSubmit={handleSubmit}>
+        <ToastContainer />
         <div className="mb-4">
-          <label htmlFor="title" className="block text-gray-700 font-bold mb-2">
+          <label htmlFor="title" className="block font-bold mb-2">
             Title
           </label>
           <input
+            name="title"
             id="title"
             type="text"
-            className="w-full border border-white p-2 rounded-lg"
+            className="w-full border border-white p-2 rounded-lg text-black"
             value={post.title}
             onChange={handleInputChange}
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="title" className="block text-gray-700 font-bold mb-2">
+          <label htmlFor="author" className="block   font-bold mb-2">
             Author
           </label>
           <input
-            id="title"
+            name="author"
+            id="author"
             type="text"
             className="w-full border border-white p-2 rounded-lg"
             value={post.author}
@@ -103,39 +107,33 @@ export default function Blogs() {
           />
         </div>
         <div className="mb-4">
-          <label
-            htmlFor="content"
-            className="block text-gray-700 font-bold mb-2"
-          >
+          <label htmlFor="content" className="block  font-bold mb-2">
             Content
           </label>
           <textarea
+            name="content"
             id="content"
             className="w-full border border-white p-2 rounded-lg"
             value={post.content}
             onChange={handleInputChange}
           />
-          <p className="text-gray-500 text-sm mt-1">
+          <p className="  text-sm mt-1">
             Separate new paragraphs by a newline character=&gt; /n
           </p>
         </div>
         <div className="mb-4">
-          <label
-            htmlFor="imageURL"
-            className="block text-gray-700 font-bold mb-2"
-          >
+          <label htmlFor="image_url" className="block  font-bold mb-2">
             Image URL
           </label>
           <input
+            name="image_url"
             id="imageURL"
             type="text"
             className="w-full border border-white p-2 rounded-lg"
             value={post.image_url}
             onChange={handleInputChange}
           />
-          <p className="text-gray-500 text-sm mt-1">
-            The link to the image placeholeder.
-          </p>
+          <p className="text-sm mt-1">The link to the image you want to use.</p>
         </div>
         <div className="mb-4">
           <button
