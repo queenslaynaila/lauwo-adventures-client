@@ -1,146 +1,110 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useTable } from 'react-table';
 
-const usersData = [
-  {
-    id: 1,
-    username: 'john_doe',
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    role: 'admin',
-  },
-  {
-    id: 2,
-    username: 'jane_doe',
-    name: 'Jane Doe',
-    email: 'jane.doe@example.com',
-    role: 'user',
-  },
-  {
-    id: 3,
-    username: 'bob_smith',
-    name: 'Bob Smith',
-    email: 'bob.smith@example.com',
-    role: 'user',
-  },
-];
+function BookingsTable() {
+  const [bookings, setBookings] = useState([]);
 
-const Bookings = () => {
-  const [search, setSearch] = useState('');
-  const [selectedUsers, setSelectedUsers] = useState([]);
-  const [users, setUsers] = useState(usersData);
+  useEffect(() => {
+    fetch('http://localhost:3000/bookings')
+      .then((response) => response.json())
+      .then((data) => setBookings(data))
+      .catch((error) => console.error(error));
+  }, []);
 
-  const handleSearch = (event) => {
-    setSearch(event.target.value);
-  };
-
-  const handleCheckboxChange = (event, user) => {
-    if (event.target.checked) {
-      setSelectedUsers((prevSelectedUsers) => [...prevSelectedUsers, user]);
-    } else {
-      setSelectedUsers((prevSelectedUsers) =>
-        prevSelectedUsers.filter((selectedUser) => selectedUser.id !== user.id)
-      );
-    }
-  };
-
-  const handleBulkDelete = () => {
-    setUsers((prevUsers) =>
-      prevUsers.filter((user) => !selectedUsers.includes(user))
-    );
-    setSelectedUsers([]);
-  };
-
-  const handleAddUser = () => {
-    // TODO: Add new user
-  };
-
-  const filteredUsers = users.filter((user) =>
-    user.username.toLowerCase().includes(search.toLowerCase())
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: 'ID',
+        accessor: 'id',
+      },
+      {
+        Header: 'Name',
+        accessor: 'first_name',
+      },
+      {
+        Header: 'Email',
+        accessor: 'email',
+      },
+      {
+        Header: 'Phone Number',
+        accessor: 'phone_number',
+      },
+      {
+        Header: 'Country',
+        accessor: 'country',
+      },
+      {
+        Header: 'Travel Period',
+        accessor: 'travel_period',
+      },
+      {
+        Header: 'No of Travellers',
+        accessor: 'no_of_travellers',
+      },
+      {
+        Header: 'Additional Info',
+        accessor: 'additional_info',
+      },
+      {
+        Header: 'Adults',
+        accessor: 'no_of_adults',
+      },
+      {
+        Header: 'Children',
+        accessor: 'no_of_children',
+      },
+      {
+        Header: 'Small Children',
+        accessor: 'no_of_small_children',
+      },
+      {
+        Header: 'Tour',
+        accessor: 'bookable_type',
+      },
+      {
+        Header: 'Created At',
+        accessor: 'created_at',
+      },
+    ],
+    []
   );
+
+  const tableInstance = useTable({ columns, data: bookings });
+
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    tableInstance;
 
   return (
-    <div className="px-4 py-8 w-full ">
-      <h1 className="text-2xl font-bold mb-4">Bookings</h1>
-      <div className="mt-2 grid grid-cols-1 lg:grid-cols-2">
-        <div class="flex items-center mb-2">
-          <input
-            type="text"
-            class="border p-2 rounded-md w-full sm:w-56"
-            placeholder="Search..."
-            value={search}
-            onChange={handleSearch}
-          />
-        </div>
-
-        <div className="sm:mt-2">
-          <button
-            className={`px-5 py-3 mr-2 mb-2 ${
-              selectedUsers.length > 0 ? 'bg-red-500' : 'bg-yellow-400'
-            } text-white rounded-lg`}
-            onClick={handleBulkDelete}
-            disabled={selectedUsers.length === 0}
-          >
-            Delete
-          </button>
-          <button
-            className="bg-yellow-400 text-white px-5 py-3   rounded-lg hover:bg-yellow-600"
-            onClick={handleAddUser}
-          >
-            Add user
-          </button>
-        </div>
-      </div>
-
-      <div class="relative shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left   table-auto">
-          <thead class="text-xs  uppercase bg-gray-50">
-            <tr>
-              <th scope="col" class="px-6 py-3">
-                ACTION
+    <table {...getTableProps()}>
+      <thead>
+        {headerGroups.map((headerGroup) => (
+          <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
+            {headerGroup.headers.map((column) => (
+              <th key={column.id} {...column.getHeaderProps()}>
+                {column.render('Header')}
               </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">EMAIL</div>
-              </th>
-
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">ROLE</div>
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-white">
-            {filteredUsers.map((user) => (
-              <tr key={user.id}>
-                <td class="px-6 py-4 whitespace-nowrap ">
-                  <div class="flex items-center">
-                    <div class="flex items-center">
-                      <input
-                        type="checkbox"
-                        name="selectedUsers"
-                        value={user.id}
-                        onChange={(event) => handleCheckboxChange(event, user)}
-                      />
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="flex items-center">
-                    <div>
-                      <div>{user.email}</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="flex items-center">
-                    <div>{user.role}</div>
-                  </div>
-                </td>
-              </tr>
             ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+          </tr>
+        ))}
+      </thead>
+      <tbody {...getTableBodyProps()}>
+        {rows.map((row) => {
+          prepareRow(row);
+          return (
+            <tr {...row.getRowProps()} key={row.id}>
+              {row.cells.map((cell) => {
+                return (
+                  <td key={cell.id} {...cell.getCellProps()}>
+                    {cell.render('Cell')}
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   );
-};
+}
 
-export default Bookings;
+export default BookingsTable;
