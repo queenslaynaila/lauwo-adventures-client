@@ -1,144 +1,196 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useTable } from 'react-table';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import UserForm from './UserForm';
 
 const Users = () => {
-  const usersData = [
-    {
-      id: 1,
-      username: 'john_doe',
-      name: 'John Doe',
-      email: 'john.doe@example.com',
-      role: 'admin',
-    },
-    {
-      id: 2,
-      username: 'jane_doe',
-      name: 'Jane Doe',
-      email: 'jane.doe@example.com',
-      role: 'user',
-    },
-    {
-      id: 3,
-      username: 'bob_smith',
-      name: 'Bob Smith',
-      email: 'bob.smith@example.com',
-      role: 'user',
-    },
-  ];
-  const [search, setSearch] = useState('');
-  const [selectedUsers, setSelectedUsers] = useState([]);
-  const [users, setUsers] = useState(usersData);
-
-  const handleSearch = (event) => {
-    setSearch(event.target.value);
+  const [admins, setAdmins] = useState([]);
+  const [selectedRows, setSelectedRows] = useState([]);
+  const contentStyle = {
+    width: '85%',
+    maxHeight: '85%',
+    overflow: 'auto',
+    margin: 'auto',
   };
+  useEffect(() => {
+    fetch('http://localhost:3000/admins')
+      .then((response) => response.json())
+      .then((data) => setAdmins(data))
+      .catch((error) => console.error(error));
+  }, []);
 
-  const handleCheckboxChange = (event, user) => {
-    if (event.target.checked) {
-      setSelectedUsers((prevSelectedUsers) => [...prevSelectedUsers, user]);
-    } else {
-      setSelectedUsers((prevSelectedUsers) =>
-        prevSelectedUsers.filter((selectedUser) => selectedUser.id !== user.id)
-      );
-    }
-  };
+  const data = React.useMemo(() => admins, [admins]);
 
-  const handleBulkDelete = () => {
-    setUsers((prevUsers) =>
-      prevUsers.filter((user) => !selectedUsers.includes(user))
-    );
-    setSelectedUsers([]);
-  };
-
-  const handleAddUser = () => {
-    // TODO: Add new user
-  };
-
-  const filteredUsers = users.filter((user) =>
-    user.username.toLowerCase().includes(search.toLowerCase())
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: 'ID',
+        accessor: 'id',
+        Cell: ({ row }) => (
+          <input
+            type="checkbox"
+            checked={selectedRows.some(
+              (banner) => banner.id === row.original.id
+            )}
+            onChange={(e) => {
+              const checked = e.target.checked;
+              setSelectedRows((selectedRows) => {
+                if (checked) {
+                  return [...selectedRows, row.original];
+                } else {
+                  return selectedRows.filter(
+                    (banner) => banner.id !== row.original.id
+                  );
+                }
+              });
+            }}
+          />
+        ),
+      },
+      {
+        Header: 'Email',
+        accessor: 'email',
+      },
+    ],
+    [selectedRows]
   );
 
-  return (
-    <div className="px-4 py-8 w-full ">
-      <h1 className="text-2xl font-bold mb-4">Users</h1>
-      <div className="mt-2 grid grid-cols-1 lg:grid-cols-2">
-        <div class="flex items-center mb-2">
-          <input
-            type="text"
-            class="border p-2 rounded-md w-full sm:w-56"
-            placeholder="Search..."
-            value={search}
-            onChange={handleSearch}
-          />
-        </div>
+  const tableInstance = useTable({ columns, data });
 
-        <div className="sm:mt-2">
-          <button
-            className={`px-5 py-3 mr-2 mb-2 ${
-              selectedUsers.length > 0 ? 'bg-red-500' : 'bg-yellow-400'
-            } text-white rounded-lg`}
-            onClick={handleBulkDelete}
-            disabled={selectedUsers.length === 0}
-          >
-            Delete
-          </button>
-          <button
-            className="bg-yellow-400 text-white px-5 py-3   rounded-lg hover:bg-yellow-600"
-            onClick={handleAddUser}
-          >
-            Add user
-          </button>
-        </div>
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    tableInstance;
+
+    const handleDelete = () => {
+     
+      Promise.all(
+        selectedRows.map((admin) =>
+          fetch(`http://localhost:3000/admins/${admin.id}`, {
+            method: 'DELETE',
+          }).then((response) => {
+            if (response.ok) {
+              return response.json().then((message)=>{
+                setAdmins(
+                  admins.filter(
+                    (admin) =>
+                      !selectedRows.some(
+                        (selectedAdmin) => selectedAdmin.id === admin.id
+                      )
+                  )
+                );
+                setSelectedRows([]);
+                notifySuccess()
+              })
+            } else {
+               setSelectedRows([]);
+               notifyError()
+            }
+          })
+        )
+      )
+        .catch((error) => console.error(error));
+    };
+    
+    const notifySuccess = ( ) =>
+      toast.success( 'User(s) deleted succesfully', {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        style: {
+          backgroundColor: '#FFCE3C',
+          color: '#000',
+        },
+      });
+    
+    const notifyError = () =>
+      toast.error( 'Failed to delete User(s)', {
+        theme: 'colored',
+      });
+    
+
+  return (
+    <div className="px-4 py-8 w-full">
+      <h1 className="text-2xl font-bold mb-4">Users</h1>
+      <ToastContainer />
+      <div className="sm:mt-2">
+        <button
+          className={`px-5 py-3 mr-2 mb-2 ${
+            selectedRows.length > 0 ? 'bg-red-500' : 'bg-yellow-400'
+          } text-white rounded-lg`}
+          disabled={selectedRows.length === 0}
+          onClick={handleDelete}
+        >
+          Delete
+        </button>
+        <Popup
+          trigger={
+            <button className="px-5 py-3 mr-2 mb-2 bg-yellow-400 text-white rounded-lg">
+              Create Admin
+            </button>
+          }
+          modal
+          nested
+          closeOnDocumentClick
+          contentStyle={contentStyle}
+        >
+          {(close) => (
+            <div className="modal">
+              <button className="close" onClick={close}>
+                &times;
+              </button>
+              <UserForm />
+            </div>
+          )}
+        </Popup>
       </div>
 
-      <div class="relative shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left   table-auto">
-          <thead class="text-xs  uppercase bg-gray-50">
-            <tr>
-              <th scope="col" class="px-6 py-3">
-                ACTION
-              </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">EMAIL</div>
-              </th>
-
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">ROLE</div>
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-white">
-            {filteredUsers.map((user) => (
-              <tr key={user.id}>
-                <td class="px-6 py-4 whitespace-nowrap ">
-                  <div class="flex items-center">
-                    <div class="flex items-center">
-                      <input
-                        type="checkbox"
-                        name="selectedUsers"
-                        value={user.id}
-                        onChange={(event) => handleCheckboxChange(event, user)}
-                      />
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="flex items-center">
-                    <div>
-                      <div>{user.email}</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="flex items-center">
-                    <div>{user.role}</div>
-                  </div>
-                </td>
+      {admins.length ? (
+        <table
+          {...getTableProps()}
+          className="w-full  shadow-md sm:rounded-lg text-left   "
+        >
+          <thead className="bg-gray-50">
+            {headerGroups.map((headerGroup) => (
+              <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
+                {headerGroup.headers.map((column) => (
+                  <th
+                    className="px-3 py-3"
+                    key={column.id}
+                    {...column.getHeaderProps()}
+                  >
+                    {column.render('Header')}
+                  </th>
+                ))}
               </tr>
             ))}
+          </thead>
+          <tbody {...getTableBodyProps()} className="divide-y divide-white">
+            {rows.map((row) => {
+              prepareRow(row);
+              return (
+                <tr {...row.getRowProps()} key={row.id}>
+                  {row.cells.map((cell) => (
+                    <td class="p-3 " key={cell.id} {...cell.getCellProps()}>
+                      {cell.render('Cell')}
+                    </td>
+                  ))}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
-      </div>
+      ) : (
+        <p>No admins on site. Create new one.</p>
+      )}
     </div>
   );
 };
+
 export default Users;
