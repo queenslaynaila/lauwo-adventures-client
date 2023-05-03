@@ -63,57 +63,54 @@ const Users = () => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     tableInstance;
 
-    const handleDelete = () => {
-     
-      Promise.all(
-        selectedRows.map((admin) =>
-          fetch(`http://localhost:3000/admins/${admin.id}`, {
-            method: 'DELETE',
-          }).then((response) => {
-            if (response.ok) {
-              return response.json().then((message)=>{
-                setAdmins(
-                  admins.filter(
-                    (admin) =>
-                      !selectedRows.some(
-                        (selectedAdmin) => selectedAdmin.id === admin.id
-                      )
-                  )
-                );
-                setSelectedRows([]);
-                notifySuccess()
-              })
-            } else {
-               setSelectedRows([]);
-               notifyError()
-            }
-          })
-        )
+  const handleDelete = () => {
+    Promise.all(
+      selectedRows.map((admin) =>
+        fetch(`http://localhost:3000/admins/${admin.id}`, {
+          method: 'DELETE',
+        }).then((response) => {
+          if (response.ok) {
+            return response.json().then((message) => {
+              setAdmins(
+                admins.filter(
+                  (admin) =>
+                    !selectedRows.some(
+                      (selectedAdmin) => selectedAdmin.id === admin.id
+                    )
+                )
+              );
+              setSelectedRows([]);
+              notifySuccess();
+            });
+          } else {
+            setSelectedRows([]);
+            notifyError();
+          }
+        })
       )
-        .catch((error) => console.error(error));
-    };
-    
-    const notifySuccess = ( ) =>
-      toast.success( 'User(s) deleted succesfully', {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-        style: {
-          backgroundColor: '#FFCE3C',
-          color: '#000',
-        },
-      });
-    
-    const notifyError = () =>
-      toast.error( 'Failed to delete User(s)', {
-        theme: 'colored',
-      });
-    
+    ).catch((error) => console.error(error));
+  };
+
+  const notifySuccess = () =>
+    toast.success('User(s) deleted succesfully', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
+
+  const notifyError = () =>
+    toast.error('Failed to delete User(s)', {
+      theme: 'colored',
+    });
 
   return (
     <div className="px-4 py-8 w-full">
