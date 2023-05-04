@@ -58,27 +58,29 @@ export default function LoginPage() {
       },
       body: JSON.stringify(adminData),
     })
-      .then((response) => {
-        if (!response.ok) {
-          notifyError();
+      .then((r) => {
+        if (r.ok) {
+          r.json().then((_data) => {
+            notifySuccess();
+            setFormData({
+              password: '',
+              email: '',
+            });
+            setTimeout(() => {
+              router.push('admin/dashboard');
+            }, 2000);
+          });
+        } else {
+          r.json().then(() => {
+            notifyError();
+            setFormData({
+              password: '',
+              email: '',
+            });
+          });
         }
-
-        return response.json();
       })
-      .then((data) => {
-        setFormData({
-          password: '',
-          email: '',
-        });
-        console.log(data);
-        notifySuccess();
-        setTimeout(() => {
-          router.push('admin/dashboard');
-        }, 5000);
-      })
-
       .catch((error) => {
-        notifyError();
         console.log(error);
       });
   };
