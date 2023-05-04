@@ -148,7 +148,7 @@ const Users = () => {
         </Popup>
       </div>
 
-      {admins.length ? (
+       <div className='overflow-x-auto'>
         <table
           {...getTableProps()}
           className="w-full  shadow-md sm:rounded-lg text-left   "
@@ -183,9 +183,7 @@ const Users = () => {
             })}
           </tbody>
         </table>
-      ) : (
-        <p>No admins on site. Create new one.</p>
-      )}
+      </div>
     </div>
   );
 };

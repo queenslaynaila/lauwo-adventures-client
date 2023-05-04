@@ -125,7 +125,7 @@ const Promotions = () => {
         </Popup>
       </div>
 
-      {banners.length ? (
+      <div className='overflow-x-auto'>
         <table
           {...getTableProps()}
           className="w-full  shadow-md sm:rounded-lg text-left   "
@@ -160,9 +160,7 @@ const Promotions = () => {
             })}
           </tbody>
         </table>
-      ) : (
-        <p>No banners on site. Create new one.</p>
-      )}
+        </div>
     </div>
   );
 };

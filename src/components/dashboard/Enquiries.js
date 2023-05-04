@@ -141,6 +141,7 @@ export default function Enquiries() {
         placeholder="Search by name, email or message"
       /> 
       <p className='text-sm mt-2'>For record keeping delete an inquiry after replying to it </p>
+      <div className='overflow-x-auto'>
       <table
         {...getTableProps()}
         className="w-full  shadow-md sm:rounded-lg text-left  mt-4 "
@@ -191,6 +192,7 @@ export default function Enquiries() {
             })}
         </tbody>
       </table>
+      </div>
       <div className="inline-flex  mt-2">
         <button
           className="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4  "

@@ -75,6 +75,7 @@ function BookingsTable() {
     tableInstance;
 
   return (
+    <div className='overflow-x-auto'>
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map((headerGroup) => (
@@ -104,6 +105,8 @@ function BookingsTable() {
         })}
       </tbody>
     </table>
+    </div>
+   
   );
 }
 
