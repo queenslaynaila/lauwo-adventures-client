@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   useTable,
   useSortBy,
@@ -10,6 +11,8 @@ import {
 
 export default function Enquiries() {
   const [data, setData] = useState([]);
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
     fetch(' http://localhost:3000/inquiries')
@@ -19,21 +22,44 @@ export default function Enquiries() {
 
   const columns = useMemo(
     () => [
-      { Header: 'ID', accessor: 'id' },
+      {
+        Header: 'ID',
+        accessor: 'id',
+        Cell: ({ row }) => (
+          <input
+            type="checkbox"
+            checked={selectedRows.some(
+              (banner) => banner.id === row.original.id
+            )}
+            onChange={(e) => {
+              const checked = e.target.checked;
+              setSelectedRows((selectedRows) => {
+                if (checked) {
+                  return [...selectedRows, row.original];
+                } else {
+                  return selectedRows.filter(
+                    (banner) => banner.id !== row.original.id
+                  );
+                }
+              });
+            }}
+          />
+        ),
+      },
       { Header: 'Name', accessor: 'name' },
       { Header: 'Email', accessor: 'email' },
       { Header: 'Message', accessor: 'message' },
       { Header: 'Created', accessor: 'created_at' },
     ],
-    []
+    [selectedRows]
   );
 
-  // Define table instance with search, sort, and pagination functionalities
+  // Define table instance with search and pagination functionalities
   const tableInstance = useTable(
     {
       columns,
       data,
-      initialState: { pageIndex: 0, pageSize: 10 }, // Set initial page index and page size
+      initialState: { pageIndex: 0, pageSize: 10 },
     },
     useFilters,
     useGlobalFilter,
@@ -46,20 +72,66 @@ export default function Enquiries() {
     getTableBodyProps,
     headerGroups,
     prepareRow,
-    page,  
-    
-    
+    page,
     previousPage,
     nextPage,
     canPreviousPage,
     canNextPage,
-    
   } = tableInstance;
 
-  // State for search input
-  const [searchValue, setSearchValue] = useState('');
+  const handleDelete = () => {
+    Promise.all(
+      selectedRows.map((enquiry) =>
+        fetch(`http://localhost:3000/inquiries/${enquiry.id}`, {
+          method: 'DELETE',
+        }).then((response) => {
+          if (response.ok) {
+            return response.json().then(() => {
+              setData(
+                data.filter(
+                  (enquiry) =>
+                    !selectedRows.some(
+                      (selectedAdmin) => selectedAdmin.id === enquiry.id
+                    )
+                )
+              );
+              setSelectedRows([]);
+              notifySuccess();
+            });
+          } else {
+            setSelectedRows([]);
+            notifyError();
+          }
+        })
+      )
+    ).catch((error) => console.error(error));
+  };
+
+  const notifySuccess = () =>
+    toast.success('Enquiry(s) deleted succesfully', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
+
+  const notifyError = () =>
+    toast.error('Failed to delete Enquiry(s)', {
+      theme: 'colored',
+    });
+
   return (
     <div className="px-4 py-8 w-full ">
+      <ToastContainer />
+      <h1 className="text-2xl font-bold mb-4">Enquiries</h1>
       <input
         type="text"
         className="border p-2 rounded-md w-2/5 "
@@ -131,6 +203,15 @@ export default function Enquiries() {
           disabled={!canNextPage}
         >
           Next
+        </button>
+        <button
+          className={`px-4 py-2  ${
+            selectedRows.length > 0 ? 'bg-red-500' : 'bg-yellow-300'
+          } text-white `}
+          disabled={selectedRows.length === 0}
+          onClick={handleDelete}
+        >
+          Delete
         </button>
       </div>
     </div>
