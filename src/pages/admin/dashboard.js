@@ -53,9 +53,9 @@ const Dashboard = () => {
   };
 
   const notifyError = () =>
-    toast.error('SignOut failed.Try again.', {
+    toast.error('There was an error signing you out.Try again.', {
       position: 'top-center',
-      autoClose: 5000,
+      autoClose: 2500,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -79,13 +79,12 @@ const Dashboard = () => {
       if (!response.ok) {
         notifyError()
       }
+      localStorage.removeItem("token") 
       notifySuccess()
       setTimeout(() => {
         router.push('/admin');
       }, 2500);
-      localStorage.removeItem("token") 
-        
-      
+
     })
     .catch(error => {
       console.error('There was a problem with the sign out request:', error);
