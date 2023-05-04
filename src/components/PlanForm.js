@@ -26,6 +26,7 @@ export default function PlanForm() {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
+    console.log(formData)
   };
 
   const handleSubmit = async (event) => {
@@ -315,13 +316,13 @@ export default function PlanForm() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="notes"
+              htmlFor="extra_info"
               className="mb-2 text-sm font-medium text-gray-900"
             >
               Any Additional info
             </label>
             <textarea
-              id="notes"
+              id="extra_info"
               rows="4"
               className="p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 "
               placeholder="Let us know more about your wishes htmlFor the trip or questions or any concerns you have ..."
