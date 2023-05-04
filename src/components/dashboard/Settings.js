@@ -32,7 +32,7 @@ export default function Settings() {
             <div className="mb-4">
               <label
                 htmlFor="email"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-800 font-bold mb-2"
               >
                 Current email
               </label>
@@ -47,7 +47,7 @@ export default function Settings() {
             <div className="mb-4">
               <label
                 htmlFor="new-email"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-800 font-bold mb-2"
               >
                 New email
               </label>
@@ -74,7 +74,7 @@ export default function Settings() {
             <div className="mb-4">
               <label
                 htmlFor="password"
-                className="block text-black-500 font-bold mb-2"
+                className="block   text-gray-800  font-bold mb-2"
               >
                 Current password
               </label>
@@ -89,7 +89,7 @@ export default function Settings() {
             <div className="mb-4">
               <label
                 htmlFor="new-password"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-800 font-bold mb-2"
               >
                 New password
               </label>
@@ -102,7 +102,7 @@ export default function Settings() {
             <div className="mb-4">
               <label
                 htmlFor="confirm-password"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-800 font-bold mb-2"
               >
                 Confirm new password
               </label>
