@@ -62,13 +62,15 @@ export default function LoginPage() {
         if (r.ok) {
           r.json().then((_data) => {
             notifySuccess();
+            setTimeout(() => {
+              router.push('admin/dashboard');
+            }, 2500);
+            localStorage.setItem("token", r.headers.get("Authorization"))
             setFormData({
               password: '',
               email: '',
             });
-            setTimeout(() => {
-              router.push('admin/dashboard');
-            }, 2000);
+           
           });
         } else {
           r.json().then(() => {
