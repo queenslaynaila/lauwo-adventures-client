@@ -90,7 +90,10 @@ const Promotions = () => {
     <div className="px-4 py-8 w-full">
       <h1 className="text-2xl font-bold mb-4">Promotions</h1>
       <p className="mb-4">
-      This section is for all major promotions and important information that you would like your users to know. We recommend having only one banner at a time to avoid cluttering the homepage. Please remember to delete expired promotions to keep the site up to date and relevant.
+        This section is for all major promotions and important information that
+        you would like your users to know. We recommend having only one banner
+        at a time to avoid cluttering the homepage. Please remember to delete
+        expired promotions to keep the site up to date and relevant.
       </p>
 
       <div className="sm:mt-2">
@@ -125,7 +128,7 @@ const Promotions = () => {
         </Popup>
       </div>
 
-      <div className='overflow-x-auto'>
+      <div className="overflow-x-auto">
         <table
           {...getTableProps()}
           className="w-full  shadow-md sm:rounded-lg text-left   "
@@ -160,7 +163,7 @@ const Promotions = () => {
             })}
           </tbody>
         </table>
-        </div>
+      </div>
     </div>
   );
 };

@@ -132,66 +132,72 @@ export default function Enquiries() {
     <div className="px-4 py-8 w-full ">
       <ToastContainer />
       <h1 className="text-2xl font-bold mb-4">Enquiries</h1>
-    
+
       <input
         type="text"
         className="border p-2 rounded-md w-2/5 "
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder="Search by name, email or message"
-      /> 
-      <p className='text-sm mt-2'>For record keeping delete an inquiry after replying to it </p>
-      <div className='overflow-x-auto'>
-      <table
-        {...getTableProps()}
-        className="w-full  shadow-md sm:rounded-lg text-left  mt-4 "
-      >
-        <thead className="bg-gray-50">
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
-              {headerGroup.headers.map((column) => (
-                <th
-                  key={column.id}
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className={`px-3 py-3 ${
-                    column.isSorted
-                      ? column.isSortedDesc
-                        ? 'desc'
-                        : 'asc'
-                      : ''
-                  }`}
-                >
-                  {column.render('Header')}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody {...getTableBodyProps()} className="divide-y divide-white">
-          {page
-            .filter((row) => {
-              const { name, email, message } = row.values;
-              const searchRegex = new RegExp(searchValue, 'i');
-              return (
-                searchRegex.test(name) ||
-                searchRegex.test(email) ||
-                searchRegex.test(message)
-              );
-            })
-            .map((row) => {
-              prepareRow(row);
-              return (
-                <tr {...row.getRowProps()} key={row.id}>
-                  {row.cells.map((cell) => (
-                    <td className="p-3 " key={cell.id} {...cell.getCellProps()}>
-                      {cell.render('Cell')}
-                    </td>
-                  ))}
-                </tr>
-              );
-            })}
-        </tbody>
-      </table>
+      />
+      <p className="text-sm mt-2">
+        For record keeping delete an inquiry after replying to it{' '}
+      </p>
+      <div className="overflow-x-auto">
+        <table
+          {...getTableProps()}
+          className="w-full  shadow-md sm:rounded-lg text-left  mt-4 "
+        >
+          <thead className="bg-gray-50">
+            {headerGroups.map((headerGroup) => (
+              <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
+                {headerGroup.headers.map((column) => (
+                  <th
+                    key={column.id}
+                    {...column.getHeaderProps(column.getSortByToggleProps())}
+                    className={`px-3 py-3 ${
+                      column.isSorted
+                        ? column.isSortedDesc
+                          ? 'desc'
+                          : 'asc'
+                        : ''
+                    }`}
+                  >
+                    {column.render('Header')}
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody {...getTableBodyProps()} className="divide-y divide-white">
+            {page
+              .filter((row) => {
+                const { name, email, message } = row.values;
+                const searchRegex = new RegExp(searchValue, 'i');
+                return (
+                  searchRegex.test(name) ||
+                  searchRegex.test(email) ||
+                  searchRegex.test(message)
+                );
+              })
+              .map((row) => {
+                prepareRow(row);
+                return (
+                  <tr {...row.getRowProps()} key={row.id}>
+                    {row.cells.map((cell) => (
+                      <td
+                        className="p-3 "
+                        key={cell.id}
+                        {...cell.getCellProps()}
+                      >
+                        {cell.render('Cell')}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+          </tbody>
+        </table>
       </div>
       <div className="inline-flex  mt-2">
         <button

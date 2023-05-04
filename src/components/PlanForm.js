@@ -26,7 +26,7 @@ export default function PlanForm() {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData)
+    console.log(formData);
   };
 
   const handleSubmit = async (event) => {

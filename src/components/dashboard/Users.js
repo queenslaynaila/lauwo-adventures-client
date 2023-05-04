@@ -148,7 +148,7 @@ const Users = () => {
         </Popup>
       </div>
 
-       <div className='overflow-x-auto'>
+      <div className="overflow-x-auto">
         <table
           {...getTableProps()}
           className="w-full  shadow-md sm:rounded-lg text-left   "

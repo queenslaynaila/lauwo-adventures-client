@@ -58,7 +58,7 @@ export default function Plannings() {
       { Header: 'People', accessor: 'how_many_travelers' },
       { Header: 'Adults', accessor: 'no_of_adults' },
       { Header: 'Children', accessor: 'no_of_children' },
-      { Header: 'Extra Info', accessor: 'extra_info' }
+      { Header: 'Extra Info', accessor: 'extra_info' },
     ],
     [selectedRows]
   );
@@ -141,67 +141,79 @@ export default function Plannings() {
     <div className="px-4 py-8 w-full ">
       <ToastContainer />
       <h1 className="text-2xl font-bold mb-4">Adventure Planning</h1>
-      <p>This category represents clients who are interested in going on an adventure but need help deciding where to start and which adventure to choose (such as a safari or climbing). Your role is to reach out to these clients, provide them with information, and help them plan out their trip. Offer advice on what adventure would best suit their needs. Remember to delete the message from the database after replying to avoid clutter. </p>
+      <p>
+        This category represents clients who are interested in going on an
+        adventure but need help deciding where to start and which adventure to
+        choose (such as a safari or climbing). Your role is to reach out to
+        these clients, provide them with information, and help them plan out
+        their trip. Offer advice on what adventure would best suit their needs.
+        Remember to delete the message from the database after replying to avoid
+        clutter.{' '}
+      </p>
       <input
         type="text"
         className="border p-2 rounded-md w-2/5 mt-2"
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder="Search by name, email or message"
-      /> 
-      
-   <div className='overflow-x-auto'>
-   <table
-        {...getTableProps()}
-        className="w-full  shadow-md sm:rounded-lg text-left  mt-4"
-      >
-        <thead className="bg-gray-50">
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
-              {headerGroup.headers.map((column) => (
-                <th
-                  key={column.id}
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className={`px-3 py-3 ${
-                    column.isSorted
-                      ? column.isSortedDesc
-                        ? 'desc'
-                        : 'asc'
-                      : ''
-                  }`}
-                >
-                  {column.render('Header')}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody {...getTableBodyProps()} className="divide-y divide-white">
-          {page
-            .filter((row) => {
-              const { name, email, message } = row.values;
-              const searchRegex = new RegExp(searchValue, 'i');
-              return (
-                searchRegex.test(name) ||
-                searchRegex.test(email) ||
-                searchRegex.test(message)
-              );
-            })
-            .map((row) => {
-              prepareRow(row);
-              return (
-                <tr {...row.getRowProps()} key={row.id}>
-                  {row.cells.map((cell) => (
-                    <td className="p-3 " key={cell.id} {...cell.getCellProps()}>
-                      {cell.render('Cell')}
-                    </td>
-                  ))}
-                </tr>
-              );
-            })}
-        </tbody>
-      </table>
-   </div>
+      />
+
+      <div className="overflow-x-auto">
+        <table
+          {...getTableProps()}
+          className="w-full  shadow-md sm:rounded-lg text-left  mt-4"
+        >
+          <thead className="bg-gray-50">
+            {headerGroups.map((headerGroup) => (
+              <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
+                {headerGroup.headers.map((column) => (
+                  <th
+                    key={column.id}
+                    {...column.getHeaderProps(column.getSortByToggleProps())}
+                    className={`px-3 py-3 ${
+                      column.isSorted
+                        ? column.isSortedDesc
+                          ? 'desc'
+                          : 'asc'
+                        : ''
+                    }`}
+                  >
+                    {column.render('Header')}
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody {...getTableBodyProps()} className="divide-y divide-white">
+            {page
+              .filter((row) => {
+                const { name, email, message } = row.values;
+                const searchRegex = new RegExp(searchValue, 'i');
+                return (
+                  searchRegex.test(name) ||
+                  searchRegex.test(email) ||
+                  searchRegex.test(message)
+                );
+              })
+              .map((row) => {
+                prepareRow(row);
+                return (
+                  <tr {...row.getRowProps()} key={row.id}>
+                    {row.cells.map((cell) => (
+                      <td
+                        className="p-3 "
+                        key={cell.id}
+                        {...cell.getCellProps()}
+                      >
+                        {cell.render('Cell')}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+          </tbody>
+        </table>
+      </div>
       <div className="inline-flex  mt-2">
         <button
           className="bg-yellow-300 hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4  "
