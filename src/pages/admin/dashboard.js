@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { TbBrandBooking } from 'react-icons/tb';
 import { FcPlanner } from 'react-icons/fc';
+import { IoIosLogOut} from 'react-icons/io';
 import {
   BsChevronDown,
   BsChevronUp,
@@ -20,19 +22,80 @@ import Plannings from '@/components/dashboard/Plannings';
 import Bookings from '@/components/dashboard/Bookings';
 import Enquiries from '@/components/dashboard/Enquiries';
 import ViewBlogs from '@/components/dashboard/ViewBlogs';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Dashboard = () => {
   const [activeSection, setActiveSection] = useState('bookings');
   const [showDropdown, setShowDropdown] = useState(false);
+  const router = useRouter();
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
   };
 
   const handleDropdownClick = () => setShowDropdown(!showDropdown);
+  const notifySuccess = () => {
+    toast.success('Signing You Out..', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
+  };
 
+  const notifyError = () =>
+    toast.error('SignOut failed.Try again.', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+    });
+
+  
+  function handleSignOut() {
+   
+ 
+    fetch('http://localhost:3000/admins/sign_out', {
+      method: 'DELETE',
+      headers: {
+        "content-type": "application/json",
+        "authorization": localStorage.getItem("token")
+    },
+    })
+    .then(response => {
+      if (!response.ok) {
+        notifyError()
+      }
+      notifySuccess()
+      setTimeout(() => {
+        router.push('/admin');
+      }, 2500);
+      localStorage.removeItem("token") 
+        
+      
+    })
+    .catch(error => {
+      console.error('There was a problem with the sign out request:', error);
+    });
+  }
+  
   return (
     <div style={{ backgroundImage: `url(/safari-1.jpg)` }}>
       <div className="grid grid-cols-1">
+      <ToastContainer />
         <div className="mt-24">
           <div className="flex item-center justify-center flex-row   ">
             <div className="text-gray-100 px-4  w-1/6 ">
@@ -182,6 +245,16 @@ const Dashboard = () => {
                   >
                     <AiOutlineSetting className="inline-block mr-1 font-bold" />
                     <span className="hidden lg:inline-block">Settings</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={handleSignOut}
+                    
+                    className='block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black '
+                  >
+                    <IoIosLogOut className="inline-block mr-1 font-bold" />
+                    <span className="hidden lg:inline-block">SignOut</span>
                   </a>
                 </li>
               </ul>
