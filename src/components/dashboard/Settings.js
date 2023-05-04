@@ -4,7 +4,6 @@ import { useState } from 'react';
 export default function Settings() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
- 
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -13,8 +12,6 @@ export default function Settings() {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
-
-  
 
   const handleEmailSubmit = (event) => {
     event.preventDefault();
