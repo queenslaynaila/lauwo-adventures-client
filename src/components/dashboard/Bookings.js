@@ -58,6 +58,7 @@ export default function BookingsTable() {
       { Header: 'Children', accessor: 'no_of_children' },
       { Header: 'SmallChildren', accessor: 'no_of_small_children' },
       { Header: 'Additional Info', accessor: 'additional_info' },
+      { Header: 'Date Booked', accessor: 'created_at' },
     ],
     [selectedRows]
   );
@@ -89,8 +90,8 @@ export default function BookingsTable() {
 
   const handleDelete = () => {
     Promise.all(
-      selectedRows.map((enquiry) =>
-        fetch(`http://localhost:3000/planningforms/${enquiry.id}`, {
+      selectedRows.map((booking) =>
+        fetch(`http://localhost:3000/bookings/${booking.id}`, {
           method: 'DELETE',
         }).then((response) => {
           if (response.ok) {
@@ -116,7 +117,7 @@ export default function BookingsTable() {
   };
 
   const notifySuccess = () =>
-    toast.success('Entry(s) deleted succesfully', {
+    toast.success('Booking(s) deleted succesfully', {
       position: 'top-center',
       autoClose: 5000,
       hideProgressBar: false,
@@ -132,7 +133,7 @@ export default function BookingsTable() {
     });
 
   const notifyError = () =>
-    toast.error('Failed to delete Entry(s).Try again.', {
+    toast.error('Failed to delete Booking(s).Try again.', {
       theme: 'colored',
     });
 
