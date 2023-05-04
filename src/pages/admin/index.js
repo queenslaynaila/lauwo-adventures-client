@@ -73,10 +73,6 @@ export default function LoginPage() {
         } else {
           r.json().then(() => {
             notifyError();
-            setFormData({
-              password: '',
-              email: '',
-            });
           });
         }
       })
