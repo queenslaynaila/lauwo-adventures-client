@@ -12,7 +12,7 @@ function Tours({ tours }) {
         </h1>
       </header>
 
-      <div className="gap-4 mt-6 mx-16 my-6 relative overflow-y-auto max-h-[calc(100vh-300px)]">
+      <div className="gap-4 mt-6 mx-16 my-6 relative  max-h-[calc(100vh-300px)]">
         <div className="flex flex-wrap justify-center">
           {tours.map((tour) => (
             <div key={tour.id} className="w-full md:w-1/2 lg:w-1/3 p-4">
