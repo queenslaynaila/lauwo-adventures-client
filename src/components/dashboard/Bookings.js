@@ -58,8 +58,6 @@ export default function BookingsTable() {
       { Header: 'Children', accessor: 'no_of_children' },
       { Header: 'SmallChildren', accessor: 'no_of_small_children' },
       { Header: 'Additional Info', accessor: 'additional_info' },
-     
-   
     ],
     [selectedRows]
   );
@@ -143,7 +141,8 @@ export default function BookingsTable() {
       <ToastContainer />
       <h1 className="text-2xl font-bold mb-4">Bookings</h1>
       <p>
-        Remember to delete a booking nce its status is confirmed and its long gone so as to keep the database relevant and up to date.
+        Remember to delete a booking nce its status is confirmed and its long
+        gone so as to keep the database relevant and up to date.
       </p>
       <input
         type="text"
