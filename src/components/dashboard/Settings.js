@@ -60,7 +60,7 @@ export default function Settings() {
             <div className="mb-4">
               <button
                 type="submit"
-                className="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
+                className="bg-yellow-300  text-gray-800 py-2 px-4 rounded hover:bg-yellow-400"
               >
                 Update email
               </button>
@@ -115,7 +115,7 @@ export default function Settings() {
             <div className="mb-4">
               <button
                 type="submit"
-                className="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
+                className="bg-yellow-300  text-gray-800 py-2 px-4 rounded hover:bg-yellow-400"
               >
                 Update password
               </button>
