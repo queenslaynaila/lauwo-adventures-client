@@ -90,9 +90,7 @@ const Promotions = () => {
     <div className="px-4 py-8 w-full">
       <h1 className="text-2xl font-bold mb-4">Promotions</h1>
       <p className="mb-4">
-        A banner is a graphic used to display promotions, notices, or
-        advertisements on a website. We recommend only having one banner at a
-        time on the site. At most two.
+      This section is for all major promotions and important information that you would like your users to know. We recommend having only one banner at a time to avoid cluttering the homepage. Please remember to delete expired promotions to keep the site up to date and relevant.
       </p>
 
       <div className="sm:mt-2">

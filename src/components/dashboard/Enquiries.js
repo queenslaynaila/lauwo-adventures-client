@@ -132,13 +132,15 @@ export default function Enquiries() {
     <div className="px-4 py-8 w-full ">
       <ToastContainer />
       <h1 className="text-2xl font-bold mb-4">Enquiries</h1>
+    
       <input
         type="text"
         className="border p-2 rounded-md w-2/5 "
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder="Search by name, email or message"
-      />
+      /> 
+      <p className='text-sm mt-2'>For record keeping delete an inquiry after replying to it </p>
       <table
         {...getTableProps()}
         className="w-full  shadow-md sm:rounded-lg text-left  mt-4 "
@@ -207,7 +209,7 @@ export default function Enquiries() {
         <button
           className={`px-4 py-2  ${
             selectedRows.length > 0 ? 'bg-red-500' : 'bg-yellow-300'
-          } text-white `}
+          } text-gray-800 `}
           disabled={selectedRows.length === 0}
           onClick={handleDelete}
         >
