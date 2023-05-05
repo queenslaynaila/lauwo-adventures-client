@@ -49,7 +49,7 @@ export default function LoginPage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const adminData = {
-      admin: { email: formData.email, password: formData.password },
+      admin: { email: formData.email, password: formData.password, remember_me: true  },
     };
     fetch('http://localhost:3000/admins/sign_in', {
       method: 'POST',
