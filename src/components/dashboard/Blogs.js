@@ -117,6 +117,7 @@ export default function Blogs() {
             className="w-full border border-white p-2 rounded-lg"
             value={post.content}
             onChange={handleInputChange}
+            placeholder='This is my first paragraph./n This is my second paragraph.n/This is my third paragraph'
           />
           <p className="  text-sm mt-1">
             Separate new paragraphs by a newline character=&gt; /n
