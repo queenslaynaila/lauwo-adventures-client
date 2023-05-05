@@ -21,6 +21,10 @@ import Promotions from '@/components/dashboard/Promotions';
 import Plannings from '@/components/dashboard/Plannings';
 import Bookings from '@/components/dashboard/Bookings';
 import Enquiries from '@/components/dashboard/Enquiries';
+import MountainBookings from '@/components/dashboard/MountainBookings';
+import SafariBookings from '@/components/dashboard/SafariBookings';
+import DaytripBookings from '@/components/dashboard/DaytripBookings';
+import CulturalBookings from '@/components/dashboard/CulturalBookings';
 import ViewBlogs from '@/components/dashboard/ViewBlogs';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -99,19 +103,101 @@ const Dashboard = () => {
           <div className="flex item-center justify-center flex-row   ">
             <div className="text-gray-100 px-4  w-1/6 ">
               <ul className="my-8 space-y-2 flex flex-col justify-center items-center lg:items-start py-8 lg:py-0">
-                <li className="flex-col cursor-pointer">
-                  <a
-                    href="#"
-                    onClick={() => handleSectionClick('bookings')}
-                    className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
+              <li className="flex-col cursor-pointer">
+                  <div
+                    className={`flex items-center py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
                       activeSection === 'bookings'
                         ? 'bg-gray-100 text-gray-900'
                         : ''
                     }`}
+                    onClick={() => handleSectionClick('bookings')}
                   >
                     <TbBrandBooking className="inline-block mr-1 font-bold" />
                     <span className="hidden lg:inline-block">Bookings</span>
-                  </a>
+                    {showDropdown ? (
+                      <BsChevronUp
+                        onClick={handleDropdownClick}
+                        className="ml-1"
+                      />
+                    ) : (
+                      <BsChevronDown
+                        onClick={handleDropdownClick}
+                        className="ml-1"
+                      />
+                    )}
+                  </div>
+                  {showDropdown && (
+                    <ul>
+                      <li className="mt-1">
+                        <a
+                          href="#"
+                          onClick={() => handleSectionClick('mountainbookings')}
+                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
+                            activeSection === 'mountainbookings'
+                              ? 'bg-gray-100 text-gray-900'
+                              : ''
+                          }`}
+                        >
+                          <FaMountain className="inline-block mr-1 font-bold" />
+
+                          <span className="hidden lg:inline-block">
+                            Mountain Bookings
+                          </span>
+                        </a>
+                      </li>
+                      <li className="mt-1">
+                        <a
+                          href="#"
+                          onClick={() => handleSectionClick('safaribookings')}
+                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
+                            activeSection === 'safaribookings'
+                              ? 'bg-gray-100 text-gray-900'
+                              : ''
+                          }`}
+                        >
+                          <RiSafariFill className="inline-block mr-1 font-bold" />
+
+                          <span className="hidden lg:inline-block">
+                            Safari Bookings
+                          </span>
+                        </a>
+                      </li>
+                      <li className="mt-1">
+                        <a
+                          href="#"
+                          onClick={() => handleSectionClick('daytripbookings')}
+                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
+                            activeSection === 'daytripbookings'
+                              ? 'bg-gray-100 text-gray-900'
+                              : ''
+                          }`}
+                        >
+                          <RiSafariFill className="inline-block mr-1 font-bold" />
+
+                          <span className="hidden lg:inline-block">
+                            Day Trips Bookings
+                          </span>
+                        </a>
+                      </li>
+                      <li className="mt-1">
+                        <a
+                          href="#"
+                          onClick={() => handleSectionClick('culturaltoursbookings')}
+                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
+                            activeSection === 'culturaltoursbookings'
+                              ? 'bg-gray-100 text-gray-900'
+                              : ''
+                          }`}
+                        >
+                          <RiSafariFill className="inline-block mr-1 font-bold" />
+
+                          <span className="hidden lg:inline-block">
+                            Cultural Bookings
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  )}
                 </li>
                 <li className='cursor-pointer'>
                   <a
@@ -272,6 +358,10 @@ const Dashboard = () => {
               {activeSection === 'dayTrips' && <p>daytrips</p>}
               {activeSection === 'culturalTours' && <p>culturalToura</p>}
               {activeSection === 'blogs' && <Blogs />}
+              {activeSection === 'mountainbookings' && <MountainBookings/>}
+              {activeSection === 'safaribookings' &&  <SafariBookings/>}
+              {activeSection === 'daytripbookings' && <DaytripBookings/>}
+              {activeSection === 'culturaltoursbookings' && <CulturalBookings/>}
               {activeSection === 'viewallblogs' && <ViewBlogs />}
             </div>
           </div>
