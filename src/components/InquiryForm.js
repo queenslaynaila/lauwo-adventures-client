@@ -69,7 +69,7 @@ const InquiryForm = () => {
   const notifyError = () => toast.error(error, { theme: 'colored' });
 
   return (
-    <div className="sm:-mt-96 sm:mb-20 lg:mt-24 lg:mb-24 -mt-72" id='contact'>
+    <div className="sm:-mt-96 sm:mb-20 lg:mt-24 lg:mb-24 -mt-72" id="contact">
       <ToastContainer />
       <div className="lg:text-2xl sm:text-sm px-4 ">
         <div className="lg:w-3/4 mx-auto">

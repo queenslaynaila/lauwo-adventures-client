@@ -20,6 +20,10 @@ module.exports = {
         sand: '#FDECBA',
         light: '#FFF4D2',
       },
+      screens: {
+        xs: '280px',
+        ms: '375px',
+      },
     },
   },
   plugins: [],

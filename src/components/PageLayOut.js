@@ -4,17 +4,17 @@ import Blogs from './Blogs';
 import Statement from './Statement';
 import PopularAdventure from './PopularAdventure';
 import InquiryForm from './InquiryForm';
-import Gallery from './Gallery';
 import SocialsButtons from './SocialsButtons';
+import FixedBanner from './FixedBanner';
 const PageLayOut = () => {
   return (
     <div>
       <Header />
+      <FixedBanner />
       <About />
       <Statement />
       <PopularAdventure />
       <InquiryForm />
-      <Gallery />
       <Blogs />
       <SocialsButtons />
     </div>
