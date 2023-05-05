@@ -9,7 +9,7 @@ export default function LoginPage() {
     email: '',
     password: '',
   });
-
+  const [rememberMe, setRememberMe] = useState(false);
   const notifySuccess = () => {
     toast.success('Login successful,Redirecting..!', {
       position: 'top-center',
@@ -133,6 +133,15 @@ export default function LoginPage() {
                       placeholder="Enter your Password"
                     />
                   </div>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="rememberMe"
+                      checked={rememberMe}
+                      onChange={() => setRememberMe(!rememberMe)}
+                    />
+                      Remember me
+                  </label>
 
                   <div className="text-center mt-6">
                     <button
