@@ -352,11 +352,6 @@ const Dashboard = () => {
               {activeSection === 'promotions' && <Promotions />}
               {activeSection === 'users' && <Users />}
               {activeSection === 'settings' && <Settings />}
-              {activeSection === 'tours' && <p>tours</p>}
-              {activeSection === 'mountains' && <p>meruss</p>}
-              {activeSection === 'safaris' && <p>msafaris</p>}
-              {activeSection === 'dayTrips' && <p>daytrips</p>}
-              {activeSection === 'culturalTours' && <p>culturalToura</p>}
               {activeSection === 'blogs' && <Blogs />}
               {activeSection === 'mountainbookings' && <MountainBookings/>}
               {activeSection === 'safaribookings' &&  <SafariBookings/>}
