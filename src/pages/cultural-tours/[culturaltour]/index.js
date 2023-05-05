@@ -5,13 +5,17 @@ import BookingForm from '@/components/BookingForm';
 import Head from 'next/head';
 
 function Tour({ culturalTour }) {
+ //console.log(culturalTour);
   const router = useRouter();
   console.log(router);
   const path = router.query.culturaltour;
   console.log(path);
-  console.log(culturalTour);
   const tour = culturalTour[0];
-  const bookableType = 'Cultural Tours';
+  const bookableType = 'CulturalTour';
+  const adventure = {
+    name: `${tour.name} day trip`,
+    id: tour.id,
+  };
   const contentStyle = {
     width: '85%',
     maxHeight: '85%',
@@ -113,7 +117,7 @@ function Tour({ culturalTour }) {
                       &times;
                     </button>
                     <BookingForm
-                      adventure={culturalTour}
+                      adventure={adventure}
                       bookableType={bookableType}
                     />
                   </div>
