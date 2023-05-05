@@ -24,17 +24,15 @@ function Tours({ tours }) {
         </h1>
       </header>
 
-      <div className="gap-4 mt-6 mx-16 my-6 relative  max-h-[calc(100vh-300px)]">
-        <div className="flex flex-wrap justify-center">
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
           {tours.map((tour) => (
-            <div key={tour.id} className="w-full md:w-1/2 lg:w-1/3 p-4">
+            <div key={tour.id}  >
               <CulturalTourCard
                 tour={tour}
-                className="max-w-full sm:max-w-xs"
               />
             </div>
           ))}
-        </div>
+        
       </div>
     </div>
   );
