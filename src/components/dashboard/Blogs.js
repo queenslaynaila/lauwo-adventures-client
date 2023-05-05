@@ -59,6 +59,7 @@ export default function Blogs() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        "authorization": localStorage.getItem("token")
       },
       body: JSON.stringify(post),
     }).then((r) => {
