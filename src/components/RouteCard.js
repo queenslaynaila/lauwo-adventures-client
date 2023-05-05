@@ -2,7 +2,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
-import {   FaDollarSign } from 'react-icons/fa';
+import { FaDollarSign } from 'react-icons/fa';
 export default function RouteCard({ route, duration, routeDuration }) {
   const bookableType = 'RouteDuration';
 
@@ -47,7 +47,7 @@ export default function RouteCard({ route, duration, routeDuration }) {
             <div className=" mb-1 flex-grow flex flex-wrap lg:flex-col">
               <div className="w-full capitalize p-2 flex items-center">
                 1-3 People:
-                <FaDollarSign  />
+                <FaDollarSign />
                 {routeDuration.one_three_price} per person
               </div>
               <div className="w-full capitalize p-2 flex items-center">
@@ -56,8 +56,8 @@ export default function RouteCard({ route, duration, routeDuration }) {
                 {routeDuration.three_six_price} per person
               </div>
               <div className="w-full capitalize p-2 flex items-center">
-               6-10 People:
-                <FaDollarSign/>
+                6-10 People:
+                <FaDollarSign />
                 {routeDuration.six_ten_price} per person
               </div>
             </div>

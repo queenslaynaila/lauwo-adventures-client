@@ -48,8 +48,6 @@ export default function ViewBlogs() {
       },
       { Header: 'Title', accessor: 'title' },
       { Header: 'Author', accessor: 'author' },
-   
-       
     ],
     [selectedRows]
   );
@@ -85,9 +83,9 @@ export default function ViewBlogs() {
         fetch(`http://localhost:3000/blogs/${blog.id}`, {
           method: 'DELETE',
           headers: {
-            "content-type": "application/json",
-            "authorization": localStorage.getItem("token")
-        },
+            'content-type': 'application/json',
+            authorization: localStorage.getItem('token'),
+          },
         }).then((response) => {
           if (response.ok) {
             return response.json().then(() => {
@@ -136,7 +134,7 @@ export default function ViewBlogs() {
     <div className="px-4 py-8 w-full ">
       <ToastContainer />
       <h1 className="text-2xl font-bold mb-4">Blogs</h1>
-      
+
       <input
         type="text"
         className="border p-2 rounded-md w-2/5 mt-2"

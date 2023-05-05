@@ -5,7 +5,7 @@ import BookingForm from '@/components/BookingForm';
 import Head from 'next/head';
 
 function Tour({ culturalTour }) {
- //console.log(culturalTour);
+  //console.log(culturalTour);
   const router = useRouter();
   console.log(router);
   const path = router.query.culturaltour;

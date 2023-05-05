@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { TbBrandBooking } from 'react-icons/tb';
 import { FcPlanner } from 'react-icons/fc';
-import { IoIosLogOut} from 'react-icons/io';
+import { IoIosLogOut } from 'react-icons/io';
 import {
   BsChevronDown,
   BsChevronUp,
@@ -68,42 +68,38 @@ const Dashboard = () => {
       theme: 'colored',
     });
 
-  
   function handleSignOut() {
-   
- 
     fetch('http://localhost:3000/admins/sign_out', {
       method: 'DELETE',
       headers: {
-        "content-type": "application/json",
-        "authorization": localStorage.getItem("token")
-    },
+        'content-type': 'application/json',
+        authorization: localStorage.getItem('token'),
+      },
     })
-    .then(response => {
-      if (!response.ok) {
-        notifyError()
-      }
-      localStorage.removeItem("token") 
-      notifySuccess()
-      setTimeout(() => {
-        router.push('/admin');
-      }, 2500);
-
-    })
-    .catch(error => {
-      console.error('There was a problem with the sign out request:', error);
-    });
+      .then((response) => {
+        if (!response.ok) {
+          notifyError();
+        }
+        localStorage.removeItem('token');
+        notifySuccess();
+        setTimeout(() => {
+          router.push('/admin');
+        }, 2500);
+      })
+      .catch((error) => {
+        console.error('There was a problem with the sign out request:', error);
+      });
   }
-  
+
   return (
     <div style={{ backgroundImage: `url(/safari-1.jpg)` }}>
       <div className="grid grid-cols-1">
-      <ToastContainer />
+        <ToastContainer />
         <div className="mt-24">
           <div className="flex item-center justify-center flex-row   ">
             <div className="text-gray-100 px-4  w-1/6 ">
               <ul className="my-8 space-y-2 flex flex-col justify-center items-center lg:items-start py-8 lg:py-0">
-              <li className="flex-col cursor-pointer">
+                <li className="flex-col cursor-pointer">
                   <div
                     className={`flex items-center py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
                       activeSection === 'bookings'
@@ -182,7 +178,9 @@ const Dashboard = () => {
                       <li className="mt-1">
                         <a
                           href="#"
-                          onClick={() => handleSectionClick('culturaltoursbookings')}
+                          onClick={() =>
+                            handleSectionClick('culturaltoursbookings')
+                          }
                           className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
                             activeSection === 'culturaltoursbookings'
                               ? 'bg-gray-100 text-gray-900'
@@ -199,7 +197,7 @@ const Dashboard = () => {
                     </ul>
                   )}
                 </li>
-                <li className='cursor-pointer'>
+                <li className="cursor-pointer">
                   <a
                     href="#"
                     onClick={() => handleSectionClick('enquiries')}
@@ -213,7 +211,7 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Enquiries</span>
                   </a>
                 </li>
-                <li className='cursor-pointer'>
+                <li className="cursor-pointer">
                   <a
                     href="#"
                     onClick={() => handleSectionClick('planning')}
@@ -227,7 +225,7 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Planning</span>
                   </a>
                 </li>
-                <li className='cursor-pointer'>
+                <li className="cursor-pointer">
                   <a
                     href="#"
                     onClick={() => handleSectionClick('promotions')}
@@ -241,7 +239,7 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Promotions</span>
                   </a>
                 </li>
-                <li className='cursor-pointer'>
+                <li className="cursor-pointer">
                   <a
                     href="#"
                     onClick={() => handleSectionClick('users')}
@@ -294,7 +292,7 @@ const Dashboard = () => {
                           <FaMountain className="inline-block mr-1 font-bold" />
 
                           <span className="hidden lg:inline-block">
-                           New Blog
+                            New Blog
                           </span>
                         </a>
                       </li>
@@ -332,11 +330,10 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Settings</span>
                   </a>
                 </li>
-                <li className='cursor-pointer'>
+                <li className="cursor-pointer">
                   <a
                     onClick={handleSignOut}
-                    
-                    className='block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black '
+                    className="block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black "
                   >
                     <IoIosLogOut className="inline-block mr-1 font-bold" />
                     <span className="hidden lg:inline-block">SignOut</span>
@@ -353,10 +350,12 @@ const Dashboard = () => {
               {activeSection === 'users' && <Users />}
               {activeSection === 'settings' && <Settings />}
               {activeSection === 'blogs' && <Blogs />}
-              {activeSection === 'mountainbookings' && <MountainBookings/>}
-              {activeSection === 'safaribookings' &&  <SafariBookings/>}
-              {activeSection === 'daytripbookings' && <DaytripBookings/>}
-              {activeSection === 'culturaltoursbookings' && <CulturalBookings/>}
+              {activeSection === 'mountainbookings' && <MountainBookings />}
+              {activeSection === 'safaribookings' && <SafariBookings />}
+              {activeSection === 'daytripbookings' && <DaytripBookings />}
+              {activeSection === 'culturaltoursbookings' && (
+                <CulturalBookings />
+              )}
               {activeSection === 'viewallblogs' && <ViewBlogs />}
             </div>
           </div>

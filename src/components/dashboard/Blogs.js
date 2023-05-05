@@ -59,7 +59,7 @@ export default function Blogs() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        "authorization": localStorage.getItem("token")
+        authorization: localStorage.getItem('token'),
       },
       body: JSON.stringify(post),
     }).then((r) => {
@@ -117,7 +117,7 @@ export default function Blogs() {
             className="w-full border border-white p-2 rounded-lg"
             value={post.content}
             onChange={handleInputChange}
-            placeholder='This is my first paragraph./n This is my second paragraph.n/This is my third paragraph'
+            placeholder="This is my first paragraph./n This is my second paragraph.n/This is my third paragraph"
           />
           <p className="  text-sm mt-1">
             Separate new paragraphs by a newline character=&gt; /n

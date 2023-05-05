@@ -24,7 +24,7 @@ function CulturalTourCard({ tour }) {
           </div>
         </div>
       </Link>
-  </div>
+    </div>
   );
 }
 

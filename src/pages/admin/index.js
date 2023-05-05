@@ -49,7 +49,11 @@ export default function LoginPage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const adminData = {
-      admin: { email: formData.email, password: formData.password, remember_me: true  },
+      admin: {
+        email: formData.email,
+        password: formData.password,
+        remember_me: true,
+      },
     };
     fetch('http://localhost:3000/admins/sign_in', {
       method: 'POST',
@@ -65,12 +69,11 @@ export default function LoginPage() {
             setTimeout(() => {
               router.push('admin/dashboard');
             }, 2500);
-            localStorage.setItem("token", r.headers.get("Authorization"))
+            localStorage.setItem('token', r.headers.get('Authorization'));
             setFormData({
               password: '',
               email: '',
             });
-           
           });
         } else {
           r.json().then(() => {
@@ -140,7 +143,7 @@ export default function LoginPage() {
                       checked={rememberMe}
                       onChange={() => setRememberMe(!rememberMe)}
                     />
-                      Remember me
+                    Remember me
                   </label>
 
                   <div className="text-center mt-6">

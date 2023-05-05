@@ -24,15 +24,12 @@ function Tours({ tours }) {
         </h1>
       </header>
 
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
-          {tours.map((tour) => (
-            <div key={tour.id}  >
-              <CulturalTourCard
-                tour={tour}
-              />
-            </div>
-          ))}
-        
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
+        {tours.map((tour) => (
+          <div key={tour.id}>
+            <CulturalTourCard tour={tour} />
+          </div>
+        ))}
       </div>
     </div>
   );

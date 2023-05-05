@@ -9,7 +9,7 @@ import {
   usePagination,
 } from 'react-table';
 
-export default function  CulturalBookings() {
+export default function CulturalBookings() {
   const [data, setData] = useState([]);
   const [selectedRows, setSelectedRows] = useState([]);
   const [searchValue, setSearchValue] = useState('');
