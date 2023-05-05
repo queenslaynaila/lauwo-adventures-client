@@ -84,6 +84,10 @@ export default function ViewBlogs() {
       selectedRows.map((blog) =>
         fetch(`http://localhost:3000/blogs/${blog.id}`, {
           method: 'DELETE',
+          headers: {
+            "content-type": "application/json",
+            "authorization": localStorage.getItem("token")
+        },
         }).then((response) => {
           if (response.ok) {
             return response.json().then(() => {
