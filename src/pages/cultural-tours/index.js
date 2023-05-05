@@ -15,7 +15,7 @@ function Tours({ tours }) {
           content="Tanzania, cultural tours, adventure, book now"
         />
       </Head>
-      <header className="w-full h-1/2 lg:h-96 bg-[url('/lions.jpg')] bg-cover bg-center flex justify-center items-center relative">
+      <header className="w-full h-1/2 lg:h-96 bg-[url('/maasai.jpg')] bg-cover bg-center flex justify-center items-center relative">
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         <h1 className="text-white text-center text-lg lg:text-2xl font-semibold mt-16 mx-6 z-0">
           Discover Tanzania in less time with our lightning-fast cultural tour
