@@ -16,8 +16,8 @@ export default function DayTripCard({ day }) {
           <div className="absolute inset-0 flex items-center justify-center text-left">
             <div className="text-white p-4">
               <h3 className="text-2xl font-bold mt-4">{day.name}</h3>
-              <div className="absolute bottom-0 left-0 px-2 bg-yellow-500">
-                <div className="text-lg font-medium">From {day.price}</div>
+              <div className="absolute bottom-0 left-0 px-2 bg-yellow-300">
+                <div className="text-lg font-medium text-black">From {day.price}</div>
               </div>
             </div>
           </div>
