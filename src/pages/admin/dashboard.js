@@ -294,7 +294,7 @@ const Dashboard = () => {
                           <FaMountain className="inline-block mr-1 font-bold" />
 
                           <span className="hidden lg:inline-block">
-                            Add New
+                           New Blog
                           </span>
                         </a>
                       </li>
