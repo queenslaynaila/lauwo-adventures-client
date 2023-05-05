@@ -1,24 +1,28 @@
 import Image from 'next/image';
 import Head from 'next/head';
- import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs';
 import { truncate } from '@/utils/truncate';
 import { generateSlug } from '@/utils/generateSlug';
 import Link from 'next/link';
 import useSWR from 'swr';
 function Blogs() {
-  const url = 'http://localhost:3000/latest_blogs'
+  const url = 'http://localhost:3000/latest_blogs';
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data: blogs, error } = useSWR(url, fetcher, {
     fallback: true,
     revalidateOnMount: true,
   });
 
-  if (error) return <div className='m-4 font-poly font-semibold'>Something went wrong</div>;
-  if (!blogs) return <div className='m-4 font-poly font-semibold'>Loading...</div>;
+  if (error)
+    return (
+      <div className="m-4 font-poly font-semibold">Something went wrong</div>
+    );
+  if (!blogs)
+    return <div className="m-4 font-poly font-semibold">Loading...</div>;
 
   return (
     <div className="m-4 font-poly">
-       <Head>
+      <Head>
         <title>Recent Blogs - Lauwo Tours</title>
         <meta
           name="description"
@@ -28,7 +32,7 @@ function Blogs() {
         <meta
           property="og:description"
           content="Check out our latest blog posts for tips, news, and insights on a variety of tours, safaris and mountain climbing."
-        />     
+        />
       </Head>
       <div>
         <h1 className="text-center text-lg mt-4 lg:mt-8 lg:text-3xl font-bold uppercase">
@@ -38,8 +42,7 @@ function Blogs() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogs.map((blog) => (
           <div className="p-4" key={blog.id}>
-            <div
-              className="relative bg-white border border-gray-200 rounded-lg shadow">
+            <div className="relative bg-white border border-gray-200 rounded-lg shadow">
               <Image
                 src={blog.image_url}
                 alt="/"

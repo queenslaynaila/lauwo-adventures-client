@@ -5,10 +5,12 @@ import Statement from './Statement';
 import PopularAdventure from './PopularAdventure';
 import InquiryForm from './InquiryForm';
 import SocialsButtons from './SocialsButtons';
+import FixedBanner from './FixedBanner';
 const PageLayOut = () => {
   return (
     <div>
       <Header />
+      <FixedBanner />
       <About />
       <Statement />
       <PopularAdventure />

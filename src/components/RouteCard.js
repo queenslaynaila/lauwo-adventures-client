@@ -2,10 +2,10 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
-
+import {   FaDollarSign } from 'react-icons/fa';
 export default function RouteCard({ route, duration, routeDuration }) {
   const bookableType = 'RouteDuration';
- 
+
   const adventure = {
     name: `${route.route_name} ${duration} day climb`,
     id: routeDuration.id,
@@ -38,11 +38,29 @@ export default function RouteCard({ route, duration, routeDuration }) {
               src={route.image_URL}
               alt="Route"
               className="rounded-lg mb-4 h-96 object-cover object-center"
-              height={500} width={500}
+              height={500}
+              width={500}
             />
           </div>
           <div className="md:w-1/2 md:ml-8">
             <p className="mb-4 text-lg leading-6">{route.description}</p>
+            <div className=" mb-1 flex-grow flex flex-wrap lg:flex-col">
+              <div className="w-full capitalize p-2 flex items-center">
+                1-3 People:
+                <FaDollarSign  />
+                {routeDuration.one_three_price} per person
+              </div>
+              <div className="w-full capitalize p-2 flex items-center">
+                3-6 People:
+                <FaDollarSign />
+                {routeDuration.three_six_price} per person
+              </div>
+              <div className="w-full capitalize p-2 flex items-center">
+               6-10 People:
+                <FaDollarSign/>
+                {routeDuration.six_ten_price} per person
+              </div>
+            </div>
             <div className="text-center h-24">
               <Popup
                 trigger={

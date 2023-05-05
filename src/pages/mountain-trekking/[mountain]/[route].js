@@ -49,7 +49,7 @@ const RouteSection = ({ mountains }) => {
 
   return (
     <>
-     <Head>
+      <Head>
         <title>{`${route.route_name} | ${mountain.mountain_name}`}</title>
         <meta
           name="description"

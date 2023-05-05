@@ -23,7 +23,7 @@ const Safari = ({ safaris }) => {
   return (
     <>
       <Head>
-        <title>{safari.name} Experience  Lauwo Adventures</title>
+        <title>{safari.name} Experience Lauwo Adventures</title>
         <meta name="description" content={safari.description} />
         <meta
           property="og:title"
