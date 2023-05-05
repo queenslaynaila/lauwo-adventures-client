@@ -99,7 +99,7 @@ const Dashboard = () => {
           <div className="flex item-center justify-center flex-row   ">
             <div className="text-gray-100 px-4  w-1/6 ">
               <ul className="my-8 space-y-2 flex flex-col justify-center items-center lg:items-start py-8 lg:py-0">
-                <li className="flex-col">
+                <li className="flex-col cursor-pointer">
                   <a
                     href="#"
                     onClick={() => handleSectionClick('bookings')}
@@ -113,7 +113,7 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Bookings</span>
                   </a>
                 </li>
-                <li>
+                <li className='cursor-pointer'>
                   <a
                     href="#"
                     onClick={() => handleSectionClick('enquiries')}
@@ -127,7 +127,7 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Enquiries</span>
                   </a>
                 </li>
-                <li>
+                <li className='cursor-pointer'>
                   <a
                     href="#"
                     onClick={() => handleSectionClick('planning')}
@@ -141,7 +141,7 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Planning</span>
                   </a>
                 </li>
-                <li>
+                <li className='cursor-pointer'>
                   <a
                     href="#"
                     onClick={() => handleSectionClick('promotions')}
@@ -155,7 +155,7 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Promotions</span>
                   </a>
                 </li>
-                <li>
+                <li className='cursor-pointer'>
                   <a
                     href="#"
                     onClick={() => handleSectionClick('users')}
@@ -170,7 +170,7 @@ const Dashboard = () => {
                   </a>
                 </li>
 
-                <li className="flex-col">
+                <li className="flex-col cursor-pointer">
                   <div
                     className={`flex items-center py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
                       activeSection === 'blogs'
@@ -246,7 +246,7 @@ const Dashboard = () => {
                     <span className="hidden lg:inline-block">Settings</span>
                   </a>
                 </li>
-                <li>
+                <li className='cursor-pointer'>
                   <a
                     onClick={handleSignOut}
                     
