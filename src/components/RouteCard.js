@@ -47,17 +47,17 @@ export default function RouteCard({ route, duration, routeDuration }) {
             <div className=" mb-1 flex-grow flex flex-wrap lg:flex-col">
               <div className="w-full capitalize p-2 flex items-center">
                 1-3 People:
-                <FaDollarSign className="mr-1" />
+                <FaDollarSign  />
                 {routeDuration.one_three_price} per person
               </div>
               <div className="w-full capitalize p-2 flex items-center">
                 3-6 People:
-                <FaDollarSign className="mr-1" />
+                <FaDollarSign />
                 {routeDuration.three_six_price} per person
               </div>
               <div className="w-full capitalize p-2 flex items-center">
                6-10 People:
-                <FaDollarSign className="mr-1" />
+                <FaDollarSign/>
                 {routeDuration.six_ten_price} per person
               </div>
             </div>
