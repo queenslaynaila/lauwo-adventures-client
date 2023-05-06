@@ -50,7 +50,7 @@ const Safari = ({ safaris }) => {
         <div className="inset bg-black/80">
           <div className="border-l-2 border-black h-full text-white">
             <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl xl font-poly capitalize text-center py-32">
-              {safari.name} experience
+              {safari.name} 
             </h3>
             <div className="flex flex-col items-center px-8 sm:-mt-8 -mt-24">
               {safari.safari_itineries.map((itinerary, index) => (
