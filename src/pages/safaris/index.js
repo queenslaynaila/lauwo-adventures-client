@@ -49,7 +49,7 @@ const Safaris = ({ safaris }) => {
                     </div>
                     <div className="absolute bottom-0 px-1 left-0  bg-yellow-300">
                      <div className="text-lg font-medium text-black">
-                        From &#36;{safari.budget_price}
+                        From ${safari.budget_price}
                      </div>
                     </div>
                   </div>
