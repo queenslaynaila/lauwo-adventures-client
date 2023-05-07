@@ -6,7 +6,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 import { useRouter } from 'next/router';
-
+import { FaDollarSign } from 'react-icons/fa';
 const Safari = ({ safaris }) => {
   const bookableType = 'Safari';
   const contentStyle = {
@@ -19,7 +19,7 @@ const Safari = ({ safaris }) => {
   const router = useRouter();
   const path = router.query.safari;
   const safari = safaris.find((safari) => generateSlug(safari.name) === path);
-
+ 
   return (
     <>
       <Head>
@@ -96,6 +96,23 @@ const Safari = ({ safaris }) => {
                   )}
                 </div>
               ))}
+             <div className=" flex-grow flex flex-wrap lg:flex-col mb-2">
+               <div className="w-full capitalize p-2 flex items-center">
+                  Budget:
+                  <FaDollarSign />
+                    {safari.budget_price}
+               </div>
+               <div className="w-full capitalize p-2 flex items-center">
+                 Mid Range:
+                 <FaDollarSign />
+                   {safari.midrange_price}
+               </div>
+               <div className="w-full capitalize p-2 flex items-center">
+                  Luxury:
+                 <FaDollarSign />
+                  {safari.luxury_price}
+               </div>
+             </div>
               <div className="flex  items-center justify-center">
                 <Popup
                   trigger={
