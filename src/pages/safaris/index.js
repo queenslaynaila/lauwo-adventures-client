@@ -45,6 +45,12 @@ const Safaris = ({ safaris }) => {
                       <h3 className="text-md font-bold uppercase font-poly z-3 text-center">
                         {safari.name}
                       </h3>
+                      
+                    </div>
+                    <div className="absolute bottom-0 px-1 left-0  bg-yellow-300">
+                     <div className="text-lg font-medium text-black">
+                        From &#36;{safari.budget_price}
+                     </div>
                     </div>
                   </div>
                 </Link>
