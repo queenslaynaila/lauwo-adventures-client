@@ -1,25 +1,27 @@
-/* eslint-disable react/jsx-key */
-import React from 'react';
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { useTable } from 'react-table';
-export default function Pricing() {
-  const data = [
-    {
-      people: '1 to 3 people',
-      standardPackage: '$100',
-      premiumPackage: '$150',
-    },
-    {
-      people: '3 to 6 people',
-      standardPackage: '$200',
-      premiumPackage: '$300',
-    },
-    {
-      people: '6 to 9 people',
-      standardPackage: '$300',
-      premiumPackage: '$450',
-    },
-  ];
+
+export default function Pricing({ routeDuration }) {
+  const data = useMemo(
+    () => [
+      {
+        people: '1 to 3 people',
+        standardPackage: `$${routeDuration.one_three_price}`,
+        premiumPackage: `$${routeDuration.one_three_price_premium}`,
+      },
+      {
+        people: '3 to 6 people',
+        standardPackage: `$${routeDuration.three_six_price}`,
+        premiumPackage: `$${routeDuration.three_six_price_premium}`,
+      },
+      {
+        people: '6 to 9 people',
+        standardPackage: `$${routeDuration.six_ten_price}`,
+        premiumPackage: `$${routeDuration.six_ten_price_premium}`,
+      },
+    ],
+    [routeDuration]
+  );
 
   const columns = useMemo(
     () => [
@@ -30,20 +32,24 @@ export default function Pricing() {
     []
   );
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data });
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+  } = useTable({ columns, data });
+
   return (
     <div>
       <div className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2">
         Pricing
       </div>
       <div className="bg-sand px-8 py-12">
-        {' '}
         <table {...getTableProps()} className="w-full">
           <thead>
             {headerGroups.map((headerGroup) => (
-              // eslint-disable-next-line react/jsx-key
-              <tr {...headerGroup.getHeaderGroupProps()}>
+              <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
                 {headerGroup.headers.map((column) => (
                   <th
                     key={column}
@@ -61,9 +67,12 @@ export default function Pricing() {
             {rows.map((row) => {
               prepareRow(row);
               return (
-                <tr {...row.getRowProps()} className="border-b border-zinc-600">
+                <tr key={row.id}
+                  {...row.getRowProps()}
+                  className="border-b border-zinc-600"
+                >
                   {row.cells.map((cell) => (
-                    <td
+                    <td key={cell.id}
                       {...cell.getCellProps()}
                       className="py-2 px-4 whitespace-nowrap"
                     >
