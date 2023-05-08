@@ -47,7 +47,7 @@ const RouteSection = ({ mountains }) => {
     };
     fetchRouteDurations();
   }, [duration]);
-
+ 
   return (
     <>
       <Head>
@@ -78,7 +78,7 @@ const RouteSection = ({ mountains }) => {
         </div>
 
         <Packages packages={packages} />
-        <Pricing />
+        <Pricing routeDuration={routeDuration} />
       </div>
     </>
   );
