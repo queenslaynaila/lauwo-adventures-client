@@ -65,7 +65,7 @@ const Safaris = ({ safaris }) => {
 
 export default Safaris;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch('http://localhost:3000/safaris');
   const safaris = await res.json();
 
