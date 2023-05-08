@@ -3,6 +3,7 @@ import Head from 'next/head';
 import RouteCard from '@/components/RouteCard';
 import MountainItinery from '@/components/MountainItinery';
 import Packages from '@/components/Packages';
+import  Pricing from '@/components/Pricing';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
@@ -77,6 +78,7 @@ const RouteSection = ({ mountains }) => {
         </div>
 
         <Packages packages={packages} />
+        <Pricing/>
       </div>
     </>
   );
