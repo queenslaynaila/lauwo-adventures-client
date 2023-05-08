@@ -93,7 +93,7 @@ function Tour({ culturalTour }) {
                 ))}
             </ul>
             <h2 className="text-2xl font-bold mb-2 text-gray-900">
-              Price: ${tour.price}
+              Price: $130
             </h2>
           </div>
 
