@@ -37,7 +37,7 @@ function Tours({ tours }) {
 
 export default Tours;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch('http://localhost:3000/cultural_tours');
   const tours = await res.json();
   return {
