@@ -19,7 +19,7 @@ const Safari = ({ safaris }) => {
   const router = useRouter();
   const path = router.query.safari;
   const safari = safaris.find((safari) => generateSlug(safari.name) === path);
- 
+
   return (
     <>
       <Head>
@@ -50,7 +50,7 @@ const Safari = ({ safaris }) => {
         <div className="inset bg-black/80">
           <div className="border-l-2 border-black h-full text-white">
             <h3 className="lg:text-2xl xl:text-3xl 3xl:text-4xl xl font-poly capitalize text-center py-32">
-              {safari.name} 
+              {safari.name}
             </h3>
             <div className="flex flex-col items-center px-8 sm:-mt-8 -mt-24">
               {safari.safari_itineries.map((itinerary, index) => (
@@ -96,23 +96,23 @@ const Safari = ({ safaris }) => {
                   )}
                 </div>
               ))}
-             <div className=" flex-grow flex flex-wrap lg:flex-col mb-2">
-               <div className="w-full capitalize p-2 flex items-center">
+              <div className=" flex-grow flex flex-wrap lg:flex-col mb-2">
+                <div className="w-full capitalize p-2 flex items-center">
                   Budget:
                   <FaDollarSign />
-                    {safari.budget_price}
-               </div>
-               <div className="w-full capitalize p-2 flex items-center">
-                 Mid Range:
-                 <FaDollarSign />
-                   {safari.midrange_price}
-               </div>
-               <div className="w-full capitalize p-2 flex items-center">
+                  {safari.budget_price}
+                </div>
+                <div className="w-full capitalize p-2 flex items-center">
+                  Mid Range:
+                  <FaDollarSign />
+                  {safari.midrange_price}
+                </div>
+                <div className="w-full capitalize p-2 flex items-center">
                   Luxury:
-                 <FaDollarSign />
+                  <FaDollarSign />
                   {safari.luxury_price}
-               </div>
-             </div>
+                </div>
+              </div>
               <div className="flex  items-center justify-center">
                 <Popup
                   trigger={

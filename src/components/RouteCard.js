@@ -2,7 +2,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 import Image from 'next/image';
- 
+
 export default function RouteCard({ route, duration, routeDuration }) {
   const bookableType = 'RouteDuration';
 
@@ -44,7 +44,7 @@ export default function RouteCard({ route, duration, routeDuration }) {
           </div>
           <div className="md:w-1/2 md:ml-8">
             <p className="mb-4 text-lg leading-6">{route.description}</p>
-           
+
             <div className="text-center h-24">
               <Popup
                 trigger={

@@ -5,36 +5,42 @@ import { truncate } from '@/utils/truncate';
 import { generateSlug } from '@/utils/generateSlug';
 import Link from 'next/link';
 import useSWR from 'swr';
-import { FaSpinner ,FaExclamationCircle } from 'react-icons/fa';
+import { FaSpinner, FaExclamationCircle } from 'react-icons/fa';
 function Blogs() {
   const url = 'http://localhost:3000/latest_blogs';
   const fetcher = (url) => fetch(url).then((res) => res.json());
-  const { data: blogs, error ,isLoading } = useSWR(url, fetcher, {
+  const {
+    data: blogs,
+    error,
+    isLoading,
+  } = useSWR(url, fetcher, {
     fallback: true,
     revalidateOnMount: true,
   });
-  
 
   if (error)
     return (
       <div className="text-center mb-2">
-      <div>
-        <FaExclamationCircle className="inline w-10 h-10 mr-2 text-red-500 fill-yellow-400 font-poly" />
-        <span>Oops! Something went wrong while fetching the blogs. Please try again later.</span>
-      </div>
-    </div>
-    )
-    if (isLoading || !blogs) {
-      return (
-        <div className='text-center mb-2'>
-          <div role='status'>
-            <FaSpinner className='inline w-10 h-10 mr-2 text-gray-200 animate-spin  fill-yellow-400' />
-            <span className='sr-only'>Loading...</span>
-          </div>
+        <div>
+          <FaExclamationCircle className="inline w-10 h-10 mr-2 text-red-500 fill-yellow-400 font-poly" />
+          <span>
+            Oops! Something went wrong while fetching the blogs. Please try
+            again later.
+          </span>
         </div>
-      )
-    }
-  
+      </div>
+    );
+  if (isLoading || !blogs) {
+    return (
+      <div className="text-center mb-2">
+        <div role="status">
+          <FaSpinner className="inline w-10 h-10 mr-2 text-gray-200 animate-spin  fill-yellow-400" />
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="m-4 font-poly">
       <Head>
