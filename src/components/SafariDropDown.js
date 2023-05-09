@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
-import adventures from '@/data/adventures.json';
+import safaris from '@/data/safaris.json';
 import Head from 'next/head';
 
-const AdventuresDropDown = ({ setIsOpen }) => {
+const SafariDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
@@ -18,7 +18,7 @@ const AdventuresDropDown = ({ setIsOpen }) => {
         className="flex flex-row items-center justify-center"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >
-       Mountains
+       Safaris
         {isDropdownOpen ? (
           <AiOutlineCaretUp className="ml-1" />
         ) : (
@@ -30,7 +30,7 @@ const AdventuresDropDown = ({ setIsOpen }) => {
           isDropdownOpen ? 'block' : 'hidden'
         }`}
       >
-        {adventures.map((adventure) => (
+        {safaris.map((adventure) => (
           <div key={adventure.id} className="mb-2 py-1">
             <Link
               href={`/${generateSlug(adventure.name)}`}
@@ -50,4 +50,4 @@ const AdventuresDropDown = ({ setIsOpen }) => {
   );
 };
 
-export default AdventuresDropDown;
+export default  SafariDropDown;
