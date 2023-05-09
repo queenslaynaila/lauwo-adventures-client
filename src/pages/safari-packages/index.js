@@ -26,7 +26,7 @@ const Safaris = ({ safaris }) => {
                 <Link
                   className="p-4"
                   key={safari.id}
-                  href={`/safaris/${generateSlug(safari.name)}`}
+                  href={`/safari-packages/${generateSlug(safari.name)}`}
                 >
                   <div
                     className="border-2 border-white relative shadow-lg
