@@ -42,7 +42,7 @@ export default function Pricing({ routeDuration }) {
 
   return (
     <div>
-      <div className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2">
+      <div className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2" id='pricing'>
         Pricing
       </div>
       <div className="bg-sand px-8 py-12">
