@@ -33,7 +33,7 @@ const AdventuresDropDown = ({ setIsOpen }) => {
         {adventures.map((adventure) => (
           <div key={adventure.id} className="mb-2 py-1">
             <Link
-              href={`/${generateSlug(adventure.name)}`}
+              href={`/mountain-trekking/${generateSlug(adventure.name)}`}
               className="capitalize"
               onClick={() => {
                 setIsOpen(false);
