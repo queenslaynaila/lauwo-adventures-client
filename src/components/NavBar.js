@@ -55,7 +55,7 @@ const NavBar = () => {
           <CulturalTourDropDown setIsOpen={setIsOpen} />
         </li>
         <li>
-          <Link href="/#about">About</Link>
+          <Link href="/about-us">About</Link>
         </li>
         <li>
           <Link href="/gallery">Gallery</Link>
