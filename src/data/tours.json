@@ -1,11 +1,11 @@
 [
     {
       "id": 1,
-      "name": "Locations"
+      "name": "culturaltour locations"
     },
     {
       "id": 2,
-      "name": "daytrip packages"
+      "name": "culturaltour packages"
     } 
   ]
   
