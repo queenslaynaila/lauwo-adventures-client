@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function DayTripCard({ day }) {
   return (
     <div>
-      <Link href={`/day-trips/${generateSlug(day.name)}`}>
+      <Link href={`/daytrip-packages/${generateSlug(day.name)}`}>
         <div className="relative card overflow-hidden rounded-lg shadow-md hover:shadow-lg transform transition-transform hover:-translate-y-1 cursor-pointer h-80">
           <Image
             src={day.image_url}
