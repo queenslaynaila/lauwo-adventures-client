@@ -4,6 +4,7 @@ import Head from 'next/head';
 import FaqCard from '@/components/FaqCard';
 import { BiSearch } from 'react-icons/bi';
 import { useState } from 'react';
+import Link from 'next/link';
 const SafariPage = ({ faqs }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
@@ -73,7 +74,7 @@ const SafariPage = ({ faqs }) => {
             Trusted Tour Company in Tanzania. See our reviews here.
           </p>
         </div>
-        <div className="  mx-auto my-8">
+        <div className="  mx-auto ">
           <h1 className="text-2xl font-bold mb-4 text-center py-2">
             Tanzania&apos;s Top Nature Reserves
           </h1>
@@ -102,14 +103,156 @@ const SafariPage = ({ faqs }) => {
             </div>
           ))}
         </div>
+        <div class="py-8">
+          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+              We Offer the best Safaris
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-white rounded-lg shadow-md flex flex-col">
+                <div class="relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1662003905953-f2aa253c48df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80"
+                    height={500}
+                    width={500}
+                    alt="Serengeti Adventure"
+                    class="w-full h-auto rounded-t-lg"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold mb-2">
+                    Dynamic Dou Safari: Serengeti & Ngongoro in 3 days
+                  </h3>
+                  <p class="text-gray-700 mb-4">
+                    Experience the wonders of Serengeti National Park with our
+                    guided safari tour.
+                  </p>
+                  <Link
+                    href="safari-packages/dynamic-duo-safari-serengeti--ngorongoro-in-3-days"
+                    class="text-blue-500 hover:underline"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg shadow-md flex flex-col">
+                <div class="relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1617938544737-cf7b41829226?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    height={500}
+                    width={500}
+                    alt="Serengeti Adventure"
+                    class="w-full h-auto rounded-t-lg"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold mb-2">
+                  Wildlife Wonders, A 8 day adventure
+                  </h3>
+                  <p class="text-gray-700 mb-4">
+                    Experience the wonders of Serengeti National Park with our
+                    guided safari tour.
+                  </p>
+                  <Link
+                    href="safari-packages/wildlife-wonders-8-day-tanzanian-safari-expedition"
+                    class="text-blue-500 hover:underline"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg shadow-md flex flex-col">
+                <div class="relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1534476478164-b15fec4f091c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    height={500}
+                    width={500}
+                    alt="Serengeti Adventure"
+                    class="w-full h-auto rounded-t-lg"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold mb-2">
+                  Serengeti Splendors: 5-Day Wildlife Safari Adventure
+                  </h3>
+                  <p class="text-gray-700 mb-4">
+                    Experience the wonders of Serengeti National Park with our
+                    guided safari tour.
+                  </p>
+                  <Link
+                    href="safari-packages/serengeti-splendors-5-day-wildlife-safari-adventure"
+                    class="text-blue-500 hover:underline"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="text-center mt-6">
+              <Link
+                href="/safari-packages"
+                class="text-blue-500 hover:underline"
+              >
+                View All Safari Packages
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="py-16 relative">
+            <div className="flex items-center justify-center gap-4">
+              <hr className="sm:w-40 w-10 border border-black" />
+              <h1 className="3xl:text-4xl xl:text-2xl text-xl font-semibold">
+                Frequently Asked Questions
+              </h1>
+              <div>
+                <BiSearch
+                  className="text-2xl cursor-pointer transition duration-500 ease-in-out hover:text-yellow-500"
+                  onClick={() => setIsSearchOpen(!isSearchOpen)}
+                />
+                {isSearchOpen && (
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    className="bg-transparent border-b  px-4
+            focus:outline-none focus:border-primary sm:w-72 w-40
+          "
+                    onChange={handleSearch}
+                  />
+                )}
+              </div>
+            </div>
+            <div className="w-3/4 mx-auto mt-10">
+              {filteredFaqs.length > 0 ? (
+                filteredFaqs.map((faq) => (
+                  <FaqCard
+                    key={faq.id}
+                    question={faq.question}
+                    answer={faq.answer}
+                  />
+                ))
+              ) : (
+                <div className="text-white text-center">
+                  <h1 className="text-2xl font-semibold">No FAQs found</h1>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
 };
 
 export default SafariPage;
-export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/frequently_asked_questions');
+export async function getStaticProps() {
+  const res = await fetch('http://localhost:3000/safari_faqs');
   const faqs = await res.json();
 
   return {
