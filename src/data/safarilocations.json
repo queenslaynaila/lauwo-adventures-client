@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Arusha National Park",
+    "description": "Arusha National Park, located in northern Tanzania near the town of Arusha, covers an area of about 137 square kilometers (52.9 square miles). It is known for its diverse landscapes, including forests, grasslands, and volcanic mountains. The park is home to a variety of wildlife, including giraffes, buffalos, zebras, and colobus monkeys, as well as over 400 species of birds. One of the unique features of Arusha National Park is the presence of Mount Meru, the fifth-highest mountain in Africa and the second-highest peak in Tanzania after Mount Kilimanjaro. Visitors can enjoy activities such as game drives, hiking, and climbing Mount Meru.",
+    "image": "/safari.jpg"
+  },
+  {
+    "title": "Tarangire National Park",
+    "description": "Tarangire National Park, located approximately 73 miles southwest of Arusha, covers an area of approximately 2,850 square kilometers. It is famous for its large herds of elephants, baobab trees, and diverse wildlife. The Tarangire River runs through the park, providing a vital source of water for the animals during the dry season. The park is home to over 550 species of birds, making it a popular destination for birdwatchers. Other wildlife commonly seen in the park include lions, leopards, cheetahs, giraffes, zebras, wildebeests, and buffalo. Tarangire National Park is open year-round and offers various lodges and campsites for visitors.",
+    "image": "/safari.jpg"
+  },
+  {
+    "title": "Lake Manyara National Park",
+    "description": "Gateway to the Tanzanian safari’s northern circuit national parks, Lake Manyara National Park covers an area of 330 square kilometers (127 square miles). It is famous for its diverse landscapes, including forests, wetlands, and savannas. The park is named after Lake Manyara, a shallow alkaline lake that covers approximately two-thirds of the park's total area. Lake Manyara National Park is home to a wide variety of wildlife, including elephants, giraffes, zebras, hippos, baboons, and many species of birds. It is also known for its tree-climbing lions, which are a unique and rare sight in Tanzania. Visitors can go on game drives, bird watching, walking safaris, and cultural tours in the park or nearby Maasai villages. In addition to its wildlife, Lake Manyara National Park offers breathtaking scenery, including the Rift Valley escarpment, the Mahogany Forest, lush groundwater forests, and the hot springs at Maji Moto. It is a popular destination for nature lovers, photographers, and anyone seeking an authentic African safari experience.",
+    "image": "/safari.jpg"
+  },
+  {
+    "title": "Serengeti National Park",
+    "description": "Prepare to be spellbound by the unparalleled beauty and untamed wilderness of Serengeti National Park. This legendary destination in Tanzania is a haven for wildlife enthusiasts and nature lovers alike. Spanning over vast plains and rolling hills, Serengeti is renowned for its breathtaking landscapes and diverse ecosystem. Marvel at the iconic Great Migration, where millions of wildebeest, zebras, and gazelles make their epic journey in search of fresh grazing grounds, accompanied by predators lurking in the shadows.Immerse yourself in the sights and sounds of the African savannah as you encounter majestic lions, graceful giraffes, playful elephants, and a myriad of other captivating wildlife species. The park's rich biodiversity provides endless opportunities for exhilarating game drives, where you can witness extraordinary wildlife interactions and capture awe-inspiring photographs. Beyond the wildlife, Serengeti boasts a captivating cultural heritage. Engage with local Maasai communities and gain insights into their traditional way of life and customs.",
+    "image": "/serengeti.jpg"
+  }
+]
