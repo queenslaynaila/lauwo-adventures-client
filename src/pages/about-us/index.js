@@ -14,9 +14,9 @@ export default function index() {
             background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))',
           }}
         ></div>
-        <div className="relative container mx-auto p-4 flex items-end">
+        <div className="relative container mx-auto p-4 flex mt-8 items-end">
           <div>
-            <div className="float-left py-10 px-5 my-5">
+            <div className="float-left py-10 px-5 my-5 ">
               <div className="heading mb-3 text-2xl md:text-4xl text-white">
                 About Lauwo Adventures
               </div>
