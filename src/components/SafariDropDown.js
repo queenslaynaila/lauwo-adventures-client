@@ -18,7 +18,7 @@ const SafariDropDown = ({ setIsOpen }) => {
         className="flex flex-row items-center justify-center"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >
-       Safaris
+        Safaris
         {isDropdownOpen ? (
           <AiOutlineCaretUp className="ml-1" />
         ) : (
@@ -50,4 +50,4 @@ const SafariDropDown = ({ setIsOpen }) => {
   );
 };
 
-export default  SafariDropDown;
+export default SafariDropDown;

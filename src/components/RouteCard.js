@@ -43,8 +43,12 @@ export default function RouteCard({ route, duration, routeDuration }) {
             />
           </div>
           <div className="md:w-1/2 md:ml-8">
-            <p className="mb-4 text-lg leading-6">{route.description} Find prices  
-              <Link href="#pricing" className="text-blue-500 ml-1 hover:underline">
+            <p className="mb-4 text-lg leading-6">
+              {route.description} Find prices
+              <Link
+                href="#pricing"
+                className="text-blue-500 ml-1 hover:underline"
+              >
                 here.
               </Link>
             </p>

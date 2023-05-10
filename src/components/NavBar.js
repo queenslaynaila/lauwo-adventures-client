@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
 import MobileMenu from './MobileMenu';
-import  SafariDropDown from './SafariDropDown';
+import SafariDropDown from './SafariDropDown';
 import AdventuresDropDown from './AdventuresDropDown';
-import  DayTripDropDown from './DayTripDropDown'
+import DayTripDropDown from './DayTripDropDown';
 import GuideDropDown from './GuideDropDown';
-import  CulturalTourDropDown from './CulturalTourDropDown'
+import CulturalTourDropDown from './CulturalTourDropDown';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);

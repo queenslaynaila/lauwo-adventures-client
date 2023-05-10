@@ -2,9 +2,9 @@ import { IoCloseSharp } from 'react-icons/io5';
 import Link from 'next/link';
 import AdventuresDropDown from './AdventuresDropDown';
 import GuideDropDown from './GuideDropDown';
-import  SafariDropDown from './SafariDropDown';
-import  DayTripDropDown from './DayTripDropDown'
-import  CulturalTourDropDown from './CulturalTourDropDown'
+import SafariDropDown from './SafariDropDown';
+import DayTripDropDown from './DayTripDropDown';
+import CulturalTourDropDown from './CulturalTourDropDown';
 
 const MobileMenu = ({ isOpen, toggle }) => {
   return (
@@ -17,20 +17,20 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <AdventuresDropDown />
         </li>
         <li>
-          <SafariDropDown/>
+          <SafariDropDown />
         </li>
         <li>
-          <DayTripDropDown/>
+          <DayTripDropDown />
         </li>
         <li>
-          <CulturalTourDropDown/>
+          <CulturalTourDropDown />
         </li>
         <li>
           <Link href="/#about" onClick={toggle}>
             About
           </Link>
         </li>
-         
+
         <li>
           <Link href="/#contact" onClick={toggle}>
             Contact

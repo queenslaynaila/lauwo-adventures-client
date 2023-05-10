@@ -50,4 +50,4 @@ const CulturalTourDropDown = ({ setIsOpen }) => {
   );
 };
 
-export default   CulturalTourDropDown;
+export default CulturalTourDropDown;

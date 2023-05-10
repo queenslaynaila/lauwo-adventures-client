@@ -5,7 +5,7 @@ import { generateSlug } from '@/utils/generateSlug';
 import daytrips from '@/data/daytrips.json';
 import Head from 'next/head';
 
-const  DayTripDropDown = ({ setIsOpen }) => {
+const DayTripDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
@@ -18,7 +18,7 @@ const  DayTripDropDown = ({ setIsOpen }) => {
         className="flex flex-row items-center justify-center"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >
-       DayTrips
+        DayTrips
         {isDropdownOpen ? (
           <AiOutlineCaretUp className="ml-1" />
         ) : (
@@ -50,4 +50,4 @@ const  DayTripDropDown = ({ setIsOpen }) => {
   );
 };
 
-export default   DayTripDropDown;
+export default DayTripDropDown;

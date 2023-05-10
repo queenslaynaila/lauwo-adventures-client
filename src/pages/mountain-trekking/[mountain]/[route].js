@@ -47,7 +47,7 @@ const RouteSection = ({ mountains }) => {
     };
     fetchRouteDurations();
   }, [duration]);
- 
+
   return (
     <>
       <Head>

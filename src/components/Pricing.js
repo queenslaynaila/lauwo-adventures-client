@@ -32,17 +32,15 @@ export default function Pricing({ routeDuration }) {
     []
   );
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = useTable({ columns, data });
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable({ columns, data });
 
   return (
     <div>
-      <div className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2" id='pricing'>
+      <div
+        className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2"
+        id="pricing"
+      >
         Pricing
       </div>
       <div className="bg-sand px-8 py-12">
@@ -67,12 +65,14 @@ export default function Pricing({ routeDuration }) {
             {rows.map((row) => {
               prepareRow(row);
               return (
-                <tr key={row.id}
+                <tr
+                  key={row.id}
                   {...row.getRowProps()}
                   className="border-b border-zinc-600"
                 >
                   {row.cells.map((cell) => (
-                    <td key={cell.id}
+                    <td
+                      key={cell.id}
                       {...cell.getCellProps()}
                       className="py-2 px-4 whitespace-nowrap"
                     >
