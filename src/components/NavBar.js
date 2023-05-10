@@ -6,7 +6,6 @@ import { BiSearch } from 'react-icons/bi';
 import MobileMenu from './MobileMenu';
 import SafariDropDown from './SafariDropDown';
 import AdventuresDropDown from './AdventuresDropDown';
-import DayTripDropDown from './DayTripDropDown';
 import GuideDropDown from './GuideDropDown';
 import CulturalTourDropDown from './CulturalTourDropDown';
 
@@ -49,10 +48,10 @@ const NavBar = () => {
           <SafariDropDown setIsOpen={setIsOpen} />
         </li>
         <li>
-          <DayTripDropDown setIsOpen={setIsOpen} />
+          <Link href="/day-trips">DayTrips</Link>
         </li>
         <li>
-          <CulturalTourDropDown setIsOpen={setIsOpen} />
+          <Link href="/cultural-tours">Cultural tours</Link>
         </li>
         <li>
           <Link href="/about-us">About</Link>

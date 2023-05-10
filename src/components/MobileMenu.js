@@ -20,10 +20,10 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <SafariDropDown />
         </li>
         <li>
-          <DayTripDropDown />
+          <Link href="/daytrips">DayTrips</Link>
         </li>
         <li>
-          <CulturalTourDropDown />
+          <Link href="/culturaltours">Cultural tours</Link>
         </li>
         <li>
           <Link href="/#about" onClick={toggle}>
