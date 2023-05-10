@@ -20,8 +20,8 @@ const Header = () => {
 
   return (
     <header
-      className="h-screen bg-cover bg-image bg-center bg-no-repeat flex flex-col bg-fixed w-full"
-      style={{ backgroundImage: `url(${currentImage})` }}
+      className="h-screen bg-cover bg-image bg-center bg-no-repeat flex flex-col bg-fixed w-full  transition-opacity duration-1000 "
+      style={{ backgroundImage: `url(${currentImage})` ,opacity: 1}}
     >
       <div className="bg-black/50 h-screen">
         <div className="flex flex-col justify-center items-center gap-4 sm:mt-56 mt-36 text-white">
