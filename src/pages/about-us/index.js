@@ -4,32 +4,31 @@ import Image from 'next/image';
 export default function index() {
   return (
    <div className="font-poly">
-  <div className="lg:h-64 h-64 hero-image bg-right-bottom bg-cover flex" style={{ backgroundImage: "url('/g-3.jpg')" }}>
-    <div className="relative container mx-auto p-4 flex items-end ">
-      <div>
-        <div className=" float-left py-10 px-5 my-5 ">
-          <div className="heading mb-3 text-2xl md:text-4xl text-white">About Lauwo Adventures</div>
-          <div className="text leading-normal text-white">Our team, values, and community projects.</div>
-        </div>
-        <div className="cta clear-left px-5">
-          <a className="no-underline btn btn-primary block sm:inline-block global-transition text-white" href="" target="">
-            <div className="flex justify-center items-center">
-              <span>Plan a trip with Lauwo today.</span>
-              <span className="fa fa-xs fa-arrow-right ml-4"></span>
-            </div>
-          </a>
-        </div>
+   <div className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center" style={{ backgroundImage: "url('/lauwotourbus.jpg')" }}>
+  <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))' }}></div>
+  <div className="relative container mx-auto p-4 flex items-end">
+    <div>
+      <div className="float-left py-10 px-5 my-5">
+        <div className="heading mb-3 text-2xl md:text-4xl text-white">About Lauwo Adventures</div>
+        <div className="text leading-normal text-white">Our team, values, and community projects.</div>
+      </div>
+      <div className="cta clear-left px-5">
+        <a className="no-underline btn btn-primary block sm:inline-block global-transition text-white" href="" target="">
+          <div className="flex justify-center items-center">
+            <span>Plan a trip with Lauwo today.</span>
+            <span className="fa fa-xs fa-arrow-right ml-4"></span>
+          </div>
+        </a>
       </div>
     </div>
   </div>
+</div>
 
-  <div className="p-5 bg-yellow-500">
-    <p className="text-white lg:ml-12">
-      Trusted Tour Company in Tanzania. See our reviews here.
-    </p>
-  </div>
-  
- 
+<div className="p-5 bg-yellow-500">
+  <p className="text-white lg:ml-12">
+    Trusted Tour Company in Tanzania. See our reviews here.
+  </p>
+</div>
   <div>
     <h1 className='text-center p-4 text-2xl'>Who We Are</h1>
     <p  className='  p-2 leading-8  mx-4 lg:mx-16'>Lauwo Adventures is a passionate team of adventure enthusiasts who love everything about Tanzania. As a local company, we have always been rooted in this beautiful country and take pride in sharing its wonders with our clients.
