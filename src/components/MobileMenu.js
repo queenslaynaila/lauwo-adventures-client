@@ -26,7 +26,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <Link href="/culturaltours">Cultural tours</Link>
         </li>
         <li>
-          <Link href="/#about" onClick={toggle}>
+          <Link href="/about-us" onClick={toggle}>
             About
           </Link>
         </li>
