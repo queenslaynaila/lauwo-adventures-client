@@ -36,10 +36,10 @@ const NavBar = () => {
       <Link href="/" className="flex items-center ml-10">
         <Image src="/logo.png" width={50} height={50} alt="logo" />
       </Link>
-      <div className="absolute right-6 md:hidden top-6 scale-150">
+      <div className="absolute right-6 tablet:hidden top-6 scale-150">
         <HiOutlineMenuAlt2 onClick={toggle} />
       </div>
-      <ul className="hidden md:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold">
+      <ul className="hidden tablet:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold">
         <li>
           <AdventuresDropDown setIsOpen={setIsOpen} />
         </li>
