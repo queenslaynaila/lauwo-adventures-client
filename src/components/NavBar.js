@@ -67,17 +67,7 @@ const NavBar = () => {
         <li>
           <GuideDropDown setIsOpen={setIsOpen} />
         </li>
-        <li>
-          <a
-            href="https://wa.me/255767707055"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex   p-2 rounded -mt-2     text-primary  items-center bg-black"
-          >
-            <FaWhatsapp className="mr-2" />
-            Whatsapp
-          </a>
-        </li>
+         
       </ul>
       <MobileMenu isOpen={isOpen} toggle={toggle} />
     </nav>
