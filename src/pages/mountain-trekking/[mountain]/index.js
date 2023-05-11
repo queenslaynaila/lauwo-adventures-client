@@ -34,15 +34,18 @@ export default function Mountain({ mountains, faqs }) {
           setGroupClimbs(data);
         } else {
           console.error('Failed to fetch group climbs data');
+          setGroupClimbs([]);  
         }
       } catch (error) {
         console.error('Failed to fetch group climbs data', error);
+        setGroupClimbs([]) 
       }
     };
-
+  
     fetchGroupClimbs();
-  }, [mountain]);
-  console.log(groupClimbs);
+  }, [mountain]); 
+  
+ 
   const contentStyle = {
     width: '85%',
     maxHeight: '85%',
