@@ -40,9 +40,9 @@ export default function Trip({ trips }) {
         "url": "https://lauwo-adventures-client.vercel.app/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.yourwebsite.com/logo.png",
-          "width": 600,
-          "height": 60,
+          "url": "https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75",
+          "width": 50,
+          "height": 50,
           "caption": "Lauwo Adventures"
         }
       }
