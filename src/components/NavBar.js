@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
-import { BiSearch } from 'react-icons/bi';
 import MobileMenu from './MobileMenu';
 import SafariDropDown from './SafariDropDown';
 import AdventuresDropDown from './AdventuresDropDown';
 import GuideDropDown from './GuideDropDown';
-import CulturalTourDropDown from './CulturalTourDropDown';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,11 +67,17 @@ const NavBar = () => {
         <li>
           <GuideDropDown setIsOpen={setIsOpen} />
         </li>
-        <div className="border-l-2 border-white">
-          <li>
-            <BiSearch className="ml-8 w-6 h-6" />
-          </li>
-        </div>
+        <li>
+          <a
+            href="https://wa.me/255767707055"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex   p-2 rounded -mt-2     text-primary  items-center bg-black"
+          >
+            <FaWhatsapp className="mr-2" />
+            Whatsapp
+          </a>
+        </li>
       </ul>
       <MobileMenu isOpen={isOpen} toggle={toggle} />
     </nav>
