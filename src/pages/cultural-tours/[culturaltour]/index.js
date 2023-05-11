@@ -5,7 +5,6 @@ import BookingForm from '@/components/BookingForm';
 import Head from 'next/head';
 
 function Tour({ culturalTour }) {
-  //console.log(culturalTour);
   const router = useRouter();
   console.log(router);
   const path = router.query.culturaltour;
@@ -23,6 +22,35 @@ function Tour({ culturalTour }) {
     margin: 'auto',
     backgroundColor: 'white',
   };
+  function culturalTourJsonLd(trip) {
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "TouristAttraction",
+      "name": trip.name,
+      "description": trip.description,
+      "url": trip.image_url,
+      "location": {
+        "@type": "Place",
+        "name": trip.location
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Lauwo Adventures",
+        "url": "https://lauwo-adventures-client.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75",
+          "width": 50,
+          "height": 50,
+          "caption": "Lauwo Adventures"
+        }
+      }
+    };
+  
+    return {
+      __html: JSON.stringify(jsonLd)
+    };
+  }
   return (
     <>
       <Head>
@@ -35,6 +63,7 @@ function Tour({ culturalTour }) {
           property="og:url"
           content={`http://localhost:3000/cultural_tours/${tour.slug}`}
         />
+        <script type="application/ld+json" dangerouslySetInnerHTML={culturalTourJsonLd(tour)} />
       </Head>
       <div
         className="bg-cover bg-center  inset-0 bg-black bg-opacity-100"
