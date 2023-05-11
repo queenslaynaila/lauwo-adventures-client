@@ -18,7 +18,7 @@ const AdventuresDropDown = ({ setIsOpen }) => {
         className="flex flex-row items-center justify-center"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >
-        Mountains
+        Climbing
         {isDropdownOpen ? (
           <AiOutlineCaretUp className="ml-1" />
         ) : (

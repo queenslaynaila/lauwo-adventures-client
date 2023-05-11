@@ -169,8 +169,7 @@ export default function Mountain({ mountains, faqs }) {
             Choosing the Right Route
           </h2>
           <p className="text-lg text-center mb-4">
-            We offer a variety of routes to conquer Mount Kilimanjaro,
-            including:
+            We offer a variety of routes to conquer {mountain.mountain_name},including:
           </p>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mountain.routes.map((route, index) => (
@@ -180,11 +179,11 @@ export default function Mountain({ mountains, faqs }) {
               </li>
             ))}
           </ul>
-          <h2 className="text-2xl font-bold text-center mb-6 mt-8">
-            Best Time to Climb Mount Kilimanjaro
+          <h2 className="text-2xl font-bold text-center mb-6 mt-8 capitalize">
+            Best Time to Climb  {mountain.mountain_name}
           </h2>
           <p className="text-lg text-center mb-4">
-            The climbing conditions on Mount Kilimanjaro vary across seasons.
+            The climbing conditions on  {mountain.mountain_name} vary across seasons.
             Here's an overview of the peak and off-peak seasons:
           </p>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
@@ -204,7 +203,7 @@ export default function Mountain({ mountains, faqs }) {
             advantages and considerations. Our experienced guides can provide
             personalized advice based on your preferences and the specific route
             you choose. Contact us with your preferred climbing dates, and
-            we&apos;ll help you plan your Kilimanjaro adventure accordingly.
+            we&apos;ll help you plan your  {mountain.mountain_name} adventure accordingly.
           </p>
         </div>
 
@@ -335,9 +334,9 @@ export default function Mountain({ mountains, faqs }) {
             <div className="text-center">
               <p className="leading-8 mb-2 text-lg">
                 We apologize for the inconvenience, but there are currently no
-                scheduled group climbs. However, we have got you covered! Enter
-                your details below, and we'll make sure to notify you via email
-                as soon as new group climbs are added. Don't miss out on the
+                scheduled group climbs for {mountain.mountain_name} currently. However, we have got you covered! Enter
+                your details below, and we&apos;ll make sure to notify you via email
+                as soon as new group climbs for {mountain.mountain_name}  are added. Don&apos;t miss out on the
                 opportunity to join our exciting adventures!
               </p>
               <div>
