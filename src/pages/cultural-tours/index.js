@@ -11,10 +11,111 @@ function Tours({ tours }) {
     overflow: 'auto',
     margin: 'auto',
   };
-   
+  function addCulturalJsonLd() {
+    return {
+      __html: `{
+      "@context": "https://schema.org/",
+      "@type": ["TouristAttraction","Cultural Tours"],
+      "name": "Cultural Tours in Tanzania",
+      "description": "Experience authentic cultural tours in Tanzania with Lauwo Adventures. Engage with the vibrant Maasai, Chaga, and Hadzabe tribes and explore their traditions.",
+      "touristType": {
+        "@type": "Audience",
+        "audienceType" : "Memorial Tourism",
+        "geographicArea": [{
+          "@type": "AdministrativeArea",
+          "name": "Tanzania"
+        },{
+          "@type": "AdministrativeArea",
+          "name": "Tanzania"
+        }]
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Tanzania, Moshi Arusha"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Lauwo Adventures",
+        "url": "https://lauwo-adventures-client.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75",
+          "width": 50,
+          "height": 50,
+          "caption": "Lauwo Adventures"
+        }
+      },
+      "sameAs":"https://en.wikipedia.org/wiki/Cultural_tourism",
+      "itemListElement": [
+        {
+          "@type": "TouristAttraction",
+          "name": "Marangu Cultural Tour",
+          "description": "Description of Cultural Tour 1",
+          "url": "https://www.example.com/cultural-tour-1"
+        },
+        {
+          "@type": "TouristAttraction",
+          "name": "Maasai Cultural Tour",
+          "description": "Description of Cultural Tour 2",
+          "url": "https://lauwo-adventures-client.vercel.app/day-trips/maasai"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Trip proposed by  lauwo adventures for tourists booking a safari and cultural tours.",
+        "description": "A 20 percent discount is offered.",
+        "price": "500",
+        "priceCurrency": "USD",
+        "availabilityEnds": "2023-10-31",
+        "url": "https://mytripco.com/trip/12345",
+        "eligibleRegion": {
+          "@type": "Country",
+          "name": "USA"
+        },
+        "offeredBy": {
+          "@type": "Organization",
+          "name": "lauwo adventures",
+          "url": "https://lauwo-adventures-client.vercel.app/"
+        }
+      }
+    }
+  `,
+    };
+  }
 
   return (
     <div className="font-poly">
+      <Head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Experience authentic cultural tours in Tanzania, Moshi Arusha with Lauwo Adventures. Engage with the vibrant Maasai, Chaga, and Hadzabe tribes, explore their traditions, and gain insights into local communities. Combine your cultural tour with a thrilling Kilimanjaro climbing adventure."
+        />
+        <title>
+          Cultural Tours in Tanzania | Authentic Experiences | Lauwo Adventures
+        </title>
+        <meta
+          name="keywords"
+          content="cultural tours, authentic experiences, Tanzania, Moshi Arusha, Maasai, Chaga, Hadzabe, Kilimanjaro climbing,Tanzania safaris, Lauwo Adventures"
+        />
+        <meta name="author" content="Lauwo Adventures" />
+        <meta name="google" content="translate" />
+        <meta
+          name="google-site-verification"
+          content="hKFgedHOB3VpAnDkoVs-Fm7QCpHkhAh6KaHKxbMVra8"
+        />
+        <Link
+          rel="canonical"
+          href="https://www.yourwebsite.com/cultural-tours"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addCulturalJsonLd()}
+          key="product-jsonld"
+        />
+      </Head>
+
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
         style={{ backgroundImage: "url('/maasai.jpg')" }}
