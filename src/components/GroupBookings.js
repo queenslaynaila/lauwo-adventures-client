@@ -41,20 +41,23 @@ export default function GroupBookings({ id }) {
     });
   };
   const notifySuccess = () =>
-    toast.success('Group Reservation received successfully.Expect an email from us with the specifics.', {
-      position: 'top-center',
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'colored',
-      style: {
-        backgroundColor: '#FFCE3C',
-        color: '#000',
-      },
-    });
+    toast.success(
+      'Group Reservation received successfully.Expect an email from us with the specifics.',
+      {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        style: {
+          backgroundColor: '#FFCE3C',
+          color: '#000',
+        },
+      }
+    );
 
   const error =
     (errors && errors.name && errors.name[0]) ||
