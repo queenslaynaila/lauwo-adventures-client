@@ -61,6 +61,12 @@ const SafariPage = ({ faqs }) => {
                   asked questions, and learn how to plan your dream safari
                   adventure.
                 </div>
+                <div className="text leading-normal text-white">
+                  You can browse through our various safari packages{' '}
+                  <Link href="/safari-packages" className="text-blue-500 font-semibold">
+                    here.
+                  </Link>
+                </div>
               </div>
               <div className="cta clear-left px-5">
                 <div className="flex">
