@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link'
+import Link from 'next/link';
 export default function index() {
   return (
     <div className="font-poly">
@@ -38,7 +38,8 @@ export default function index() {
                 </a>
                 <Link
                   className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
-                  href="/planning-form" >
+                  href="/planning-form"
+                >
                   <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
                     <span className="mr-2">Plan a Trip</span>
                     <span className="fa fa-arrow-right"></span>
