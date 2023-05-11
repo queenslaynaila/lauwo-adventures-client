@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import EnquiryPopUp from '@/components/enquirypopup';
+import  NotificationForm from '@/components/NotificationForm';
 import GroupBookings from '@/components/GroupBookings';
 export default function Mountain({ mountains, faqs }) {
   const router = useRouter();
@@ -359,7 +360,7 @@ export default function Mountain({ mountains, faqs }) {
                       <button className="close " onClick={close}>
                         &times;
                       </button>
-                      <EnquiryPopUp />
+                      <NotificationForm mountain={mountain.mountain_name}/>
                     </div>
                   )}
                 </Popup>
