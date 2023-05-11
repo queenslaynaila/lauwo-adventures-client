@@ -1,6 +1,6 @@
 import CulturalTourCard from '../../components/CulturalTourCard';
 import Head from 'next/head';
-
+import Link from 'next/link'
 function Tours({ tours }) {
   return (
     <div className="font-poly">
@@ -36,16 +36,14 @@ function Tours({ tours }) {
                   <span className="fa fa-arrow-right"></span>
                 </button>
               </a>
-              <a
-                className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
-                href="/plan-a-trip"
-                target="_blank"
-              >
-                <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                  <span className="mr-2">Plan a Trip</span>
-                  <span className="fa fa-arrow-right"></span>
-                </button>
-              </a>
+              <Link
+                  className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
+                  href="/planning-form">
+                  <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                    <span className="mr-2">Plan a Trip</span>
+                    <span className="fa fa-arrow-right"></span>
+                  </button>
+                </Link>
             </div>
           </div>
         </div>
