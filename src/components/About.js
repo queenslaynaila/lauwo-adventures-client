@@ -28,7 +28,7 @@ function About() {
           </div>
           <div className="px-8 py-10">
             <h2 className="text-3xl  font-poly font-bold text-center">
-              About Us
+              Who We Are ?
             </h2>
             <p className=" py-5 text-base md:text-sm tracking-wide sm:leading-10 leading-8">
               Lauwo Adventures is a local tour company operating in Kilimanjaro
