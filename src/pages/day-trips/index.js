@@ -3,7 +3,6 @@ import FaqCard from '@/components/FaqCard';
 import { BiSearch } from 'react-icons/bi';
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import DayTripCard from '@/components/DayTripCard';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';

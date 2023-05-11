@@ -3,8 +3,7 @@ import Link from 'next/link';
 import AdventuresDropDown from './AdventuresDropDown';
 import GuideDropDown from './GuideDropDown';
 import SafariDropDown from './SafariDropDown';
-import DayTripDropDown from './DayTripDropDown';
-import CulturalTourDropDown from './CulturalTourDropDown';
+ 
 
 const MobileMenu = ({ isOpen, toggle }) => {
   return (

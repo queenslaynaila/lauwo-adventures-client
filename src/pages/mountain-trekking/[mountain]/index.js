@@ -189,7 +189,7 @@ export default function Mountain({ mountains, faqs }) {
           </h2>
           <p className="text-lg text-center mb-4">
             The climbing conditions on {mountain.mountain_name} vary across
-            seasons. Here's an overview of the peak and off-peak seasons:
+            seasons. Here&apos;  s an overview of the peak and off-peak seasons:
           </p>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
             <li className="mb-4">
@@ -201,6 +201,7 @@ export default function Mountain({ mountains, faqs }) {
               <p className=" leading-8">{mountain.off_peak_season}</p>
             </li>
           </ul>
+          
 
           <p className="  mt-4 leading-8">
             It&apos;s important to note that {mountain.mountain_name} can be
@@ -279,7 +280,7 @@ export default function Mountain({ mountains, faqs }) {
           <p className="  leading-8">
             Are you a solo traveler or part of a small group of two? Join one of
             our scheduled group climbs and enjoy a more cost-effective
-            adventure. By joining our open group expeditions, you'll have the
+            adventure. By joining our open group expeditions, you&apos;  ll have the
             opportunity to climb alongside like-minded travelers from all over
             the world. Immerse yourself in the company of fellow climbers from
             countries such as the US, UK, Germany, Canada, France, Brazil,
@@ -397,6 +398,7 @@ export default function Mountain({ mountains, faqs }) {
               )}
             </div>
           </div>
+          
           <div className="w-3/4 mx-auto mt-10">
             {filteredFaqs.length > 0 ? (
               filteredFaqs.map((faq) => (

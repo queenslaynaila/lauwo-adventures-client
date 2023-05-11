@@ -1,5 +1,4 @@
 import CulturalTourCard from '../../components/CulturalTourCard';
-import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Popup from 'reactjs-popup';
@@ -12,8 +11,7 @@ function Tours({ tours }) {
     overflow: 'auto',
     margin: 'auto',
   };
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
+   
 
   return (
     <div className="font-poly">
