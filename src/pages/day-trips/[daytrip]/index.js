@@ -93,7 +93,7 @@ export default function Trip({ trips }) {
                 />
               </div>
               <div className="md:w-1/2">
-                <p className="mb-4 text-lg">{trip.description}</p>
+                <p className="mb-4 text-lg font-poly">{trip.description}</p>
                 <div className="text-center h-24">
                   <Popup
                     trigger={
@@ -125,8 +125,8 @@ export default function Trip({ trips }) {
         </div>
         <div></div>
       </div>
-      <div>
-        <ul>
+      <div >
+        <ul className='font-poly'>
           <li className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
             <div className="lg:ml-6 font-semibold">Price:</div>
             <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">
