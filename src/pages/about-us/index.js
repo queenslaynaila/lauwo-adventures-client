@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
@@ -12,9 +13,56 @@ export default function index() {
     overflow: 'auto',
     margin: 'auto',
   };
-
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://lauwo-adventures-client.vercel.app/about-us"
+    },
+    "headline": "About Lauwo Adventures",
+    "description": "Discover the wonders of Tanzania with Lauwo Adventures - a trusted tour company offering thrilling wildlife safaris, cultural experiences, and expeditions to Mount Kilimanjaro. Explore the beauty of Tanzania with our experienced guides and immerse yourself in responsible tourism practices. Start planning your extraordinary adventure today!",
+    "image": {
+      "@type": "ImageObject",
+      "url": "/kilimanjaro.jpg",
+      "height": 500,
+      "width": 500
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Lauwo Adventures"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lauwo Adventures",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75",
+        "width": 60,
+        "height": 60
+      }
+    }
+  };
   return (
     <div className="font-poly">
+      <Head>
+        <title>About Us | Lauwo Adventures</title>
+        <meta
+          name="description"
+          content="Lauwo Adventures is a local tour company operating in Kilimanjaro originating from the mountaineer family of 'Yohani Kinyala Lauwo' who was the first African guide to climb and conquer the summit of Mount Kilimanjaro."
+        />
+        <meta
+          name="keywords"
+          content="Lauwo Adventures, tour company, Kilimanjaro, mountaineer, Yohani Kinyala Lauwo, porters, local communities, vocational training, Tanzania tourism industry,Mount meru, Tanzanian safaris, visit tanzania, freedom foundation tanzania, wildgem adventures"
+        />
+        <meta name="author" content="Lauwo Adventures" />
+        <meta name="google" content="translate" />
+        <Link
+          rel="canonical"
+          href="https://www.yourwebsite.com/about-us"
+        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      </Head>
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
         style={{ backgroundImage: "url('/lauwotourbus.jpg')" }}
