@@ -1,4 +1,3 @@
- 
 import Head from 'next/head';
 import FaqCard from '@/components/FaqCard';
 import { BiSearch } from 'react-icons/bi';
@@ -53,7 +52,7 @@ export default function Index({ faqs, dayTrips }) {
             </div>
             <div className="cta clear-left px-5">
               <div className="flex">
-              <Link
+                <Link
                   className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
                   href="/travelconsideration"
                 >
@@ -92,14 +91,13 @@ export default function Index({ faqs, dayTrips }) {
             nested
             closeOnDocumentClick
             contentStyle={contentStyle}
-           
           >
             {(close) => (
               <div className="modal">
                 <button className="close " onClick={close}>
                   &times;
                 </button>
-                <EnquiryPopUp/>
+                <EnquiryPopUp />
               </div>
             )}
           </Popup>

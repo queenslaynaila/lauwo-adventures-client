@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
- 
+
 import EnquiryPopUp from '@/components/enquirypopup';
 export default function index() {
   const contentStyle = {
@@ -12,7 +12,7 @@ export default function index() {
     overflow: 'auto',
     margin: 'auto',
   };
-   
+
   return (
     <div className="font-poly">
       <div
@@ -37,7 +37,7 @@ export default function index() {
             </div>
             <div className="cta clear-left px-5">
               <div className="flex">
-              <Link
+                <Link
                   className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
                   href="/travelconsideration"
                 >
@@ -76,14 +76,13 @@ export default function index() {
             nested
             closeOnDocumentClick
             contentStyle={contentStyle}
-           
           >
             {(close) => (
               <div className="modal">
                 <button className="close " onClick={close}>
                   &times;
                 </button>
-                <EnquiryPopUp/>
+                <EnquiryPopUp />
               </div>
             )}
           </Popup>

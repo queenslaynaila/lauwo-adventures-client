@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
- 
+
 import EnquiryPopUp from '@/components/enquirypopup';
 export default function index() {
   const contentStyle = {
@@ -73,7 +73,7 @@ export default function index() {
                 <button className="close " onClick={close}>
                   &times;
                 </button>
-                <EnquiryPopUp/>
+                <EnquiryPopUp />
               </div>
             )}
           </Popup>

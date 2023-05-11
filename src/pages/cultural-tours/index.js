@@ -39,15 +39,15 @@ function Tours({ tours }) {
           </div>
           <div className="cta clear-left px-5">
             <div className="flex">
-            <Link
-                  className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
-                  href="/travelconsideration"
-                >
-                  <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                    <span className="mr-2">Plan A Tanzanian Visit </span>
-                    <span className="fa fa-arrow-right"></span>
-                  </button>
-                </Link>
+              <Link
+                className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
+                href="/travelconsideration"
+              >
+                <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                  <span className="mr-2">Plan A Tanzanian Visit </span>
+                  <span className="fa fa-arrow-right"></span>
+                </button>
+              </Link>
               <Link
                 className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
                 href="/planning-form"
@@ -77,14 +77,13 @@ function Tours({ tours }) {
             nested
             closeOnDocumentClick
             contentStyle={contentStyle}
-           
           >
             {(close) => (
               <div className="modal">
                 <button className="close " onClick={close}>
                   &times;
                 </button>
-                <EnquiryPopUp/>
+                <EnquiryPopUp />
               </div>
             )}
           </Popup>
