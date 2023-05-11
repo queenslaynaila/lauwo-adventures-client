@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import Head from 'next/head';
 import FaqCard from '@/components/FaqCard';
 import { BiSearch } from 'react-icons/bi';
@@ -6,8 +6,17 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import DayTripCard from '@/components/DayTripCard';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import EnquiryPopUp from '@/components/enquirypopup';
 
 export default function Index({ faqs, dayTrips }) {
+  const contentStyle = {
+    width: '85%',
+    maxHeight: '85%',
+    overflow: 'auto',
+    margin: 'auto',
+  };
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
 
@@ -44,16 +53,15 @@ export default function Index({ faqs, dayTrips }) {
             </div>
             <div className="cta clear-left px-5">
               <div className="flex">
-                <a
-                  className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white mr-2"
-                  href="/visiting-tanzania"
-                  target="_blank"
+              <Link
+                  className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
+                  href="/travelconsideration"
                 >
-                  <button className="text-white border  border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                    <span className="mr-2">Plan Your Tanzania Visit</span>
+                  <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                    <span className="mr-2">Plan A Tanzanian Visit </span>
                     <span className="fa fa-arrow-right"></span>
                   </button>
-                </a>
+                </Link>
                 <Link
                   className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
                   href="/planning-form"
@@ -73,15 +81,29 @@ export default function Index({ faqs, dayTrips }) {
         <p className="text-white lg:ml-12">
           Trusted Tour Company in Tanzania. See our reviews here.
         </p>
-        <a
-          className="no-underline btn btn-outline-primary"
-          href="/enquiry"
-          target="_blank"
-        >
-          <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-            Enquire Now
-          </button>
-        </a>
+        <div>
+          <Popup
+            trigger={
+              <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
+                Enquire Now
+              </button>
+            }
+            modal
+            nested
+            closeOnDocumentClick
+            contentStyle={contentStyle}
+           
+          >
+            {(close) => (
+              <div className="modal">
+                <button className="close " onClick={close}>
+                  &times;
+                </button>
+                <EnquiryPopUp/>
+              </div>
+            )}
+          </Popup>
+        </div>
       </div>
       <div class="py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

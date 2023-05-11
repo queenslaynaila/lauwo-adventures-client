@@ -1,7 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
-
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+ 
+import EnquiryPopUp from '@/components/enquirypopup';
 export default function index() {
+  const contentStyle = {
+    width: '85%',
+    maxHeight: '85%',
+    overflow: 'auto',
+    margin: 'auto',
+  };
+
   return (
     <div className="font-poly">
       <div
@@ -46,15 +56,28 @@ export default function index() {
         <p className="text-white lg:ml-12">
           Trusted Tour Company in Tanzania. See our reviews here.
         </p>
-        <a
-          className="no-underline btn btn-outline-primary"
-          href="/enquiry"
-          target="_blank"
-        >
-          <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-            Enquire Now
-          </button>
-        </a>
+        <div>
+          <Popup
+            trigger={
+              <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
+                Enquire Now
+              </button>
+            }
+            modal
+            nested
+            closeOnDocumentClick
+            contentStyle={contentStyle}
+          >
+            {(close) => (
+              <div className="modal">
+                <button className="close " onClick={close}>
+                  &times;
+                </button>
+                <EnquiryPopUp/>
+              </div>
+            )}
+          </Popup>
+        </div>
       </div>
       <h1 className="text-2xl text-center p-4">
         Things to Consider When You Visit Tanzania

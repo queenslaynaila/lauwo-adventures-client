@@ -5,7 +5,16 @@ import FaqCard from '@/components/FaqCard';
 import { BiSearch } from 'react-icons/bi';
 import { useState } from 'react';
 import Link from 'next/link';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import EnquiryPopUp from '@/components/enquirypopup';
 const SafariPage = ({ faqs }) => {
+  const contentStyle = {
+    width: '85%',
+    maxHeight: '85%',
+    overflow: 'auto',
+    margin: 'auto',
+  };
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
 
@@ -55,25 +64,24 @@ const SafariPage = ({ faqs }) => {
               </div>
               <div className="cta clear-left px-5">
                 <div className="flex">
-                  <a
-                    className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white mr-2"
-                    href="/visiting-tanzania"
-                    target="_blank"
-                  >
-                    <button className="text-white border  border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                      <span className="mr-2">Plan Your Tanzania Visit</span>
-                      <span className="fa fa-arrow-right"></span>
-                    </button>
-                  </a>
-                  <Link
-                    className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
-                    href="/planning-form"
-                  >
-                    <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                      <span className="mr-2">Plan a Trip</span>
-                      <span className="fa fa-arrow-right"></span>
-                    </button>
-                  </Link>
+                <Link
+                  className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
+                  href="/travelconsideration"
+                >
+                  <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                    <span className="mr-2">Plan A Tanzanian Visit </span>
+                    <span className="fa fa-arrow-right"></span>
+                  </button>
+                </Link>
+                <Link
+                  className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
+                  href="/planning-form"
+                >
+                  <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                    <span className="mr-2">Plan a Trip</span>
+                    <span className="fa fa-arrow-right"></span>
+                  </button>
+                </Link>
                 </div>
               </div>
             </div>
@@ -85,15 +93,29 @@ const SafariPage = ({ faqs }) => {
             Discover the richness of Tanzania&apos;s cultural experiences
             through our curated tours.
           </p>
-          <a
-            className="no-underline btn btn-outline-primary"
-            href="/enquiry"
-            target="_blank"
+          <div>
+          <Popup
+            trigger={
+              <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
+                Enquire Now
+              </button>
+            }
+            modal
+            nested
+            closeOnDocumentClick
+            contentStyle={contentStyle}
+           
           >
-            <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-              Enquire Now
-            </button>
-          </a>
+            {(close) => (
+              <div className="modal">
+                <button className="close " onClick={close}>
+                  &times;
+                </button>
+                <EnquiryPopUp/>
+              </div>
+            )}
+          </Popup>
+        </div>
         </div>
         <div className="  mx-auto ">
           <h1 className="text-2xl font-bold mb-4 text-center py-2 mt-4">
