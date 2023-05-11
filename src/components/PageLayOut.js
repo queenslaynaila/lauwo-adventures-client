@@ -134,9 +134,9 @@ const PageLayOut = () => {
   return (
     <div>
       <Head>
-        <meta charset="UTF-8"/>
+        <meta charSet="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
         <meta name="description" content="Discover the wonders of Tanzania with Lauwo Adventures. We offer exceptional safari packages, Mount Kilimanjaro expeditions, cultural tours, and more. Explore the beauty and rich heritage of Tanzania with our experienced guides."/>
         <meta name="keywords" content="lauwo, lauwo adevntures,Tanzania adventure tours,Safari packages in Tanzania,Mount Kilimanjaro expeditions,Cultural tours in Tanzania,Wildlife safaris,Tanzania travel experiences,Local tour operator in Tanzania,African safari adventures,Tanzania vacation packages,Explore Tanzania's natural beauty,HoneyMoonSafaris,Mount Meru expeditions,Mountain Climbng"/>
         <meta name="author" content="Your Name"/>

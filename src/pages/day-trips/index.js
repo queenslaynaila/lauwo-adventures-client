@@ -96,7 +96,7 @@ export default function Index({ faqs, dayTrips }) {
   return (
     <div className="font-poly">
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Day Trips in Tanzania | Lauwo Adventures</title>
         <meta name="description" content="Explore the beauty of Tanzania with exciting day trips offered by Lauwo Adventures. Discover breathtaking landscapes, wildlife, and local culture." />
