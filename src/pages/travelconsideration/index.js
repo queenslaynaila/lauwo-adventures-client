@@ -173,36 +173,37 @@ export default function index() {
           The peak tourist season in Tanzania is during the dry seasons when the
           weather is generally sunny and wildlife sightings are plentiful. This
           period is popular among visitors who are interested in wildlife
-          safaris and trekking adventures. However, it&apos;  s important to note that
-          these seasons also attract more tourists, leading to higher prices and
-          potentially crowded attractions.
+          safaris and trekking adventures. However, it&apos; s important to note
+          that these seasons also attract more tourists, leading to higher
+          prices and potentially crowded attractions.
         </p>
         <p className="text-gray-800 leading-8">
           During the rainy seasons, the landscapes in Tanzania transform with
           lush greenery and fewer tourists. This period can be ideal for
           birdwatching enthusiasts and those looking for a more budget-friendly
-          experience. However, it&apos;  s important to consider that some roads and
-          remote areas may become inaccessible or challenging to navigate due to
-          heavy rainfall.
+          experience. However, it&apos; s important to consider that some roads
+          and remote areas may become inaccessible or challenging to navigate
+          due to heavy rainfall.
         </p>
         <p className="text-gray-800 leading-8">
-          When packing for your trip to Tanzania, it&apos;  s recommended to bring
-          lightweight and breathable clothing for the hot and humid climate.
-          Pack comfortable walking shoes, a wide-brimmed hat, and sunglasses to
-          protect yourself from the sun. Additionally, it&apos;  s advisable to pack a
-          waterproof jacket or poncho during the rainy seasons.
+          When packing for your trip to Tanzania, it&apos; s recommended to
+          bring lightweight and breathable clothing for the hot and humid
+          climate. Pack comfortable walking shoes, a wide-brimmed hat, and
+          sunglasses to protect yourself from the sun. Additionally, it&apos; s
+          advisable to pack a waterproof jacket or poncho during the rainy
+          seasons.
         </p>
         <p className="text-gray-800 leading-8">
           If you plan to visit higher-altitude regions like Mount Kilimanjaro or
-          the Ngorongoro Conservation Area, it&apos;  s important to pack warm clothing
-          layers, as temperatures can drop significantly. It&apos;  s also recommended
-          to pack sturdy hiking boots and thermal layers if you plan to embark
-          on trekking adventures.
+          the Ngorongoro Conservation Area, it&apos; s important to pack warm
+          clothing layers, as temperatures can drop significantly. It&apos; s
+          also recommended to pack sturdy hiking boots and thermal layers if you
+          plan to embark on trekking adventures.
         </p>
         <p className="text-gray-800 leading-8">
-          Keep in mind that weather conditions can vary, so it&apos;  s always a good
-          idea to check the forecast for the specific regions you plan to visit
-          and pack accordingly.
+          Keep in mind that weather conditions can vary, so it&apos; s always a
+          good idea to check the forecast for the specific regions you plan to
+          visit and pack accordingly.
         </p>
       </div>
 
@@ -238,8 +239,8 @@ export default function index() {
         </p>
         <p className="text-gray-800 leading-8">
           Not sure which adventure is right for you? No problem! We understand
-          that choosing the perfect trip can be overwhelming. That&apos;  s why we
-          encourage you to reach out to us with your preferences and budget{' '}
+          that choosing the perfect trip can be overwhelming. That&apos; s why
+          we encourage you to reach out to us with your preferences and budget{' '}
           <a
             href="http://localhost:4000/planning-form"
             className="text-blue-500 underline"

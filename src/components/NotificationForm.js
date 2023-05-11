@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function NotificationForm({mountain}) {
+export default function NotificationForm({ mountain }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -15,7 +15,7 @@ export default function NotificationForm({mountain}) {
       name,
       email,
       message,
-      title:mountain
+      title: mountain,
     };
 
     fetch('http://localhost:3000/notifications', {
@@ -41,21 +41,24 @@ export default function NotificationForm({mountain}) {
     });
   };
   const notifySuccess = () =>
-    toast.success(`Thank you! Well notify you when new tours are available for ${mountain}`, {
-      position: 'top-center',
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'colored',
-      style: {
-        backgroundColor: '#FFCE3C',
-        color: '#000',
-      },
-    });
-   
+    toast.success(
+      `Thank you! Well notify you when new tours are available for ${mountain}`,
+      {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        style: {
+          backgroundColor: '#FFCE3C',
+          color: '#000',
+        },
+      }
+    );
+
   const error =
     (errors && errors.name && errors.name[0]) ||
     (errors && errors.email && errors.email[0]) ||
@@ -65,7 +68,9 @@ export default function NotificationForm({mountain}) {
   return (
     <div className="p-4 font-poly">
       <ToastContainer />
-      <h2 className="text-xl font-bold mb-4 text-center">Notify Me When Group Tours Open Up</h2>
+      <h2 className="text-xl font-bold mb-4 text-center">
+        Notify Me When Group Tours Open Up
+      </h2>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
           <label

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import AdventuresDropDown from './AdventuresDropDown';
 import GuideDropDown from './GuideDropDown';
 import SafariDropDown from './SafariDropDown';
- 
 
 const MobileMenu = ({ isOpen, toggle }) => {
   return (

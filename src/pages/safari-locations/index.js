@@ -63,7 +63,10 @@ const SafariPage = ({ faqs }) => {
                 </div>
                 <div className="text leading-normal text-white">
                   You can browse through our various safari packages{' '}
-                  <Link href="/safari-packages" className="text-yellow-500 font-semibold">
+                  <Link
+                    href="/safari-packages"
+                    className="text-yellow-500 font-semibold"
+                  >
                     here.
                   </Link>
                 </div>

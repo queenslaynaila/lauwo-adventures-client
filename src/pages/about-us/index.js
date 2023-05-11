@@ -117,8 +117,8 @@ export default function index() {
           Contact us today to start planning your extraordinary Tanzanian
           adventure. Let us guide you through the wonders of this magnificent
           land, showcasing its beauty, culture, and warm hospitality like no one
-          else can. Together, let&apos;  s create memories that will last a lifetime
-          with Lauwo Adventures..
+          else can. Together, let&apos; s create memories that will last a
+          lifetime with Lauwo Adventures..
         </p>
       </div>
 
