@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import Link from 'next/link';
 
-const images = ['/mountain.jpg', '/safari.jpg', '/mountain2.jpg'];
+const images = ['/kilimanjaro.jpg', '/safari.jpg', '/ol-doinyo-lengai-1389118.jpg'];
 
 const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
