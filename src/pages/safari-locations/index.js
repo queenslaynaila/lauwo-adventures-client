@@ -54,29 +54,52 @@ const SafariPage = ({ faqs }) => {
                 </div>
               </div>
               <div className="cta clear-left px-5">
-                <a
-                  className="no-underline btn btn-primary block sm:inline-block global-transition text-white"
-                  href="/plan-safari"
-                  target="_blank"
-                >
-                  <div className="flex justify-center items-center">
-                    <span>Plan your safari adventure today.</span>
-                    <span className="fa fa-xs fa-arrow-right ml-4"></span>
-                  </div>
-                </a>
+                <div className="flex">
+                  <a
+                    className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white mr-2"
+                    href="/visiting-tanzania"
+                    target="_blank"
+                  >
+                    <button className="text-white border  border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                      <span className="mr-2">Plan Your Tanzania Visit</span>
+                      <span className="fa fa-arrow-right"></span>
+                    </button>
+                  </a>
+                  <a
+                    className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
+                    href="/plan-a-trip"
+                    target="_blank"
+                  >
+                    <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                      <span className="mr-2">Plan a Trip</span>
+                      <span className="fa fa-arrow-right"></span>
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="p-5 bg-yellow-500">
+        <div className="p-5 bg-yellow-500 flex items-center justify-between">
           <p className="text-white lg:ml-12">
-            Trusted Tour Company in Tanzania. See our reviews here.
+            Discover the richness of Tanzania&apos;s cultural experiences
+            through our curated tours.
           </p>
+          <a
+            className="no-underline btn btn-outline-primary"
+            href="/enquiry"
+            target="_blank"
+          >
+            <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
+              Enquire Now
+            </button>
+          </a>
         </div>
         <div className="  mx-auto ">
-          <h1 className="text-2xl font-bold mb-4 text-center py-2">
-            Tanzania&apos;s Top Nature Reserves
+          <h1 className="text-2xl font-bold mb-4 text-center py-2 mt-4">
+            Explore Tanzania&apos;s Premier Safari Destinations: Our Top Nature
+            Reserves
           </h1>
           {safarilocations.map((location, index) => (
             <div
@@ -105,8 +128,8 @@ const SafariPage = ({ faqs }) => {
         </div>
         <div class="py-8">
           <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
-              We Offer the best Safaris
+            <h2 class="text-2xl font-bold mb-4 text-center">
+              Discover Our Extraordinary Safari Packages
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div class="bg-white rounded-lg shadow-md flex flex-col">
@@ -149,7 +172,7 @@ const SafariPage = ({ faqs }) => {
 
                 <div class="p-6">
                   <h3 class="text-xl font-semibold mb-2">
-                  Wildlife Wonders, A 8 day adventure
+                    Wildlife Wonders, A 8 day adventure
                   </h3>
                   <p class="text-gray-700 mb-4">
                     Experience the wonders of Serengeti National Park with our
@@ -176,7 +199,7 @@ const SafariPage = ({ faqs }) => {
 
                 <div class="p-6">
                   <h3 class="text-xl font-semibold mb-2">
-                  Serengeti Splendors: 5-Day Wildlife Safari Adventure
+                    Serengeti Splendors: 5-Day Wildlife Safari Adventure
                   </h3>
                   <p class="text-gray-700 mb-4">
                     Experience the wonders of Serengeti National Park with our
@@ -190,7 +213,6 @@ const SafariPage = ({ faqs }) => {
                   </Link>
                 </div>
               </div>
-
             </div>
 
             <div class="text-center mt-6">

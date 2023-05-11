@@ -25,25 +25,46 @@ export default function index() {
               </div>
             </div>
             <div className="cta clear-left px-5">
-              <a
-                className="no-underline btn btn-primary block sm:inline-block global-transition text-white"
-                href=""
-                target=""
-              >
-                <div className="flex justify-center items-center">
-                  <span>Plan a trip with Lauwo today.</span>
-                  <span className="fa fa-xs fa-arrow-right ml-4"></span>
-                </div>
-              </a>
+              <div className="flex">
+                <a
+                  className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white mr-2"
+                  href="/visiting-tanzania"
+                  target="_blank"
+                >
+                  <button className="text-white border  border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                    <span className="mr-2">Plan Your Tanzania Visit</span>
+                    <span className="fa fa-arrow-right"></span>
+                  </button>
+                </a>
+                <a
+                  className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
+                  href="/plan-a-trip"
+                  target="_blank"
+                >
+                  <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                    <span className="mr-2">Plan a Trip</span>
+                    <span className="fa fa-arrow-right"></span>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="p-5 bg-yellow-500">
+      <div className="p-5 bg-yellow-500 flex items-center justify-between">
         <p className="text-white lg:ml-12">
           Trusted Tour Company in Tanzania. See our reviews here.
         </p>
+        <a
+          className="no-underline btn btn-outline-primary"
+          href="/enquiry"
+          target="_blank"
+        >
+          <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
+            Enquire Now
+          </button>
+        </a>
       </div>
       <div>
         <h1 className="text-center p-4 text-2xl">Who We Are</h1>

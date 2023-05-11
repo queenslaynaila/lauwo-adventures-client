@@ -14,7 +14,8 @@ const SafariDropDown = ({ setIsOpen }) => {
         <title>Adventures</title>
         <meta name="description" content="Explore our adventures" />
       </Head>
-      <Link href={'/safari-locations'}
+      <Link
+        href={'/safari-locations'}
         className="flex flex-row items-center justify-center"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >

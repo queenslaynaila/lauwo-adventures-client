@@ -3,27 +3,94 @@ import Head from 'next/head';
 
 function Tours({ tours }) {
   return (
-    <div>
-      <Head>
-        <title>Discover Tanzania&apos; Cultural Tours - Book Now</title>
-        <meta
-          name="description"
-          content="Join our lightning-fast cultural tour trips, taking you on a journey through the heart of Tanzanian culture from city to village. Book now for an unforgettable adventure!"
-        />
-        <meta
-          name="keywords"
-          content="Tanzania, cultural tours, adventure, book now"
-        />
-      </Head>
-      <header className="w-full h-1/2 lg:h-96 bg-[url('/maasai.jpg')] bg-cover bg-center flex justify-center items-center relative">
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-        <h1 className="text-white text-center text-lg lg:text-2xl font-semibold mt-16 mx-6 z-0">
-          Discover Tanzania in less time with our lightning-fast cultural tour
-          trips, taking you on a journey through the heart of Tanzanian culture
-          from city to village. Book now for an unforgettable adventure!
-        </h1>
-      </header>
+    <div className="font-poly">
+      <div
+        className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
+        style={{ backgroundImage: "url('/maasai.jpg')" }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))',
+          }}
+        ></div>
+        <div className="relative container mx-auto p-4 mt-8">
+          <div className="py-10 px-5 my-5 text-white">
+            <div className="mb-3 text-2xl md:text-4xl">
+              Experience the Rich Cultural Heritage of Tanzania
+            </div>
+            <div className="leading-normal">
+              Discover the richness of Tanzania&apos;s cultural experiences
+              through our curated tours.
+            </div>
+          </div>
+          <div className="cta clear-left px-5">
+            <div className="flex">
+              <a
+                className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white mr-2"
+                href="/visiting-tanzania"
+                target="_blank"
+              >
+                <button className="text-white border  border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                  <span className="mr-2">Plan Your Tanzania Visit</span>
+                  <span className="fa fa-arrow-right"></span>
+                </button>
+              </a>
+              <a
+                className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
+                href="/plan-a-trip"
+                target="_blank"
+              >
+                <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                  <span className="mr-2">Plan a Trip</span>
+                  <span className="fa fa-arrow-right"></span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="p-5 bg-yellow-500 flex items-center justify-between">
+        <p className="text-white lg:ml-12">
+          Discover the richness of Tanzania&apos;s cultural experiences through
+          our curated tours.
+        </p>
+        <a
+          className="no-underline btn btn-outline-primary"
+          href="/enquiry"
+          target="_blank"
+        >
+          <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
+            Enquire Now
+          </button>
+        </a>
+      </div>
 
+      <div class="py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold mb-4 text-center">
+            Who Should Embark on Cultural Tours ?{' '}
+          </h2>
+          <p className="mb-4 leading-8">
+            {' '}
+            Cultural tours are meant for curious travelers who seek authentic
+            and immersive experiences. These tours are ideal for individuals who
+            have a keen interest in exploring different cultures, traditions,
+            and ways of life. If you have a passion for learning about the
+            customs, rituals, and artistic expressions of local communities,
+            cultural tours are perfect for you. Whether you are a solo traveler,
+            a family, or a group of friends, cultural tours provide a unique
+            opportunity to engage with indigenous cultures, interact with local
+            communities, and gain a deeper appreciation for the diversity of our
+            world. Embark on a cultural tour and broaden your horizons through
+            meaningful cultural exchanges and memorable encounters.Our cultural
+            tours focus on the vibrant Maasai culture. Engage with Maasai
+            tribes, visit their villages, and witness daily activities. Gain
+            insights into their beliefs and traditions.
+          </p>
+        </div>
+      </div>
+      <h2 class="text-2xl font-bold mb-4 text-center">Our Packages </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
         {tours.map((tour) => (
           <div key={tour.id}>
