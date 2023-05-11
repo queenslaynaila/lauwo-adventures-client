@@ -23,6 +23,36 @@ export default function Trip({ trips }) {
     margin: 'auto',
     backgroundColor: 'white',
   };
+  function addDayTripDetailJsonLd(trip) {
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "TouristAttraction",
+      "name": trip.name,
+      "description": trip.description,
+      "url": trip.image_url,
+      "location": {
+        "@type": "Place",
+        "name":  "Tanzania"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Lauwo Adventures",
+        "url": "https://lauwo-adventures-client.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.yourwebsite.com/logo.png",
+          "width": 600,
+          "height": 60,
+          "caption": "Lauwo Adventures"
+        }
+      }
+    };
+  
+    return {
+      __html: JSON.stringify(jsonLd)
+    };
+  }
+  
   return (
     <>
       <Head>
@@ -38,6 +68,7 @@ export default function Trip({ trips }) {
           )}`}
         />
         <meta property="og:type" content="website" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={addDayTripDetailJsonLd(trip)} />
       </Head>
       <div
         className="bg-cover bg-center bg-no-repeat"
