@@ -39,16 +39,12 @@ const Header = () => {
             the vast Savannah plain fields in the Serengeti.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center mt-4  gap-2">
-          <Link href="/planning-form" className="w-2/4 md:w-40 sm:w-auto">
-            <button className="text-white bg-yellow-500  hover:bg-yellow-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
-              Lets Plan Your Trip
-            </button>
+        <div className="flex justify-center items-center gap-4 mt-4 font-poly">
+          <Link href="planning-form">
+            <button className="bg-yellow-500 hover:bg-yellow-800 text-white px-4 py-2 rounded-md">Plan A Trip</button>
           </Link>
-          <Link href="/#contact" className="w-2/4  md:w-40 sm:w-auto ">
-            <button className="text-white bg-yellow-500  hover:bg-yellow-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
-              Enquire Now
-            </button>
+          <Link href="#/contact">
+            <button className="bg-yellow-500 hover:bg-yellow-800 text-white px-4 py-2 rounded-md">Enquire Now</button>
           </Link>
         </div>
         <div className="flex flex-col items-center gap-4 mt-16">
