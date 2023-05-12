@@ -112,7 +112,6 @@ function Tours({ tours }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={addCulturalJsonLd()}
-        
         />
       </Head>
 

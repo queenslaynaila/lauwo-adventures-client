@@ -11,7 +11,6 @@ import EnquiryPopUp from '@/components/enquirypopup';
 import NotificationForm from '@/components/NotificationForm';
 import GroupBookings from '@/components/GroupBookings';
 export default function Mountain({ mountain, faqs }) {
-   
   const [groupClimbs, setGroupClimbs] = useState([]);
   useEffect(() => {
     const fetchGroupClimbs = async () => {
@@ -418,11 +417,11 @@ export async function getStaticPaths() {
   const paths = mountains.map((mountain) => ({
     params: { mountain: generateSlug(mountain.mountain_name), id: mountain.id },
   }));
- 
+
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   const res = await fetch('http://localhost:3000/mountains');
   const mountains = await res.json();
   const mountain = mountains.find(

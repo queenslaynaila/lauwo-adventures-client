@@ -4,7 +4,6 @@ import BookingForm from '@/components/BookingForm';
 import Head from 'next/head';
 import { generateSlug } from '@/utils/generateSlug';
 function Tour({ tour }) {
-   
   const bookableType = 'CulturalTour';
   const adventure = {
     name: `${tour.name} day trip`,
@@ -19,31 +18,31 @@ function Tour({ tour }) {
   };
   function culturalTourJsonLd(trip) {
     const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "TouristAttraction",
-      "name": trip.name,
-      "description": trip.description,
-      "url": trip.image_url,
-      "location": {
-        "@type": "Place",
-        "name": trip.location
+      '@context': 'https://schema.org',
+      '@type': 'TouristAttraction',
+      name: trip.name,
+      description: trip.description,
+      url: trip.image_url,
+      location: {
+        '@type': 'Place',
+        name: trip.location,
       },
-      "provider": {
-        "@type": "Organization",
-        "name": "Lauwo Adventures",
-        "url": "https://lauwo-adventures-client.vercel.app/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75",
-          "width": 50,
-          "height": 50,
-          "caption": "Lauwo Adventures"
-        }
-      }
+      provider: {
+        '@type': 'Organization',
+        name: 'Lauwo Adventures',
+        url: 'https://lauwo-adventures-client.vercel.app/',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75',
+          width: 50,
+          height: 50,
+          caption: 'Lauwo Adventures',
+        },
+      },
     };
-  
+
     return {
-      __html: JSON.stringify(jsonLd)
+      __html: JSON.stringify(jsonLd),
     };
   }
   return (
@@ -58,7 +57,10 @@ function Tour({ tour }) {
           property="og:url"
           content={`http://localhost:3000/cultural_tours/${tour.slug}`}
         />
-        <script type="application/ld+json" dangerouslySetInnerHTML={culturalTourJsonLd(tour)} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={culturalTourJsonLd(tour)}
+        />
       </Head>
       <div
         className="bg-cover bg-center  inset-0 bg-black bg-opacity-100"
@@ -158,7 +160,9 @@ function Tour({ tour }) {
 export default Tour;
 
 export async function getStaticPaths() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/cultural_tours');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/cultural_tours'
+  );
   const culturalTours = await res.json();
   const paths = culturalTours.map((tour) => ({
     params: { culturaltour: generateSlug(tour.name), id: tour.id },
@@ -171,12 +175,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/cultural_tours');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/cultural_tours'
+  );
   const culturalTours = await res.json();
   const culturalTour = culturalTours.find(
     (culturalTour) => generateSlug(culturalTour.name) === params.culturaltour
   );
   return {
-    props: {tour: culturalTour },
+    props: { tour: culturalTour },
   };
 }

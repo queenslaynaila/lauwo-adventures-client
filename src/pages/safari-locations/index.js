@@ -78,7 +78,7 @@ const SafariPage = ({ faqs }) => {
                     href="/travelconsideration"
                   >
                     <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                      <span className="mr-2">Plan A Tanzanian Visit </span>
+                      <span className="mr-2">Plan A Safari </span>
                       <span className="fa fa-arrow-right"></span>
                     </button>
                   </Link>
@@ -87,7 +87,7 @@ const SafariPage = ({ faqs }) => {
                     href="/planning-form"
                   >
                     <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                      <span className="mr-2">Plan a Trip</span>
+                      <span className="mr-2">Plan A Trip</span>
                       <span className="fa fa-arrow-right"></span>
                     </button>
                   </Link>

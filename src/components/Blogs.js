@@ -20,7 +20,7 @@ function Blogs() {
 
   if (error)
     return (
-      <div className="text-center mb-2">
+      <div className="text-center mb-2 ">
         <div>
           <FaExclamationCircle className="inline w-10 h-10 mr-2 text-red-500 fill-yellow-400 font-poly" />
           <span>
@@ -55,10 +55,10 @@ function Blogs() {
           content="Check out our latest blog posts for tips, news, and insights on a variety of tours, safaris and mountain climbing."
         />
       </Head>
-      <div >
-      <h1 className="font-bold text-center my-4 text-lg lg:text-3xl">
-             Latest Articles on Our Blogs
-      </h1>
+      <div>
+        <h1 className="font-bold text-center my-4 text-lg lg:text-3xl">
+          Latest Articles on Our Blogs
+        </h1>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogs.map((blog) => (

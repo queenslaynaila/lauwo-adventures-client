@@ -3,11 +3,10 @@ import Head from 'next/head';
 import Popup from 'reactjs-popup';
 import BookingForm from '@/components/BookingForm';
 import { generateSlug } from '@/utils/generateSlug';
- 
+
 import { FaCheck, FaTimes, FaDollarSign } from 'react-icons/fa';
 
 export default function Trip({ trip }) {
-  
   const bookableType = 'DayTrip';
   const adventure = {
     name: `${trip.name} day trip`,
@@ -22,34 +21,34 @@ export default function Trip({ trip }) {
   };
   function addDayTripDetailJsonLd(trip) {
     const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "TouristAttraction",
-      "name": trip.name,
-      "description": trip.description,
-      "url": trip.image_url,
-      "location": {
-        "@type": "Place",
-        "name":  "Tanzania"
+      '@context': 'https://schema.org',
+      '@type': 'TouristAttraction',
+      name: trip.name,
+      description: trip.description,
+      url: trip.image_url,
+      location: {
+        '@type': 'Place',
+        name: 'Tanzania',
       },
-      "provider": {
-        "@type": "Organization",
-        "name": "Lauwo Adventures",
-        "url": "https://lauwo-adventures-client.vercel.app/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75",
-          "width": 50,
-          "height": 50,
-          "caption": "Lauwo Adventures"
-        }
-      }
+      provider: {
+        '@type': 'Organization',
+        name: 'Lauwo Adventures',
+        url: 'https://lauwo-adventures-client.vercel.app/',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75',
+          width: 50,
+          height: 50,
+          caption: 'Lauwo Adventures',
+        },
+      },
     };
-  
+
     return {
-      __html: JSON.stringify(jsonLd)
+      __html: JSON.stringify(jsonLd),
     };
   }
-  
+
   return (
     <>
       <Head>
@@ -65,7 +64,10 @@ export default function Trip({ trip }) {
           )}`}
         />
         <meta property="og:type" content="website" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={addDayTripDetailJsonLd(trip)} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addDayTripDetailJsonLd(trip)}
+        />
       </Head>
       <div
         className="bg-cover bg-center bg-no-repeat"
@@ -122,8 +124,8 @@ export default function Trip({ trip }) {
         </div>
         <div></div>
       </div>
-      <div >
-        <ul className='font-poly'>
+      <div>
+        <ul className="font-poly">
           <li className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
             <div className="lg:ml-6 font-semibold">Price:</div>
             <div className="single_tour_inclusions_content flex-grow flex flex-wrap lg:flex-col">

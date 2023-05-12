@@ -15,7 +15,7 @@ const Safari = ({ safari }) => {
     overflow: 'auto',
     margin: 'auto',
   };
- 
+
   return (
     <>
       <Head>

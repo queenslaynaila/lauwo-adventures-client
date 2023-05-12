@@ -14,34 +14,35 @@ export default function index() {
     margin: 'auto',
   };
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://lauwo-adventures-client.vercel.app/about-us"
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://lauwo-adventures-client.vercel.app/about-us',
     },
-    "headline": "About Lauwo Adventures",
-    "description": "Discover the wonders of Tanzania with Lauwo Adventures - a trusted tour company offering thrilling wildlife safaris, cultural experiences, and expeditions to Mount Kilimanjaro. Explore the beauty of Tanzania with our experienced guides and immerse yourself in responsible tourism practices. Start planning your extraordinary adventure today!",
-    "image": {
-      "@type": "ImageObject",
-      "url": "/kilimanjaro.jpg",
-      "height": 500,
-      "width": 500
+    headline: 'About Lauwo Adventures',
+    description:
+      'Discover the wonders of Tanzania with Lauwo Adventures - a trusted tour company offering thrilling wildlife safaris, cultural experiences, and expeditions to Mount Kilimanjaro. Explore the beauty of Tanzania with our experienced guides and immerse yourself in responsible tourism practices. Start planning your extraordinary adventure today!',
+    image: {
+      '@type': 'ImageObject',
+      url: '/kilimanjaro.jpg',
+      height: 500,
+      width: 500,
     },
-    "author": {
-      "@type": "Organization",
-      "name": "Lauwo Adventures"
+    author: {
+      '@type': 'Organization',
+      name: 'Lauwo Adventures',
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Lauwo Adventures",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75",
-        "width": 60,
-        "height": 60
-      }
-    }
+    publisher: {
+      '@type': 'Organization',
+      name: 'Lauwo Adventures',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75',
+        width: 60,
+        height: 60,
+      },
+    },
   };
   return (
     <div className="font-poly">
@@ -57,11 +58,11 @@ export default function index() {
         />
         <meta name="author" content="Lauwo Adventures" />
         <meta name="google" content="translate" />
-        <Link
-          rel="canonical"
-          href="https://www.yourwebsite.com/about-us"
+        <Link rel="canonical" href="https://www.yourwebsite.com/about-us" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </Head>
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"

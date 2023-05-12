@@ -24,7 +24,7 @@ export default function Index({ faqs, dayTrips }) {
 
   const filteredFaqs = faqs.filter((faq) => {
     return faq.question.toLowerCase().includes(searchValue.toLowerCase());
-  })
+  });
   function addDayTripsJsonLd() {
     return {
       __html: `{
@@ -99,19 +99,28 @@ export default function Index({ faqs, dayTrips }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Day Trips in Tanzania | Lauwo Adventures</title>
-        <meta name="description" content="Explore the beauty of Tanzania with exciting day trips offered by Lauwo Adventures. Discover breathtaking landscapes, wildlife, and local culture." />
-        <meta name="keywords" content="Marangu to Mandara Hut Day Trip, Kikuletwa Hot Springs Day Trip, Maasai Tours, Arusha National Park Day Trip, day trips, Tanzania, Lauwo Adventures" />
+        <meta
+          name="description"
+          content="Explore the beauty of Tanzania with exciting day trips offered by Lauwo Adventures. Discover breathtaking landscapes, wildlife, and local culture."
+        />
+        <meta
+          name="keywords"
+          content="Marangu to Mandara Hut Day Trip, Kikuletwa Hot Springs Day Trip, Maasai Tours, Arusha National Park Day Trip, day trips, Tanzania, Lauwo Adventures"
+        />
         <meta name="author" content="Lauwo Adventures" />
         <meta name="google" content="translate" />
         <meta
           name="google-site-verification"
           content="hKFgedHOB3VpAnDkoVs-Fm7QCpHkhAh6KaHKxbMVra8"
         />
-         <Link
+        <Link
           rel="canonical"
           href="https://lauwo-adventures-client.vercel.app/day-trips"
         />
-        <script type="application/ld+json" dangerouslySetInnerHTML={addDayTripsJsonLd()} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addDayTripsJsonLd()}
+        />
       </Head>
 
       <div
