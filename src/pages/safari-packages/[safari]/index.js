@@ -7,7 +7,7 @@ import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 import { useRouter } from 'next/router';
 import { FaDollarSign } from 'react-icons/fa';
-const Safari = ({ safaris }) => {
+const Safari = ({ safari }) => {
   const bookableType = 'Safari';
   const contentStyle = {
     width: '85%',
@@ -15,11 +15,7 @@ const Safari = ({ safaris }) => {
     overflow: 'auto',
     margin: 'auto',
   };
-
-  const router = useRouter();
-  const path = router.query.safari;
-  const safari = safaris.find((safari) => generateSlug(safari.name) === path);
-
+ 
   return (
     <>
       <Head>
@@ -149,13 +145,22 @@ const Safari = ({ safaris }) => {
 
 export default Safari;
 
-export async function getServerSideProps() {
+export async function getStaticPaths() {
   const res = await fetch('http://localhost:3000/safaris');
   const safaris = await res.json();
+  const paths = safaris.map((safari) => ({
+    params: { safari: generateSlug(safari.name), id: safari.id },
+  }));
+  return { paths, fallback: false };
+}
 
+export async function getStaticProps({ params }) {
+  const res = await fetch('http://localhost:3000/safaris');
+  const safaris = await res.json();
+  const safari = safaris.find(
+    (safari) => generateSlug(safari.name) === params.safari
+  );
   return {
-    props: {
-      safaris,
-    },
+    props: { safari },
   };
 }

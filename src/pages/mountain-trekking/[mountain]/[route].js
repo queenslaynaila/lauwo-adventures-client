@@ -46,7 +46,7 @@ const RouteSection = ({ route,duration,itineries,packages,mountain }) => {
 export default RouteSection;
 
 export async function getStaticPaths() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/mountains');
+  const res = await fetch('http://localhost:3000/mountains');
   const mountains = await res.json();
 
   const allPaths = mountains.flatMap((mountain) =>
@@ -73,7 +73,7 @@ export async function getStaticPaths() {
     const words = route.split('-');
     const routeName = words.slice(0, -2).join(' ');
     const duration = words.slice(-2, -1)[0];
-    const res = await fetch('https://lauwo-adventures-api.onrender.com/mountains');
+    const res = await fetch('http://localhost:3000/mountains');
     const mountains = await res.json();
     const mountainData = mountains.find(
       (mtn) => generateSlug(mtn.mountain_name) === mountain
@@ -81,7 +81,7 @@ export async function getStaticPaths() {
     const RouteData = mountainData.routes.find(
       (route) => route.route_name.toLowerCase() === routeName
     );
-    const res2 = await fetch('https://lauwo-adventures-api.onrender.com/route_durations');
+    const res2 = await fetch('http://localhost:3000/route_durations');
     const routeDurations = await res2.json();
 
     const routeDuration = routeDurations.find((routeDuration) => {
