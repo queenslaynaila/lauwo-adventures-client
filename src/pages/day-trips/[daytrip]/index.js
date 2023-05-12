@@ -3,14 +3,11 @@ import Head from 'next/head';
 import Popup from 'reactjs-popup';
 import BookingForm from '@/components/BookingForm';
 import { generateSlug } from '@/utils/generateSlug';
-import { useRouter } from 'next/router';
+ 
 import { FaCheck, FaTimes, FaDollarSign } from 'react-icons/fa';
 
-export default function Trip({ trips }) {
-  const router = useRouter();
-  const path = router.query.daytrip;
-  const trip = trips.find((trip) => generateSlug(trip.name) === path);
-  console.log(trip);
+export default function Trip({ trip }) {
+  
   const bookableType = 'DayTrip';
   const adventure = {
     name: `${trip.name} day trip`,
@@ -170,12 +167,29 @@ export default function Trip({ trips }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticPaths() {
   const res = await fetch('http://localhost:3000/day_trips');
   const trips = await res.json();
+
+  const paths = trips.map((trip) => ({
+    params: { daytrip: generateSlug(trip.name) },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const res = await fetch('http://localhost:3000/day_trips');
+  const trips = await res.json();
+
+  const trip = trips.find((trip) => generateSlug(trip.name) === params.daytrip);
+
   return {
     props: {
-      trips,
+      trip,
     },
   };
 }
