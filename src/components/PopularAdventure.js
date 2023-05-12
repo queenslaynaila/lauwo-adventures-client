@@ -1,11 +1,12 @@
 import { AiOutlineCompass } from 'react-icons/ai';
 import Link from 'next/link';
+import Image from 'next/image';
 const PopularAdventure = () => {
   const services = [
     {
       title: 'Climbing Expeditions',
       description:
-        'Embark on a challenging and rewarding journey to conquer the majestic peaks of Tanzania.',
+        'Embark on a challenging and rewarding journey to conquer the majestic peaks of Tanzania.Conquer majestic Tanzania peaks on a challenging   journey',
       image: '/kilimanjaro.jpg',
       url: '/mountain-trekking/mount-kilimanjaro',
     },
@@ -17,23 +18,16 @@ const PopularAdventure = () => {
       url: '/safari-packages',
     },
     {
-      title: 'Day Trips',
+      title: 'Day Trips & Cultural Tours',
       description:
-        'Discover the beauty of Tanzania on our day trips to stunning locations and cultural landmarks.',
+        'Experience the breathtaking beauty of Tanzania through captivating day trips and cultural discoveries.',
       image: '/daytrip.jpg',
       url: '/daytrip-packages',
-    },
-    {
-      title: 'Cultural Tours',
-      description:
-        'Immerse yourself in the rich cultural heritage of Tanzania with our guided cultural tours.',
-      image: '/culturaltour.jpg',
-      url: '/culturaltour-packages',
-    },
+    }
   ];
   return (
     <>
-      <section className="bg-gray-100 py-12 font-poly lg:mt-4 mt-96">
+      <section className=" py-12 font-poly lg:mt-0 mt-96">
         <div className="mx-50">
           <div className="flex justify-center items-center">
             <div className="border-t border-black w-1/3"></div>
@@ -48,7 +42,7 @@ const PopularAdventure = () => {
           <h1 className="font-bold text-center my-4 text-lg lg:text-3xl">
             Come Experience Tanzania With Us
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link key={index} href={service.url}>
                 <div className="bg-white rounded-lg shadow-md flex flex-col">
@@ -65,6 +59,37 @@ const PopularAdventure = () => {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-gray-100 font-poly">
+        <div className="container mx-auto py-12 ">
+          <h2 className="text-3xl font-bold text-center mb-8">Why Book with Lauwo Adventures?</h2>
+          <div className="grid ms:grid-cols-3 grid-cols-1 gap-8">
+            <div className="flex flex-col items-center">
+              <Image src="/trip.png" alt="Tailor Made Tours" className="w-20 h-20 mb-4 bg-gray-100" height={80} width={80} />
+              <p className="text-center">Tailor Made Tours</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src="/itinerary.png" alt="Custom Itineraries" className="w-20 h-20 mb-4 bg-gray-100"  height={80} width={80}/>
+              <p className="text-center">Custom Itineraries</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src="/advise.png" alt="24/7 Expert Advice" className="w-20 h-20 mb-4 bg-gray-100"  height={80} width={80} />
+              <p className="text-center">24/7 Expert Advice</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src="/guide.png" alt="Experienced Guides" className="w-20 h-20 mb-4 bg-gray-100" height={80} width={80} />
+              <p className="text-center">Experienced Guides</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src="/authentic.png" alt="Authentic Experiences" className="w-20 h-20 mb-4 bg-gray-100"  height={80} width={80}/>
+              <p className="text-center">Authentic Experiences</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src="/customer.png" alt="Customer Satisfaction" className="w-20 h-20 mb-4 bg-gray-100"   height={80} width={80} />
+              <p className="text-center">Customer Satisfaction</p>
+            </div>
           </div>
         </div>
       </section>
