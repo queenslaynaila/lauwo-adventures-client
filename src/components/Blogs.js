@@ -42,7 +42,7 @@ function Blogs() {
   }
 
   return (
-    <div className="m-4 font-poly">
+    <div className=" font-poly p-4 bg-gray-100">
       <Head>
         <title>Recent Blogs - Lauwo Tours</title>
         <meta
@@ -55,10 +55,10 @@ function Blogs() {
           content="Check out our latest blog posts for tips, news, and insights on a variety of tours, safaris and mountain climbing."
         />
       </Head>
-      <div>
-        <h1 className="text-center text-lg mt-4 lg:mt-8 lg:text-3xl font-bold uppercase">
-          recent blogs
-        </h1>
+      <div >
+      <h1 className="font-bold text-center my-4 text-lg lg:text-3xl">
+             Latest Articles on Our Blogs
+      </h1>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogs.map((blog) => (
