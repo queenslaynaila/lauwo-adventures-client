@@ -49,7 +49,10 @@ export default function PlanForm() {
   return (
     <div className="flex justify-center ">
       <div className="bg-white rounded-lg  w-4/5  p-10 mx-auto mb-8   flex items-center justify-center">
-        <form onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          className="shadow-lg shadow-black/20  rounded-lg   p-4"
+        >
           <div className="mb-6">
             <label
               htmlFor="adventure"
