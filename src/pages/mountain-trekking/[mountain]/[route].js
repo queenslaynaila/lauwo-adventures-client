@@ -4,50 +4,9 @@ import RouteCard from '@/components/RouteCard';
 import MountainItinery from '@/components/MountainItinery';
 import Packages from '@/components/Packages';
 import Pricing from '@/components/Pricing';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
-
-const RouteSection = ({ mountains }) => {
+ 
+const RouteSection = ({ route,duration,itineries,packages,mountain }) => {
   const bookableType = 'Mountain';
-
-  const router = useRouter();
-  const moutainPath = router.query.mountain;
-  const routePath = router.query.route;
-
-  const mountain = mountains.find(
-    (mtn) => generateSlug(mtn.mountain_name) === moutainPath
-  );
-
-  // Extract route name and duration from route string
-  const words = routePath.split('-');
-  const routeName = words.slice(0, -2).join(' ');
-  const duration = words.slice(-2)[0];
-
-  // Find the route that matches the route name in the URL
-  const route = mountain.routes.find(
-    (route) => route.route_name.toLowerCase() === routeName
-  );
-
-  const [routeDuration, setRouteDuration] = useState({});
-  const [itineries, setItineries] = useState([]);
-  const [packages, setPackages] = useState([]);
-  useEffect(() => {
-    const fetchRouteDurations = async () => {
-      const res = await fetch('http://localhost:3000/route_durations');
-      const routeDurations = await res.json();
-      const routeDuration = routeDurations.find(
-        (routeDuration) => routeDuration.duration_days === parseInt(duration)
-      );
-      if (routeDuration) {
-        const { itineries, ...routeDetails } = routeDuration;
-        setItineries(itineries);
-        setPackages(routeDetails);
-        setRouteDuration(routeDuration);
-      }
-    };
-    fetchRouteDurations();
-  }, [duration]);
-
   return (
     <>
       <Head>
@@ -62,7 +21,7 @@ const RouteSection = ({ mountains }) => {
           route={route}
           duration={duration}
           bookableType={bookableType}
-          routeDuration={routeDuration}
+          routeDuration={duration}
         />
         <div className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2 ">
           itinerary
@@ -78,7 +37,7 @@ const RouteSection = ({ mountains }) => {
         </div>
 
         <Packages packages={packages} />
-        <Pricing routeDuration={routeDuration} />
+        <Pricing routeDuration={duration} />
       </div>
     </>
   );
@@ -86,13 +45,56 @@ const RouteSection = ({ mountains }) => {
 
 export default RouteSection;
 
-export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/mountains');
+export async function getStaticPaths() {
+  const res = await fetch('https://lauwo-adventures-api.onrender.com/mountains');
   const mountains = await res.json();
 
+  const allPaths = mountains.flatMap((mountain) =>
+    mountain.routes.flatMap((route) =>
+      route.durations.map((duration) => ({
+        params: {
+          mountain: generateSlug(mountain.mountain_name),  
+          route: generateSlug(route.route_name) + `-${duration}-days`,
+        },
+      }))
+    )
+  );
+  
   return {
-    props: {
-      mountains,
-    },
+    paths: allPaths,
+    fallback: false,
   };
 }
+
+ 
+
+  export async function getStaticProps({ params }) {
+    const { mountain, route } = params;
+    const words = route.split('-');
+    const routeName = words.slice(0, -2).join(' ');
+    const duration = words.slice(-2, -1)[0];
+    const res = await fetch('https://lauwo-adventures-api.onrender.com/mountains');
+    const mountains = await res.json();
+    const mountainData = mountains.find(
+      (mtn) => generateSlug(mtn.mountain_name) === mountain
+    );
+    const RouteData = mountainData.routes.find(
+      (route) => route.route_name.toLowerCase() === routeName
+    );
+    const res2 = await fetch('https://lauwo-adventures-api.onrender.com/route_durations');
+    const routeDurations = await res2.json();
+
+    const routeDuration = routeDurations.find((routeDuration) => {
+      return routeDuration.duration_days === parseInt(duration) && routeDuration.route_name === RouteData.route_name;
+    });
+    const { itineries, ...routeDetails } = routeDuration;
+    return {
+      props: {
+        route:  RouteData,
+        itineries: itineries,
+        packages: routeDetails,
+        duration: duration,
+        mountain:mountainData
+      },
+    };
+  }

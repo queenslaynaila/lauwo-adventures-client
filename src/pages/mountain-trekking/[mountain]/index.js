@@ -5,18 +5,13 @@ import { BiSearch } from 'react-icons/bi';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
-import { useRouter } from 'next/router';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import EnquiryPopUp from '@/components/enquirypopup';
 import NotificationForm from '@/components/NotificationForm';
 import GroupBookings from '@/components/GroupBookings';
-export default function Mountain({ mountains, faqs }) {
-  const router = useRouter();
-  const path = router.query.mountain;
-  const mountain = mountains.find(
-    (mountain) => generateSlug(mountain.mountain_name) === path
-  );
+export default function Mountain({ mountain, faqs }) {
+   
   const [groupClimbs, setGroupClimbs] = useState([]);
   useEffect(() => {
     const fetchGroupClimbs = async () => {
@@ -417,15 +412,27 @@ export default function Mountain({ mountains, faqs }) {
     </div>
   );
 }
-
-export async function getServerSideProps() {
+export async function getStaticPaths() {
   const res = await fetch('http://localhost:3000/mountains');
   const mountains = await res.json();
+  const paths = mountains.map((mountain) => ({
+    params: { mountain: generateSlug(mountain.mountain_name), id: mountain.id },
+  }));
+ 
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({params}) {
+  const res = await fetch('http://localhost:3000/mountains');
+  const mountains = await res.json();
+  const mountain = mountains.find(
+    (mountain) => generateSlug(mountain.mountain_name) === params.mountain
+  );
   const res2 = await fetch('http://localhost:3000/frequently_asked_questions');
   const faqs = await res2.json();
   return {
     props: {
-      mountains,
+      mountain,
       faqs,
     },
   };
