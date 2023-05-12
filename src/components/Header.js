@@ -3,10 +3,31 @@ import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import Link from 'next/link';
 
 const images = [
-  '/mountain.jpg',
-  '/safari.jpg',
-  '/mountain2.jpg',
-   
+  {
+    src: '/kilimanjarosunrise.jpg',
+    heading: 'Climb Mount Kilimanjaro',
+    paragraph:
+      'Embark on an epic journey to the roof of Africa and conquer the majestic Kilimanjaro. Scale its towering peaks, traverse breathtaking landscapes, and challenge yourself to reach new heights. Our experienced guides will lead you through diverse ecosystems, from lush rainforests to snow-capped summit .',
+    ctaText: 'Kilimanjaro ',
+    ctaLink: '/mountain-trekking/mount-kilimanjaro',
+  },
+  {
+    src: '/background.jpg',
+    heading: 'Safaris in Tanzania',
+    paragraph:
+      'Immerse yourself in the wonders of the African wilderness on our extraordinary wildlife safaris. Journey through vast savannahs, dense jungles, and untamed landscapes teeming with iconic wildlife. Witness herds of elephants roaming freely, spot majestic lions lazing under the African sun, and marvel at the grace of giraffes as they graze on treetops.  ',
+    ctaText: 'Safari Tours',
+    ctaLink: '/safari-packages',
+  },
+
+  {
+    src: '/gq.jpg',
+    heading: 'Our Safari Locations',
+    paragraph:
+      "Indulge in the diversity of Tanzania's breathtaking safari locations. From the endless plains of the Serengeti to the wildlife-rich Ngorongoro Crater, each destination offers a unique and enchanting experience. Witness the annual wildebeest migration, spot the elusive Big Five, and immerse yourself in the rich cultural heritage of local tribes. ",
+    ctaText: 'Safari Locations',
+    ctaLink: '/safari-locations',
+  },
 ];
 
 const Header = () => {
@@ -25,28 +46,43 @@ const Header = () => {
 
   return (
     <header
-      className="h-screen bg-cover bg-image bg-center bg-no-repeat flex flex-col bg-fixed w-full  transition-opacity duration-1000 "
-      style={{ backgroundImage: `url(${currentImage})`, opacity: 1 }}
+      className="h-screen bg-cover bg-image bg-center bg-no-repeat flex flex-col bg-fixed w-full transition-opacity duration-1000"
+      style={{
+        backgroundImage: `url(${currentImage.src})`,
+      }}
     >
-      <div className="bg-black/50 h-screen">
-        <div className="flex flex-col justify-center items-center gap-4 sm:mt-56 mt-36 text-white">
-          <h1 className="text-4xl font-poly font-bold w-8/12 sm:w-6/12 leading-[50px]">
-            Experience the adventure of a lifetime
-          </h1>
-          <p className="font-poly w-8/12 sm:w-6/12">
-            As a third-generation family owned tour company run by locals, Lauwo
-            Adventure offers authentic Tanzanian experiences ranging from
-            beautiful summits atop the Kilimanjaro to local vibrant cultures and
-            the vast Savannah plain fields in the Serengeti.
-          </p>
-        </div>
-        <div className="flex justify-center items-center gap-4 mt-4 font-poly">
-          <Link href="planning-form">
-            <button className="bg-yellow-500 hover:bg-yellow-800 text-white px-4 py-2 rounded-md">Plan A Trip</button>
-          </Link>
-          <Link href="#/contact">
-            <button className="bg-yellow-500 hover:bg-yellow-800 text-white px-4 py-2 rounded-md">Enquire Now</button>
-          </Link>
+      <div className="bg-black/50 h-screen flex flex-col items-center justify-center font-poly">
+        <div className="relative container p-4 mt-16 lg:mt-32">
+          <div className="py-10 px-5 my-5 text-center">
+            <div className="heading mb-3  md:text-4xl text-white text-4xl  font-bold  leading-[50px]">
+              {currentImage.heading}
+            </div>
+            <div className="text leading-normal text-white mx-auto max-w-2xl">
+              {currentImage.paragraph}
+            </div>
+          </div>
+          <div className="cta clear-left px-5 text-center">
+            <div className="flex justify-center">
+              <Link
+                className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
+                href={currentImage.ctaLink}
+              >
+                <button className="text-white bg-yellow-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2 flex items-center">
+                  <span className="mr-2">{currentImage.ctaText}</span>
+                  <span className="fa fa-arrow-right"></span>
+                </button>
+              </Link>
+              <Link
+                className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
+                href="/planning-form"
+              >
+                <button className="text-white bg-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                  <span className="mr-2">Plan A Trip</span>
+                  <span className="fa fa-arrow-right"></span>
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col items-center gap-4 mt-16">
           <Link href="/#about">
