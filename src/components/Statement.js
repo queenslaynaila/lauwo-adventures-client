@@ -4,7 +4,7 @@ import { FaPenFancy } from 'react-icons/fa';
 
 function Statement() {
   return (
-    <div className="h-screen bg-white md:m-11 sm:mt-0 mt-10">
+    <div className="h-screen bg-white md:m-11 sm:mt-0 mt-10 font-poly">
       <div className="w-full px-6 sm:px-12 lg:px-24 xl:px-48">
         <div className=" relative flex justify-center items-center w-full mt-6 md:mt-10  top-0 left-0">
           <hr className="h-px m-2 w-1/4 md:w-1/3 font-bold bg-black border-0  " />
