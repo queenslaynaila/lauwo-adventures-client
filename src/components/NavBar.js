@@ -37,7 +37,7 @@ const NavBar = () => {
         <Image src="/logo.png" width={50} height={50} alt="logo" />
       </Link>
       <div className="absolute right-6 tablet:hidden top-6 scale-150 ">
-        <HiOutlineMenuAlt2 onClick={toggle} className='md:text-4xl'/>
+        <HiOutlineMenuAlt2 onClick={toggle} className="md:text-4xl" />
       </div>
       <ul className="hidden tablet:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold">
         <li>
@@ -65,9 +65,11 @@ const NavBar = () => {
           <Link href="/blogs">Blogs</Link>
         </li>
         <li>
-          <GuideDropDown setIsOpen={setIsOpen} />
+          <Link href="/blogs">Blogs</Link>
         </li>
-         
+        <li>
+          <Link href="/kilimanjaro-group-climb">Group Climb</Link>
+        </li>
       </ul>
       <MobileMenu isOpen={isOpen} toggle={toggle} />
     </nav>
