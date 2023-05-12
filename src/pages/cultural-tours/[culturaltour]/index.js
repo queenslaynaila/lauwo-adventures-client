@@ -1,15 +1,10 @@
-import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Popup from 'reactjs-popup';
 import BookingForm from '@/components/BookingForm';
 import Head from 'next/head';
-
-function Tour({ culturalTour }) {
-  const router = useRouter();
-  console.log(router);
-  const path = router.query.culturaltour;
-  console.log(path);
-  const tour = culturalTour[0];
+import { generateSlug } from '@/utils/generateSlug';
+function Tour({ tour }) {
+   
   const bookableType = 'CulturalTour';
   const adventure = {
     name: `${tour.name} day trip`,
@@ -162,10 +157,26 @@ function Tour({ culturalTour }) {
 
 export default Tour;
 
-export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/cultural_tours');
-  const culturalTour = await res.json();
+export async function getStaticPaths() {
+  const res = await fetch('https://lauwo-adventures-api.onrender.com/cultural_tours');
+  const culturalTours = await res.json();
+  const paths = culturalTours.map((tour) => ({
+    params: { culturaltour: generateSlug(tour.name), id: tour.id },
+  }));
+
   return {
-    props: { culturalTour },
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const res = await fetch('https://lauwo-adventures-api.onrender.com/cultural_tours');
+  const culturalTours = await res.json();
+  const culturalTour = culturalTours.find(
+    (culturalTour) => generateSlug(culturalTour.name) === params.culturaltour
+  );
+  return {
+    props: {tour: culturalTour },
   };
 }
