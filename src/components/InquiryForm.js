@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-
+import { BiComment } from 'react-icons/bi';
 const testimonials = [
   {
     quote:
@@ -52,7 +52,16 @@ const InquiryForm = () => {
 
   return (
     <section className="testimonial-section font-poly pb-8">
-      <h2 className="text-center text-3xl font-bold mb-4">
+    <div className="mx-50">
+        <div className="flex justify-center items-center">
+          <div className="border-t border-black w-1/3"></div>
+          <div className="text-center">
+            <BiComment className="lg:text-5xl sm:text-2xl text-xl inline-block mx-2" />
+          </div>
+          <div className="border-t border-black w-1/3"></div>
+        </div>
+      </div>
+      <h2 className="text-center text-3xl font-bold mb-4 pt-2">
         What Our Travellers Say About Us
       </h2>
       <div className="flex items-center justify-center">

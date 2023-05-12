@@ -5,6 +5,7 @@ import { truncate } from '@/utils/truncate';
 import { generateSlug } from '@/utils/generateSlug';
 import Link from 'next/link';
 import useSWR from 'swr';
+import { TfiWrite } from 'react-icons/tfi';
 import { FaSpinner, FaExclamationCircle } from 'react-icons/fa';
 function Blogs() {
   const url = 'http://localhost:3000/latest_blogs';
@@ -42,7 +43,7 @@ function Blogs() {
   }
 
   return (
-    <div className=" font-poly p-4 bg-gray-100">
+    <div className=" font-poly p-4 ">
       <Head>
         <title>Recent Blogs - Lauwo Tours</title>
         <meta
@@ -56,8 +57,17 @@ function Blogs() {
         />
       </Head>
       <div>
+      <div className="mx-50">
+        <div className="flex justify-center items-center">
+          <div className="border-t border-black w-1/3"></div>
+          <div className="text-center">
+            <TfiWrite className="lg:text-5xl sm:text-2xl inline-block mx-2" />
+          </div>
+          <div className="border-t border-black w-1/3"></div>
+        </div>
+      </div>
         <h1 className="font-bold text-center my-4 text-lg lg:text-3xl">
-          Latest Articles on Our Blogs
+          Travel Tips With Lauwo
         </h1>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
