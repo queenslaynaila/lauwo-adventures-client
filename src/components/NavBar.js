@@ -36,8 +36,8 @@ const NavBar = () => {
       <Link href="/" className="flex items-center ml-10">
         <Image src="/logo.png" width={50} height={50} alt="logo" />
       </Link>
-      <div className="absolute right-6 tablet:hidden top-6 scale-150">
-        <HiOutlineMenuAlt2 onClick={toggle} />
+      <div className="absolute right-6 tablet:hidden top-6 scale-150 ">
+        <HiOutlineMenuAlt2 onClick={toggle} className='md:text-4xl'/>
       </div>
       <ul className="hidden tablet:flex gap-8 p-6 font-poly text-base tracking-wide font-semibold">
         <li>
