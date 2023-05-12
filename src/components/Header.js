@@ -3,9 +3,10 @@ import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import Link from 'next/link';
 
 const images = [
+  '/mountain.jpg',
   '/safari.jpg',
-  '/ol-doinyo-lengai-1389118.jpg',
-  '/kilimanjaro.jpg',
+  '/mountain2.jpg',
+   
 ];
 
 const Header = () => {
