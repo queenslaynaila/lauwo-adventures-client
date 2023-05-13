@@ -25,74 +25,7 @@ export default function Index({ faqs, dayTrips }) {
   const filteredFaqs = faqs.filter((faq) => {
     return faq.question.toLowerCase().includes(searchValue.toLowerCase());
   });
-  function addDayTripsJsonLd() {
-    return {
-      __html: `{
-        "@context": "https://schema.org/",
-        "@type": "TouristAttraction",
-        "name": "Day Trips in Tanzania",
-        "description": "Explore the beauty of Tanzania with exciting day trips offered by Lauwo Adventures. Discover breathtaking landscapes, wildlife, and local culture.",
-        "location": {
-          "@type": "Place",
-          "name": "Tanzania, Moshi Arusha"
-        },
-        "provider": {
-          "@type": "Organization",
-          "name": "Lauwo Adventures",
-          "url": "https://lauwo-adventures-client.vercel.app/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://lauwo-adventures-client.vercel.app/_next/image?url=%2Flogo.png&w=64&q=75",
-            "width": 50,
-            "height": 50,
-            "caption": "Lauwo Adventures"
-          }
-        },
-        "sameAs": "https://en.wikipedia.org/wiki/Day_trip",
-        "itemListElement": [
-          {
-            "@type": "TouristAttraction",
-            "name": "Marangu to Mandara Hut Day Trip",
-            "description": "Embark on a scenic hike from Marangu to Mandara Hut in Kilimanjaro. Experience the lush rainforest and enjoy breathtaking views.",
-            "url": "https://lauwo-adventures-client.vercel.app/day-trips/marangu-to-mandara-hut"
-          },
-          {
-            "@type": "TouristAttraction",
-            "name": "Kikuletwa Hot Springs Day Trip",
-            "description": "Relax and rejuvenate at the stunning Kikuletwa Hot Springs. Swim in crystal-clear waters and enjoy the tranquil surroundings.",
-            "url": "https://lauwo-adventures-client.vercel.app/day-trips/kikuletwa-hot-springs"
-          },
-          {
-            "@type": "TouristAttraction",
-            "name": "Maasai Tours",
-            "description": "Immerse yourself in Maasai culture and traditions with a guided tour. Learn about their lifestyle, customs, and ancient rituals.",
-            "url": "https://lauwo-adventures-client.vercel.app/day-trips/maasai"
-          },
-          {
-            "@type": "TouristAttraction",
-            "name": "Arusha National Park Day Trip",
-            "description": "Experience the beauty of Arusha National Park on a day trip. Encounter diverse wildlife, stunning landscapes, and the iconic Mount Meru.",
-            "url": "https://lauwo-adventures-client.vercel.app/day-trips/arusha-national-park"
-          }
-        ],
-        "offers": {
-          "@type": "Offer",
-          "name": "Day trips offered by Lauwo Adventures for adventurous travelers.",
-          "description": "Book now and enjoy an unforgettable day exploring Tanzania's treasures.",
-          "priceCurrency": "USD",
-          "price": "200",
-          "availability": "https://schema.org/InStock",
-          "validFrom": "2023-01-01",
-          "url": "https://lauwo-adventures-client.vercel.app/day-trips",
-          "offeredBy": {
-            "@type": "Organization",
-            "name": "Lauwo Adventures",
-            "url": "https://lauwo-adventures-client.vercel.app/"
-          }
-        }
-      }`,
-    };
-  }
+  
   return (
     <div className="font-poly">
       <Head>
@@ -117,10 +50,7 @@ export default function Index({ faqs, dayTrips }) {
           rel="canonical"
           href="https://lauwo-adventures-client.vercel.app/day-trips"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={addDayTripsJsonLd()}
-        />
+         
       </Head>
 
       <div
