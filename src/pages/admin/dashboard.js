@@ -69,7 +69,7 @@ const Dashboard = () => {
     });
 
   function handleSignOut() {
-    fetch('http://localhost:3000/admins/sign_out', {
+    fetch('https://lauwo-adventures-api.onrender.com/admins/sign_out', {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',

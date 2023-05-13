@@ -202,7 +202,7 @@ export default function Index({ tips }) {
   );
 }
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/tips');
+  const res = await fetch('https://lauwo-adventures-api.onrender.com/tips');
   const tips = await res.json();
 
   return {

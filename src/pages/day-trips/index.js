@@ -274,9 +274,9 @@ export default function Index({ faqs, dayTrips }) {
   );
 }
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/day_trip_faqs');
+  const res = await fetch('https://lauwo-adventures-api.onrender.com/day_trip_faqs');
   const faqs = await res.json();
-  const day = await fetch('http://localhost:3000/day_trips');
+  const day = await fetch('https://lauwo-adventures-api.onrender.com/day_trips');
   const dayTrips = await day.json();
   return {
     props: {

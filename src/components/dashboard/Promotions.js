@@ -13,7 +13,7 @@ const Promotions = () => {
     margin: 'auto',
   };
   useEffect(() => {
-    fetch('http://localhost:3000/banners')
+    fetch('https://lauwo-adventures-api.onrender.com/banners')
       .then((response) => response.json())
       .then((data) => setBanners(data))
       .catch((error) => console.error(error));
@@ -67,7 +67,7 @@ const Promotions = () => {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((banner) =>
-        fetch(`http://localhost:3000/banners/${banner.id}`, {
+        fetch(`https://lauwo-adventures-api.onrender.com/banners/${banner.id}`, {
           method: 'DELETE',
         })
       )

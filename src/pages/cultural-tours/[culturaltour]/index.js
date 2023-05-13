@@ -55,7 +55,7 @@ function Tour({ tour }) {
         <meta property="og:image" content="/culture.jpg" />
         <meta
           property="og:url"
-          content={`http://localhost:3000/cultural_tours/${tour.slug}`}
+          content={`https://lauwo-adventures-api.onrender.com/cultural_tours/${tour.slug}`}
         />
         <script
           type="application/ld+json"

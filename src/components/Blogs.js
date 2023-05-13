@@ -8,7 +8,7 @@ import useSWR from 'swr';
 import { TfiWrite } from 'react-icons/tfi';
 import { FaSpinner, FaExclamationCircle } from 'react-icons/fa';
 function Blogs() {
-  const url = 'http://localhost:3000/latest_blogs';
+  const url = 'https://lauwo-adventures-api.onrender.com/latest_blogs';
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const {
     data: blogs,

@@ -17,7 +17,7 @@ const UserForm = () => {
         password: formData.password,
       },
     };
-    fetch('http://localhost:3000/admins', {
+    fetch('https://lauwo-adventures-api.onrender.com/admins', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

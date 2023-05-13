@@ -50,7 +50,7 @@ export default function PasswordReset() {
     const adminData = {
       admin: { email: formData.email, password: formData.password },
     };
-    fetch('http://localhost:3000/admins/sign_in', {
+    fetch('https://lauwo-adventures-api.onrender.com/admins/sign_in', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
