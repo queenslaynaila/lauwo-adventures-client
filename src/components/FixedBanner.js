@@ -6,7 +6,9 @@ const FixedBanner = () => {
 
   useEffect(() => {
     const fetchBanners = async () => {
-      const response = await fetch('https://lauwo-adventures-api.onrender.com/banners');
+      const response = await fetch(
+        'https://lauwo-adventures-api.onrender.com/banners'
+      );
       const data = await response.json();
       setBanners(data);
     };

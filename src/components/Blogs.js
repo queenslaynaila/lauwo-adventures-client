@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Head from 'next/head';
- 
+
 import { truncate } from '@/utils/truncate';
 import { generateSlug } from '@/utils/generateSlug';
 import Link from 'next/link';
 import useSWR from 'swr';
- 
+
 import { FaSpinner, FaExclamationCircle } from 'react-icons/fa';
 function Blogs() {
   const url = 'https://lauwo-adventures-api.onrender.com/latest_blogs';
@@ -61,15 +61,14 @@ function Blogs() {
           <div className="flex justify-center items-center">
             <div className="border-t border-black w-1/3"></div>
             <div className="text-center mx-2">
-            <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      height="3em"
-      width="3em"
-     
-    >
-      <path d="M20 13h-4c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2H4l-2 5v2c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-2M6 20c-.89 0-1.34-1.08-.71-1.71.63-.63 1.71-.18 1.71.71 0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71.63-.63 1.71-.18 1.71.71 0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71.63-.63 1.71-.18 1.71.71 0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71.63-.63 1.71-.18 1.71.71 0 .55-.45 1-1 1m0-10V3H6v7H3v2h18v-2M8 5h8v1H8m0 1h6v1H8" />
-    </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                height="3em"
+                width="3em"
+              >
+                <path d="M20 13h-4c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2H4l-2 5v2c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-2M6 20c-.89 0-1.34-1.08-.71-1.71.63-.63 1.71-.18 1.71.71 0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71.63-.63 1.71-.18 1.71.71 0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71.63-.63 1.71-.18 1.71.71 0 .55-.45 1-1 1m4 0c-.89 0-1.34-1.08-.71-1.71.63-.63 1.71-.18 1.71.71 0 .55-.45 1-1 1m0-10V3H6v7H3v2h18v-2M8 5h8v1H8m0 1h6v1H8" />
+              </svg>
             </div>
             <div className="border-t border-black w-1/3"></div>
           </div>
@@ -103,14 +102,13 @@ function Blogs() {
                   >
                     Read more
                     <svg
-      viewBox="0 0 1024 1024"
-      fill="currentColor"
-      height="1em"
-      width="1em"
-    
-    >
-      <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z" />
-    </svg>
+                      viewBox="0 0 1024 1024"
+                      fill="currentColor"
+                      height="1em"
+                      width="1em"
+                    >
+                      <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z" />
+                    </svg>
                   </a>
                 </div>
               </div>

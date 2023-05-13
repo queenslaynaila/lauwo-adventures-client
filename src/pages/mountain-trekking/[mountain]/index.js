@@ -374,17 +374,17 @@ export default function Mountain({ mountain, faqs }) {
               Frequently Asked Questions
             </h1>
             <div>
-            <svg
-      fill="currentColor"
-      viewBox="0 0 16 16"
-      height="1em"
-      width="1em"
-      className="text-2xl cursor-pointer transition duration-500 ease-in-out hover:text-yellow-500"
+              <svg
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+                className="text-2xl cursor-pointer transition duration-500 ease-in-out hover:text-yellow-500"
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-    >
-      <path d="M11.742 10.344a6.5 6.5 0 10-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 001.415-1.414l-3.85-3.85a1.007 1.007 0 00-.115-.1zM12 6.5a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0z" />
-    </svg>
-               
+              >
+                <path d="M11.742 10.344a6.5 6.5 0 10-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 001.415-1.414l-3.85-3.85a1.007 1.007 0 00-.115-.1zM12 6.5a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0z" />
+              </svg>
+
               {isSearchOpen && (
                 <input
                   type="text"
@@ -419,7 +419,9 @@ export default function Mountain({ mountain, faqs }) {
   );
 }
 export async function getStaticPaths() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/mountains');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/mountains'
+  );
   const mountains = await res.json();
   const paths = mountains.map((mountain) => ({
     params: { mountain: generateSlug(mountain.mountain_name), id: mountain.id },
@@ -429,12 +431,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/mountains');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/mountains'
+  );
   const mountains = await res.json();
   const mountain = mountains.find(
     (mountain) => generateSlug(mountain.mountain_name) === params.mountain
   );
-  const res2 = await fetch('https://lauwo-adventures-api.onrender.com/frequently_asked_questions');
+  const res2 = await fetch(
+    'https://lauwo-adventures-api.onrender.com/frequently_asked_questions'
+  );
   const faqs = await res2.json();
   return {
     props: {

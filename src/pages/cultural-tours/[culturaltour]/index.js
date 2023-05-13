@@ -16,7 +16,7 @@ function Tour({ tour }) {
     margin: 'auto',
     backgroundColor: 'white',
   };
-  
+
   return (
     <>
       <Head>
@@ -29,8 +29,6 @@ function Tour({ tour }) {
           property="og:url"
           content={`https://lauwo-adventures-api.onrender.com/cultural_tours/${tour.slug}`}
         />
-        
-        
       </Head>
       <div
         className="bg-cover bg-center  inset-0 bg-black bg-opacity-100"

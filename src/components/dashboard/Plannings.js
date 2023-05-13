@@ -91,9 +91,12 @@ export default function Plannings() {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((enquiry) =>
-        fetch(`https://lauwo-adventures-api.onrender.com/planningforms/${enquiry.id}`, {
-          method: 'DELETE',
-        }).then((response) => {
+        fetch(
+          `https://lauwo-adventures-api.onrender.com/planningforms/${enquiry.id}`,
+          {
+            method: 'DELETE',
+          }
+        ).then((response) => {
           if (response.ok) {
             return response.json().then(() => {
               setData(

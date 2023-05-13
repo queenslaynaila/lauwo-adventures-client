@@ -9,7 +9,6 @@ import Head from 'next/head';
 import Why from './Why';
 import TourGroups from './TourGroups';
 const PageLayOut = () => {
-  
   return (
     <div>
       <Head>
@@ -58,7 +57,6 @@ const PageLayOut = () => {
           name="twitter:image"
           content="https://www.yourwebsite.com/image.jpg"
         />
-         
       </Head>
 
       <Header />

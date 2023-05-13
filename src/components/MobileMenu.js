@@ -25,7 +25,6 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <Link href="/day-trips">DayTrips</Link>
         </li>
 
-
         <li>
           <Link href="/about-us" onClick={toggle}>
             About
@@ -38,7 +37,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <Link href="/contact-us">Contact Us</Link>
         </li>
         <li>
-          <Link  href="/blogs" onClick={toggle}>
+          <Link href="/blogs" onClick={toggle}>
             Blog
           </Link>
         </li>

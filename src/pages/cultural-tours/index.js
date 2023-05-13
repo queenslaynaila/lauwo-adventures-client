@@ -1,5 +1,5 @@
 import CulturalTourCard from '@/components/CulturalTourCard';
- 
+
 import Link from 'next/link';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
@@ -11,11 +11,9 @@ function Tours({ tours }) {
     overflow: 'auto',
     margin: 'auto',
   };
- 
+
   return (
     <div className="font-poly">
-      
-
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
         style={{ backgroundImage: "url('/maasai.jpg')" }}
@@ -128,7 +126,9 @@ function Tours({ tours }) {
 export default Tours;
 
 export async function getStaticProps() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/cultural_tours');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/cultural_tours'
+  );
   const tours = await res.json();
   return {
     props: { tours },
