@@ -24,7 +24,7 @@ module.exports = {
       config.plugins.push(
         new CopyPlugin({
           patterns: [
-            { from: './_redirects', to: './' }
+            { from: './_redirects', to: './build' }
           ],
         })
       );
