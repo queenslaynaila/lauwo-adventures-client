@@ -4,7 +4,7 @@ import EnquiryPopUp from '@/components/enquirypopup';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { useState } from 'react';
-import { BiSearch } from 'react-icons/bi';
+//import { BiSearch } from 'react-icons/bi';
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 import simpleFormat from '@/utils/simpleFormat';
 export default function Index({ tips }) {
@@ -140,10 +140,17 @@ export default function Index({ tips }) {
                 Planning Tips
               </h1>
               <div>
-                <BiSearch
-                  className="text-2xl cursor-pointer transition duration-500 ease-in-out hover:text-yellow-500"
+              <svg
+      fill="currentColor"
+      viewBox="0 0 16 16"
+      height="1em"
+      width="1em"
+      className="text-2xl cursor-pointer transition duration-500 ease-in-out hover:text-yellow-500"
                   onClick={() => setIsSearchOpen(!isSearchOpen)}
-                />
+    >
+      <path d="M11.742 10.344a6.5 6.5 0 10-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 001.415-1.414l-3.85-3.85a1.007 1.007 0 00-.115-.1zM12 6.5a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0z" />
+    </svg>
+                {/* <BiSearch/> */}
                 {isSearchOpen && (
                   <input
                     type="text"

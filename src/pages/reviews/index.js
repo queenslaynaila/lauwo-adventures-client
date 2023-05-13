@@ -64,7 +64,7 @@ console.log(togglePopup)
       </div>
       <h2 className="text-lg font-bold mb-4 text-white">{tagline}</h2>
       <div>
-      <p className="text-white mb-4 ">{truncatedContent }</p>
+      <p className="text-white mb-4 ">{truncatedContent }...</p>
         {isContentTruncated ? (
           <Popup
           contentStyle={contentStyle}
