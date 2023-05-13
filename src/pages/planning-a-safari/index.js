@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import safarilocations from '@/data/safarilocations.json';
 import Head from 'next/head';
 import FaqCard from '@/components/FaqCard';
 import { BiSearch } from 'react-icons/bi';
@@ -165,7 +164,7 @@ const SafariPage = ({ faqs }) => {
                   elephant, buffalo, and rhino).
                 </li>
                 <li>
-                  Gorilla Trekking: If you're interested in encountering
+                  Gorilla Trekking: If you&apos;re interested in encountering
                   mountain gorillas, head to Uganda, Rwanda, or the Congo in
                   Central Africa.
                 </li>
@@ -182,7 +181,7 @@ const SafariPage = ({ faqs }) => {
               </h3>
               <p class="  mb-4">
                 Tanzania is renowned for its exceptional safari experiences and
-                diverse wildlife. Here's why Tanzania stands out:
+                diverse wildlife. Here&apos;s why Tanzania stands out:
               </p>
               <ul class="list-disc list-inside   mb-4">
                 <li>
@@ -193,7 +192,7 @@ const SafariPage = ({ faqs }) => {
                 <li>
                   <strong>Mount Kilimanjaro:</strong> Tanzania offers the
                   opportunity to combine a safari with a thrilling climb up
-                  Africa's highest peak.
+                  Africa&apos;s highest peak.
                 </li>
                 <li>
                   <strong>Ngorongoro Crater:</strong> This UNESCO World Heritage
@@ -212,7 +211,7 @@ const SafariPage = ({ faqs }) => {
                 </li>
               </ul>
               <p>
-                Tanzania's commitment to wildlife conservation, its stunning
+                Tanzania&apos;s commitment to wildlife conservation, its stunning
                 landscapes, and the authentic cultural interactions make it a
                 top choice for safari enthusiasts.
               </p>
@@ -233,10 +232,10 @@ const SafariPage = ({ faqs }) => {
               </h3>
               <p class="  mb-4">
                 If you are traveling solo or as a couple, and your dates and
-                lodge/camp preferences are flexible, you typically don't need to
+                lodge/camp preferences are flexible, you typically don&apos;t need to
                 book a year in advance. One month or a few weeks lead-time is
                 usually sufficient. However, if you have specific locations,
-                lodges, or dates in mind that are non-negotiable, it's advisable
+                lodges, or dates in mind that are non-negotiable, it&apos;s advisable
                 to book as early as possible to secure your preferred choices.
               </p>
               <p>
@@ -378,7 +377,7 @@ const SafariPage = ({ faqs }) => {
               </ul>
               <p class="  mt-4">
                 Keep in mind that specific wildlife sightings and weather
-                patterns can vary, so it's advisable to consult with local
+                patterns can vary, so it&apos;s advisable to consult with local
                 experts or tour operators for the most up-to-date information.
               </p>
             </div>
@@ -428,7 +427,7 @@ const SafariPage = ({ faqs }) => {
                   Sample Safari Cost in Tanzania
                 </h3>
                 <p class=" mb-4">
-                  To give you an idea of safari costs in Tanzania, here's a
+                  To give you an idea of safari costs in Tanzania, here&apos;s a
                   sample 7-day safari package for 2 people during peak season,
                   including meals, accommodations, park fees, VAT, private
                   four-wheel vehicle, professional guide, and driver:
@@ -520,7 +519,7 @@ const SafariPage = ({ faqs }) => {
                 </p>
                 <ul class="list-disc list-inside ">
                   <li>
-                    Adapters for camera lenses and tripod (if you're a
+                    Adapters for camera lenses and tripod (if you&apos;re a
                     photography enthusiast)
                   </li>
                   <li>Lightweight and quick-drying towels</li>
@@ -557,7 +556,7 @@ const SafariPage = ({ faqs }) => {
               <p class=" mb-4">
                 Planning a safari is a once-in-a-lifetime experience, and at
                 Lauwo Adventures, we are dedicated to making it extraordinary.
-                Here's why you should choose us:
+                Here&apos;s why you should choose us:
               </p>
 
               <ul class="list-disc list-inside   mb-4">
@@ -631,7 +630,7 @@ const SafariPage = ({ faqs }) => {
                   </h3>
                   <p class="text-gray-700 mb-4">
                     Discover the mesmerizing beauty and wildlife treasures of
-                    Arusha National Park, a true gem of Tanzania's natural
+                    Arusha National Park, a true gem of Tanzania&apos;s natural
                     wonders...
                   </p>
                   <Link
