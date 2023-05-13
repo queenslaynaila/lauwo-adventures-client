@@ -7,7 +7,7 @@ const images = [
     src: '/kilimanjarosunrise.jpg',
     heading: 'Climb Mount Kilimanjaro',
     paragraph:
-      'Embark on an epic journey to the roof of Africa and conquer the majestic Kilimanjaro. Scale its towering peaks, traverse breathtaking landscapes, and challenge yourself to reach new heights. Our experienced guides will lead you through diverse ecosystems, from lush rainforests to snow-capped summit .',
+      'Embark on an epic journey to the roof of Africa and conquer the majestic Kilimanjaro. Scale its towering peaks, traverse breathtaking landscapes, and challenge yourself to reach new heights. Our experienced guides will lead you through diverse ecosystems...',
     ctaText: 'Kilimanjaro ',
     ctaLink: '/mountain-trekking/mount-kilimanjaro',
   },
