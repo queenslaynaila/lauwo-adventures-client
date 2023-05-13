@@ -211,9 +211,9 @@ const SafariPage = ({ faqs }) => {
                 </li>
               </ul>
               <p>
-                Tanzania&apos;s commitment to wildlife conservation, its stunning
-                landscapes, and the authentic cultural interactions make it a
-                top choice for safari enthusiasts.
+                Tanzania&apos;s commitment to wildlife conservation, its
+                stunning landscapes, and the authentic cultural interactions
+                make it a top choice for safari enthusiasts.
               </p>
             </div>
           </div>
@@ -232,11 +232,12 @@ const SafariPage = ({ faqs }) => {
               </h3>
               <p class="  mb-4">
                 If you are traveling solo or as a couple, and your dates and
-                lodge/camp preferences are flexible, you typically don&apos;t need to
-                book a year in advance. One month or a few weeks lead-time is
-                usually sufficient. However, if you have specific locations,
-                lodges, or dates in mind that are non-negotiable, it&apos;s advisable
-                to book as early as possible to secure your preferred choices.
+                lodge/camp preferences are flexible, you typically don&apos;t
+                need to book a year in advance. One month or a few weeks
+                lead-time is usually sufficient. However, if you have specific
+                locations, lodges, or dates in mind that are non-negotiable,
+                it&apos;s advisable to book as early as possible to secure your
+                preferred choices.
               </p>
               <p>
                 Keep in mind that booking too early also carries the risk of
