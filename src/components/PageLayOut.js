@@ -9,129 +9,7 @@ import Head from 'next/head';
 import Why from './Why';
 import TourGroups from './TourGroups';
 const PageLayOut = () => {
-  function addHomeJsonLd() {
-    return {
-      __html: `{
-      "@context": "https://schema.org/",
-      "@type": "LocalBusiness",
-      "name": "Lauwo Adventures",
-      "url":"",
-      "siteLinks": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lauwo-adventures-client.vercel.app/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Kilimanjaro Trekking",
-            "item": "https://lauwo-adventures-client.vercel.app/mountain-trekking/mount-kilimanjaro"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Mount Meru Trekking",
-            "item": "https://lauwo-adventures-client.vercel.app/mountain-trekking/mount-meru"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Oldonyo Lengai",
-            "item": "https://lauwo-adventures-client.vercel.app/mountain-trekking/ol-doinyo-lengai"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "name": "About Us",
-            "item": "https://lauwo-adventures-client.vercel.app/about-us"
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "name": "Contact us ",
-            "item": "https://lauwo-adventures-client.vercel.app/#contact"
-          },
-          {
-            "@type": "ListItem",
-            "position": 7,
-            "name": "Top Tanzanian Safari Locations",
-            "item": "https://lauwo-adventures-client.vercel.app/safari-locations"
-          },
-          {
-            "@type": "ListItem",
-            "position": 8,
-            "name": "Our Safari packages",
-            "item": "https://lauwo-adventures-client.vercel.app/safari-packages"
-          },
-          {
-            "@type": "ListItem",
-            "position": 9,
-            "name": "Day Trips",
-            "item": "https://lauwo-adventures-client.vercel.app/day-trips"
-          },
-          {
-            "@type": "ListItem"
-            "position": 10,
-            "name": "Traveling to Tanzania",
-            "item": "https://lauwo-adventures-client.vercel.app/travelconsideration"
-          },
-          {
-            "@type": "ListItem",
-            "position": 10,
-            "name": "Plan an adventure in Tanzania",
-            "item": "https://lauwo-adventures-client.vercel.app/planning-form"
-          }
-        ]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Moshi",
-        "addressLocality": "Arusha",
-        "addressRegion": "Tanzania",
-        "postalCode": "12345",
-        "addressCountry": "Tanzania"
-      },
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "telephone": "+255-123-456-7890",
-      "sameAs": [
-          "https://www.facebook.com/lauwoadventures",
-          "https://www.tripadvisor.com/ Attraction_Review-g317084-d17424491-Reviews-Lauwo_Adventures-Moshi_Kilimanjaro_Region.html",
-          "https://www.instagram.com/yourcompany",
-          "https://www.linkedin.com/company/lauwo-adventures/"
-          
-      ],
-      "location": {
-        "@type": "Place",
-        "name": "Tanzania, Moshi Arusha"
-      },
-      
-       
-      "offers": {
-        "@type": "Offer",
-        "name": "Trip proposed by  lauwo adventures for tourists booking a safari and cultural tours.",
-        "description": "A 20 percent discount is offered.",
-        "price": "500",
-        "priceCurrency": "USD",
-        "availabilityEnds": "2023-10-31",
-        "url": "https://mytripco.com/trip/12345",
-        "eligibleRegion": {
-          "@type": "Country",
-          "name": "USA"
-        },
-        "offeredBy": {
-          "@type": "Organization",
-          "name": "lauwo adventures",
-          "url": "https://lauwo-adventures-client.vercel.app/"
-        }
-      }
-    }
-  `,
-    };
-  }
+  
   return (
     <div>
       <Head>
@@ -180,11 +58,7 @@ const PageLayOut = () => {
           name="twitter:image"
           content="https://www.yourwebsite.com/image.jpg"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={addHomeJsonLd()}
-          key="product-jsonld"
-        />
+         
       </Head>
 
       <Header />
