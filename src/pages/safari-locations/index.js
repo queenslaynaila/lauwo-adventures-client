@@ -176,7 +176,10 @@ const SafariPage = ({ faqs }) => {
                     Dynamic Dou Safari: Serengeti & Ngongoro in 3 days
                   </h3>
                   <p class="text-gray-700 mb-4">
-                  Immerse yourself in the captivating beauty of the Serengeti and Ngorongoro Crater in 3 days. Witness the awe-inspiring Great Migration, encounter majestic wildlife, and explore the breathtaking landscapes....
+                    Immerse yourself in the captivating beauty of the Serengeti
+                    and Ngorongoro Crater in 3 days. Witness the awe-inspiring
+                    Great Migration, encounter majestic wildlife, and explore
+                    the breathtaking landscapes....
                   </p>
                   <Link
                     href="/our-safari-packages/dynamic-duo-safari-serengeti--ngorongoro-in-3-days"
@@ -202,7 +205,10 @@ const SafariPage = ({ faqs }) => {
                     Wildlife Wonders, A 8 day adventure
                   </h3>
                   <p class="text-gray-700 mb-4">
-                  Embark on an 8-day Wildlife Wonders adventure through Serengeti, Ngorongoro, and Arusha. Witness the Great Migration, explore the stunning landscapes, and engage in....
+                    Embark on an 8-day Wildlife Wonders adventure through
+                    Serengeti, Ngorongoro, and Arusha. Witness the Great
+                    Migration, explore the stunning landscapes, and engage
+                    in....
                   </p>
                   <Link
                     href="/our-safari-packages/wildlife-wonders-8-day-tanzanian-safari-expedition"
@@ -228,7 +234,11 @@ const SafariPage = ({ faqs }) => {
                     Serengeti Splendors: 5-Day Wildlife Safari Adventure
                   </h3>
                   <p class="text-gray-700 mb-4">
-                  Embark on a 5-day Serengeti Splendors safari adventure, immersing yourself in the captivating wildlife and breathtaking landscapes. Witness the Great Migration and encounter magnificent animals in their natural habitat. Unforgettable....
+                    Embark on a 5-day Serengeti Splendors safari adventure,
+                    immersing yourself in the captivating wildlife and
+                    breathtaking landscapes. Witness the Great Migration and
+                    encounter magnificent animals in their natural habitat.
+                    Unforgettable....
                   </p>
                   <Link
                     href="/our-safari-packages/serengeti-splendors-5-day-wildlife-safari-adventure"

@@ -176,7 +176,7 @@ const SafariPage = ({ faqs }) => {
               </ul>
             </div>
 
-            <div  >
+            <div>
               <h3 class="text-xl font-semibold mb-2">
                 2. Tanzania: A Safari Paradise
               </h3>
@@ -211,15 +211,14 @@ const SafariPage = ({ faqs }) => {
                   history and vibrant culture.
                 </li>
               </ul>
-              <p  >
+              <p>
                 Tanzania's commitment to wildlife conservation, its stunning
                 landscapes, and the authentic cultural interactions make it a
                 top choice for safari enthusiasts.
               </p>
-               
             </div>
           </div>
-          <div >
+          <div>
             <h2 class="text-2xl font-semibold mb-4">
               How Early to Book Your Trip?
             </h2>
@@ -240,7 +239,7 @@ const SafariPage = ({ faqs }) => {
                 lodges, or dates in mind that are non-negotiable, it's advisable
                 to book as early as possible to secure your preferred choices.
               </p>
-              <p  >
+              <p>
                 Keep in mind that booking too early also carries the risk of
                 uncertainties, as unforeseen circumstances can arise within a
                 long booking period. Assess your priorities and the level of
@@ -257,7 +256,7 @@ const SafariPage = ({ faqs }) => {
                 quickly, especially during peak seasons. Booking well in advance
                 ensures you secure the desired number of rooms for your group.
               </p>
-              <p  >
+              <p>
                 The size of the lodge or camp also plays a role in determining
                 how far in advance you should book. Luxury safari camps, for
                 example, have a smaller capacity and may require earlier
@@ -265,8 +264,8 @@ const SafariPage = ({ faqs }) => {
               </p>
             </div>
 
-            <div  >
-              <p >
+            <div>
+              <p>
                 Ultimately, the more time you have to prepare, the better you
                 can manage your expectations and make necessary arrangements.
                 Consider your specific requirements, preferred accommodations,
@@ -275,7 +274,7 @@ const SafariPage = ({ faqs }) => {
               </p>
             </div>
           </div>
-          <div >
+          <div>
             <h2 class="text-2xl font-semibold mb-4">Step 3: When to Go</h2>
 
             <div class="mb-8">
@@ -383,7 +382,7 @@ const SafariPage = ({ faqs }) => {
                 experts or tour operators for the most up-to-date information.
               </p>
             </div>
-            <div  >
+            <div>
               <h2 class="text-2xl font-semibold mb-4">
                 Step 4: Set Your Budget
               </h2>
@@ -441,8 +440,7 @@ const SafariPage = ({ faqs }) => {
                 </ul>
                 <p class=" mt-4">
                   Keep in mind that these prices are estimates and can vary
-                  depending on the specific safari package you
-                  choose.
+                  depending on the specific safari package you choose.
                 </p>
               </div>
 
@@ -475,7 +473,7 @@ const SafariPage = ({ faqs }) => {
                 </p>
               </div>
             </div>
-            <div  >
+            <div>
               <h2 class="text-2xl font-semibold mb-4">
                 Step 5: What to Pack on a Safari
               </h2>
@@ -545,13 +543,13 @@ const SafariPage = ({ faqs }) => {
                 </ul>
                 <p class=" mt-4">
                   Remember to pack light and consider any weight or size
-                  restrictions imposed by airlines  . Check
-                  the specific requirements of your destination and consult with
-                  us for any additional recommendations.
+                  restrictions imposed by airlines . Check the specific
+                  requirements of your destination and consult with us for any
+                  additional recommendations.
                 </p>
               </div>
             </div>
-            <div >
+            <div>
               <h2 class="text-2xl font-semibold mb-4">
                 Why Safari with Lauwo Adventures?
               </h2>
@@ -629,10 +627,12 @@ const SafariPage = ({ faqs }) => {
 
                 <div class="p-6">
                   <h3 class="text-xl font-semibold mb-2">
-                  Arusha National Park
+                    Arusha National Park
                   </h3>
                   <p class="text-gray-700 mb-4">
-                  Discover the mesmerizing beauty and wildlife treasures of Arusha National Park, a true gem of Tanzania's natural wonders...
+                    Discover the mesmerizing beauty and wildlife treasures of
+                    Arusha National Park, a true gem of Tanzania's natural
+                    wonders...
                   </p>
                   <Link
                     href="/safari-locations"
@@ -655,11 +655,12 @@ const SafariPage = ({ faqs }) => {
 
                 <div class="p-6">
                   <h3 class="text-xl font-semibold mb-2">
-                  Tarangire National Park
+                    Tarangire National Park
                   </h3>
                   <p class="text-gray-700 mb-4">
-                    
-Embark on an extraordinary journey through Tarangire National Park, where breathtaking landscapes and iconic baobab trees create a captivating safari experience..
+                    Embark on an extraordinary journey through Tarangire
+                    National Park, where breathtaking landscapes and iconic
+                    baobab trees create a captivating safari experience..
                   </p>
                   <Link
                     href="/safari-locations"
@@ -682,10 +683,13 @@ Embark on an extraordinary journey through Tarangire National Park, where breath
 
                 <div class="p-6">
                   <h3 class="text-xl font-semibold mb-2">
-                    Serengeti  National park
+                    Serengeti National park
                   </h3>
                   <p class="text-gray-700 mb-4">
-                  Embark on an unforgettable adventure in the vast wilderness of Serengeti National Park, where the iconic Great Migration and abundant wildlife offer a safari experience like no other...
+                    Embark on an unforgettable adventure in the vast wilderness
+                    of Serengeti National Park, where the iconic Great Migration
+                    and abundant wildlife offer a safari experience like no
+                    other...
                   </p>
                   <Link
                     href="/safari-locations"
@@ -729,7 +733,10 @@ Embark on an extraordinary journey through Tarangire National Park, where breath
                     Dynamic Dou Safari: Serengeti & Ngongoro in 3 days
                   </h3>
                   <p class="text-gray-700 mb-4">
-                     Immerse yourself in the captivating beauty of the Serengeti and Ngorongoro Crater in 3 days. Witness the awe-inspiring Great Migration, encounter majestic wildlife, and explore the breathtaking landscapes....
+                    Immerse yourself in the captivating beauty of the Serengeti
+                    and Ngorongoro Crater in 3 days. Witness the awe-inspiring
+                    Great Migration, encounter majestic wildlife, and explore
+                    the breathtaking landscapes....
                   </p>
                   <Link
                     href="/our-safari-packages/dynamic-duo-safari-serengeti--ngorongoro-in-3-days"
@@ -755,7 +762,10 @@ Embark on an extraordinary journey through Tarangire National Park, where breath
                     Wildlife Wonders, A 8 day adventure
                   </h3>
                   <p class="text-gray-700 mb-4">
-                  Embark on an 8-day Wildlife Wonders adventure through Serengeti, Ngorongoro, and Arusha. Witness the Great Migration, explore the stunning landscapes, and engage in....
+                    Embark on an 8-day Wildlife Wonders adventure through
+                    Serengeti, Ngorongoro, and Arusha. Witness the Great
+                    Migration, explore the stunning landscapes, and engage
+                    in....
                   </p>
                   <Link
                     href="/our-safari-packages/wildlife-wonders-8-day-tanzanian-safari-expedition"
@@ -781,7 +791,11 @@ Embark on an extraordinary journey through Tarangire National Park, where breath
                     Serengeti Splendors: 5-Day Wildlife Safari Adventure
                   </h3>
                   <p class="text-gray-700 mb-4">
-                  Embark on a 5-day Serengeti Splendors safari adventure, immersing yourself in the captivating wildlife and breathtaking landscapes. Witness the Great Migration and encounter magnificent animals in their natural habitat. Unforgettable....
+                    Embark on a 5-day Serengeti Splendors safari adventure,
+                    immersing yourself in the captivating wildlife and
+                    breathtaking landscapes. Witness the Great Migration and
+                    encounter magnificent animals in their natural habitat.
+                    Unforgettable....
                   </p>
                   <Link
                     href="/our-safari-packages/serengeti-splendors-5-day-wildlife-safari-adventure"
