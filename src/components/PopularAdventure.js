@@ -31,13 +31,13 @@ const cardData = [
     title:
       'Safari Packages To get You Started on Your Tanzanian Safari Adventure',
     image: '/safari-1.jpg',
-    link: '/safari-packages',
+    link: '/our-safari-packages',
   },
   {
     id: 3,
     title: 'Getting Started on Your First Safari ? Plan Your Safari With Lauwo',
     image: '/lauwoteam.jpeg',
-    link: '',
+    link: '/planning-a-safari',
   },
   {
     id: 1,
