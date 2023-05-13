@@ -22,8 +22,9 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <SafariDropDown />
         </li>
         <li>
-          <Link href="/daytrips">DayTrips</Link>
+          <Link href="/day-trips">DayTrips</Link>
         </li>
+
 
         <li>
           <Link href="/about-us" onClick={toggle}>
@@ -34,12 +35,10 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <Link href="/reviews">Reviews</Link>
         </li>
         <li>
-          <Link href="/#contact" onClick={toggle}>
-            Contact
-          </Link>
+          <Link href="/contact-us">Contact Us</Link>
         </li>
         <li>
-          <Link href="/#blog" onClick={toggle}>
+          <Link  href="/blogs" onClick={toggle}>
             Blog
           </Link>
         </li>
