@@ -3,7 +3,30 @@ import Link from 'next/link';
 import EnquiryPopUp from '@/components/enquirypopup';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-export default function Index() {
+import { useState } from 'react';
+import { BiSearch } from 'react-icons/bi';
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
+import simpleFormat from '@/utils/simpleFormat';
+export default function Index({tips}) {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
+  const [currentItem, setCurrentItem] = useState(0);
+
+  const handleSearch = (e) => {
+    setSearchValue(e.target.value);
+  };
+
+  const handlePrev = () => {
+    setCurrentItem((currentItem - 1 + tips.length) % tips.length);
+  };
+
+  const handleNext = () => {
+    setCurrentItem((currentItem + 1) % tips.length);
+  };
+
+  const filteredTips = tips.filter((tip) => {
+    return tip.title.toLowerCase().includes(searchValue.toLowerCase());
+  });
   const contentStyle = {
     width: '55%',
     maxHeight: '85%',
@@ -42,7 +65,7 @@ export default function Index() {
                     href="/travelconsideration"
                   >
                     <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                      <span className="mr-2">Plan A Tanzanian Visit </span>
+                      <span className="mr-2">Tanzania Travel Considerations</span>
                       <span className="fa fa-arrow-right"></span>
                     </button>
                   </Link>
@@ -88,106 +111,84 @@ export default function Index() {
             </Popup>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-center ">
-          <div className=" md:w-8/12  md:order-1">
-            <div className="p-8">
-              <h2 className="text-2xl font-bold mb-4">
-                Why Are Full Moon Climbs Popular?
-              </h2>
-              <div className=" p-4">
-                <p className="text-lg mb-4">
-                  Full moon climbs are popular for several reasons:
-                </p>
-
-                <ul className="list-disc list-inside leading-8">
-                  <li className="mb-2">
-                    Unique Experience: Climbing a mountain or a hill during a
-                    full moon offers a distinct and memorable experience...
-                  </li>
-                  <li className="mb-2">
-                    Scenic Beauty: Full moon climbs provide breathtaking views
-                    of the surroundings...
-                  </li>
-                  <li className="mb-2">
-                    Enhanced Visibility: The brightness of the full moon
-                    enhances visibility during nighttime climbs...
-                  </li>
-                  <li className="mb-2">
-                    Sense of Adventure: Full moon climbs add an element of
-                    adventure and thrill to the experience...
-                  </li>
-                  <li className="mb-2">
-                    Social and Cultural Significance: Full moon climbs often
-                    have cultural and spiritual significance in various
-                    societies...
-                  </li>
-                  <li className="mb-2">
-                    Limited Availability: Full moon climbs are only possible on
-                    specific nights when the moon is at its fullest...
-                  </li>
-                  <li className="mb-2">
-                    Mental and Emotional Impact: Many people find that spending
-                    time in nature and undertaking challenging activities like
-                    climbing can have positive effects on mental and emotional
-                    well-being...
-                  </li>
-                </ul>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">Full Moon Dates</h2>
-
-              <p className="text-lg mb-4">
-                The dates below indicate the full moon itself. Your climb will
-                be arranged around these dates, so you will summit one day
-                before or after. This is because it can get a little busy on the
-                full moon date. The effect and experience of the full moon
-                remain the same one day either side.
-              </p>
-
-              <ul className="list-disc list-inside">
-                <li className="mb-2">5 January</li>
-                <li className="mb-2">5 February</li>
-                <li className="mb-2">7 March</li>
-                <li className="mb-2">5 April</li>
-                <li className="mb-2">5 May</li>
-                <li className="mb-2">3 June</li>
-                <li className="mb-2">3 July</li>
-                <li className="mb-2">30 August</li>
-                <li className="mb-2">29 September</li>
-                <li className="mb-2">28 October</li>
-                <li className="mb-2">27 November</li>
-                <li className="mb-2">26 December</li>
-              </ul>
+        
+        <div  >
+        <div className="py-16 relative ">
+        <div className="flex items-center justify-center gap-4">
+            <hr className="sm:w-40 w-10 border border-black" />
+            <h1 className="3xl:text-4xl xl:text-2xl text-xl font-semibold">
+               Planning Tips
+            </h1>
+            <div>
+              <BiSearch
+                className="text-2xl cursor-pointer transition duration-500 ease-in-out hover:text-yellow-500"
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+              />
+              {isSearchOpen && (
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="bg-transparent border-b  px-4
+            focus:outline-none focus:border-primary sm:w-72 w-40
+          "
+                  onChange={handleSearch}
+                />
+              )}
             </div>
           </div>
-          <div className=" md:w-4/12 md:order-2 mt-8 md:mt-0">
-            <div className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Related Pages</h3>
-              <ul className="space-y-4">
-                <li>
-                  <a href="/kilimanjaro-routes" className="text-blue-500">
-                    Kilimanjaro Routes
-                  </a>
-                </li>
-                <li>
-                  <a href="/planing" className="text-blue-500">
-                    Climb Planning
-                  </a>
-                </li>
-                <li>
-                  <a href="/hiking-prices" className="text-blue-500">
-                    Hiking Prices
-                  </a>
-                </li>
-                <li>
-                  <a href="/full-moon" className="text-blue-500">
-                    Full Moon Climb
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div className="sm:w-3/4 w-full mx-auto mt-10 px-4">
+            {filteredTips.length > 0 ? (
+              <>
+                <div className="flex justify-between">
+                  <button onClick={handlePrev} disabled={currentItem === 0}>
+                    <BsArrowLeftCircleFill
+                      className={`text-black text-2xl ${
+                        currentItem === 0 ? 'hidden' : 'cursor-pointer'
+                      }`}
+                    />
+                  </button>
+                  <h2 className="text-black font-semibold xl:text-2xl text-xl capitalize text-center">
+                    {filteredTips[currentItem].title}
+                  </h2>
+                  <button
+                    onClick={handleNext}
+                    disabled={currentItem === filteredTips.length - 1}
+                  >
+                    <BsArrowRightCircleFill
+                      className={`text-black text-2xl ${
+                        currentItem === filteredTips.length - 1
+                          ? 'hidden'
+                          : 'cursor-pointer'
+                      }`}
+                    />
+                  </button>
+                </div>
+                <div className="border-t border-b border-white mt-10 pt-5 pb-8">
+                  <div className="text- text-sm leading-7">
+                    {simpleFormat(filteredTips[currentItem].content)}
+                  </div>
+                </div>
+              </>
+            ) : (
+              <h1 className="text-xl font-semibold text-white  flex justify-center items-center">
+                No tips found
+              </h1>
+            )}
           </div>
         </div>
       </div>
+       
+      </div>
     </div>
   );
+}
+export async function getServerSideProps() {
+  const res = await fetch('http://localhost:3000/tips');
+  const tips = await res.json();
+
+  return {
+    props: {
+      tips,
+    },
+  };
 }
