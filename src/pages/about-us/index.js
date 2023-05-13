@@ -204,11 +204,11 @@ export default function index() {
                 </div>
                 <h2 className="text-xl font-semibold mb-2">Safaris</h2>
                 <p className="mb-4 leading-8">
-                  Embark on thrilling wildlife safaris across Tanzania&apos;s iconic
-                  national parks, including Arusha, Serengeti, and Tarangire.
-                  Experience close encounters with diverse wildlife, witness
-                  breathtaking landscapes, and immerse yourself in the wonders
-                  of the African wilderness.
+                  Embark on thrilling wildlife safaris across Tanzania&apos;s
+                  iconic national parks, including Arusha, Serengeti, and
+                  Tarangire. Experience close encounters with diverse wildlife,
+                  witness breathtaking landscapes, and immerse yourself in the
+                  wonders of the African wilderness.
                 </p>
               </div>
             </div>
@@ -262,10 +262,10 @@ export default function index() {
             enjoyable experience during their climb.
           </p>
           <p className="p-2 leading-8 mx-4 lg:mx-16">
-            We take the safety of our clients seriously, and that&apos;s why we have
-            an evacuation process set up in case of emergencies during climbs.
-            In the event of sickness or any other emergency, we evacuate our
-            clients via helicopter to ensure they receive prompt medical
+            We take the safety of our clients seriously, and that&apos;s why we
+            have an evacuation process set up in case of emergencies during
+            climbs. In the event of sickness or any other emergency, we evacuate
+            our clients via helicopter to ensure they receive prompt medical
             attention.
           </p>
           <p className="p-2 leading-8 mx-4 lg:mx-16">

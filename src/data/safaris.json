@@ -1,10 +1,14 @@
 [
   {
+    "id": 2,
+    "name": "Planning A Safari"
+  },
+  {
     "id": 1,
     "name": "safari locations"
   },
   {
     "id": 2,
-    "name": "safari packages"
+    "name": "our safari packages"
   }
 ]

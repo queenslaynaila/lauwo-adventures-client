@@ -3,7 +3,7 @@ import Link from 'next/link';
 import EnquiryPopUp from '@/components/enquirypopup';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
- 
+
 export default function Index() {
   const contentStyle = {
     width: '55%',

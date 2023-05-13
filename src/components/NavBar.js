@@ -5,7 +5,7 @@ import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import MobileMenu from './MobileMenu';
 import SafariDropDown from './SafariDropDown';
 import AdventuresDropDown from './AdventuresDropDown';
- 
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -58,14 +58,12 @@ const NavBar = () => {
           <Link href="/gallery">Gallery</Link>
         </li>
         <li>
-          <Link href="/#contact">Contact</Link>
+          <Link href="/contact-us">Contact</Link>
         </li>
         <li>
           <Link href="/blogs">Blogs</Link>
         </li>
-        <li>
-          <Link href="/blogs">Blogs</Link>
-        </li>
+
         <li>
           <Link href="/kilimanjaro-group-climb">Group Climb</Link>
         </li>

@@ -1,9 +1,9 @@
 import { IoCloseSharp } from 'react-icons/io5';
 import Link from 'next/link';
 import AdventuresDropDown from './AdventuresDropDown';
- 
+
 import SafariDropDown from './SafariDropDown';
- 
+
 const MobileMenu = ({ isOpen, toggle }) => {
   return (
     isOpen && (

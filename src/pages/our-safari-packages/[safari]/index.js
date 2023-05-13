@@ -5,7 +5,7 @@ import { GiMeal } from 'react-icons/gi';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
- 
+
 import { FaDollarSign } from 'react-icons/fa';
 const Safari = ({ safari }) => {
   const bookableType = 'Safari';

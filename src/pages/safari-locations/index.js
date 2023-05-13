@@ -126,9 +126,8 @@ const SafariPage = ({ faqs }) => {
           </div>
         </div>
         <div className="  mx-auto ">
-          <h1 className="text-2xl font-bold mb-4 text-center py-2 mt-4">
-            Explore Tanzania&apos;s Premier Safari Destinations: Our Top Nature
-            Reserves
+          <h1 className="text-2xl font-bold mb-4 text-center py-2 mt-4 capitalize">
+            Safari Destinations that You can go to with Lauwo Adventures
           </h1>
           {safarilocations.map((location, index) => (
             <div
@@ -138,7 +137,7 @@ const SafariPage = ({ faqs }) => {
               }`}
             >
               <div className="w-full md:w-1/2 p-4">
-                <h2 className="text-lg font-medium mb-2 font-semibold">
+                <h2 className="text-lg  mb-2 font-semibold">
                   {location.title}
                 </h2>
                 <p className="mb-4">{location.description}</p>
@@ -177,11 +176,10 @@ const SafariPage = ({ faqs }) => {
                     Dynamic Dou Safari: Serengeti & Ngongoro in 3 days
                   </h3>
                   <p class="text-gray-700 mb-4">
-                    Experience the wonders of Serengeti National Park with our
-                    guided safari tour.
+                  Immerse yourself in the captivating beauty of the Serengeti and Ngorongoro Crater in 3 days. Witness the awe-inspiring Great Migration, encounter majestic wildlife, and explore the breathtaking landscapes....
                   </p>
                   <Link
-                    href="safari-packages/dynamic-duo-safari-serengeti--ngorongoro-in-3-days"
+                    href="/our-safari-packages/dynamic-duo-safari-serengeti--ngorongoro-in-3-days"
                     class="text-blue-500 hover:underline"
                   >
                     Learn More
@@ -204,11 +202,10 @@ const SafariPage = ({ faqs }) => {
                     Wildlife Wonders, A 8 day adventure
                   </h3>
                   <p class="text-gray-700 mb-4">
-                    Experience the wonders of Serengeti National Park with our
-                    guided safari tour.
+                  Embark on an 8-day Wildlife Wonders adventure through Serengeti, Ngorongoro, and Arusha. Witness the Great Migration, explore the stunning landscapes, and engage in....
                   </p>
                   <Link
-                    href="safari-packages/wildlife-wonders-8-day-tanzanian-safari-expedition"
+                    href="/our-safari-packages/wildlife-wonders-8-day-tanzanian-safari-expedition"
                     class="text-blue-500 hover:underline"
                   >
                     Learn More
@@ -231,11 +228,10 @@ const SafariPage = ({ faqs }) => {
                     Serengeti Splendors: 5-Day Wildlife Safari Adventure
                   </h3>
                   <p class="text-gray-700 mb-4">
-                    Experience the wonders of Serengeti National Park with our
-                    guided safari tour.
+                  Embark on a 5-day Serengeti Splendors safari adventure, immersing yourself in the captivating wildlife and breathtaking landscapes. Witness the Great Migration and encounter magnificent animals in their natural habitat. Unforgettable....
                   </p>
                   <Link
-                    href="safari-packages/serengeti-splendors-5-day-wildlife-safari-adventure"
+                    href="/our-safari-packages/serengeti-splendors-5-day-wildlife-safari-adventure"
                     class="text-blue-500 hover:underline"
                   >
                     Learn More

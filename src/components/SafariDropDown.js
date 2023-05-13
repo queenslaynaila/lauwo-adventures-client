@@ -3,19 +3,13 @@ import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
 import safaris from '@/data/safaris.json';
-import Head from 'next/head';
 
 const SafariDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <div className="relative flex flex-col items-center">
-      <Head>
-        <title>Adventures</title>
-        <meta name="description" content="Explore our adventures" />
-      </Head>
-      <Link
-        href={'/safari-locations'}
+      <button
         className="flex flex-row items-center justify-center"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >
@@ -25,7 +19,7 @@ const SafariDropDown = ({ setIsOpen }) => {
         ) : (
           <AiOutlineCaretDown className="ml-1" />
         )}
-      </Link>
+      </button>
       <div
         className={`absolute top-10 bg-white text-black text-center w-52 h-36 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light ${
           isDropdownOpen ? 'block' : 'hidden'

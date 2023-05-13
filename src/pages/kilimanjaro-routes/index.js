@@ -6,7 +6,7 @@ import 'reactjs-popup/dist/index.css';
 import Image from 'next/image';
 import safarilocations from '@/data/safarilocations.json';
 export default function Index({ routes }) {
-  console.log(safarilocations)
+  console.log(safarilocations);
   const contentStyle = {
     width: '85%',
     maxHeight: '85%',

@@ -9,7 +9,7 @@ export default function Index() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
-  console.log(errors)
+  console.log(errors);
   const handleSubmit = (e) => {
     e.preventDefault();
 
