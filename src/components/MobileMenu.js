@@ -30,7 +30,9 @@ const MobileMenu = ({ isOpen, toggle }) => {
             About
           </Link>
         </li>
-
+        <li>
+          <Link href="/reviews">Reviews</Link>
+        </li>
         <li>
           <Link href="/#contact" onClick={toggle}>
             Contact
