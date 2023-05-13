@@ -57,15 +57,15 @@ function Blogs() {
         />
       </Head>
       <div>
-      <div className="mx-50">
-        <div className="flex justify-center items-center">
-          <div className="border-t border-black w-1/3"></div>
-          <div className="text-center">
-            <TfiWrite className="lg:text-5xl sm:text-2xl inline-block mx-2" />
+        <div className="mx-50">
+          <div className="flex justify-center items-center">
+            <div className="border-t border-black w-1/3"></div>
+            <div className="text-center">
+              <TfiWrite className="lg:text-5xl sm:text-2xl inline-block mx-2" />
+            </div>
+            <div className="border-t border-black w-1/3"></div>
           </div>
-          <div className="border-t border-black w-1/3"></div>
         </div>
-      </div>
         <h1 className="font-bold text-center my-4 text-lg lg:text-3xl">
           Travel Tips With Lauwo
         </h1>

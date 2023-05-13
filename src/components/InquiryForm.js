@@ -52,7 +52,7 @@ const InquiryForm = () => {
 
   return (
     <section className="testimonial-section font-poly pb-8">
-    <div className="mx-50">
+      <div className="mx-50">
         <div className="flex justify-center items-center">
           <div className="border-t border-black w-1/3"></div>
           <div className="text-center">
