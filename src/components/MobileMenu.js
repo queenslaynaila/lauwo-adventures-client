@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AdventuresDropDown from './AdventuresDropDown';
 import GuideDropDown from './GuideDropDown';
 import SafariDropDown from './SafariDropDown';
-
+import PlanningDropDown from './PlanningDropDown';
 const MobileMenu = ({ isOpen, toggle }) => {
   return (
     isOpen && (
@@ -14,20 +14,24 @@ const MobileMenu = ({ isOpen, toggle }) => {
         <li>
           <AdventuresDropDown />
         </li>
+       
+        <li>
+        <Link href="/planing">Plan Your Climb</Link>
+        </li>
         <li>
           <SafariDropDown />
         </li>
         <li>
           <Link href="/daytrips">DayTrips</Link>
         </li>
-        <li>
-          <Link href="/culturaltours">Cultural tours</Link>
-        </li>
+       
+         
         <li>
           <Link href="/about-us" onClick={toggle}>
             About
           </Link>
         </li>
+       
 
         <li>
           <Link href="/#contact" onClick={toggle}>
@@ -39,9 +43,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
             Blog
           </Link>
         </li>
-        <li>
-          <GuideDropDown />
-        </li>
+        
       </ul>
     )
   );

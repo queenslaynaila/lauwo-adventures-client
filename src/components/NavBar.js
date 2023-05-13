@@ -5,8 +5,8 @@ import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import MobileMenu from './MobileMenu';
 import SafariDropDown from './SafariDropDown';
 import AdventuresDropDown from './AdventuresDropDown';
-import GuideDropDown from './GuideDropDown';
-import { FaWhatsapp } from 'react-icons/fa';
+import PlanningDropDown from './PlanningDropDown';
+ 
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,14 +44,15 @@ const NavBar = () => {
           <AdventuresDropDown setIsOpen={setIsOpen} />
         </li>
         <li>
+        <Link href="/planing">Plan Your Climb</Link>
+        </li>
+        <li>
           <SafariDropDown setIsOpen={setIsOpen} />
         </li>
         <li>
           <Link href="/day-trips">DayTrips</Link>
         </li>
-        <li>
-          <Link href="/cultural-tours">Cultural tours</Link>
-        </li>
+       
         <li>
           <Link href="/about-us">About</Link>
         </li>
