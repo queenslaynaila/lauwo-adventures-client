@@ -1,4 +1,4 @@
-const CopyPlugin = require('copy-webpack-plugin');
+ 
 
 module.exports = {
   reactStrictMode: true,
@@ -18,18 +18,5 @@ module.exports = {
     ],
   },
   distDir: 'build',
-  webpack: (config, { isServer }) => {
-    // Only apply the plugin on the server-build target
-    if (isServer) {
-      config.plugins.push(
-        new CopyPlugin({
-          patterns: [
-            { from: './_redirects', to: './build' }
-          ],
-        })
-      );
-    }
-
-    return config;
-  },
+  
 };
