@@ -204,7 +204,6 @@ export default function Index({ faqs, dayTrips }) {
             Tanzanian Day Trips
           </h2>
           <p className="mb-4 leading-8">
-            {' '}
             Embark on a Tanzanian day trip with Lauwo Adventures and discover
             why Tanzania offers some of the best safaris in Africa. To truly
             appreciate the wonders of this country, you usually need more time,
