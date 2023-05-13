@@ -9,7 +9,7 @@ export default function Index() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
-
+  console.log(errors)
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -270,24 +270,24 @@ export default function Index() {
             <h3 className="text-2xl font-bold mb-4">Related Pages</h3>
             <ul className="space-y-4">
               <li>
-                <a href="/kilimanjaro-routes" className="text-blue-500">
+                <Link href="/kilimanjaro-routes" className="text-blue-500">
                   Kilimanjaro Routes
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/planing" className="text-blue-500">
+                <Link href="/planing" className="text-blue-500">
                   Climb Planning
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/hiking-prices" className="text-blue-500">
+                <Link href="/hiking-prices" className="text-blue-500">
                   Hiking Prices
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/full-moon" className="text-blue-500">
+                <Link href="/full-moon" className="text-blue-500">
                   Full Moon Climb
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

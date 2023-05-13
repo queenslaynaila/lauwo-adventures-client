@@ -18,6 +18,7 @@ export default function Index({ tips }) {
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  console.log(searchValue)
   const [currentItem, setCurrentItem] = useState(0);
   const [filteredTips, setFilteredTips] = useState(tips);
   const handleSearch = (e) => {
