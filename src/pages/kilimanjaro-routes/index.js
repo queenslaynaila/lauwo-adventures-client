@@ -122,9 +122,7 @@ export default function Index({ routes }) {
   );
 }
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://lauwo-adventures-api.onrender.com/kilimanjaro_routes'
-  );
+  const res = await fetch('http://localhost:3000/kilimanjaro_routes');
   const routes = await res.json();
 
   return {

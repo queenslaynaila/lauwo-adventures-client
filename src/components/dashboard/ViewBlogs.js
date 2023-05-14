@@ -15,7 +15,7 @@ export default function ViewBlogs() {
   const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
-    fetch('https://lauwo-adventures-api.onrender.com/blogs')
+    fetch('http://localhost:3000/blogs')
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
@@ -80,7 +80,7 @@ export default function ViewBlogs() {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((blog) =>
-        fetch(`https://lauwo-adventures-api.onrender.com/blogs/${blog.id}`, {
+        fetch(`http://localhost:3000/blogs/${blog.id}`, {
           method: 'DELETE',
           headers: {
             'content-type': 'application/json',

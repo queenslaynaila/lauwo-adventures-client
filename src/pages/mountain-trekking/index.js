@@ -110,9 +110,7 @@ export default function Mountains({ mountains }) {
   );
 }
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://lauwo-adventures-api.onrender.com/mountains'
-  );
+  const res = await fetch('http://localhost:3000/mountains');
   const mountains = await res.json();
 
   return {

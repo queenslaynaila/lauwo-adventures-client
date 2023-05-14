@@ -10,9 +10,7 @@ export default function TourGroups() {
   useEffect(() => {
     const fetchGroupClimbs = async () => {
       try {
-        const response = await fetch(
-          `https://lauwo-adventures-api.onrender.com/group_climbs/`
-        );
+        const response = await fetch(`http://localhost:3000/group_climbs/`);
         if (response.ok) {
           const data = await response.json();
           setGroupClimbs(data);

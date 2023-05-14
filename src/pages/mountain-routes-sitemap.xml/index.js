@@ -2,9 +2,9 @@ import { getServerSideSitemapLegacy } from 'next-sitemap';
 import { generateSlug } from '@/utils/generateSlug';
 
 export const getServerSideProps = async (ctx) => {
-  const mountains = await fetch(
-    'https://lauwo-adventures-api.onrender.com/mountains'
-  ).then((res) => res.json());
+  const mountains = await fetch('http://localhost:3000/mountains').then((res) =>
+    res.json()
+  );
 
   const routeSitemaps = mountains
     .flatMap((mountain) =>

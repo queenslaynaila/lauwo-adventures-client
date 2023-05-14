@@ -14,7 +14,7 @@ const BannerForm = () => {
       data_category: formData.category,
       message: formData.message,
     };
-    fetch('https://lauwo-adventures-api.onrender.com/banners', {
+    fetch('http://localhost:3000/banners', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

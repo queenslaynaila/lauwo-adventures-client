@@ -1,12 +1,26 @@
 import { generateSlug } from '@/utils/generateSlug';
 import Head from 'next/head';
-import RouteCard from '@/components/RouteCard';
+import FaqCard from '@/components/FaqCard';
 import MountainItinery from '@/components/MountainItinery';
 import Packages from '@/components/Packages';
 import Pricing from '@/components/Pricing';
-
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+const menuTabs = [
+  'Itinerary',
+  'Standard',
+  'Premium',
+  'Pricing',
+  'FAQS',
+  'Book',
+];
 const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
-  const bookableType = 'Mountain';
+  const [activeTab, setActiveTab] = useState('Itinerary');
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
     <>
       <Head>
@@ -16,28 +30,98 @@ const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
           content={`Explore ${route.route_name} at ${mountain.mountain_name}.`}
         />
       </Head>
-      <div className="font-poly mb-4">
-        <RouteCard
-          route={route}
-          duration={duration}
-          bookableType={bookableType}
-          routeDuration={duration}
-        />
-        <div className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2 ">
-          itinerary
-        </div>
-        <div className="relative">
-          <div
-            className="vl absolute  border-l-2 border-black ml-[-3px] left-1/2 "
-            style={{ height: '99%', top: '1%' }}
-          ></div>
-          {itineries.map((itinery, index) => (
-            <MountainItinery key={itinery.id} index={index} itinery={itinery} />
-          ))}
-        </div>
+      <div className="font-poly ">
+        <header
+          className="h-[50vh] lg:h-[60vh] bg-cover bg-image bg-center bg-no-repeat flex items-center justify-center bg-gray-400 bg-blend-multiply"
+          style={{
+            backgroundImage: `url(${route.image_URL})`,
+          }}
+        >
+          <div className="relative container p-4 mt-16">
+            <div className="py-10 px-5 my-5 text-center">
+              <div className="border-t-2 border-b-2 border-white my-3 pb-4 pt-2 md:text-4xl text-white text-4xl font-bold leading-[50px] mx-auto max-w-2xl uppercase">
+                {route.route_name} {duration} days
+              </div>
+              <div className="text leading-normal text-white mx-auto max-w-2xl">
+                PRIVATE TREKS AND GROUP CLIMBS
+              </div>
+            </div>
+          </div>
+        </header>
+        <div
+          className="  border-solid border-t-5 border-ad884a"
+          style={{ borderTop: '5px solid #ad884a' }}
+        ></div>
 
-        <Packages packages={packages} />
-        <Pricing routeDuration={duration} />
+        <div className="py-5 px-5 my-5 text-center">
+          <div className="border-t-2 border-b-2 border-white my-3 pb-4 pt-2 md:text-4xl text-black text-4xl font-bold leading-[50px] mx-auto max-w-2xl uppercase">
+            {route.route_name} {duration} days
+          </div>
+          <div className="text leading-normal text-black mx-auto max-w-2xl flex flex-col lg:flex-row md:flex-row justify-between gap-11">
+            <p>Paragraph to ad to the route duratiosn tabel</p>
+          </div>
+        </div>
+        <div>
+          <ul className="flex flex-wrap text-sm font-medium text-center gap-2 justify-center items-center text-gray-500   ">
+            {menuTabs.map((route) => (
+              <li className="mr-2 " key={route}>
+                <Link
+                  href={`#${route}`}
+                  className={`inline-block p-4 rounded-lg ${
+                    activeTab === route
+                      ? 'bg-yellow-700 text-white active'
+                      : 'hover:text-black hover:bg-gray-50  bg-yellow-500 text-white'
+                  }`}
+                  onClick={() => handleTabChange(route)}
+                >
+                  {route}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div
+          id={'Itinerary'}
+          className={`tab-content ${activeTab === 'Itinerary' ? '' : 'hidden'}`}
+        >
+          <div>
+            <h1 className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2 ">
+              Itinerary
+            </h1>
+
+            <div className="relative">
+              <div
+                className="vl absolute  border-l-2 border-black ml-[-3px] left-1/2 "
+                style={{ height: '99%', top: '1%' }}
+              ></div>
+              {itineries.map((itinery, index) => (
+                <MountainItinery
+                  key={itinery.id}
+                  index={index}
+                  itinery={itinery}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div
+          id={'Pricing'}
+          className={`tab-content ${activeTab === 'Pricing' ? '' : 'hidden'}`}
+        >
+          <Pricing routeDuration={duration} />
+        </div>
+        <div
+          id={'Standard'}
+          className={`tab-content ${activeTab === 'Standard' ? '' : 'hidden'}`}
+        >
+          <Packages packages={packages} />
+        </div>
+        <div
+          id={'Premium'}
+          className={`tab-content ${activeTab === 'Premium' ? '' : 'hidden'}`}
+        >
+          <Packages packages={packages} />
+        </div>
       </div>
     </>
   );
@@ -46,9 +130,7 @@ const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
 export default RouteSection;
 
 export async function getStaticPaths() {
-  const res = await fetch(
-    'https://lauwo-adventures-api.onrender.com/mountains'
-  );
+  const res = await fetch('http://localhost:3000/mountains');
   const mountains = await res.json();
 
   const allPaths = mountains.flatMap((mountain) =>
@@ -73,9 +155,7 @@ export async function getStaticProps({ params }) {
   const words = route.split('-');
   const routeName = words.slice(0, -2).join(' ');
   const duration = words.slice(-2, -1)[0];
-  const res = await fetch(
-    'https://lauwo-adventures-api.onrender.com/mountains'
-  );
+  const res = await fetch('http://localhost:3000/mountains');
   const mountains = await res.json();
   const mountainData = mountains.find(
     (mtn) => generateSlug(mtn.mountain_name) === mountain
@@ -83,9 +163,7 @@ export async function getStaticProps({ params }) {
   const RouteData = mountainData.routes.find(
     (route) => route.route_name.toLowerCase() === routeName
   );
-  const res2 = await fetch(
-    'https://lauwo-adventures-api.onrender.com/route_durations'
-  );
+  const res2 = await fetch('http://localhost:3000/route_durations');
   const routeDurations = await res2.json();
 
   const routeDuration = routeDurations.find((routeDuration) => {

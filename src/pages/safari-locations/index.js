@@ -316,9 +316,7 @@ const SafariPage = ({ faqs }) => {
 
 export default SafariPage;
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://lauwo-adventures-api.onrender.com/safari_faqs'
-  );
+  const res = await fetch('http://localhost:3000/safari_faqs');
   const faqs = await res.json();
 
   return {

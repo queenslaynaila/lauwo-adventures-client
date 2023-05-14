@@ -15,7 +15,7 @@ export default function Enquiries() {
   const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
-    fetch(' https://lauwo-adventures-api.onrender.com/inquiries')
+    fetch(' http://localhost:3000/inquiries')
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
@@ -82,12 +82,9 @@ export default function Enquiries() {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((enquiry) =>
-        fetch(
-          `https://lauwo-adventures-api.onrender.com/inquiries/${enquiry.id}`,
-          {
-            method: 'DELETE',
-          }
-        ).then((response) => {
+        fetch(`http://localhost:3000/inquiries/${enquiry.id}`, {
+          method: 'DELETE',
+        }).then((response) => {
           if (response.ok) {
             return response.json().then(() => {
               setData(

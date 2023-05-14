@@ -15,7 +15,7 @@ export default function CulturalBookings() {
   const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
-    fetch('https://lauwo-adventures-api.onrender.com/cultural_bookings')
+    fetch('http://localhost:3000/cultural_bookings')
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
@@ -91,12 +91,9 @@ export default function CulturalBookings() {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((booking) =>
-        fetch(
-          `https://lauwo-adventures-api.onrender.com/bookings/${booking.id}`,
-          {
-            method: 'DELETE',
-          }
-        ).then((response) => {
+        fetch(`http://localhost:3000/bookings/${booking.id}`, {
+          method: 'DELETE',
+        }).then((response) => {
           if (response.ok) {
             return response.json().then(() => {
               setData(

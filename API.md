@@ -4,7 +4,7 @@ These are the endpoints for managing bookings.
 
 ## POST /planningforms
 
-https://lauwo-adventures-api.onrender.com/planningforms
+http://localhost:3000/planningforms
 
 Creates a new planning form.
 
@@ -52,19 +52,19 @@ These are the endpoints for managing planning forms.
 
 ### GET /planningforms
 
-https://lauwo-adventures-api.onrender.com/planningforms
+http://localhost:3000/planningforms
 
 Returns a list of all planning forms.
 
 ### GET /planningforms/:id
 
-https://lauwo-adventures-api.onrender.com/planningforms/1
+http://localhost:3000/planningforms/1
 
 Returns a single planning form.
 
 ### POST /planningforms
 
-https://lauwo-adventures-api.onrender.com/planningforms
+http://localhost:3000/planningforms
 
 Creates a new planning form.
 
@@ -87,7 +87,7 @@ Creates a new planning form.
 
 ### PATCH /planningforms/:id
 
-https://lauwo-adventures-api.onrender.com/planningforms/1
+http://localhost:3000/planningforms/1
 
 Updates a single planning form.
 
@@ -111,7 +111,7 @@ Updates a single planning form.
 
 ### DELETE /planningforms/:id
 
-https://lauwo-adventures-api.onrender.com/planningforms/1
+http://localhost:3000/planningforms/1
 
 Deletes a single planning form.
 
@@ -121,17 +121,17 @@ These are the adventures that lauwo offers.
 
 ### GET /adventures
 
-https://lauwo-adventures-api.onrender.com/adventures
+http://localhost:3000/adventures
 Returns a list of all adventures.
 
 ### GET /adventures/:id
 
-https://lauwo-adventures-api.onrender.com/adventures/1
+http://localhost:3000/adventures/1
 Returns a single adventure.
 
 ### POST /adventures
 
-https://lauwo-adventures-api.onrender.com/adventures
+http://localhost:3000/adventures
 Creates a new adventure.
 
 ```json:
@@ -142,7 +142,7 @@ Creates a new adventure.
 
 ### PATCH /adventures/:id
 
-https://lauwo-adventures-api.onrender.com/adventures/1
+http://localhost:3000/adventures/1
 Updates a single adventure.
 
 ```json:
@@ -153,7 +153,7 @@ Updates a single adventure.
 
 ### DELETE /adventures/:id
 
-https://lauwo-adventures-api.onrender.com/adventures/1
+http://localhost:3000/adventures/1
 Deletes a single adventure.
 
 ## CULTURAL TOURS
@@ -162,17 +162,17 @@ These are the cultural tours that lauwo offers.
 
 ### GET /cultural_tours
 
-https://lauwo-adventures-api.onrender.com/cultural_tours
+http://localhost:3000/cultural_tours
 Returns a list of all cultural tours.
 
 ### GET /cultural_tours/:id
 
-https://lauwo-adventures-api.onrender.com/cultural_tours/1
+http://localhost:3000/cultural_tours/1
 Returns a single cultural tour.
 
 ### POST /cultural_tours
 
-https://lauwo-adventures-api.onrender.com/cultural_tours
+http://localhost:3000/cultural_tours
 Creates a new cultural tour.
 
 ```json
@@ -191,7 +191,7 @@ Creates a new cultural tour.
 
 ### PATCH /cultural_tours/:id
 
-https://lauwo-adventures-api.onrender.com/cultural_tours/1
+http://localhost:3000/cultural_tours/1
 Updates a single cultural tour.
 
 ```json
@@ -209,7 +209,7 @@ Updates a single cultural tour.
 
 ### DELETE /cultural_tours/:id
 
-https://lauwo-adventures-api.onrender.com/cultural_tours/1
+http://localhost:3000/cultural_tours/1
 Deletes a single cultural tour.
 
 ## DAY TRIPS
@@ -218,17 +218,17 @@ These are the day trips that lauwo offers.
 
 ### GET /day_trips
 
-https://lauwo-adventures-api.onrender.com/day_trips
+http://localhost:3000/day_trips
 Returns a list of all day trips.
 
 ### GET /day_trips/:id
 
-https://lauwo-adventures-api.onrender.com/day_trips/1
+http://localhost:3000/day_trips/1
 Returns a single day trip.
 
 ### POST /day_trips
 
-https://lauwo-adventures-api.onrender.com/day_trips
+http://localhost:3000/day_trips
 Creates a new day trip.
 
 ```json
@@ -246,7 +246,7 @@ Creates a new day trip.
 
 ### PATCH /day_trips/:id
 
-https://lauwo-adventures-api.onrender.com/day_trips/1
+http://localhost:3000/day_trips/1
 Updates a single day trip.
 
 ```json
@@ -263,7 +263,7 @@ Updates a single day trip.
 
 ### DELETE /day_trips/:id
 
-https://lauwo-adventures-api.onrender.com/day_trips/1
+http://localhost:3000/day_trips/1
 Deletes a single day trip.
 
 ## BLOGS
@@ -272,17 +272,17 @@ These are the blogs that lauwo writes.
 
 ### GET /blogs
 
-https://lauwo-adventures-api.onrender.com/blogs
+http://localhost:3000/blogs
 Returns a list of all blogs.
 
 ### GET /blogs/:id
 
-https://lauwo-adventures-api.onrender.com/blogs/1
+http://localhost:3000/blogs/1
 Returns a single blog.
 
 ### POST /blogs
 
-https://lauwo-adventures-api.onrender.com/blogs
+http://localhost:3000/blogs
 Creates a new blog.
 
 ```json
@@ -296,7 +296,7 @@ Creates a new blog.
 
 ### PATCH /blogs/:id
 
-https://lauwo-adventures-api.onrender.com/blogs/1
+http://localhost:3000/blogs/1
 Updates a single blog.
 
 ```json:
@@ -310,7 +310,7 @@ Updates a single blog.
 
 ### DELETE /blogs/:id
 
-https://lauwo-adventures-api.onrender.com/blogs/1
+http://localhost:3000/blogs/1
 Deletes a single blog.
 
 ## INQUIRIES
@@ -319,17 +319,17 @@ These are the inquiries that lauwo receives.
 
 ### GET /inquiries
 
-https://lauwo-adventures-api.onrender.com/inquiries
+http://localhost:3000/inquiries
 Returns a list of all inquiries.
 
 ### GET /inquiries/:id
 
-https://lauwo-adventures-api.onrender.com/inquiries/1
+http://localhost:3000/inquiries/1
 Returns a single inquiry.
 
 ### POST /inquiries
 
-https://lauwo-adventures-api.onrender.com/inquiries
+http://localhost:3000/inquiries
 Creates a new inquiry.
 
 ```json:
@@ -342,24 +342,24 @@ Creates a new inquiry.
 
 ### DELETE /inquiries/:id
 
-https://lauwo-adventures-api.onrender.com/inquiries/1
+http://localhost:3000/inquiries/1
 Deletes a single inquiry.
 
 ## MOUNTAINS
 
 ### GET /mountains
 
-https://lauwo-adventures-api.onrender.com/mountains
+http://localhost:3000/mountains
 Returns a list of all mountains.
 
 ### GET /mountains/:id
 
-https://lauwo-adventures-api.onrender.com/mountains/1
+http://localhost:3000/mountains/1
 Returns a single mountain.
 
 ### POST /mountains
 
-https://lauwo-adventures-api.onrender.com/mountains
+http://localhost:3000/mountains
 Creates a new mountain.
 
 ```json:
@@ -373,7 +373,7 @@ Creates a new mountain.
 
 ### PATCH /mountains/:id
 
-https://lauwo-adventures-api.onrender.com/mountains/1
+http://localhost:3000/mountains/1
 Updates a single mountain.
 
 ```json:
@@ -387,34 +387,34 @@ Updates a single mountain.
 
 ### DELETE /mountains/:id
 
-https://lauwo-adventures-api.onrender.com/mountains/1
+http://localhost:3000/mountains/1
 Deletes a single mountain.
 
 ## ROUTES
 
 ### GET /mountains/:id/routes
 
-https://lauwo-adventures-api.onrender.com/mountains/1/routes
+http://localhost:3000/mountains/1/routes
 Returns a list of all routes for a specific mountain.
 
 ### GET /routes/:id/route_durations
 
-https://lauwo-adventures-api.onrender.com/routes/1/route_durations
+http://localhost:3000/routes/1/route_durations
 Returns a list of all route durations for a specific route.
 
 ### GET /routes
 
-https://lauwo-adventures-api.onrender.com/routes
+http://localhost:3000/routes
 Returns a list of all routes.
 
 ### GET /routes/:id
 
-https://lauwo-adventures-api.onrender.com/routes/1
+http://localhost:3000/routes/1
 Returns a single route.
 
 ### POST /routes
 
-https://lauwo-adventures-api.onrender.com/routes
+http://localhost:3000/routes
 Creates a new route.
 
 ```json:
@@ -428,7 +428,7 @@ Creates a new route.
 
 ### PATCH /routes/:id
 
-https://lauwo-adventures-api.onrender.com/routes/1
+http://localhost:3000/routes/1
 Updates a single route.
 
 ```json:
@@ -442,29 +442,29 @@ Updates a single route.
 
 ### DELETE /routes/:id
 
-https://lauwo-adventures-api.onrender.com/routes/1
+http://localhost:3000/routes/1
 Deletes a single route.
 
 ## ROUTE DURATIONS
 
 ### GET /route_durations
 
-https://lauwo-adventures-api.onrender.com/route_durations
+http://localhost:3000/route_durations
 Returns a list of all route durations.
 
 ### GET /route_durations/:id
 
-https://lauwo-adventures-api.onrender.com/route_durations/1
+http://localhost:3000/route_durations/1
 Returns a single route duration.
 
 ### GET /route_durations/:id/itineries
 
-https://lauwo-adventures-api.onrender.com/route_durations/1/itineries
+http://localhost:3000/route_durations/1/itineries
 Returns a list of all itineries for a given route duration.
 
 ### POST /route_durations
 
-https://lauwo-adventures-api.onrender.com/route_durations
+http://localhost:3000/route_durations
 Creates a new route duration.
 
 ```json:
@@ -483,7 +483,7 @@ Creates a new route duration.
 
 ### PATCH /route_durations/:id
 
-https://lauwo-adventures-api.onrender.com/route_durations/1
+http://localhost:3000/route_durations/1
 Updates a single route duration.
 
 ```json:
@@ -502,19 +502,19 @@ Updates a single route duration.
 
 ### DELETE /route_durations/:id
 
-https://lauwo-adventures-api.onrender.com/route_durations/1
+http://localhost:3000/route_durations/1
 Deletes a single route duration.
 
 ## ITINERARIES
 
 ### GET /itineries
 
-https://lauwo-adventures-api.onrender.com/itineries
+http://localhost:3000/itineries
 Returns a list of all itineries.
 
 ### GET /itineries/:id
 
-https://lauwo-adventures-api.onrender.com/itineries/1
+http://localhost:3000/itineries/1
 Returns a single itinerary.
 
 ### POST /itineries
@@ -538,7 +538,7 @@ Creates a new itinery.
 
 ### PATCH /itineries/:id
 
-https://lauwo-adventures-api.onrender.com/itineries/1
+http://localhost:3000/itineries/1
 Updates a single itinery.
 
 ```json:
@@ -558,14 +558,14 @@ Updates a single itinery.
 
 ### DELETE /itineries/:id
 
-https://lauwo-adventures-api.onrender.com/itineries/1
+http://localhost:3000/itineries/1
 Deletes a single itinery.
 
 ns a single itinerary for a given route duration.
 
 ### POST /route_durations/:id/itineries
 
-https://lauwo-adventures-api.onrender.com/route_durations/1/itineries
+http://localhost:3000/route_durations/1/itineries
 Creates a new itinerary for a given route duration.
 
 ```json:
@@ -584,7 +584,7 @@ Creates a new itinerary for a given route duration.
 
 ### PATCH /route_durations/:id/itineries/:itinerary_id
 
-https://lauwo-adventures-api.onrender.com/route_durations/1/itineries/1
+http://localhost:3000/route_durations/1/itineries/1
 Updates a single itinerary for a given route duration.
 
 ```json:
@@ -603,7 +603,7 @@ Updates a single itinerary for a given route duration.
 
 ### DELETE /route_durations/:id/itineries/:itinerary_id
 
-https://lauwo-adventures-api.onrender.com/route_durations/1/itineries/1
+http://localhost:3000/route_durations/1/itineries/1
 Deletes a single itinerary for a given route duration.
 
 ## BOOKINGS

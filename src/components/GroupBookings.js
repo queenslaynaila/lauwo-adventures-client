@@ -18,7 +18,7 @@ export default function GroupBookings({ id }) {
       group_climbs_id: id,
     };
 
-    fetch('https://lauwo-adventures-api.onrender.com/group_climb_bookings', {
+    fetch('http://localhost:3000/group_climb_bookings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

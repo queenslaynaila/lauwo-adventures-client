@@ -55,7 +55,7 @@ export default function LoginPage() {
         remember_me: true,
       },
     };
-    fetch('https://lauwo-adventures-api.onrender.com/admins/sign_in', {
+    fetch('http://localhost:3000/admins/sign_in', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

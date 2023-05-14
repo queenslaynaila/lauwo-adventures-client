@@ -65,7 +65,7 @@ const Safaris = ({ safaris }) => {
 export default Safaris;
 
 export async function getStaticProps() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/safaris');
+  const res = await fetch('http://localhost:3000/safaris');
   const safaris = await res.json();
 
   return {

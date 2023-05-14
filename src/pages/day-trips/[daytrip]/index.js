@@ -137,9 +137,7 @@ export default function Trip({ trip }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(
-    'https://lauwo-adventures-api.onrender.com/day_trips'
-  );
+  const res = await fetch('http://localhost:3000/day_trips');
   const trips = await res.json();
 
   const paths = trips.map((trip) => ({
@@ -153,9 +151,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(
-    'https://lauwo-adventures-api.onrender.com/day_trips'
-  );
+  const res = await fetch('http://localhost:3000/day_trips');
   const trips = await res.json();
 
   const trip = trips.find((trip) => generateSlug(trip.name) === params.daytrip);

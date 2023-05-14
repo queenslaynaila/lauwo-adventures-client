@@ -54,7 +54,7 @@ export default function index({ blogs }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/blogs');
+  const res = await fetch('http://localhost:3000/blogs');
   const blogs = await res.json();
   return {
     props: { blogs },

@@ -15,7 +15,7 @@ export default function Plannings() {
   const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
-    fetch('https://lauwo-adventures-api.onrender.com/planningforms')
+    fetch('http://localhost:3000/planningforms')
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
@@ -91,12 +91,9 @@ export default function Plannings() {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((enquiry) =>
-        fetch(
-          `https://lauwo-adventures-api.onrender.com/planningforms/${enquiry.id}`,
-          {
-            method: 'DELETE',
-          }
-        ).then((response) => {
+        fetch(`http://localhost:3000/planningforms/${enquiry.id}`, {
+          method: 'DELETE',
+        }).then((response) => {
           if (response.ok) {
             return response.json().then(() => {
               setData(

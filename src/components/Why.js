@@ -34,7 +34,7 @@ export default function Why() {
               height={80}
               width={80}
             />
-          
+
             <p className="text-center">
               Tailor Made Tours
               <br />

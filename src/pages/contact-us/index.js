@@ -23,7 +23,7 @@ export default function Index() {
       email: formData.email,
       message: formData.message,
     };
-    fetch('https://lauwo-adventures-api.onrender.com/inquiries', {
+    fetch('http://localhost:3000/inquiries', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

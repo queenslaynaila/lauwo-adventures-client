@@ -146,7 +146,7 @@ const Safari = ({ safari }) => {
 export default Safari;
 
 export async function getStaticPaths() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/safaris');
+  const res = await fetch('http://localhost:3000/safaris');
   const safaris = await res.json();
   const paths = safaris.map((safari) => ({
     params: { safari: generateSlug(safari.name), id: safari.id },
@@ -155,7 +155,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/safaris');
+  const res = await fetch('http://localhost:3000/safaris');
   const safaris = await res.json();
   const safari = safaris.find(
     (safari) => generateSlug(safari.name) === params.safari

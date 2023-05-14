@@ -18,7 +18,7 @@ export default function NotificationForm({ mountain }) {
       title: mountain,
     };
 
-    fetch('https://lauwo-adventures-api.onrender.com/notifications', {
+    fetch('http://localhost:3000/notifications', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

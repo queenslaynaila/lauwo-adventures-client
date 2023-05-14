@@ -16,7 +16,7 @@ const Users = () => {
     margin: 'auto',
   };
   useEffect(() => {
-    fetch('https://lauwo-adventures-api.onrender.com/admins')
+    fetch('http://localhost:3000/admins')
       .then((response) => response.json())
       .then((data) => setAdmins(data))
       .catch((error) => console.error(error));
@@ -66,7 +66,7 @@ const Users = () => {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((admin) =>
-        fetch(`https://lauwo-adventures-api.onrender.com/admins/${admin.id}`, {
+        fetch(`http://localhost:3000/admins/${admin.id}`, {
           method: 'DELETE',
         }).then((response) => {
           if (response.ok) {
