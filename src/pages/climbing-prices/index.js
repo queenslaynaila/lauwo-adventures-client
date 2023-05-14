@@ -1,18 +1,8 @@
-import Image from 'next/image';
+ 
 import React from 'react';
-import FaqCard from '@/components/FaqCard';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { generateSlug } from '@/utils/generateSlug';
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
-import NotificationForm from '@/components/NotificationForm';
-import GroupBookings from '@/components/GroupBookings';
-import 'reactjs-popup/dist/index.css';
-import { truncate } from '@/utils/truncate';
-import simpleFormat from '@/utils/simpleFormat';
-const menuTabs = ['Itinerary', 'Pricing', 'Inclusive', 'Exclusive', 'Book'];
-console.log(menuTabs);
+ 
+  
+ 
 
 export default function Mountain() {
   return (

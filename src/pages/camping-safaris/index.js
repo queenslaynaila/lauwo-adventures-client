@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import safarilocations from '@/data/safarilocations.json';
+ 
 import Head from 'next/head';
 import FaqCard from '@/components/FaqCard';
 ///import { BiSearch } from 'react-icons/bi';
@@ -134,7 +133,7 @@ const SafariPage = ({ faqs }) => {
               Budget Safari:Camping
             </h2>
             <p className="  p-2 leading-8 ">
-              Immerse yourself in the raw beauty of Tanzania's wildlife and
+              Immerse yourself in the raw beauty of Tanzania&apos;s wildlife and
               landscapes with our exceptional camping safaris. Experience the
               thrill of being close to nature, as you listen to the distant
               roars of lions and the laughter of hyenas while nestled in your
@@ -162,7 +161,7 @@ const SafariPage = ({ faqs }) => {
 
               <ul className="list-disc list-inside  mb-4">
                 <li>
-                  Pack appropriately: Since you will be camping, it's important
+                  Pack appropriately: Since you will be camping, it&apos;s important
                   to pack light and bring only essential items. Make sure to
                   pack warm clothing, a sleeping bag, a flashlight, insect
                   repellent, and sunscreen.
@@ -175,7 +174,7 @@ const SafariPage = ({ faqs }) => {
                 </li>
                 <li>
                   Respect the environment: Remember that you are a guest in the
-                  animals' natural habitat. Respect their space and do not
+                  animals&apos; natural habitat. Respect their space and do not
                   disturb them. Also, make sure to properly dispose of your
                   trash and avoid littering.
                 </li>

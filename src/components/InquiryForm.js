@@ -40,8 +40,7 @@ const testimonials = [
   },
 ];
 
-const tripAdvisorRating = 4.8;
-const tripAdvisorReviewsCount = 300;
+ 
 
 const InquiryForm = () => {
   const [activeIndex, setActiveIndex] = useState(0);
