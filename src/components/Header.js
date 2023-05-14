@@ -17,7 +17,7 @@ const images = [
     paragraph:
       'Immerse yourself in the wonders of the African wilderness on our extraordinary wildlife safaris. Journey through vast savannahs, dense jungles, and untamed landscapes teeming with iconic wildlife. Witness herds of elephants roaming freely, spot majestic lions lazing under the African sun, and marvel at the grace of giraffes as they graze on treetops.  ',
     ctaText: 'Safari Tours',
-    ctaLink: '/safari-packages',
+    ctaLink: '/our-safari-packages',
   },
 
   {
