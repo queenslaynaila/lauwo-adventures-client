@@ -54,15 +54,14 @@ const SafariPage = ({ faqs }) => {
             <div>
               <div className="float-left py-10 px-5 my-5">
                 <div className="heading mb-3 text-2xl md:text-4xl text-white">
-                  Explore the World of Safaris
+                  Camping Safaris
                 </div>
                 <div className="text leading-normal text-white">
-                  Discover exciting safari locations, get answers to frequently
-                  asked questions, and learn how to plan your dream safari
-                  adventure.
+                  Camping safari is a great way to experience the African
+                  wilderness while keeping costs low
                 </div>
                 <div className="text leading-normal text-white">
-                  You can browse through our various safari packages{' '}
+                  You can browse through our other safari packages{' '}
                   <Link
                     href="/safari-packages"
                     className="text-yellow-500 font-semibold"
@@ -99,8 +98,8 @@ const SafariPage = ({ faqs }) => {
 
         <div className="p-5 bg-yellow-500 flex items-center justify-between">
           <p className="text-white lg:ml-12">
-            Discover the richness of Tanzania&apos;s cultural experiences
-            through our curated tours.
+            Discover the richness of Tanzania&apos;s experiences through our
+            curated tours.
           </p>
           <div>
             <Popup
@@ -125,144 +124,104 @@ const SafariPage = ({ faqs }) => {
             </Popup>
           </div>
         </div>
-        <div className="  mx-auto ">
-          <h1 className="text-2xl font-bold mb-4 text-center py-2 mt-4 capitalize">
-            Safari Destinations that You can go to with Lauwo Adventures
+        <div className="  mx-auto  lg:mx-16">
+          <h1 className="text-center p-4 text-2xl font-bold capitalize">
+            Welcome to Lauwo Adventures: Your Gateway to Unforgettable Camping
+            Safaris in Tanzania
           </h1>
-          {safarilocations.map((location, index) => (
-            <div
-              key={index}
-              className={`flex flex-wrap justify-center mx-4 lg:mx-16 ${
-                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              }`}
-            >
-              <div className="w-full md:w-1/2 p-4">
-                <h2 className="text-lg  mb-2 font-semibold">
-                  {location.title}
-                </h2>
-                <p className="mb-4">{location.description}</p>
-              </div>
-              <div className="w-full md:w-1/2 p-4">
-                <Image
-                  src={location.image}
-                  alt="Responsible Tourism"
-                  width={500}
-                  height={500}
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="py-8">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold mb-4 text-center">
-              Discover Our Extraordinary Safari Packages
+          <div className="py-8">
+            <h2 className="text-2xl font-semibold mb-4 text-center">
+              Budget Safari:Camping
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg shadow-md flex flex-col">
-                <div className="relative">
-                  <Image
-                    src="https://images.unsplash.com/photo-1662003905953-f2aa253c48df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80"
-                    height={500}
-                    width={500}
-                    alt="Serengeti Adventure"
-                    className="w-full h-auto rounded-t-lg"
-                  />
-                </div>
+            <p className="  p-2 leading-8 ">
+              Immerse yourself in the raw beauty of Tanzania's wildlife and
+              landscapes with our exceptional camping safaris. Experience the
+              thrill of being close to nature, as you listen to the distant
+              roars of lions and the laughter of hyenas while nestled in your
+              comfortable tent. With Luawo adventures, we take care of every
+              detail, ensuring a stress-free and unforgettable adventure for
+              you.
+            </p>
+            <h2 className="text-2xl font-semibold mb-4 text-center">
+              Camping Safari Experience
+            </h2>
+            <p className="  p-2 leading-8 ">
+              Right in the heart of the African wilderness; sitting around a
+              campfire and sleeping amidst the sounds and roars of night
+              predators comes with a special feeling of adventure. We provide
+              all camping gear (except sleeping bags) during your safari and
+              serve freshly cooked food that is prepared by our experienced
+              safari cooks. Our cook and driver do all the camp set up for you
+              and you only participate in that if you are after an active
+              adventure.
+            </p>
+            <div className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4 text-center">
+                Camping Safari Planning Tips
+              </h2>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Dynamic Dou Safari: Serengeti & Ngongoro in 3 days
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    Immerse yourself in the captivating beauty of the Serengeti
-                    and Ngorongoro Crater in 3 days. Witness the awe-inspiring
-                    Great Migration, encounter majestic wildlife, and explore
-                    the breathtaking landscapes....
-                  </p>
-                  <Link
-                    href="/our-safari-packages/dynamic-duo-safari-serengeti--ngorongoro-in-3-days"
-                    className="text-blue-500 hover:underline"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-md flex flex-col">
-                <div className="relative">
-                  <Image
-                    src="https://images.unsplash.com/photo-1617938544737-cf7b41829226?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                    height={500}
-                    width={500}
-                    alt="Serengeti Adventure"
-                    className="w-full h-auto rounded-t-lg"
-                  />
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Wildlife Wonders, A 8 day adventure
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    Embark on an 8-day Wildlife Wonders adventure through
-                    Serengeti, Ngorongoro, and Arusha. Witness the Great
-                    Migration, explore the stunning landscapes, and engage
-                    in....
-                  </p>
-                  <Link
-                    href="/our-safari-packages/wildlife-wonders-8-day-tanzanian-safari-expedition"
-                    className="text-blue-500 hover:underline"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-md flex flex-col">
-                <div className="relative">
-                  <Image
-                    src="https://images.unsplash.com/photo-1534476478164-b15fec4f091c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                    height={500}
-                    width={500}
-                    alt="Serengeti Adventure"
-                    className="w-full h-auto rounded-t-lg"
-                  />
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Serengeti Splendors: 5-Day Wildlife Safari Adventure
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    Embark on a 5-day Serengeti Splendors safari adventure,
-                    immersing yourself in the captivating wildlife and
-                    breathtaking landscapes. Witness the Great Migration and
-                    encounter magnificent animals in their natural habitat.
-                    Unforgettable....
-                  </p>
-                  <Link
-                    href="/our-safari-packages/serengeti-splendors-5-day-wildlife-safari-adventure"
-                    className="text-blue-500 hover:underline"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
+              <ul className="list-disc list-inside  mb-4">
+                <li>
+                  Pack appropriately: Since you will be camping, it's important
+                  to pack light and bring only essential items. Make sure to
+                  pack warm clothing, a sleeping bag, a flashlight, insect
+                  repellent, and sunscreen.
+                </li>
+                <li>
+                  Follow safety rules: Always listen to your safari guide and
+                  follow all safety rules. This includes staying inside your
+                  tent at night, not wandering off alone, and keeping a safe
+                  distance from any wild animals.
+                </li>
+                <li>
+                  Respect the environment: Remember that you are a guest in the
+                  animals' natural habitat. Respect their space and do not
+                  disturb them. Also, make sure to properly dispose of your
+                  trash and avoid littering.
+                </li>
+                <li>
+                  Be prepared for basic facilities: Campsites will have basic
+                  washroom facilities, but they may not be the most comfortable
+                  or luxurious. Be prepared to share these facilities with
+                  others and bring your own toiletries and toilet paper.
+                </li>
+                <li>
+                  Embrace the experience: Basic camping safaris offer a unique
+                  and authentic experience that cannot be found in a hotel.
+                  Embrace the adventure and enjoy the beautiful landscapes and
+                  wildlife around you.
+                </li>
+              </ul>
             </div>
+            <div className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4 text-center">
+                Customise A Campping Safari With Lauwo
+              </h2>
+              <p>To customise you a personalised camping safari.We need</p>
 
-            <div className="text-center mt-6">
-              <Link
-                href="/safari-packages"
-                className="text-blue-500 hover:underline"
-              >
-                View All Safari Packages
-              </Link>
+              <ul className="list-disc list-inside  mb-4">
+                <li>
+                  When you wish to do a camping safari in Tanzania.If you are
+                  unsure, dont worry just let us know about your schedule and
+                  lauwo will advise you on the best time to visit.
+                </li>
+                <li>
+                  How many days you wish to spend on safarif you are unsure,
+                  dont worry just let us know about your schedule and lauwo will
+                  advise you on the best time to visit.
+                </li>
+                <li>
+                  How many persons are traveling with youf you are unsure, dont
+                  worry just let us know about your schedule and lauwo will
+                  advise you on the best time to visit.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div>
-          <div className="py-16 relative">
+          <div className="py-8 relative">
             <div className="flex items-center justify-center gap-4">
               <hr className="sm:w-40 w-10 border border-black" />
               <h1 className="3xl:text-4xl xl:text-2xl text-xl font-semibold">

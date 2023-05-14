@@ -1,6 +1,7 @@
 import { IoCloseSharp } from 'react-icons/io5';
 import Link from 'next/link';
 import AdventuresDropDown from './AdventuresDropDown';
+import GroupDropDown from './GroupDropDown';
 
 import SafariDropDown from './SafariDropDown';
 
@@ -40,6 +41,9 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <Link href="/blogs" onClick={toggle}>
             Blog
           </Link>
+        </li>
+        <li>
+          <Link href="/kilimanjaro-group-climb">GroupClimbs</Link>
         </li>
       </ul>
     )

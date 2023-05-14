@@ -1,20 +1,15 @@
 import { generateSlug } from '@/utils/generateSlug';
 import Head from 'next/head';
-import FaqCard from '@/components/FaqCard';
+import BookingForm from '@/components/BookingForm';
 import MountainItinery from '@/components/MountainItinery';
 import Packages from '@/components/Packages';
 import Pricing from '@/components/Pricing';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-const menuTabs = [
-  'Itinerary',
-  'Standard',
-  'Premium',
-  'Pricing',
-  'FAQS',
-  'Book',
-];
+import { useState } from 'react';
+const menuTabs = ['Itinerary', 'Standard', 'Premium', 'Pricing', 'Book', 'Map'];
 const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
+  console.log(route);
+
   const [activeTab, setActiveTab] = useState('Itinerary');
 
   const handleTabChange = (tab) => {
@@ -58,7 +53,7 @@ const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
             {route.route_name} {duration} days
           </div>
           <div className="text leading-normal text-black mx-auto max-w-2xl flex flex-col lg:flex-row md:flex-row justify-between gap-11">
-            <p>Paragraph to ad to the route duratiosn tabel</p>
+            <p>{packages.description}</p>
           </div>
         </div>
         <div>
@@ -105,10 +100,22 @@ const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
           </div>
         </div>
         <div
+          id={'Book'}
+          className={`tab-content ${activeTab === 'Book' ? '' : 'hidden'}`}
+        >
+          <div>
+            <h1 className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2 ">
+              Book {route.route_name} {duration} DAYS
+            </h1>
+
+            <BookingForm adventure={packages} bookableType={'RouteDuration'} />
+          </div>
+        </div>
+        <div
           id={'Pricing'}
           className={`tab-content ${activeTab === 'Pricing' ? '' : 'hidden'}`}
         >
-          <Pricing routeDuration={duration} />
+          <Pricing routeDuration={packages} />
         </div>
         <div
           id={'Standard'}

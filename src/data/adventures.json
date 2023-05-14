@@ -1,14 +1,18 @@
 [
   {
     "id": 1,
-    "name": "kilimanjaro"
+    "name": "mount kilimanjaro"
   },
   {
     "id": 2,
-    "name": "meru"
+    "name": "mount meru"
   },
   {
     "id": 2,
     "name": "ol-doinyo-lengai"
+  },
+  {
+    "id": 2,
+    "name": "Usambara"
   }
 ]

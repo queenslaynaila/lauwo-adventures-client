@@ -130,8 +130,8 @@ const SafariPage = ({ faqs }) => {
           <h1 className="text-center p-4 text-2xl font-bold capitalize">
             Planning an African Safari
           </h1>
-          <div class="py-8">
-            <h2 class="text-2xl font-semibold mb-4 text-center">
+          <div className="py-8">
+            <h2 className="text-2xl font-semibold mb-4 text-center">
               Step 1: Where To Go and What To See
             </h2>
             <p className="  p-2 leading-8 ">
@@ -141,15 +141,15 @@ const SafariPage = ({ faqs }) => {
               perfect safari country, consider the following factors:
             </p>
 
-            <div class="mb-8">
-              <h3 class="text-xl font-semibold mb-2">
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">
                 1. Wildlife Exploration
               </h3>
-              <p class=" mb-4">
+              <p className=" mb-4">
                 Determine the specific wildlife you wish to see. Each country
                 offers unique opportunities. Here are some examples:
               </p>
-              <ul class="list-disc list-inside  mb-4">
+              <ul className="list-disc list-inside  mb-4">
                 <li>
                   Great Wildebeest Migration: Witness this incredible event in
                   Kenya and Tanzania from July to October.
@@ -176,14 +176,14 @@ const SafariPage = ({ faqs }) => {
             </div>
 
             <div>
-              <h3 class="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2">
                 2. Tanzania: A Safari Paradise
               </h3>
-              <p class="  mb-4">
+              <p className="  mb-4">
                 Tanzania is renowned for its exceptional safari experiences and
                 diverse wildlife. Here&apos;s why Tanzania stands out:
               </p>
-              <ul class="list-disc list-inside   mb-4">
+              <ul className="list-disc list-inside   mb-4">
                 <li>
                   <strong>The Serengeti:</strong> This vast national park is
                   home to the Great Wildebeest Migration, one of the most
@@ -218,19 +218,19 @@ const SafariPage = ({ faqs }) => {
             </div>
           </div>
           <div>
-            <h2 class="text-2xl font-semibold mb-4">
+            <h2 className="text-2xl font-semibold mb-4">
               How Early to Book Your Trip?
             </h2>
-            <p class="  mb-4">
+            <p className="  mb-4">
               The ideal booking time for your safari trip can vary depending on
               various factors. Here are some guidelines to consider:
             </p>
 
-            <div class="mb-8">
-              <h3 class="text-xl font-semibold mb-2">
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">
                 1. Individual or Couple Travelers
               </h3>
-              <p class="  mb-4">
+              <p className="  mb-4">
                 If you are traveling solo or as a couple, and your dates and
                 lodge/camp preferences are flexible, you typically don&apos;t
                 need to book a year in advance. One month or a few weeks
@@ -247,9 +247,9 @@ const SafariPage = ({ faqs }) => {
               </p>
             </div>
 
-            <div class="mb-8">
-              <h3 class="text-xl font-semibold mb-2">2. Group Travelers</h3>
-              <p class="  mb-4">
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">2. Group Travelers</h3>
+              <p className="  mb-4">
                 If you are traveling as a group and require multiple rooms, it
                 is wise to book as early as possible. Safari lodges/camps have
                 limited capacity, and popular accommodations tend to fill up
@@ -275,17 +275,19 @@ const SafariPage = ({ faqs }) => {
             </div>
           </div>
           <div>
-            <h2 class="text-2xl font-semibold mb-4">Step 3: When to Go</h2>
+            <h2 className="text-2xl font-semibold mb-4">Step 3: When to Go</h2>
 
-            <div class="mb-8">
-              <h3 class="text-xl font-semibold mb-2">Consider the Season</h3>
-              <p class=" placeholder:mb-4">
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">
+                Consider the Season
+              </h3>
+              <p className=" placeholder:mb-4">
                 Another vital detail in planning is determining when you intend
                 to visit Africa and the corresponding season. This will impact
                 factors such as crowds, prices, and availability of safari
                 accommodations and activities. Here are some points to consider:
               </p>
-              <ul class="list-disc list-inside  ">
+              <ul className="list-disc list-inside  ">
                 <li>
                   Familiarize yourself with low, mid, and high seasons in your
                   chosen country.
@@ -315,15 +317,15 @@ const SafariPage = ({ faqs }) => {
               </ul>
             </div>
 
-            <div class="mb-8">
-              <h3 class="text-xl font-semibold mb-2">
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">
                 Other Factors to Consider
               </h3>
-              <p class="  mb-4">
+              <p className="  mb-4">
                 Apart from the season, there are other factors to consider when
                 planning your safari. Take into account the following:
               </p>
-              <ul class="list-disc list-inside">
+              <ul className="list-disc list-inside">
                 <li>
                   Activities you wish to experience and the purpose of your
                   travel.
@@ -347,16 +349,16 @@ const SafariPage = ({ faqs }) => {
               </ul>
             </div>
 
-            <div class="mb-8">
-              <h3 class="text-xl font-semibold mb-2">
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-2">
                 Best Times to Go for a Safari in Tanzania
               </h3>
-              <p class="  mb-4">
+              <p className="  mb-4">
                 Tanzania is known for its incredible wildlife and offers great
                 safari experiences throughout the year. Here are the best times
                 to go for a safari in Tanzania:
               </p>
-              <ul class="list-disc list-inside  ">
+              <ul className="list-disc list-inside  ">
                 <li>
                   For the Great Wildebeest Migration, the best time is from July
                   to October when millions of wildebeests cross the Mara River.
@@ -376,28 +378,28 @@ const SafariPage = ({ faqs }) => {
                   lush and green.
                 </li>
               </ul>
-              <p class="  mt-4">
+              <p className="  mt-4">
                 Keep in mind that specific wildlife sightings and weather
                 patterns can vary, so it&apos;s advisable to consult with local
                 experts or tour operators for the most up-to-date information.
               </p>
             </div>
             <div>
-              <h2 class="text-2xl font-semibold mb-4">
+              <h2 className="text-2xl font-semibold mb-4">
                 Step 4: Set Your Budget
               </h2>
 
-              <div class="mb-8">
-                <h3 class="text-xl font-semibold mb-2">
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold mb-2">
                   Setting Your Safari Budget
                 </h3>
-                <p class="  mb-4">
+                <p className="  mb-4">
                   Setting a budget for your safari is an essential step to
                   ensure you make the most of your African experience while
                   staying within your financial means. Consider the following
                   factors when determining your safari budget:
                 </p>
-                <ul class="list-disc list-inside ">
+                <ul className="list-disc list-inside ">
                   <li>
                     Decide how much you are willing to spend specifically for
                     the safari portion of your trip.
@@ -423,37 +425,81 @@ const SafariPage = ({ faqs }) => {
                 </ul>
               </div>
 
-              <div class="mb-8">
-                <h3 class="text-xl font-semibold mb-2">
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold mb-2">
                   Sample Safari Cost in Tanzania
                 </h3>
-                <p class=" mb-4">
+                <p className=" mb-4">
                   To give you an idea of safari costs in Tanzania, here&apos;s a
                   sample 7-day safari package for 2 people during peak season,
                   including meals, accommodations, park fees, VAT, private
                   four-wheel vehicle, professional guide, and driver:
                 </p>
-                <ul class="list-disc list-inside text-gray-700">
+                <ul className="list-disc list-inside text-gray-700">
                   <li>Budget safari: $2791 per person</li>
                   <li>Midrange safari: $3149 per person</li>
                   <li>Luxury safari: $3584 per person</li>
                 </ul>
-                <p class=" mt-4">
+                <p className=" mt-4">
                   Keep in mind that these prices are estimates and can vary
                   depending on the specific safari package you choose.
                 </p>
               </div>
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold mb-2">
+                  Extra Safari Costs
+                </h3>
+                <p className=" mb-4">
+                  Apart from the accommodation costs, the extra costs are as
+                  follows, VAT included.
+                </p>
+                <ul className="list-disc list-inside text-gray-700">
+                  <li>
+                    Park entry fee. The park entry fee (also known as
+                    conservation fee): Serengeti ($82.6) per person per day (24
+                    hours), Tarangire/ Arusha/Manyara - $59 per person per day
+                    etc
+                  </li>
+                  <li>
+                    Concession fee. This is paid when a person spends a night in
+                    the lodge/permanent tented camp located within the park.
+                    Serengeti ($70.8 per person per day)
+                  </li>
+                  <li>
+                    Camp fee, this is paid when a person spends a night in a
+                    camp site located with the park Serengeti, Tarangire ($35.4)
+                    per person per night
+                  </li>
+                </ul>
+                <p className=" mt-4">
+                  There are other fees/charges applicable in the areas such as
+                  Mountain Climbing, Wildlife Management Areas, etc.
+                </p>
+                <ul className="list-disc list-inside text-gray-700">
+                  <li>
+                    The fee for children is between $17.7 - 23.6 per child per
+                    day The age of the child is taken as 5 years - 16 years.
+                    Less than 5 years, no charges in the park. More than 16
+                    years, adult. The lodges have each their own definitions of
+                    a child, but a 4 year child will pay for accommodation in
+                    all accommodations. A two year child will be accommodated
+                    free of charge in all accommodations.For budget camping
+                    safaris children will not be considered, the babies are too
+                    young to sleep in simple camping tents
+                  </li>
+                </ul>
+              </div>
 
-              <div class="mb-8">
-                <h3 class="text-xl font-semibold mb-2">
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold mb-2">
                   Other Expenses to Consider
                 </h3>
-                <p class=" file: mb-4">
+                <p className=" file: mb-4">
                   In addition to the safari package cost, there are other
                   expenses you should factor into your budget. These may
                   include:
                 </p>
-                <ul class="list-disc list-inside  ">
+                <ul className="list-disc list-inside  ">
                   <li>
                     Tips for guides, transfer drivers/taxis, and hotel staff.
                   </li>
@@ -463,7 +509,7 @@ const SafariPage = ({ faqs }) => {
                     vaccinations, and souvenirs.
                   </li>
                 </ul>
-                <p class="  mt-4">
+                <p className="  mt-4">
                   Based on your budget, you can choose from a range of options,
                   including budget, mid-range, and luxury safari trips. Remember
                   that your budget will impact the type of accommodations, level
@@ -474,20 +520,20 @@ const SafariPage = ({ faqs }) => {
               </div>
             </div>
             <div>
-              <h2 class="text-2xl font-semibold mb-4">
+              <h2 className="text-2xl font-semibold mb-4">
                 Step 5: What to Pack on a Safari
               </h2>
 
-              <div class="mb-8">
-                <h3 class="text-xl font-semibold mb-2">
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold mb-2">
                   Essential Items to Pack
                 </h3>
-                <p class="  mb-4">
+                <p className="  mb-4">
                   Packing the right items for your safari adventure is crucial
                   to ensure comfort and preparedness. Here are some essential
                   items to pack:
                 </p>
-                <ul class="list-disc list-inside  ">
+                <ul className="list-disc list-inside  ">
                   <li>Lightweight and breathable clothing in neutral colors</li>
                   <li>
                     Long-sleeved shirts and pants for sun protection and to ward
@@ -510,15 +556,15 @@ const SafariPage = ({ faqs }) => {
                 </ul>
               </div>
 
-              <div class="mb-8">
-                <h3 class="text-xl font-semibold mb-2">
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold mb-2">
                   Additional Considerations
                 </h3>
-                <p class="  mb-4">
+                <p className="  mb-4">
                   In addition to the essentials, here are some additional items
                   to consider packing for your safari:
                 </p>
-                <ul class="list-disc list-inside ">
+                <ul className="list-disc list-inside ">
                   <li>
                     Adapters for camera lenses and tripod (if you&apos;re a
                     photography enthusiast)
@@ -541,7 +587,7 @@ const SafariPage = ({ faqs }) => {
                     A money belt or neck pouch for keeping valuables secure
                   </li>
                 </ul>
-                <p class=" mt-4">
+                <p className=" mt-4">
                   Remember to pack light and consider any weight or size
                   restrictions imposed by airlines . Check the specific
                   requirements of your destination and consult with us for any
@@ -550,17 +596,17 @@ const SafariPage = ({ faqs }) => {
               </div>
             </div>
             <div>
-              <h2 class="text-2xl font-semibold mb-4">
+              <h2 className="text-2xl font-semibold mb-4">
                 Why Safari with Lauwo Adventures?
               </h2>
 
-              <p class=" mb-4">
+              <p className=" mb-4">
                 Planning a safari is a once-in-a-lifetime experience, and at
                 Lauwo Adventures, we are dedicated to making it extraordinary.
                 Here&apos;s why you should choose us:
               </p>
 
-              <ul class="list-disc list-inside   mb-4">
+              <ul className="list-disc list-inside   mb-4">
                 <li>
                   We offer custom itineraries based on your specifications,
                   ensuring that every detail of your safari is tailored to your
@@ -591,16 +637,16 @@ const SafariPage = ({ faqs }) => {
                 </li>
               </ul>
 
-              <p class="  mb-4">
+              <p className="  mb-4">
                 To make sure you have a memorable and exciting adventure,
                 contact us today and let us help you plan the safari of a
                 lifetime!
               </p>
 
-              <div class="text-center">
+              <div className="text-center">
                 <Link
                   href="/planning-form"
-                  class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded"
                 >
                   Plan Your Safari Now
                 </Link>
@@ -608,84 +654,84 @@ const SafariPage = ({ faqs }) => {
             </div>
           </div>
         </div>
-        <div class="py-8">
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold mb-4 text-center">
+        <div className="py-8">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold mb-4 text-center">
               Safari Locations To JumpStart You
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-white rounded-lg shadow-md flex flex-col">
-                <div class="relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white rounded-lg shadow-md flex flex-col">
+                <div className="relative">
                   <Image
                     src="https://images.unsplash.com/photo-1627394678482-833a3d8d10f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=877&q=80"
                     height={500}
                     width={500}
                     alt="Arusha National Park"
-                    class="w-full h-auto rounded-t-lg"
+                    className="w-full h-auto rounded-t-lg"
                   />
                 </div>
 
-                <div class="p-6">
-                  <h3 class="text-xl font-semibold mb-2">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
                     Arusha National Park
                   </h3>
-                  <p class="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4">
                     Discover the mesmerizing beauty and wildlife treasures of
                     Arusha National Park, a true gem of Tanzania&apos;s natural
                     wonders...
                   </p>
                   <Link
                     href="/safari-locations"
-                    class="text-blue-500 hover:underline"
+                    className="text-blue-500 hover:underline"
                   >
                     Learn More
                   </Link>
                 </div>
               </div>
-              <div class="bg-white rounded-lg shadow-md flex flex-col">
-                <div class="relative">
+              <div className="bg-white rounded-lg shadow-md flex flex-col">
+                <div className="relative">
                   <Image
                     src="https://images.unsplash.com/photo-1669745355012-54137cc7b011?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     height={500}
                     width={500}
                     alt="Tarangire National Park"
-                    class="w-full h-auto rounded-t-lg"
+                    className="w-full h-auto rounded-t-lg"
                   />
                 </div>
 
-                <div class="p-6">
-                  <h3 class="text-xl font-semibold mb-2">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
                     Tarangire National Park
                   </h3>
-                  <p class="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4">
                     Embark on an extraordinary journey through Tarangire
                     National Park, where breathtaking landscapes and iconic
                     baobab trees create a captivating safari experience..
                   </p>
                   <Link
                     href="/safari-locations"
-                    class="text-blue-500 hover:underline"
+                    className="text-blue-500 hover:underline"
                   >
                     Learn More
                   </Link>
                 </div>
               </div>
-              <div class="bg-white rounded-lg shadow-md flex flex-col">
-                <div class="relative">
+              <div className="bg-white rounded-lg shadow-md flex flex-col">
+                <div className="relative">
                   <Image
                     src="https://images.unsplash.com/photo-1534476478164-b15fec4f091c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                     height={500}
                     width={500}
                     alt="Serengeti Adventure"
-                    class="w-full h-auto rounded-t-lg"
+                    className="w-full h-auto rounded-t-lg"
                   />
                 </div>
 
-                <div class="p-6">
-                  <h3 class="text-xl font-semibold mb-2">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
                     Serengeti National park
                   </h3>
-                  <p class="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4">
                     Embark on an unforgettable adventure in the vast wilderness
                     of Serengeti National Park, where the iconic Great Migration
                     and abundant wildlife offer a safari experience like no
@@ -693,7 +739,7 @@ const SafariPage = ({ faqs }) => {
                   </p>
                   <Link
                     href="/safari-locations"
-                    class="text-blue-500 hover:underline"
+                    className="text-blue-500 hover:underline"
                   >
                     Learn More
                   </Link>
@@ -701,38 +747,38 @@ const SafariPage = ({ faqs }) => {
               </div>
             </div>
 
-            <div class="text-center mt-6">
+            <div className="text-center mt-6">
               <Link
                 href="/safari-packages"
-                class="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline"
               >
                 View All Safari Locations
               </Link>
             </div>
           </div>
         </div>
-        <div class="py-8">
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold mb-4 text-center">
+        <div className="py-8">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold mb-4 text-center">
               Popular Safari Packages
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-white rounded-lg shadow-md flex flex-col">
-                <div class="relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white rounded-lg shadow-md flex flex-col">
+                <div className="relative">
                   <Image
                     src="https://images.unsplash.com/photo-1662003905953-f2aa253c48df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80"
                     height={500}
                     width={500}
                     alt="Serengeti Adventure"
-                    class="w-full h-auto rounded-t-lg"
+                    className="w-full h-auto rounded-t-lg"
                   />
                 </div>
 
-                <div class="p-6">
-                  <h3 class="text-xl font-semibold mb-2">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
                     Dynamic Dou Safari: Serengeti & Ngongoro in 3 days
                   </h3>
-                  <p class="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4">
                     Immerse yourself in the captivating beauty of the Serengeti
                     and Ngorongoro Crater in 3 days. Witness the awe-inspiring
                     Great Migration, encounter majestic wildlife, and explore
@@ -740,28 +786,28 @@ const SafariPage = ({ faqs }) => {
                   </p>
                   <Link
                     href="/our-safari-packages/dynamic-duo-safari-serengeti--ngorongoro-in-3-days"
-                    class="text-blue-500 hover:underline"
+                    className="text-blue-500 hover:underline"
                   >
                     Learn More
                   </Link>
                 </div>
               </div>
-              <div class="bg-white rounded-lg shadow-md flex flex-col">
-                <div class="relative">
+              <div className="bg-white rounded-lg shadow-md flex flex-col">
+                <div className="relative">
                   <Image
                     src="https://images.unsplash.com/photo-1617938544737-cf7b41829226?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                     height={500}
                     width={500}
                     alt="Serengeti Adventure"
-                    class="w-full h-auto rounded-t-lg"
+                    className="w-full h-auto rounded-t-lg"
                   />
                 </div>
 
-                <div class="p-6">
-                  <h3 class="text-xl font-semibold mb-2">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
                     Wildlife Wonders, A 8 day adventure
                   </h3>
-                  <p class="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4">
                     Embark on an 8-day Wildlife Wonders adventure through
                     Serengeti, Ngorongoro, and Arusha. Witness the Great
                     Migration, explore the stunning landscapes, and engage
@@ -769,28 +815,28 @@ const SafariPage = ({ faqs }) => {
                   </p>
                   <Link
                     href="/our-safari-packages/wildlife-wonders-8-day-tanzanian-safari-expedition"
-                    class="text-blue-500 hover:underline"
+                    className="text-blue-500 hover:underline"
                   >
                     Learn More
                   </Link>
                 </div>
               </div>
-              <div class="bg-white rounded-lg shadow-md flex flex-col">
-                <div class="relative">
+              <div className="bg-white rounded-lg shadow-md flex flex-col">
+                <div className="relative">
                   <Image
                     src="https://images.unsplash.com/photo-1534476478164-b15fec4f091c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                     height={500}
                     width={500}
                     alt="Serengeti Adventure"
-                    class="w-full h-auto rounded-t-lg"
+                    className="w-full h-auto rounded-t-lg"
                   />
                 </div>
 
-                <div class="p-6">
-                  <h3 class="text-xl font-semibold mb-2">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
                     Serengeti Splendors: 5-Day Wildlife Safari Adventure
                   </h3>
-                  <p class="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4">
                     Embark on a 5-day Serengeti Splendors safari adventure,
                     immersing yourself in the captivating wildlife and
                     breathtaking landscapes. Witness the Great Migration and
@@ -799,7 +845,7 @@ const SafariPage = ({ faqs }) => {
                   </p>
                   <Link
                     href="/our-safari-packages/serengeti-splendors-5-day-wildlife-safari-adventure"
-                    class="text-blue-500 hover:underline"
+                    className="text-blue-500 hover:underline"
                   >
                     Learn More
                   </Link>
@@ -807,10 +853,10 @@ const SafariPage = ({ faqs }) => {
               </div>
             </div>
 
-            <div class="text-center mt-6">
+            <div className="text-center mt-6">
               <Link
                 href="/safari-packages"
-                class="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline"
               >
                 View All Safari Packages
               </Link>

@@ -21,12 +21,12 @@ const AdventuresDropDown = ({ setIsOpen }) => {
         )}
       </button>
       <div
-        className={`absolute top-10 bg-white text-black text-center w-52 h-36 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light ${
+        className={`absolute top-10 bg-white text-black text-center w-52 h-38 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light ${
           isDropdownOpen ? 'block' : 'hidden'
         }`}
       >
         {adventures.map((adventure) => (
-          <div key={adventure.id} className="mb-2 py-1">
+          <div key={adventure.id} className="mb-2 py-1 mt-2">
             <Link
               href={`/mountain-trekking/${generateSlug(adventure.name)}`}
               className="capitalize"

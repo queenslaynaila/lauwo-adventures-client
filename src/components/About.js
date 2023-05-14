@@ -59,7 +59,7 @@ function About() {
             <div className="text-center">
               <Link
                 href="/about-us"
-                class="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-800 hover:border-transparent rounded"
+                className="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-800 hover:border-transparent rounded"
               >
                 Learn More About Us
               </Link>

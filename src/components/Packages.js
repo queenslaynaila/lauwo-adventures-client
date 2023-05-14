@@ -1,12 +1,7 @@
 import React from 'react';
 
 export default function Packages({ packages }) {
-  const {
-    standard_inclusive,
-    standard_exclusive,
-    premium_inclusive,
-    premium_exclusive,
-  } = packages;
+  const { standard_inclusive, standard_exclusive } = packages;
 
   const standardInclusiveItems = standard_inclusive
     ? standard_inclusive.split(',')
@@ -14,24 +9,11 @@ export default function Packages({ packages }) {
   const standardExclusiveItems = standard_exclusive
     ? standard_exclusive.split(',')
     : [];
-  const premiumInclusiveItems = premium_inclusive
-    ? premium_inclusive.split(',')
-    : [];
-  const premiumExclusiveItems = premium_exclusive
-    ? premium_exclusive.split(',')
-    : [];
 
   const standardInclusiveLength = standardInclusiveItems.length;
   const standardExclusiveLength = standardExclusiveItems.length;
-  const premiumInclusiveLength = premiumInclusiveItems.length;
-  const premiumExclusiveLength = premiumExclusiveItems.length;
 
-  const maxRows = Math.max(
-    standardInclusiveLength,
-    standardExclusiveLength,
-    premiumInclusiveLength,
-    premiumExclusiveLength
-  );
+  const maxRows = Math.max(standardInclusiveLength, standardExclusiveLength);
 
   const standardTableRows = [];
   const premiumTableRows = [];
@@ -48,14 +30,6 @@ export default function Packages({ packages }) {
 
     if (i < standardExclusiveLength) {
       standardExclusiveItem = standardExclusiveItems[i].trim();
-    }
-
-    if (i < premiumInclusiveLength) {
-      premiumInclusiveItem = premiumInclusiveItems[i].trim();
-    }
-
-    if (i < premiumExclusiveLength) {
-      premiumExclusiveItem = premiumExclusiveItems[i].trim();
     }
 
     standardTableRows.push(
@@ -102,22 +76,6 @@ export default function Packages({ packages }) {
             </tr>
           </thead>
           <tbody>{standardTableRows}</tbody>
-        </table>
-        <div className="py-2 text-center text-2xl font-bold uppercase ">
-          PREMIUM
-        </div>
-        <table className="w-full mx-auto border-collapse text-black">
-          <thead>
-            <tr style={{ backgroundColor: '#FFF4D2' }}>
-              <th className="bg-background py-4 px-8 font-bold uppercase">
-                Inclusive
-              </th>
-              <th className="bg-background py-4 px-8 font-bold uppercase">
-                Exclusive
-              </th>
-            </tr>
-          </thead>
-          <tbody>{premiumTableRows}</tbody>
         </table>
       </div>
     </div>

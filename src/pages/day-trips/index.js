@@ -127,9 +127,9 @@ export default function Index({ faqs, dayTrips }) {
           </Popup>
         </div>
       </div>
-      <div class="py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-bold mb-4 text-center">
+      <div className="py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold mb-4 text-center">
             Tanzanian Day Trips
           </h2>
           <p className="mb-4 leading-8">
@@ -149,7 +149,7 @@ export default function Index({ faqs, dayTrips }) {
           </p>
         </div>
       </div>
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 className="text-2xl font-bold mb-4 text-center">
         Discover Our Extraordinary Day Trip Packages
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">

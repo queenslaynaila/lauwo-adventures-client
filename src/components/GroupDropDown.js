@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
-import safaris from '@/data/safaris.json';
+import groups from '@/data/groups.json';
 
-const SafariDropDown = ({ setIsOpen }) => {
+const GroupDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ const SafariDropDown = ({ setIsOpen }) => {
         className="flex flex-row items-center justify-center"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >
-        Safaris
+        GroupClimbs
         {isDropdownOpen ? (
           <AiOutlineCaretUp className="ml-1" />
         ) : (
@@ -25,7 +25,7 @@ const SafariDropDown = ({ setIsOpen }) => {
           isDropdownOpen ? 'block' : 'hidden'
         }`}
       >
-        {safaris.map((adventure) => (
+        {groups.map((adventure) => (
           <div key={adventure.id} className="mb-2 py-1 mt-2">
             <Link
               href={`/${generateSlug(adventure.name)}`}
@@ -45,4 +45,4 @@ const SafariDropDown = ({ setIsOpen }) => {
   );
 };
 
-export default SafariDropDown;
+export default GroupDropDown;

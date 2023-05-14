@@ -121,10 +121,7 @@ const InquiryForm = () => {
       <p className="text-gray-500 mt-2">
         These reviews are from <strong>TripAdvisor</strong>
       </p>
-      <p className="text-gray-500">
-        We have a TripAdvisor rating of {tripAdvisorRating.toFixed(1)} based on{' '}
-        {tripAdvisorReviewsCount} reviews
-      </p>
+
       <div className="testimonial-controls flex justify-center mt-6">
         {testimonials.map((_, index) => (
           <button

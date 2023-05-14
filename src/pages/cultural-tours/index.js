@@ -87,9 +87,9 @@ function Tours({ tours }) {
         </div>
       </div>
 
-      <div class="py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-bold mb-4 text-center">
+      <div className="py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold mb-4 text-center">
             Who Should Embark on Cultural Tours ?{' '}
           </h2>
           <p className="mb-4 leading-8">
@@ -111,7 +111,7 @@ function Tours({ tours }) {
           </p>
         </div>
       </div>
-      <h2 class="text-2xl font-bold mb-4 text-center">Our Packages </h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">Our Packages </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
         {tours.map((tour) => (
           <div key={tour.id}>

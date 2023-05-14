@@ -43,8 +43,8 @@ export default function Pricing({ routeDuration }) {
       >
         Pricing
       </div>
-      <div className="bg-sand px-8 py-12">
-        <table {...getTableProps()} className="w-full">
+      <div className="p-8 ">
+        <table {...getTableProps()} className="lg:w-full w-full">
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
@@ -52,7 +52,7 @@ export default function Pricing({ routeDuration }) {
                   <th
                     key={column}
                     {...column.getHeaderProps()}
-                    className="p-2 text-left"
+                    className="lg:p-2 text-left"
                     style={{ backgroundColor: '#FFF4D2' }}
                   >
                     {column.render('Header')}
@@ -74,7 +74,7 @@ export default function Pricing({ routeDuration }) {
                     <td
                       key={cell.id}
                       {...cell.getCellProps()}
-                      className="py-2 px-4 whitespace-nowrap"
+                      className="lg:py-2 lg:px-4 whitespace-nowrap"
                     >
                       {cell.render('Cell')}
                     </td>
