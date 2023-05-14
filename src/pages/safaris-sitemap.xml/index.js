@@ -1,7 +1,7 @@
 import { getServerSideSitemapLegacy } from 'next-sitemap';
 import { generateSlug } from '@/utils/generateSlug';
 export const getServerSideProps = async (ctx) => {
-  const safaris = await fetch('http://localhost:3000/safaris').then((res) =>
+  const safaris = await fetch('https://lauwo-adventures-api.onrender.com/safaris').then((res) =>
     res.json()
   );
 

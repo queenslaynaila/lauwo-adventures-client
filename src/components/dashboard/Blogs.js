@@ -55,7 +55,7 @@ export default function Blogs() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:3000/blogs', {
+    fetch('https://lauwo-adventures-api.onrender.com/blogs', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

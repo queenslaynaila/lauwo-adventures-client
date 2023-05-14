@@ -15,7 +15,7 @@ export default function SafariBookings() {
   const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3000/safari_bookings')
+    fetch('https://lauwo-adventures-api.onrender.com/safari_bookings')
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
@@ -91,7 +91,7 @@ export default function SafariBookings() {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((booking) =>
-        fetch(`http://localhost:3000/bookings/${booking.id}`, {
+        fetch(`https://lauwo-adventures-api.onrender.com/bookings/${booking.id}`, {
           method: 'DELETE',
         }).then((response) => {
           if (response.ok) {

@@ -17,7 +17,7 @@ export default function EnquiryPopUp() {
       message,
     };
 
-    fetch('http://localhost:3000/inquiries', {
+    fetch('https://lauwo-adventures-api.onrender.com/inquiries', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -65,7 +65,7 @@ const Faqs = ({ faqs }) => {
 
 export default Faqs;
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/frequently_asked_questions');
+  const res = await fetch('https://lauwo-adventures-api.onrender.com/frequently_asked_questions');
   const faqs = await res.json();
 
   return {

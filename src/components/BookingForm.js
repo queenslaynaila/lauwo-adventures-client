@@ -36,7 +36,7 @@ const BookingForm = ({ adventure, bookableType }) => {
       bookable_type: bookableType,
       bookable_id: adventure.id,
     };
-    fetch('http://localhost:3000/bookings', {
+    fetch('https://lauwo-adventures-api.onrender.com/bookings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
