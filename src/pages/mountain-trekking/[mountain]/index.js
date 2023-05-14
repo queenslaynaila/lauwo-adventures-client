@@ -308,7 +308,7 @@ export default function Mountain({ mountain, faqs }) {
             <div>
               <h1 className="text-center p-4 text-2xl font-bold">Itinery</h1>
               <p className="  p-2 leading-8  mx-4 lg:mx-16">
-                {simpleFormat(mountain.itinery)}
+                {mountain.itinery}
               </p>
             </div>
           </div>
