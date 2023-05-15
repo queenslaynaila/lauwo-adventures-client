@@ -4,7 +4,7 @@ import Image from 'next/image';
 const cardData = [
   {
     id: 1,
-    title: 'Experince Africas Majestic Peak With Our Kilimanjaro Climb',
+    title: 'Experience Africas Majestic Peak With Our Kilimanjaro Climb',
     image: '/kilimanjaro.jpg',
     link: '/mountain-trekking/mount-kilimanjaro',
   },

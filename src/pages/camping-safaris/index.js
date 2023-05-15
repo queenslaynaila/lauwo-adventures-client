@@ -73,7 +73,7 @@ const SafariPage = ({ faqs }) => {
                 <div className="flex">
                   <Link
                     className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
-                    href="/travelconsideration"
+                    href="/planning-a-safari"
                   >
                     <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
                       <span className="mr-2">Plan A Safari </span>

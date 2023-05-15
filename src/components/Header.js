@@ -47,7 +47,7 @@ const Header = () => {
   const currentImage = images[currentImageIndex];
 
   return (
-    <div className="h-screen relative">
+    <div className="h-screen relative  "  >
       {images.map((image, index) => (
         <header
           key={index}
