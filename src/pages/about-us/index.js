@@ -28,7 +28,6 @@ export default function index() {
         />
         <meta name="author" content="Lauwo Adventures" />
         <meta name="google" content="translate" />
-       
       </Head>
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"

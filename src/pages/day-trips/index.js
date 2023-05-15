@@ -51,7 +51,6 @@ export default function Index({ faqs, dayTrips }) {
           name="google-site-verification"
           content="hKFgedHOB3VpAnDkoVs-Fm7QCpHkhAh6KaHKxbMVra8"
         />
- 
       </Head>
 
       <div
