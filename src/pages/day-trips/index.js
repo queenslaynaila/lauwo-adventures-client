@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import FaqCard from '@/components/FaqCard';
+//import FaqCard from '@/components/FaqCard';
 //import { BiSearch } from 'react-icons/bi';
 import { useState } from 'react';
 import Link from 'next/link';
-import DayTripCard from '@/components/DayTripCard';
+//import DayTripCard from '@/components/DayTripCard';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import EnquiryPopUp from '@/components/enquirypopup';
@@ -153,12 +153,12 @@ export default function Index({ faqs, dayTrips }) {
       <h2 className="text-2xl font-bold mb-4 text-center">
         Discover Our Extraordinary Day Trip Packages
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
         {dayTrips.map((day) => (
           <DayTripCard key={day.id} day={day} />
         ))}
-      </div>
-      <div className='hidden'>
+      </div> */}
+      <div >
         <div className="py-16 relative">
           <div className="flex items-center justify-center gap-4">
             <hr className="sm:w-40 w-10 border border-black" />
@@ -189,7 +189,7 @@ export default function Index({ faqs, dayTrips }) {
               )}
             </div>
           </div>
-          <div className="w-3/4 mx-auto mt-10">
+          {/* <div className="w-3/4 mx-auto mt-10">
             {filteredFaqs.length > 0 ? (
               filteredFaqs.map((faq) => (
                 <FaqCard
@@ -203,7 +203,7 @@ export default function Index({ faqs, dayTrips }) {
                 <h1 className="text-2xl font-semibold">No FAQs found</h1>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
       <SocialsButtons />
