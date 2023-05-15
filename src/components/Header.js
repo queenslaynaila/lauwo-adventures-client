@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import { IoIosArrowDropdownCircle } from 'react-icons/io';
+import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import Link from 'next/link';
 
 const images = [
@@ -84,21 +84,10 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-4 mt-16">
+        <div className="hidden lg:flex md:flex flex-col items-center gap-4 mt-16 ">
           <Link href="/#about">
-            {/* <IoIosArrowDropdownCircle className="text-yellow-500 text-4xl animate-bounce" /> */}
-            <svg
-              fill="yellow"
-              viewBox="0 0 16 16"
-              height="2em"
-              width="2em"
-              className=" animate-bounce"
-            >
-              <path
-                fillRule="evenodd"
-                d="M1 8a7 7 0 1014 0A7 7 0 001 8zm15 0A8 8 0 110 8a8 8 0 0116 0zM8.5 4.5a.5.5 0 00-1 0v5.793L5.354 8.146a.5.5 0 10-.708.708l3 3a.5.5 0 00.708 0l3-3a.5.5 0 00-.708-.708L8.5 10.293V4.5z"
-              />
-            </svg>
+            <IoIosArrowDropdownCircle className="text-yellow-500 text-4xl animate-bounce" />
+            
           </Link>
         </div>
       </div>
