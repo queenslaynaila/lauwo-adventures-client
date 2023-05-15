@@ -5,8 +5,8 @@ import MainComponentLayout from '../components/MainComponentLayout';
 export default function App({ Component, pageProps }) {
   return (
     <MainComponentLayout>
-      <Component {...pageProps}  />
-      <Analytics  mode={'production'}/>
+      <Component {...pageProps} />
+      <Analytics mode={'production'} />
     </MainComponentLayout>
   );
 }

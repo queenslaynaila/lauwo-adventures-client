@@ -1,4 +1,3 @@
- 
 import Head from 'next/head';
 import FaqCard from '@/components/FaqCard';
 ///import { BiSearch } from 'react-icons/bi';
@@ -97,14 +96,12 @@ const SafariPage = ({ faqs }) => {
         </div>
 
         <div className="p-2 bg-yellow-500 flex items-center justify-between">
-          <p className="text-white lg:ml-12">
-            Discover Tanzania with Lauwo. 
-          </p>
+          <p className="text-white lg:ml-12">Discover Tanzania with Lauwo.</p>
           <div>
             <Popup
               trigger={
                 <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-                  Enquire 
+                  Enquire
                 </button>
               }
               modal
@@ -161,10 +158,10 @@ const SafariPage = ({ faqs }) => {
 
               <ul className="list-disc list-inside  mb-4">
                 <li>
-                  Pack appropriately: Since you will be camping, it&apos;s important
-                  to pack light and bring only essential items. Make sure to
-                  pack warm clothing, a sleeping bag, a flashlight, insect
-                  repellent, and sunscreen.
+                  Pack appropriately: Since you will be camping, it&apos;s
+                  important to pack light and bring only essential items. Make
+                  sure to pack warm clothing, a sleeping bag, a flashlight,
+                  insect repellent, and sunscreen.
                 </li>
                 <li>
                   Follow safety rules: Always listen to your safari guide and
@@ -275,7 +272,9 @@ const SafariPage = ({ faqs }) => {
 
 export default SafariPage;
 export async function getStaticProps() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/safari_faqs');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/safari_faqs'
+  );
   const faqs = await res.json();
 
   return {

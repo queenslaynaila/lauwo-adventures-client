@@ -53,9 +53,7 @@ export default function index() {
       </div>
 
       <div className="p-2 bg-yellow-500 flex items-center justify-between">
-        <p className="text-white lg:ml-12">
-          Trusted Tour Company in Tanzania.  
-        </p>
+        <p className="text-white lg:ml-12">Trusted Tour Company in Tanzania.</p>
         <div>
           <Popup
             trigger={

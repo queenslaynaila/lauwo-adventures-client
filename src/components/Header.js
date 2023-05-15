@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import Link from 'next/link';
-
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 const images = [
   {
     src: '/kilimanjarosunrise.jpg',
@@ -33,65 +33,117 @@ const images = [
 const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (currentImageIndex) => (currentImageIndex + 1) % images.length
-      );
-    }, 7000);
-    return () => clearInterval(interval);
-  }, []);
+  const handlePrevClick = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+  const handleNextClick = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const currentImage = images[currentImageIndex];
 
   return (
-    <header
-      className="h-screen bg-cover bg-image bg-center bg-no-repeat flex flex-col bg-fixed w-full transition-opacity duration-1000"
-      style={{
-        backgroundImage: `url(${currentImage.src})`,
-      }}
-    >
-      <div className="bg-black/50 h-screen flex flex-col items-center justify-center font-poly">
-        <div className="relative container p-4 mt-16 lg:mt-32">
-          <div className="py-10 px-5 my-5 text-center">
-            <div className="heading mb-3  md:text-4xl text-white text-4xl  font-bold  leading-[50px]">
-              {currentImage.heading}
+    <div className="h-screen relative">
+      {images.map((image, index) => (
+        <header
+          key={index}
+          className=" bg-cover bg-image bg-center bg-no-repeat flex flex-col bg-fixed w-full transition-opacity duration-1000"
+          style={{
+            backgroundImage: `url(${image.src})`,
+            display: currentImageIndex === index ? 'block' : 'none',
+          }}
+        >
+          <div className="bg-black/50 h-screen flex flex-col items-center justify-center font-poly">
+            <div className="relative container p-4 mt-16 xs:p-2 lg:mt-32">
+              <div className="py-10 xs:py-3 px-5 my-5 text-center">
+                <div className="heading mb-3  md:text-4xl text-white text-4xl  font-bold  leading-[50px]">
+                  {image.heading}
+                </div>
+                <div className="text leading-normal text-white mx-auto max-w-2xl">
+                  {image.paragraph}
+                </div>
+              </div>
+              <div className="cta clear-left px-5 text-center ">
+                <div className="flex justify-center">
+                  <Link
+                    className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
+                    href={currentImage.ctaLink}
+                  >
+                    <button className="text-white bg-yellow-500 hover:bg-yellow-800 hover:text-white rounded-md  px-4 py-2 flex items-center">
+                      <span className="mr-2">{image.ctaText}</span>
+                      <span className="fa fa-arrow-right"></span>
+                    </button>
+                  </Link>
+                  <Link
+                    className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
+                    href="/planning-form"
+                  >
+                    <button className="text-white bg-yellow-500 hover:bg-yellow-800 hover:text-white rounded-md items-center  px-4 py-2 flex ">
+                      <span className="mr-2">Plan A Trip</span>
+                      <span className="fa fa-arrow-right"></span>
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="text leading-normal text-white mx-auto max-w-2xl">
-              {currentImage.paragraph}
+            <div className="hidden lg:flex md:flex flex-col items-center gap-4 mt-16 ">
+              <Link href="/#about">
+                <IoIosArrowDropdownCircle className="text-yellow-500 text-4xl animate-bounce" />
+              </Link>
             </div>
           </div>
-          <div className="cta clear-left px-5 text-center">
-            <div className="flex justify-center">
-              <Link
-                className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
-                href={currentImage.ctaLink}
-              >
-                <button className="text-white bg-yellow-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2 flex items-center">
-                  <span className="mr-2">{currentImage.ctaText}</span>
-                  <span className="fa fa-arrow-right"></span>
-                </button>
-              </Link>
-              <Link
-                className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
-                href="/planning-form"
-              >
-                <button className="text-white bg-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                  <span className="mr-2">Plan A Trip</span>
-                  <span className="fa fa-arrow-right"></span>
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="hidden lg:flex md:flex flex-col items-center gap-4 mt-16 ">
-          <Link href="/#about">
-            <IoIosArrowDropdownCircle className="text-yellow-500 text-4xl animate-bounce" />
-            
-          </Link>
-        </div>
+        </header>
+      ))}
+
+      <div className="absolute top-1/2 transform -translate-y-1/2 left-0">
+        <button onClick={handlePrevClick} className="mx-1">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
       </div>
-    </header>
+      <div className="absolute top-1/2 transform -translate-y-1/2 right-0 ">
+        <button onClick={handlePrevClick} className="mx-1">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+    </div>
   );
 };
 

@@ -77,14 +77,12 @@ export default function index() {
       </div>
 
       <div className="p-2 bg-yellow-500 flex items-center justify-between">
-        <p className="text-white lg:ml-12">
-          Trusted Tour Company in Tanzania.
-        </p>
+        <p className="text-white lg:ml-12">Trusted Tour Company in Tanzania.</p>
         <div>
           <Popup
             trigger={
               <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-                Enquire 
+                Enquire
               </button>
             }
             modal
@@ -382,7 +380,6 @@ export default function index() {
             </a>
           </div>
         </div>
-        
       </div>
       <SocialsButtons />
     </div>

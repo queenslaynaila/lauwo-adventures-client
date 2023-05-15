@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
 import Image from 'next/image';
 const cardData = [
   {
@@ -88,8 +88,6 @@ const PopularAdventure = () => {
     setActiveGrid(gridIndex);
   };
 
-  
-
   const getCardsForGrid = () => {
     const startIndex = (activeGrid - 1) * 3;
     const endIndex = startIndex + 3;
@@ -144,7 +142,6 @@ const PopularAdventure = () => {
           ))}
         </div>
       </div>
-        
     </section>
   );
 };

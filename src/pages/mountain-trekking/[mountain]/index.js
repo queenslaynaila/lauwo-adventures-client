@@ -487,7 +487,9 @@ export default function Mountain({ mountain, faqs }) {
   );
 }
 export async function getStaticPaths() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/mountains');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/mountains'
+  );
   const mountains = await res.json();
   const paths = mountains.map((mountain) => ({
     params: { mountain: generateSlug(mountain.mountain_name), id: mountain.id },
@@ -497,12 +499,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/mountains');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/mountains'
+  );
   const mountains = await res.json();
   const mountain = mountains.find(
     (mountain) => generateSlug(mountain.mountain_name) === params.mountain
   );
-  const res2 = await fetch('https://lauwo-adventures-api.onrender.com/frequently_asked_questions');
+  const res2 = await fetch(
+    'https://lauwo-adventures-api.onrender.com/frequently_asked_questions'
+  );
   const faqs = await res2.json();
   return {
     props: {

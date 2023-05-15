@@ -107,13 +107,13 @@ export default function Index({ tips }) {
 
         <div className="p-2 bg-yellow-500 flex items-center justify-between">
           <p className="text-white lg:ml-10 capitalize">
-            Plan your climb with Lauwo Adventures. 
+            Plan your climb with Lauwo Adventures.
           </p>
           <div>
             <Popup
               trigger={
                 <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-                  Enquire 
+                  Enquire
                 </button>
               }
               modal

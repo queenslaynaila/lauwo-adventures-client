@@ -128,7 +128,9 @@ function Tour({ tour }) {
 export default Tour;
 
 export async function getStaticPaths() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/cultural_tours');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/cultural_tours'
+  );
   const culturalTours = await res.json();
   const paths = culturalTours.map((tour) => ({
     params: { culturaltour: generateSlug(tour.name), id: tour.id },
@@ -141,7 +143,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/cultural_tours');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/cultural_tours'
+  );
   const culturalTours = await res.json();
   const culturalTour = culturalTours.find(
     (culturalTour) => generateSlug(culturalTour.name) === params.culturaltour

@@ -107,12 +107,13 @@ export default function Mountains({ mountains }) {
         </div>
         <SocialsButtons />
       </div>
-     
     </>
   );
 }
 export async function getStaticProps() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/mountains');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/mountains'
+  );
   const mountains = await res.json();
 
   return {

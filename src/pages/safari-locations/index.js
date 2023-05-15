@@ -99,14 +99,12 @@ const SafariPage = ({ faqs }) => {
         </div>
 
         <div className="p-2 bg-yellow-500 flex items-center justify-between">
-          <p className="text-white lg:ml-12">
-            Discover  Tanzania with Lauwo .
-          </p>
+          <p className="text-white lg:ml-12">Discover Tanzania with Lauwo .</p>
           <div>
             <Popup
               trigger={
                 <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-                  Enquire 
+                  Enquire
                 </button>
               }
               modal
@@ -317,7 +315,9 @@ const SafariPage = ({ faqs }) => {
 
 export default SafariPage;
 export async function getStaticProps() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/safari_faqs');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/safari_faqs'
+  );
   const faqs = await res.json();
 
   return {

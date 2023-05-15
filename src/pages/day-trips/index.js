@@ -8,10 +8,10 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import EnquiryPopUp from '@/components/enquirypopup';
 import SocialsButtons from '@/components/SocialsButtons';
- 
+
 export default function Index({ faqs, dayTrips }) {
-  console.log('me')
-  console.log(faqs)
+  console.log('me');
+  console.log(faqs);
 
   const contentStyle = {
     width: '85%',
@@ -29,8 +29,8 @@ export default function Index({ faqs, dayTrips }) {
   const filteredFaqs = faqs.filter((faq) => {
     return faq.question.toLowerCase().includes(searchValue.toLowerCase());
   });
-  
-console.log(filteredFaqs)
+
+  console.log(filteredFaqs);
   return (
     <div className="font-poly">
       <Head>
@@ -56,8 +56,8 @@ console.log(filteredFaqs)
           href="https://lauwo-adventures-client.vercel.app/day-trips"
         />
       </Head>
-       
-       <div
+
+      <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
         style={{ backgroundImage: "url('/daylake.jpg')" }}
       >
@@ -106,9 +106,7 @@ console.log(filteredFaqs)
       </div>
 
       <div className="p-2 bg-yellow-500 flex items-center justify-between">
-        <p className="text-white lg:ml-12">
-          Trusted Tour Company in Tanzania.
-        </p>
+        <p className="text-white lg:ml-12">Trusted Tour Company in Tanzania.</p>
         <div>
           <Popup
             trigger={
@@ -162,7 +160,7 @@ console.log(filteredFaqs)
           <DayTripCard key={day.id} day={day} />
         ))}
       </div>
-      <div >
+      <div>
         <div className="py-16 relative">
           <div className="flex items-center justify-center gap-4">
             <hr className="sm:w-40 w-10 border border-black" />
@@ -170,7 +168,6 @@ console.log(filteredFaqs)
               Frequently Asked Questions
             </h1>
             <div>
-           
               {/* <BiSearch/>
               {isSearchOpen && (
                 <input
@@ -201,9 +198,6 @@ console.log(filteredFaqs)
         </div>
       </div>
       <SocialsButtons />
-      
-     
-     
     </div>
   );
 }
@@ -222,4 +216,3 @@ export async function getStaticProps() {
     },
   };
 }
-

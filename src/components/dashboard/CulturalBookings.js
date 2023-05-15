@@ -91,9 +91,12 @@ export default function CulturalBookings() {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((booking) =>
-        fetch(`https://lauwo-adventures-api.onrender.com/bookings/${booking.id}`, {
-          method: 'DELETE',
-        }).then((response) => {
+        fetch(
+          `https://lauwo-adventures-api.onrender.com/bookings/${booking.id}`,
+          {
+            method: 'DELETE',
+          }
+        ).then((response) => {
           if (response.ok) {
             return response.json().then(() => {
               setData(

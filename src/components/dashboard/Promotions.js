@@ -67,9 +67,12 @@ const Promotions = () => {
   const handleDelete = () => {
     Promise.all(
       selectedRows.map((banner) =>
-        fetch(`https://lauwo-adventures-api.onrender.com/banners/${banner.id}`, {
-          method: 'DELETE',
-        })
+        fetch(
+          `https://lauwo-adventures-api.onrender.com/banners/${banner.id}`,
+          {
+            method: 'DELETE',
+          }
+        )
       )
     )
       .then(() => {

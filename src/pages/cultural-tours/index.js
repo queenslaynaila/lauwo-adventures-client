@@ -120,7 +120,6 @@ function Tours({ tours }) {
         ))}
       </div>
 
-       
       <SocialsButtons />
     </div>
   );
@@ -129,7 +128,9 @@ function Tours({ tours }) {
 export default Tours;
 
 export async function getStaticProps() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/cultural_tours');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/cultural_tours'
+  );
   const tours = await res.json();
   return {
     props: { tours },

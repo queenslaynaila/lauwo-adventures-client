@@ -40,8 +40,6 @@ const testimonials = [
   },
 ];
 
- 
-
 const InquiryForm = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
