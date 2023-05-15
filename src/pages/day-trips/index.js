@@ -170,9 +170,9 @@ console.log(filteredFaqs)
               Frequently Asked Questions
             </h1>
             <div>
-{/*            
-              <BiSearch/> */}
-              {/* {isSearchOpen && (
+           
+              <BiSearch/>
+              {isSearchOpen && (
                 <input
                   type="text"
                   placeholder="Search"
@@ -180,7 +180,7 @@ console.log(filteredFaqs)
                   focus:outline-none focus:border-primary sm:w-72 w-40"
                   onChange={handleSearch}
                 />
-              )} */}
+              )}
             </div>
           </div>
           <div className="w-3/4 mx-auto mt-10">
