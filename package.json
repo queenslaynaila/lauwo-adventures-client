@@ -18,6 +18,7 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.1",
     "copy-webpack-plugin": "^11.0.0",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
