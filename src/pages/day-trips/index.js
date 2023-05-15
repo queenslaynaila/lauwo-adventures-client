@@ -11,7 +11,7 @@ import SocialsButtons from '@/components/SocialsButtons';
  
 export default function Index({ faqs, dayTrips }) {
   console.log(faqs)
-  console.log(dayTrips)
+ 
   const contentStyle = {
     width: '85%',
     maxHeight: '85%',
@@ -156,11 +156,11 @@ console.log(filteredFaqs)
       <h2 className="text-2xl font-bold mb-4 text-center">
         Discover Our Extraordinary Day Trip Packages
       </h2>
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-16 my-6">
         {dayTrips.map((day) => (
           <DayTripCard key={day.id} day={day} />
         ))}
-      </div> */}
+      </div>
       <div >
         <div className="py-16 relative">
           <div className="flex items-center justify-center gap-4">
