@@ -134,11 +134,11 @@ export default function index() {
                     height={300}
                     className="w-full h-auto rounded-lg"
                   />
-                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 rounded-lg">
-    <p className="text-center text-white text-xl font-bold">
-      Mountain climbers
-    </p>
-  </div>
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 rounded-lg">
+                    <p className="text-center text-white text-xl font-bold">
+                      Mountain climbers
+                    </p>
+                  </div>
                 </div>
                 <h2 className="text-xl font-semibold mb-2">
                   Mountain Climbing
@@ -152,20 +152,20 @@ export default function index() {
                 </p>
               </div>
               <div className="w-full md:w-1/2 p-4 ">
-              <div className="relative">
-  <Image
-    src="/background.jpg"
-    alt="Satisfied Safari Goers"
-    width={300}
-    height={300}
-    className="w-full h-auto rounded-lg"
-  />
-  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 rounded-lg">
-    <p className="text-center text-white text-xl font-bold">
-      Elephants captured in a safari
-    </p>
-  </div>
-</div>
+                <div className="relative">
+                  <Image
+                    src="/background.jpg"
+                    alt="Satisfied Safari Goers"
+                    width={300}
+                    height={300}
+                    className="w-full h-auto rounded-lg"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 rounded-lg">
+                    <p className="text-center text-white text-xl font-bold">
+                      Elephants captured in a safari
+                    </p>
+                  </div>
+                </div>
 
                 <h2 className="text-xl font-semibold mb-2">Safaris</h2>
                 <p className="mb-4 leading-8">

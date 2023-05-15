@@ -110,7 +110,7 @@ const InquiryForm = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View More  
+            View More
           </Link>
         </div>
       </div>

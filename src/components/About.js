@@ -7,17 +7,6 @@ function About() {
       style={{ backgroundImage: `url(/lauwosafari.jpg)` }}
       id="about"
     >
-      <Head>
-        <title>About Us | Lauwo Adventures</title>
-        <meta
-          name="description"
-          content="Lauwo Adventures is a local tour company operating in Kilimanjaro originating from the mountaineer family of 'Yohani Kinyala Lauwo' who was the first African guide to climb and conquer the summit of Mount Kilimanjaro."
-        />
-        <meta
-          name="keywords"
-          content="Lauwo Adventures, tour company, Kilimanjaro, mountaineer, Yohani Kinyala Lauwo, porters, local communities, vocational training, Tanzania tourism industry"
-        />
-      </Head>
       <div className="p-5 -mt-10 md:mt-0 flex items-center justify-center h-full font-poly">
         <div className="bg-primary opacity-85 w-full md:w-10/12 rounded-xl sm:mt-0 mt-16">
           <div className="flex justify-center overflow-x-scroll mt-6 md:overflow-x-hidden">

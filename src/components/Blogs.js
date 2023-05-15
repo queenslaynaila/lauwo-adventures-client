@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Head from 'next/head';
 
 import { truncate } from '@/utils/truncate';
 import { generateSlug } from '@/utils/generateSlug';
@@ -45,18 +44,6 @@ function Blogs() {
 
   return (
     <div className=" font-poly p-4 ">
-      <Head>
-        <title>Recent Blogs - Lauwo Tours</title>
-        <meta
-          name="description"
-          content="Check out our latest blog posts for tips, news, and insights on a variety of tours and safaris."
-        />
-        <meta property="og:title" content="Recent Blogs - Lauwo Tours" />
-        <meta
-          property="og:description"
-          content="Check out our latest blog posts for tips, news, and insights on a variety of tours, safaris and mountain climbing."
-        />
-      </Head>
       <div>
         <div className="mx-50">
           <div className="flex justify-center items-center">

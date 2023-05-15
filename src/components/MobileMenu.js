@@ -17,7 +17,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
         <li>
           <Link href="/planing">Plan Your Climb</Link>
         </li>
-       
+
         <li>
           <Link href="/day-trips">DayTrips</Link>
         </li>

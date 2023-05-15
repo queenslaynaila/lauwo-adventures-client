@@ -12,27 +12,21 @@ const PageLayOut = () => {
   return (
     <div>
       <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <title>
+          Lauwo Adventures | Mountain Climbing, Safaris, Camping, Cultural Tours
+        </title>
         <meta
           name="description"
-          content="Discover the wonders of Tanzania with Lauwo Adventures. We offer exceptional safari packages, Mount Kilimanjaro expeditions, cultural tours, and more. Explore the beauty and rich heritage of Tanzania with our experienced guides."
+          content="Lauwo Adventures offers unforgettable mountain climbing experiences on Mt. Kilimanjaro, Mt. Meru, Usambara Mountains, and Oldonyo Lengai. Explore Tanzania with our diverse range of safaris, camping tours, cultural tours, and day trips."
         />
-        <meta
-          name="keywords"
-          content="lauwo, lauwo adevntures,Tanzania adventure tours,Safari packages in Tanzania,Mount Kilimanjaro expeditions,Cultural tours in Tanzania,Wildlife safaris,Tanzania travel experiences,Local tour operator in Tanzania,African safari adventures,Tanzania vacation packages,Explore Tanzania's natural beauty,HoneyMoonSafaris,Mount Meru expeditions,Mountain Climbng"
-        />
-        <meta name="author" content="Your Name" />
-        <title>Lauwo Adventures | Discover the Wonders of Tanzania</title>
 
         <meta
           property="og:title"
-          content="Lauwo Adventures | Discover the Wonders of Tanzania"
+          content="Lauwo Adventures | Mountain Climbing, Safaris,  Safaris, Cultural Tours, HoneyMoon Safaris,Day Trips"
         />
         <meta
           property="og:description"
-          content="Lauwo Adventures is a trusted tour company offering unforgettable adventures in Tanzania. Explore our safari packages, climb Mount Kilimanjaro, and immerse yourself in the rich cultural heritage of Tanzania."
+          content="Lauwo Adventures offers unforgettable mountain climbing experiences on Mt. Kilimanjaro, Mt. Meru, Usambara Mountains, and Oldonyo Lengai. Explore Tanzania with our diverse range of safaris, camping tours, cultural tours, and day trips.We have safaris from as short as 2 days to as long as 10 days."
         />
         <meta
           property="og:image"
@@ -47,16 +41,23 @@ const PageLayOut = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Lauwo Adventures | Discover the Wonders of Tanzania"
+          content="Lauwo Adventures | Mountain Climbing, Safaris, Camping, Cultural Tours"
         />
         <meta
           name="twitter:description"
-          content="Discover the wonders of Tanzania with Lauwo Adventures. We offer exceptional safari packages, Mount Kilimanjaro expeditions, cultural tours, and more. Explore the beauty and rich heritage of Tanzania with our experienced guides."
+          content="Lauwo Adventures offers unforgettable mountain climbing experiences on Mt. Kilimanjaro, Mt. Meru, Usambara Mountains, and Oldonyo Lengai. Explore Tanzania with our diverse range of safaris, camping tours, cultural tours, and day trips."
         />
         <meta
           name="twitter:image"
-          content="https://www.yourwebsite.com/image.jpg"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
         />
+
+        <meta
+          name="keywords"
+          content="Lauwo Adventures, mountain climbing, safaris, camping tours, cultural tours, Tanzania, Mt. Kilimanjaro, Mt. Meru, Usambara Mountains, Oldonyo Lengai"
+        />
+        <meta name="author" content=" Lauwo adventures" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       <Header />
