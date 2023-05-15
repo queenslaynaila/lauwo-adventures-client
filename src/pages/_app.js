@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <MainComponentLayout>
       <Component {...pageProps}  />
-      <Analytics />
+      <Analytics  mode={'production'}/>
     </MainComponentLayout>
   );
 }
