@@ -28,7 +28,7 @@ export default function index() {
         />
         <meta name="author" content="Lauwo Adventures" />
         <meta name="google" content="translate" />
-        <Link rel="canonical" href="https://www.yourwebsite.com/about-us" />
+       
       </Head>
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"

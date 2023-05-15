@@ -51,10 +51,7 @@ export default function Index({ faqs, dayTrips }) {
           name="google-site-verification"
           content="hKFgedHOB3VpAnDkoVs-Fm7QCpHkhAh6KaHKxbMVra8"
         />
-        <Link
-          rel="canonical"
-          href="https://lauwo-adventures-client.vercel.app/day-trips"
-        />
+ 
       </Head>
 
       <div
