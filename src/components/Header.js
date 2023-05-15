@@ -122,7 +122,7 @@ const Header = () => {
         </button>
       </div>
       <div className="absolute top-1/2 transform -translate-y-1/2 right-0 ">
-        <button onClick={handlePrevClick} className="mx-1">
+        <button onClick={handleNextClick} className="mx-1">
           <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
             <svg
               aria-hidden="true"
