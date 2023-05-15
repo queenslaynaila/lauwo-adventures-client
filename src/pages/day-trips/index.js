@@ -8,7 +8,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import EnquiryPopUp from '@/components/enquirypopup';
 import SocialsButtons from '@/components/SocialsButtons';
-import { ErrorBoundary } from 'next/error';
+ 
 export default function Index({ faqs, dayTrips }) {
   const contentStyle = {
     width: '85%',
@@ -52,7 +52,7 @@ export default function Index({ faqs, dayTrips }) {
           href="https://lauwo-adventures-client.vercel.app/day-trips"
         />
       </Head>
-       <ErrorBoundary statusCode={500}>
+       
        <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
         style={{ backgroundImage: "url('/daylake.jpg')" }}
@@ -207,7 +207,7 @@ export default function Index({ faqs, dayTrips }) {
         </div>
       </div>
       <SocialsButtons />
-       </ErrorBoundary>
+      
      
      
     </div>
