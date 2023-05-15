@@ -3,7 +3,7 @@ import Link from 'next/link';
 import EnquiryPopUp from '@/components/enquirypopup';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-
+import SocialsButtons from '@/components/SocialsButtons';
 export default function Index() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -95,7 +95,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="p-5 bg-yellow-500 flex items-center justify-between">
+      <div className="p-2 bg-yellow-500 flex items-center justify-between">
         <p className="text-white lg:ml-12">
           Trusted Tour Company in Tanzania. See our reviews here.
         </p>
@@ -103,7 +103,7 @@ export default function Index() {
           <Popup
             trigger={
               <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-                Enquire Now
+                Enquire 
               </button>
             }
             modal
@@ -293,6 +293,7 @@ export default function Index() {
           </div>
         </div>
       </div>
+      <SocialsButtons />
     </div>
   );
 }

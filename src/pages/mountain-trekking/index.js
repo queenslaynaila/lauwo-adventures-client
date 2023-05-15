@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { generateSlug } from '@/utils/generateSlug';
-
+import SocialsButtons from '@/components/SocialsButtons';
 export default function Mountains({ mountains }) {
   const router = useRouter();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -105,7 +105,9 @@ export default function Mountains({ mountains }) {
             ))}
           </div>
         </div>
+        <SocialsButtons />
       </div>
+     
     </>
   );
 }

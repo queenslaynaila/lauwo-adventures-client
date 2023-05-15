@@ -37,7 +37,7 @@ const SocialButtons = () => {
 
   return (
     <>
-      <div className="fixed top-[50%] right-0 translate-y-[-50%] flex flex-col items-end -gap-0.1">
+      <div className="fixed top-[80%] right-0 translate-y-[-50%] flex flex-col items-end -gap-0.1">
         {socials.map((social, index) => (
           <a
             key={index}

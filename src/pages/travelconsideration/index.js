@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-
+import SocialsButtons from '@/components/SocialsButtons';
 import EnquiryPopUp from '@/components/enquirypopup';
 export default function index() {
   const contentStyle = {
@@ -307,6 +307,7 @@ export default function index() {
           guidance of experienced guides.
         </p>
       </div>
+      <SocialsButtons />
     </div>
   );
 }

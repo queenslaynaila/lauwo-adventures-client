@@ -2,7 +2,7 @@ import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
-
+import SocialsButtons from '@/components/SocialsButtons';
 export default function Index() {
   const [formData, setFormData] = useState({
     name: '',
@@ -169,6 +169,7 @@ export default function Index() {
           </div>
         </div>
       </div>
+      <SocialsButtons />
     </div>
   );
 }

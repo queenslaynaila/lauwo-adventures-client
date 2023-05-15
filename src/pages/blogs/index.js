@@ -1,6 +1,6 @@
 import BlogCard from '@/components/BlogCard';
 import Head from 'next/head';
-
+import SocialsButtons from '@/components/SocialsButtons';
 export default function index({ blogs }) {
   return (
     <div className="font-poly">
@@ -49,6 +49,7 @@ export default function index({ blogs }) {
           ))}
         </div>
       </main>
+      <SocialsButtons />
     </div>
   );
 }

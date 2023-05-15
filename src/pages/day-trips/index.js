@@ -7,7 +7,7 @@ import DayTripCard from '@/components/DayTripCard';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import EnquiryPopUp from '@/components/enquirypopup';
-
+import SocialsButtons from '@/components/SocialsButtons';
 export default function Index({ faqs, dayTrips }) {
   const contentStyle = {
     width: '85%',
@@ -205,6 +205,8 @@ export default function Index({ faqs, dayTrips }) {
           </div>
         </div>
       </div>
+      <SocialsButtons />
+     
     </div>
   );
 }

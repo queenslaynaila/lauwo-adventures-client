@@ -1,6 +1,6 @@
  
 import React from 'react';
- 
+import SocialsButtons from '@/components/SocialsButtons';
   
  
 
@@ -272,6 +272,7 @@ export default function Mountain() {
           </table>
         </div>
       </div>
+      <SocialsButtons />
     </div>
   );
 }

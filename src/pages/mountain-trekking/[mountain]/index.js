@@ -13,7 +13,7 @@ import { truncate } from '@/utils/truncate';
 import simpleFormat from '@/utils/simpleFormat';
 const menuTabs = ['Itinerary', 'Pricing', 'Inclusive', 'Exclusive', 'Book'];
 console.log(menuTabs);
-
+import SocialsButtons from '@/components/SocialsButtons';
 export default function Mountain({ mountain, faqs }) {
   const contentStyle = {
     width: '85%',
@@ -482,6 +482,7 @@ export default function Mountain({ mountain, faqs }) {
           </div>
         </div>
       </div>
+      <SocialsButtons />
     </div>
   );
 }

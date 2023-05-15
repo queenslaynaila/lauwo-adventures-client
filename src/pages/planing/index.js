@@ -4,6 +4,7 @@ import EnquiryPopUp from '@/components/enquirypopup';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { useState } from 'react';
+import SocialsButtons from '@/components/SocialsButtons';
 //import { BiSearch } from 'react-icons/bi';
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 import simpleFormat from '@/utils/simpleFormat';
@@ -205,6 +206,7 @@ export default function Index({ tips }) {
           </div>
         </div>
       </div>
+      <SocialsButtons />
     </div>
   );
 }

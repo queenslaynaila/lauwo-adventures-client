@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import EnquiryPopUp from '@/components/enquirypopup';
+import SocialsButtons from '@/components/SocialsButtons';
 const SafariPage = ({ faqs }) => {
   const contentStyle = {
     width: '85%',
@@ -912,6 +913,7 @@ const SafariPage = ({ faqs }) => {
             </div>
           </div>
         </div>
+        <SocialsButtons />
       </div>
     </>
   );

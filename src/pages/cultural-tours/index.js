@@ -1,5 +1,5 @@
 import CulturalTourCard from '@/components/CulturalTourCard';
-
+import SocialsButtons from '@/components/SocialsButtons';
 import Link from 'next/link';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
@@ -119,6 +119,9 @@ function Tours({ tours }) {
           </div>
         ))}
       </div>
+
+       
+      <SocialsButtons />
     </div>
   );
 }

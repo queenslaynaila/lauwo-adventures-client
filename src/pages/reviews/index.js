@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import Link from 'next/link';
+import SocialsButtons from '@/components/SocialsButtons';
 import ReviewModal from '@/components/ReviewModal';
 const contentStyle = {
   width: '85%',
@@ -132,6 +133,7 @@ const Gallery = () => {
           </div>
         </div>
       </div>
+      <SocialsButtons />
     </div>
   );
 };
