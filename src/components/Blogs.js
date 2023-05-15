@@ -17,6 +17,7 @@ function Blogs() {
   } = useSWR(url, fetcher, {
     fallback: true,
     revalidateOnMount: true,
+    refreshInterval: 7 * 24 * 60 * 60 * 1000, 
   });
 
   if (error)

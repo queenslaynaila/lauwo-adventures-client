@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Link from 'next/link'
 import Image from 'next/image';
 const cardData = [
   {
@@ -127,9 +127,9 @@ const PopularAdventure = () => {
       <div className="flex flex-col items-center">
         <div className="card-grid-container grid lg:grid-cols-3 grid-cols-1 gap-4 mb-4">
           {getCardsForGrid().map((card) => (
-            <a href={`${card.link}`} key={card.id}>
+            <Link href={`${card.link}`} key={card.id}>
               <Card title={card.title} image={card.image} />
-            </a>
+            </Link>
           ))}
         </div>
         <div className="flex justify-center">
