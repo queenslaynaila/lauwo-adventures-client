@@ -10,6 +10,7 @@ import EnquiryPopUp from '@/components/enquirypopup';
 import SocialsButtons from '@/components/SocialsButtons';
  
 export default function Index({ faqs, dayTrips }) {
+  console.log('me')
   console.log(faqs)
  
   const contentStyle = {
