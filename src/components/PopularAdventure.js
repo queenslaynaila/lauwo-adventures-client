@@ -88,17 +88,7 @@ const PopularAdventure = () => {
     setActiveGrid(gridIndex);
   };
 
-  const handlePrevGrid = () => {
-    if (activeGrid > 1) {
-      setActiveGrid(activeGrid - 1);
-    }
-  };
-
-  const handleNextGrid = () => {
-    if (activeGrid < grids) {
-      setActiveGrid(activeGrid + 1);
-    }
-  };
+  
 
   const getCardsForGrid = () => {
     const startIndex = (activeGrid - 1) * 3;
@@ -154,22 +144,7 @@ const PopularAdventure = () => {
           ))}
         </div>
       </div>
-      {activeGrid > 1 && (
-        <button
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-yellow-500 text-2xl focus:outline-none"
-          onClick={handlePrevGrid}
-        >
-          &lt;
-        </button>
-      )}
-      {activeGrid < grids && (
-        <button
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-yellow-500 text-2xl focus:outline-none"
-          onClick={handleNextGrid}
-        >
-          &gt;
-        </button>
-      )}
+        
     </section>
   );
 };
