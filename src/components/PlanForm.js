@@ -31,7 +31,7 @@ export default function PlanForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const res = await fetch('http://127.0.0.1:3000/planningforms', {
+    const res = await fetch('https://lauwo-adventures-api.onrender.com/planningforms', {
       body: JSON.stringify(formData),
       headers: {
         'Content-Type': 'application/json',
