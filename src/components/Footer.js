@@ -51,10 +51,10 @@ const Footer = () => {
             quick links
           </h1>
           <div className="flex flex-col justify-center items-center mt-4 gap-4 text-white font-poly capitalize underline">
-            <Link href="/#about">about us</Link>
-            <Link href="/adventures">adventures</Link>
-            <Link href="/packages">packages</Link>
-            <Link href="/#gallery">gallery</Link>
+            <Link href="/about-us">about us</Link>
+            <Link href="/mountain-trekking/mount-kilimanjaro">kilimanjaro</Link>
+            <Link href="/our-safari-packages">safari packages</Link>
+            <Link href="/blogs">blogs</Link>
           </div>
         </div>
         <div className="col-span-1 mt-4 mb-8">
@@ -62,10 +62,10 @@ const Footer = () => {
             useful links
           </h1>
           <div className="flex flex-col justify-center items-center mt-4 gap-4 text-white font-poly capitalize underline">
-            <Link href="/booking">booking</Link>
-            <Link href="/testimonials">testimonials</Link>
-            <Link href="/faqs">faq&apos;s</Link>
-            <Link href="/team">our team</Link>
+            <Link href="/kilimanjaro-group-climb">group climb bookings</Link>
+            <Link href="/reviews">testimonials</Link>
+            <Link href="/contact-us">contact us</Link>
+            <Link href="/team">payment</Link>
           </div>
         </div>
       </div>
