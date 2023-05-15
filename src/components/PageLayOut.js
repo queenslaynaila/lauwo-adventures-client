@@ -57,7 +57,12 @@ const PageLayOut = () => {
           content="Lauwo Adventures, mountain climbing, safaris, camping tours, cultural tours, Tanzania, Mt. Kilimanjaro, Mt. Meru, Usambara Mountains, Oldonyo Lengai"
         />
         <meta name="author" content=" Lauwo adventures" />
+        <meta name="google" content="translate" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="google-site-verification"
+          content="hKFgedHOB3VpAnDkoVs-Fm7QCpHkhAh6KaHKxbMVra8"
+        />
       </Head>
 
       <Header />
