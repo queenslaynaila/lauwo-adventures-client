@@ -65,7 +65,7 @@ const Footer = () => {
             <Link href="/kilimanjaro-group-climb">group climb bookings</Link>
             <Link href="/reviews">testimonials</Link>
             <Link href="/contact-us">contact us</Link>
-            <Link href="/team">payment</Link>
+            <Link href="/payments">payments</Link>
           </div>
         </div>
       </div>
