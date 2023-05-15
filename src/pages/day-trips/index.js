@@ -10,6 +10,8 @@ import EnquiryPopUp from '@/components/enquirypopup';
 import SocialsButtons from '@/components/SocialsButtons';
  
 export default function Index({ faqs, dayTrips }) {
+  console.log(faqs)
+  console.log(dayTrips)
   const contentStyle = {
     width: '85%',
     maxHeight: '85%',
