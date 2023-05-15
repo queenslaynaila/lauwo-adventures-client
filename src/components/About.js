@@ -56,12 +56,12 @@ function About() {
               training. This is to help combat poverty by supporting their
               dreams and goals.
             </p>
-            <div className="text-center">
+            <div className="text-center  ">
               <Link
                 href="/about-us"
-                className="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-800 hover:border-transparent rounded"
+                className="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-800 hover:border-transparent rounded "
               >
-                Learn More About Us
+                More About Us
               </Link>
             </div>
           </div>

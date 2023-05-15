@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import Link from 'next/link';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+ 
 const images = [
   {
     src: '/kilimanjarosunrise.jpg',
