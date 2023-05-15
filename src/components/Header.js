@@ -101,10 +101,10 @@ const Header = () => {
 
       <div className="absolute top-1/2 transform -translate-y-1/2 left-0">
         <button onClick={handlePrevClick} className="mx-1">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-yellow-500  hover:bg-yellow-800 ">
             <svg
               aria-hidden="true"
-              class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+              class="w-5 h-5 text-white sm:w-6 sm:h-6  "
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -123,7 +123,7 @@ const Header = () => {
       </div>
       <div className="absolute top-1/2 transform -translate-y-1/2 right-0 ">
         <button onClick={handleNextClick} className="mx-1">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-yellow-500 hover:bg-yellow-800">
             <svg
               aria-hidden="true"
               class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
