@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import FaqCard from '@/components/FaqCard';
-import { BiSearch } from 'react-icons/bi';
+//import { BiSearch } from 'react-icons/bi';
 import { useState } from 'react';
 import Link from 'next/link';
 import DayTripCard from '@/components/DayTripCard';
