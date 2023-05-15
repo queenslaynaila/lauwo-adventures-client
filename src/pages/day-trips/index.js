@@ -26,7 +26,8 @@ export default function Index({ faqs, dayTrips }) {
   const filteredFaqs = faqs.filter((faq) => {
     return faq.question.toLowerCase().includes(searchValue.toLowerCase());
   });
-
+  
+console.log(filteredFaqs)
   return (
     <div className="font-poly">
       <Head>
