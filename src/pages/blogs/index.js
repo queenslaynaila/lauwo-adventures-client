@@ -53,10 +53,11 @@ export default function index({ blogs }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch('https://lauwo-adventures-api.onrender.com/blogs');
   const blogs = await res.json();
   return {
     props: { blogs },
+    revalidate: 604800, // Regenerate page every 7 days (1 week)
   };
 }
