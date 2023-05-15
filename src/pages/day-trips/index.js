@@ -158,7 +158,7 @@ export default function Index({ faqs, dayTrips }) {
           <DayTripCard key={day.id} day={day} />
         ))}
       </div>
-      <div>
+      <div className='hidden'>
         <div className="py-16 relative">
           <div className="flex items-center justify-center gap-4">
             <hr className="sm:w-40 w-10 border border-black" />
