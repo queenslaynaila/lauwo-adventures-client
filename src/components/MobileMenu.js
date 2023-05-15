@@ -17,13 +17,13 @@ const MobileMenu = ({ isOpen, toggle }) => {
         <li>
           <Link href="/planing">Plan Your Climb</Link>
         </li>
-        <li>
-          <SafariDropDown />
-        </li>
+       
         <li>
           <Link href="/day-trips">DayTrips</Link>
         </li>
-
+        <li>
+          <SafariDropDown />
+        </li>
         <li>
           <Link href="/about-us" onClick={toggle}>
             About
