@@ -97,16 +97,15 @@ const SafariPage = ({ faqs }) => {
           </div>
         </div>
 
-        <div className="p-5 bg-yellow-500 flex items-center justify-between">
+        <div className="p-2 bg-yellow-500 flex items-center justify-between">
           <p className="text-white lg:ml-12">
-            Discover the richness of Tanzania&apos;s cultural experiences
-            through our curated tours.
+            Discover  Tanzania with Lauwo .
           </p>
           <div>
             <Popup
               trigger={
                 <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-                  Enquire Now
+                  Enquire 
                 </button>
               }
               modal

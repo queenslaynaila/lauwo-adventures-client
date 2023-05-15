@@ -82,7 +82,7 @@ export default function Index({ tips }) {
                     className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
                     href="/travelconsideration"
                   >
-                    <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                    <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-2 py-2 flex items-center">
                       <span className="mr-2">
                         Tanzania Travel Considerations
                       </span>
@@ -93,7 +93,7 @@ export default function Index({ tips }) {
                     className="no-underline btn btn-outline-primary block sm:inline-block global-transition text-white"
                     href="/planning-form"
                   >
-                    <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
+                    <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-2 py-2 flex items-center">
                       <span className="mr-2">Plan a Trip</span>
                       <span className="fa fa-arrow-right"></span>
                     </button>
@@ -104,15 +104,15 @@ export default function Index({ tips }) {
           </div>
         </div>
 
-        <div className="p-5 bg-yellow-500 flex items-center justify-between">
-          <p className="text-white lg:ml-12">
-            Trusted Tour Company in Tanzania. See our reviews here.
+        <div className="p-2 bg-yellow-500 flex items-center justify-between">
+          <p className="text-white lg:ml-10 capitalize">
+            Plan your climb with Lauwo Adventures. 
           </p>
           <div>
             <Popup
               trigger={
                 <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-                  Enquire Now
+                  Enquire 
                 </button>
               }
               modal
