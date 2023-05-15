@@ -3,7 +3,7 @@ import Head from 'next/head';
 //import { BiSearch } from 'react-icons/bi';
 import { useState } from 'react';
 import Link from 'next/link';
-//import DayTripCard from '@/components/DayTripCard';
+import DayTripCard from '@/components/DayTripCard';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import EnquiryPopUp from '@/components/enquirypopup';
