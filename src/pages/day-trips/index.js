@@ -171,7 +171,7 @@ console.log(filteredFaqs)
             </h1>
             <div>
            
-              <BiSearch/>
+              {/* <BiSearch/>
               {isSearchOpen && (
                 <input
                   type="text"
@@ -180,7 +180,7 @@ console.log(filteredFaqs)
                   focus:outline-none focus:border-primary sm:w-72 w-40"
                   onChange={handleSearch}
                 />
-              )}
+              )} */}
             </div>
           </div>
           <div className="w-3/4 mx-auto mt-10">
