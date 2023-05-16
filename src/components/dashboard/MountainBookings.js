@@ -13,7 +13,7 @@ export default function MountainBookings() {
   const [data, setData] = useState([]);
   const [selectedRows, setSelectedRows] = useState([]);
   const [searchValue, setSearchValue] = useState('');
- 
+
   useEffect(() => {
     fetch('https://lauwo-adventures-api.onrender.com/mountain_bookings')
       .then((response) => response.json())
@@ -52,7 +52,11 @@ export default function MountainBookings() {
       { Header: 'Phone', accessor: 'phone_number' },
       { Header: 'Country', accessor: 'country' },
       { Header: 'Travel Duration', accessor: 'travel_period' },
-      { Header: 'Adventure', accessor: ({ bookable }) => `${bookable.route_duration.route_name} ${bookable.route_duration.duration_days} days` },
+      {
+        Header: 'Adventure',
+        accessor: ({ bookable }) =>
+          `${bookable.route_duration.route_name} ${bookable.route_duration.duration_days} days`,
+      },
       { Header: 'Total Travellers', accessor: 'no_of_travellers' },
       { Header: 'Adults', accessor: 'no_of_adults' },
       { Header: 'Children', accessor: 'no_of_children' },

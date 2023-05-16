@@ -31,13 +31,16 @@ export default function PlanForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const res = await fetch('https://lauwo-adventures-api.onrender.com/planningforms', {
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    });
+    const res = await fetch(
+      'https://lauwo-adventures-api.onrender.com/planningforms',
+      {
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        method: 'POST',
+      }
+    );
     const { status, errors } = await res.json();
     if (status === 'error') {
       console.log(errors);

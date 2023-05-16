@@ -50,7 +50,7 @@ export default function GroupClimbs() {
       { Header: 'Month', accessor: 'month' },
       { Header: 'Title', accessor: 'title' },
       { Header: 'Tag', accessor: 'tag' },
-    
+
       { Header: 'Mountain', accessor: 'mountain_name' },
     ],
     [selectedRows]
@@ -82,7 +82,7 @@ export default function GroupClimbs() {
   } = tableInstance;
 
   const handleDelete = () => {
-    console.log(selectedRows)
+    console.log(selectedRows);
     Promise.all(
       selectedRows.map((enquiry) =>
         fetch(
@@ -147,7 +147,10 @@ export default function GroupClimbs() {
         placeholder="Search by mountain name or month"
       />
       <p className="text-sm mt-2">
-        This section represents current group climb schedules present in the database and displaying in the website.You can update them here.Remember to delete any closed climb so as to not clutter the database with irrelevant info. {' '}
+        This section represents current group climb schedules present in the
+        database and displaying in the website.You can update them here.Remember
+        to delete any closed climb so as to not clutter the database with
+        irrelevant info.{' '}
       </p>
       <div className="overflow-x-auto">
         <table
@@ -175,36 +178,33 @@ export default function GroupClimbs() {
               </tr>
             ))}
           </thead>
-          
-<tbody {...getTableBodyProps()} className="divide-y divide-white">
-  {page
-    .filter((row) => {
-      const { mountain_name, month } = row.values;
-      const searchRegex = new RegExp(searchValue, 'i');
-      return (
-        searchRegex.test(mountain_name) ||
-        searchRegex.test(month)
-      );
-    })
-    .map((row) => {
-      prepareRow(row);
-      return (
-        <tr {...row.getRowProps()} key={row.id}>
-          {row.cells.map((cell) => (
-            <td
-              className="p-3 "
-              key={cell.id}
-              {...cell.getCellProps()}
-            >
-              {cell.render('Cell')}
-            </td>
-          ))}
-        </tr>
-      );
-    })}
-</tbody>
 
-
+          <tbody {...getTableBodyProps()} className="divide-y divide-white">
+            {page
+              .filter((row) => {
+                const { mountain_name, month } = row.values;
+                const searchRegex = new RegExp(searchValue, 'i');
+                return (
+                  searchRegex.test(mountain_name) || searchRegex.test(month)
+                );
+              })
+              .map((row) => {
+                prepareRow(row);
+                return (
+                  <tr {...row.getRowProps()} key={row.id}>
+                    {row.cells.map((cell) => (
+                      <td
+                        className="p-3 "
+                        key={cell.id}
+                        {...cell.getCellProps()}
+                      >
+                        {cell.render('Cell')}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+          </tbody>
         </table>
       </div>
       <div className="inline-flex  mt-2">

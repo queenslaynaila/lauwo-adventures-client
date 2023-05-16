@@ -20,7 +20,7 @@ import Users from '@/components/dashboard/Users';
 import GroupClimbs from '@/components/dashboard/GroupClimbs';
 import Plannings from '@/components/dashboard/Plannings';
 import Bookings from '@/components/dashboard/Bookings';
-import Notifications from '@/components/dashboard/Notifications'
+import Notifications from '@/components/dashboard/Notifications';
 import Enquiries from '@/components/dashboard/Enquiries';
 import MountainBookings from '@/components/dashboard/MountainBookings';
 import SafariBookings from '@/components/dashboard/SafariBookings';
@@ -94,7 +94,10 @@ const Dashboard = () => {
   }
 
   return (
-    <div style={{ backgroundImage: `url(/safari-1.jpg)` }} className='font-poly'>
+    <div
+      style={{ backgroundImage: `url(/safari-1.jpg)` }}
+      className="font-poly"
+    >
       <div className="grid grid-cols-1  ">
         <ToastContainer />
         <div className="mt-24">
@@ -157,7 +160,7 @@ const Dashboard = () => {
                   >
                     <AiOutlineSetting className="inline-block mr-1 font-bold" />
                     <span className="hidden lg:inline-block">
-                       FullMoonBookings
+                      FullMoonBookings
                     </span>
                   </a>
                 </li>
@@ -392,9 +395,9 @@ const Dashboard = () => {
                 <CulturalBookings />
               )}
               {activeSection === 'viewallblogs' && <ViewBlogs />}
-              {activeSection === 'groupclimbs' && <GroupClimbs/>}
-              {activeSection === 'notifications' &&  <Notifications/>}
-              {activeSection === 'fullmoon' &&  <FullMoon/>}
+              {activeSection === 'groupclimbs' && <GroupClimbs />}
+              {activeSection === 'notifications' && <Notifications />}
+              {activeSection === 'fullmoon' && <FullMoon />}
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function Notifications() {
   const [data, setData] = useState([]);
   const [selectedRows, setSelectedRows] = useState([]);
   const [searchValue, setSearchValue] = useState('');
-   
+
   useEffect(() => {
     fetch(' https://lauwo-adventures-api.onrender.com/notifications')
       .then((response) => response.json())
@@ -50,7 +50,6 @@ export default function Notifications() {
       { Header: 'Email', accessor: 'email' },
       { Header: 'Message', accessor: 'message' },
       { Header: 'Mountain', accessor: 'title' },
-     
     ],
     [selectedRows]
   );
@@ -136,7 +135,11 @@ export default function Notifications() {
     <div className="px-4 py-8 w-full ">
       <ToastContainer />
       <h1 className="text-2xl font-bold mb-4">Group Climb Notifications</h1>
-       <p className='pb-2'>This section refers to users who want to be notified regarding our group climb schedules and specifically the mountains they want to go for a group climb in so they can plan accordingly.Follow up with them..</p>
+      <p className="pb-2">
+        This section refers to users who want to be notified regarding our group
+        climb schedules and specifically the mountains they want to go for a
+        group climb in so they can plan accordingly.Follow up with them..
+      </p>
       <input
         type="text"
         className="border p-2 rounded-md w-2/5 "
@@ -144,7 +147,7 @@ export default function Notifications() {
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder="Search by name, email ,mountain or message"
       />
-      
+
       <div className="overflow-x-auto">
         <table
           {...getTableProps()}
@@ -171,38 +174,36 @@ export default function Notifications() {
               </tr>
             ))}
           </thead>
-          
-<tbody {...getTableBodyProps()} className="divide-y divide-white">
-  {page
-    .filter((row) => {
-      const { name, email, message, title } = row.values;
-      const searchRegex = new RegExp(searchValue, 'i');
-      return (
-        searchRegex.test(name) ||
-        searchRegex.test(email) ||
-        searchRegex.test(message) ||
-        searchRegex.test(title)
-      );
-    })
-    .map((row) => {
-      prepareRow(row);
-      return (
-        <tr {...row.getRowProps()} key={row.id}>
-          {row.cells.map((cell) => (
-            <td
-              className="p-3 "
-              key={cell.id}
-              {...cell.getCellProps()}
-            >
-              {cell.render('Cell')}
-            </td>
-          ))}
-        </tr>
-      );
-    })}
-</tbody>
 
-
+          <tbody {...getTableBodyProps()} className="divide-y divide-white">
+            {page
+              .filter((row) => {
+                const { name, email, message, title } = row.values;
+                const searchRegex = new RegExp(searchValue, 'i');
+                return (
+                  searchRegex.test(name) ||
+                  searchRegex.test(email) ||
+                  searchRegex.test(message) ||
+                  searchRegex.test(title)
+                );
+              })
+              .map((row) => {
+                prepareRow(row);
+                return (
+                  <tr {...row.getRowProps()} key={row.id}>
+                    {row.cells.map((cell) => (
+                      <td
+                        className="p-3 "
+                        key={cell.id}
+                        {...cell.getCellProps()}
+                      >
+                        {cell.render('Cell')}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+          </tbody>
         </table>
       </div>
       <div className="inline-flex  mt-2">

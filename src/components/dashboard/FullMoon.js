@@ -50,8 +50,7 @@ export default function GroupClimbs() {
       { Header: 'No of People', accessor: 'noofpeople' },
       { Header: 'Arrival Date', accessor: 'arrivaldate' },
       { Header: 'Email', accessor: 'email' },
-      { Header: 'Extra Info', accessor: 'extrainfo' }
-      
+      { Header: 'Extra Info', accessor: 'extrainfo' },
     ],
     [selectedRows]
   );
@@ -146,7 +145,8 @@ export default function GroupClimbs() {
         placeholder="Search by name, arrival date, number of people,email."
       />
       <p className="text-sm mt-2">
-        The following users have expressed interest in going for a full moon climb with lauwo.Follow up with them.{' '}
+        The following users have expressed interest in going for a full moon
+        climb with lauwo.Follow up with them.{' '}
       </p>
       <div className="overflow-x-auto">
         <table
@@ -174,38 +174,36 @@ export default function GroupClimbs() {
               </tr>
             ))}
           </thead>
-        
-<tbody {...getTableBodyProps()} className="divide-y divide-white">
-  {page
-    .filter((row) => {
-      const { name, email, arrivaldate, noofpeople } = row.values;
-      const searchRegex = new RegExp(searchValue, 'i');
-      return (
-        searchRegex.test(name) ||
-        searchRegex.test(email) ||
-        searchRegex.test(arrivaldate) ||
-        searchRegex.test(noofpeople.toString())
-      );
-    })
-    .map((row) => {
-      prepareRow(row);
-      return (
-        <tr {...row.getRowProps()} key={row.id}>
-          {row.cells.map((cell) => (
-            <td
-              className="p-3 "
-              key={cell.id}
-              {...cell.getCellProps()}
-            >
-              {cell.render('Cell')}
-            </td>
-          ))}
-        </tr>
-      );
-    })}
-</tbody>
 
-
+          <tbody {...getTableBodyProps()} className="divide-y divide-white">
+            {page
+              .filter((row) => {
+                const { name, email, arrivaldate, noofpeople } = row.values;
+                const searchRegex = new RegExp(searchValue, 'i');
+                return (
+                  searchRegex.test(name) ||
+                  searchRegex.test(email) ||
+                  searchRegex.test(arrivaldate) ||
+                  searchRegex.test(noofpeople.toString())
+                );
+              })
+              .map((row) => {
+                prepareRow(row);
+                return (
+                  <tr {...row.getRowProps()} key={row.id}>
+                    {row.cells.map((cell) => (
+                      <td
+                        className="p-3 "
+                        key={cell.id}
+                        {...cell.getCellProps()}
+                      >
+                        {cell.render('Cell')}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+          </tbody>
         </table>
       </div>
       <div className="inline-flex  mt-2">
