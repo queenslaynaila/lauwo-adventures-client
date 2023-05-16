@@ -106,24 +106,24 @@ export default function Mountain() {
               </tr>
               <tr>
                 <td className="px-6 py-4">Shira Londos Route</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">7 Days</td>
+                <td className="px-6 py-4">$2000 PP</td>
+                <td className="px-6 py-4">$1900 PP</td>
+                <td className="px-6 py-4">$1800 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Rongai Route</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">6 Days</td>
+                <td className="px-6 py-4">$1850 PP</td>
+                <td className="px-6 py-4">$1750 PP</td>
+                <td className="px-6 py-4">$1650 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Rongai Route</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">7 Days</td>
+                <td className="px-6 py-4">$1950 PP</td>
+                <td className="px-6 py-4">$1850 PP</td>
+                <td className="px-6 py-4">$1750 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Marangu Route</td>
@@ -134,24 +134,24 @@ export default function Mountain() {
               </tr>
               <tr>
                 <td className="px-6 py-4">Marangu Route</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">6 Days</td>
+                <td className="px-6 py-4">$1650 PP</td>
+                <td className="px-6 py-4">$1550 PP</td>
+                <td className="px-6 py-4">$1450 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Meru Climb</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">4 Days</td>
+                <td className="px-6 py-4">$950 PP</td>
+                <td className="px-6 py-4">$850 PP</td>
+                <td className="px-6 py-4">$750 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Meru Climb</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">3 Days</td>
+                <td className="px-6 py-4">$850 PP</td>
+                <td className="px-6 py-4">$750 PP</td>
+                <td className="px-6 py-4">$650 PP</td>
               </tr>
             </tbody>
           </table>
@@ -184,86 +184,80 @@ export default function Mountain() {
               <tr>
                 <td className="px-6 py-4">Machame Route</td>
                 <td className="px-6 py-4">6 Days</td>
-                <td className="px-6 py-4">$1850 PP</td>
-                <td className="px-6 py-4">$1750 PP</td>
-                <td className="px-6 py-4">$1650 PP</td>
+                <td className="px-6 py-4">$2700 PP</td>
+                <td className="px-6 py-4">$2600 PP</td>
+                <td className="px-6 py-4">$2500 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Machame Route</td>
                 <td className="px-6 py-4">7 Days</td>
-                <td className="px-6 py-4">$1900 PP</td>
-                <td className="px-6 py-4">$1850 PP</td>
-                <td className="px-6 py-4">$1750 PP</td>
+                <td className="px-6 py-4">$3000 PP</td>
+                <td className="px-6 py-4">$2870 PP</td>
+                <td className="px-6 py-4">$2750 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Lemosho Route</td>
                 <td className="px-6 py-4">7 Days</td>
-                <td className="px-6 py-4">$1950 PP</td>
+                <td className="px-6 py-4">$3150 PP</td>
                 <td className="px-6 py-4">$1850 PP</td>
                 <td className="px-6 py-4">$1750 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Lemosho Route</td>
                 <td className="px-6 py-4">8 Days</td>
-                <td className="px-6 py-4">$2150 PP</td>
-                <td className="px-6 py-4">$1950 PP</td>
-                <td className="px-6 py-4">$1850 PP</td>
+                <td className="px-6 py-4">$3360 PP</td>
+                <td className="px-6 py-4">$3240 PP</td>
+                <td className="px-6 py-4">$3150 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Northern Circuit</td>
                 <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">$3800 PP</td>
+                <td className="px-6 py-4">$3650 PP</td>
+                <td className="px-6 py-4">$3550 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Shira Londos Route</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">7 Days</td>
+                <td className="px-6 py-4">$3100 PP</td>
+                <td className="px-6 py-4">$3000 PP</td>
+                <td className="px-6 py-4">$2850 PP</td>
+              </tr>
+              
+              <tr>
+                <td className="px-6 py-4">Rongai Route</td>
+                <td className="px-6 py-4">6 Days</td>
+                <td className="px-6 py-4">$3000 PP</td>
+                <td className="px-6 py-4">$2900 PP</td>
+                <td className="px-6 py-4">$2800 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Rongai Route</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4">Rongai Route</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">7 Days</td>
+                <td className="px-6 py-4">$3100 PP</td>
+                <td className="px-6 py-4">$3000 PP</td>
+                <td className="px-6 py-4">$2900 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Marangu Route</td>
-                <td className="px-6 py-4">9 Days</td>
+                <td className="px-6 py-4">6 Days</td>
+                <td className="px-6 py-4">$2750 PP</td>
                 <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4">Marangu Route</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">$2500 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Meru Climb</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">4 Days</td>
+                <td className="px-6 py-4">$1800 PP</td>
+                <td className="px-6 py-4">$1650 PP</td>
+                <td className="px-6 py-4">$1500 PP</td>
               </tr>
               <tr>
                 <td className="px-6 py-4">Meru Climb</td>
-                <td className="px-6 py-4">9 Days</td>
-                <td className="px-6 py-4">$2650 PP</td>
-                <td className="px-6 py-4">$2550 PP</td>
-                <td className="px-6 py-4">$2350 PP</td>
+                <td className="px-6 py-4">3 Days</td>
+                <td className="px-6 py-4">$1650 PP</td>
+                <td className="px-6 py-4">$1550 PP</td>
+                <td className="px-6 py-4">$1550 PP</td>
               </tr>
             </tbody>
           </table>
