@@ -105,7 +105,7 @@ const Gallery = () => {
       className="bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: 'url(/background.jpg)' }}
     >
-      <div className="inset bg-black/90">
+      <div className="inset bg-black/50">
         <h1 className="text-center lg:text-3xl sm:text-lg font-bold font-poly mb-10 text-white pt-28">
           Reviews of Lauwo Adventures
         </h1>
