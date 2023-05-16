@@ -17,6 +17,7 @@ export default function Index() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
+    notifyInfo()
     e.preventDefault();
     const inquiry = {
       name: formData.name,
@@ -31,6 +32,7 @@ export default function Index() {
       body: JSON.stringify(inquiry),
     }).then((r) => {
       if (r.ok) {
+        toast.dismiss();
         r.json().then((_data) => {
           notifySuccess();
           setFormData({ name: '', email: '', message: '' });
@@ -58,6 +60,22 @@ export default function Index() {
         color: '#000',
       },
     });
+    const notifyInfo = () =>
+    toast.success('Processing...', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
+
   const error =
     (errors && errors.name && errors.name[0]) ||
     (errors && errors.email && errors.email[0]) ||
