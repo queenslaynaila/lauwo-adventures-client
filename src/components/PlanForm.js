@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { adventures } from '@/data/planningData';
 import { months } from '@/data/planningData';
 import { Budget } from '@/data/planningData';
-import { useRouter } from 'next/router';
-
+ 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function PlanForm() {
-  const router = useRouter();
+  
   const [formData, setFormData] = useState({
     adventure: '',
     first_name: '',
@@ -31,27 +32,57 @@ export default function PlanForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const res = await fetch(
-      'https://lauwo-adventures-api.onrender.com/planningforms',
-      {
-        body: JSON.stringify(formData),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
+    toast.info('Submitting data...', { autoClose: false, position: 'top-center',
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    toastId: 'submitting', 
+    style: {
+      backgroundColor: '#FFCE3C',
+      color: '#000',
+    }, });
+    try {
+      const res = await fetch(
+        'https://lauwo-adventures-api.onrender.com/planningforms',
+        {
+          body: JSON.stringify(formData),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          method: 'POST',
+        }
+      );
+      const { status, errors } = await res.json();
+      toast.dismiss('submitting');
+      if (status === 'error') {
+        toast.error('Failed to submit form.');
+        console.log(errors);
+      } else {
+        toast.success('Form submitted successfully.Our team will review your submission and ge back to you.Expect an email and a Whatsap message from us', {  position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored', style: {
+          backgroundColor: '#FFCE3C',
+          color: '#000',
+        }, });
+      
       }
-    );
-    const { status, errors } = await res.json();
-    if (status === 'error') {
-      console.log(errors);
-    } else {
-      router.push('/planning-form/success');
+    } catch (error) {
+      toast.error('An error occurred while submitting the form.', { theme: 'colored' });
+      console.log(error);
     }
   };
-
+  
   return (
     <div className="flex justify-center ">
       <div className="bg-white rounded-lg  w-4/5  p-10 mx-auto mb-8   flex items-center justify-center">
+        <ToastContainer />
         <form
           onSubmit={handleSubmit}
           className="shadow-lg shadow-black/20  rounded-lg   p-4"

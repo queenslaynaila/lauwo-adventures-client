@@ -61,9 +61,9 @@ export default function planningform() {
         </div>
       </div>
 
-      <div className="p-5 bg-yellow-500 flex items-center justify-between">
+      <div className="p-2 bg-yellow-500 flex items-center justify-between">
         <p className="text-white lg:ml-12">
-          Trusted Tour Company in Tanzania. See our reviews here.
+          Trusted Tour Company in Tanzania. 
         </p>
         <div>
           <Popup

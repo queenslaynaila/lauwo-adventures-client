@@ -10,14 +10,14 @@ export default function NotificationForm({ mountain }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+      notifyInfo()
     const formData = {
       name,
       email,
       message,
       title: mountain,
     };
-
+    
     fetch('https://lauwo-adventures-api.onrender.com/notifications', {
       method: 'POST',
       headers: {
@@ -26,6 +26,7 @@ export default function NotificationForm({ mountain }) {
       body: JSON.stringify(formData),
     }).then((r) => {
       if (r.ok) {
+        toast.dismiss()
         r.json().then((_data) => {
           notifySuccess();
           setName('');
@@ -34,6 +35,7 @@ export default function NotificationForm({ mountain }) {
         });
       } else {
         r.json().then((err) => {
+          toast.dismiss()
           setErrors(err.errors);
           notifyError();
         });
@@ -42,7 +44,7 @@ export default function NotificationForm({ mountain }) {
   };
   const notifySuccess = () =>
     toast.success(
-      `Thank you! Well notify you when new tours are available for ${mountain}`,
+      `Thank you! We'll notify you when new tours are available for ${mountain}`,
       {
         position: 'top-center',
         autoClose: 5000,
@@ -58,7 +60,24 @@ export default function NotificationForm({ mountain }) {
         },
       }
     );
-
+    const notifyInfo = () =>
+    toast.success(
+      'Proccessing data....',
+      {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        style: {
+          backgroundColor: '#FFCE3C',
+          color: '#000',
+        },
+      }
+    );
   const error =
     (errors && errors.name && errors.name[0]) ||
     (errors && errors.email && errors.email[0]) ||

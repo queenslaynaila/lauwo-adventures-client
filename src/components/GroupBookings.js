@@ -17,7 +17,7 @@ export default function GroupBookings({ id }) {
       message,
       group_climbs_id: id,
     };
-
+    notifyInfo()
     fetch('https://lauwo-adventures-api.onrender.com/group_climb_bookings', {
       method: 'POST',
       headers: {
@@ -26,6 +26,7 @@ export default function GroupBookings({ id }) {
       body: JSON.stringify(formData),
     }).then((r) => {
       if (r.ok) {
+        toast.dismiss()
         r.json().then((_data) => {
           notifySuccess();
           setName('');
@@ -33,6 +34,7 @@ export default function GroupBookings({ id }) {
           setMessage('');
         });
       } else {
+        toast.dismiss()
         r.json().then((err) => {
           setErrors(err.errors);
           notifyError();
@@ -40,6 +42,25 @@ export default function GroupBookings({ id }) {
       }
     });
   };
+  const notifyInfo = () =>
+    toast.success(
+      'Proccessing data....',
+      {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        style: {
+          backgroundColor: '#FFCE3C',
+          color: '#000',
+        },
+      }
+    );
+  
   const notifySuccess = () =>
     toast.success(
       'Group Reservation received successfully.Expect an email from us with the specifics.',

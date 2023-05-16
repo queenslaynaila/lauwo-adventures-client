@@ -16,7 +16,22 @@ export default function EnquiryPopUp() {
       email,
       message,
     };
-
+    toast.info('Processing data. Please wait...', {
+      autoClose: false,
+      closeButton: false,
+      hideProgressBar: true,
+      position: 'top-center',
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
+  
     fetch('https://lauwo-adventures-api.onrender.com/inquiries', {
       method: 'POST',
       headers: {
@@ -25,6 +40,7 @@ export default function EnquiryPopUp() {
       body: JSON.stringify(formData),
     }).then((r) => {
       if (r.ok) {
+        toast.dismiss();
         r.json().then((_data) => {
           notifySuccess();
           setName('');
@@ -32,6 +48,7 @@ export default function EnquiryPopUp() {
           setMessage('');
         });
       } else {
+        toast.dismiss();
         r.json().then((err) => {
           setErrors(err.errors);
           notifyError();

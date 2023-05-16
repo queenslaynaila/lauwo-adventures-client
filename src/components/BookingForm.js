@@ -36,6 +36,7 @@ const BookingForm = ({ adventure, bookableType }) => {
       bookable_type: bookableType,
       bookable_id: adventure.id,
     };
+    notifyInfo()
     fetch('https://lauwo-adventures-api.onrender.com/bookings', {
       method: 'POST',
       headers: {
@@ -44,6 +45,7 @@ const BookingForm = ({ adventure, bookableType }) => {
       body: JSON.stringify(booking),
     }).then((r) => {
       if (r.ok) {
+        toast.dismiss()
         r.json().then((_data) => {
           notifySuccess();
           setFormData({
@@ -65,6 +67,7 @@ const BookingForm = ({ adventure, bookableType }) => {
           }, 2000);
         });
       } else {
+        toast.dismiss()
         r.json().then((err) => {
           console.error(err);
           notifyError();
@@ -76,6 +79,25 @@ const BookingForm = ({ adventure, bookableType }) => {
     });
   };
 
+
+  const notifyInfo = () =>
+    toast.success(
+      'Proccessing data....',
+      {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        style: {
+          backgroundColor: '#FFCE3C',
+          color: '#000',
+        },
+      }
+    );
   const notifySuccess = () =>
     toast.success(
       'Booking received successfully.Look out for an email from us on payment.',
