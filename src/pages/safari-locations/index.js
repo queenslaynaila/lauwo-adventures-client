@@ -18,7 +18,7 @@ const SafariPage = ({ faqs }) => {
   };
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
-
+  const [isLoading, setLoading] = useState(true);
   const handleSearch = (e) => {
     setSearchValue(e.target.value);
   };
@@ -191,7 +191,15 @@ const SafariPage = ({ faqs }) => {
                   alt="Responsible Tourism"
                   width={500}
                   height={500}
-                  className="w-full h-auto rounded-lg"
+                  
+                  className={`w-full h-auto rounded-lg
+               
+              ${
+                isLoading
+                  ? " blur-2xl  "
+                  : " blur-0 grayscale-0"
+              })`}
+          onLoadingComplete={() => setLoading(false)}
                 />
               </div>
             </div>
