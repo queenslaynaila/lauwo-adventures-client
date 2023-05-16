@@ -95,9 +95,7 @@ const InquiryForm = () => {
               )}
             </span>
             <br />
-            <span className="mt-2">
-              {testimonials[activeIndex].author}
-            </span>
+            <span className="mt-2">{testimonials[activeIndex].author}</span>
             <br />
             <span className="testimonial-title ">
               {testimonials[activeIndex].title}
