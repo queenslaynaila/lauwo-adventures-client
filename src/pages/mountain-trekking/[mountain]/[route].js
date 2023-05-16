@@ -4,11 +4,12 @@ import BookingForm from '@/components/BookingForm';
 import MountainItinery from '@/components/MountainItinery';
 import Packages from '@/components/Packages';
 import Pricing from '@/components/Pricing';
-import Link from 'next/link';
+
 import { useState } from 'react';
 import SocialsButtons from '@/components/SocialsButtons';
 const menuTabs = ['Itinerary', 'Standard', 'Premium', 'Pricing', 'Book', 'Map'];
 const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
+  console.log(itineries);
   const { standard_inclusive, standard_exclusive } = packages;
   const { premium_inclusive, premium_exclusive } = packages;
   const [activeTab, setActiveTab] = useState('Itinerary');
