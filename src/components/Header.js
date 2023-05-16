@@ -83,7 +83,7 @@ const Header = () => {
                     href="/planning-form"
                   >
                     <button className="text-white bg-yellow-500 hover:bg-yellow-800 hover:text-white rounded-md items-center  px-4 py-2 flex ">
-                      <span className="mr-2">Plan A Trip</span>
+                      <span className="mr-2">Tailor Your Trip</span>
                       <span className="fa fa-arrow-right"></span>
                     </button>
                   </Link>
