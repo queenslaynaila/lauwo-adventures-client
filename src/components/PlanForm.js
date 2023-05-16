@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { adventures } from '@/data/planningData';
 import { months } from '@/data/planningData';
 import { Budget } from '@/data/planningData';
- 
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 export default function PlanForm() {
@@ -36,17 +36,20 @@ export default function PlanForm() {
       return; // Ignore form submission if already loading
     }
     setLoading(true);
-    toast.info('Submitting data...', { autoClose: false, position: 'top-center',
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    toastId: 'submitting', 
-    style: {
-      backgroundColor: '#FFCE3C',
-      color: '#000',
-    }, });
+    toast.info('Submitting data...', {
+      autoClose: false,
+      position: 'top-center',
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      toastId: 'submitting',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
     try {
       const res = await fetch(
         'https://lauwo-adventures-api.onrender.com/planningforms',
@@ -64,26 +67,33 @@ export default function PlanForm() {
         toast.error('Failed to submit form.');
         console.log(errors);
       } else {
-        toast.success('Form submitted successfully.Our team will review your submission and ge back to you.Expect an email and a Whatsap message from us', {  position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored', style: {
-          backgroundColor: '#FFCE3C',
-          color: '#000',
-        }, });
-      
+        toast.success(
+          'Form submitted successfully.Our team will review your submission and ge back to you.Expect an email and a Whatsap message from us',
+          {
+            position: 'top-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+            style: {
+              backgroundColor: '#FFCE3C',
+              color: '#000',
+            },
+          }
+        );
       }
     } catch (error) {
-      toast.error('An error occurred while submitting the form.', { theme: 'colored' });
+      toast.error('An error occurred while submitting the form.', {
+        theme: 'colored',
+      });
       console.log(error);
     }
     setLoading(false);
   };
-  
+
   return (
     <div className="flex justify-center ">
       <div className="bg-white rounded-lg  w-4/5  p-10 mx-auto mb-8   flex items-center justify-center">
@@ -374,13 +384,13 @@ export default function PlanForm() {
             ></textarea>
           </div>
           <button
-             type="submit"
-  disabled={loading}
-  className={`text-white bg-yellow-400 ${
-    loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
-  } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
->
-  {loading ? 'Submitting...' : 'Submit'}
+            type="submit"
+            disabled={loading}
+            className={`text-white bg-yellow-400 ${
+              loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
+            } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
+          >
+            {loading ? 'Submitting...' : 'Submit'}
           </button>
         </form>
       </div>

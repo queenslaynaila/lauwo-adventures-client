@@ -41,7 +41,7 @@ const BookingForm = ({ adventure, bookableType }) => {
       bookable_type: bookableType,
       bookable_id: adventure.id,
     };
-    notifyInfo()
+    notifyInfo();
     fetch('https://lauwo-adventures-api.onrender.com/bookings', {
       method: 'POST',
       headers: {
@@ -50,7 +50,7 @@ const BookingForm = ({ adventure, bookableType }) => {
       body: JSON.stringify(booking),
     }).then((r) => {
       if (r.ok) {
-        toast.dismiss()
+        toast.dismiss();
         r.json().then((_data) => {
           notifySuccess();
           setFormData({
@@ -72,7 +72,7 @@ const BookingForm = ({ adventure, bookableType }) => {
           }, 2000);
         });
       } else {
-        toast.dismiss()
+        toast.dismiss();
         r.json().then((err) => {
           console.error(err);
           notifyError();
@@ -85,25 +85,21 @@ const BookingForm = ({ adventure, bookableType }) => {
     });
   };
 
-
   const notifyInfo = () =>
-    toast.success(
-      'Proccessing data....',
-      {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-        style: {
-          backgroundColor: '#FFCE3C',
-          color: '#000',
-        },
-      }
-    );
+    toast.success('Proccessing data....', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
   const notifySuccess = () =>
     toast.success(
       'Booking received successfully.Look out for an email from us on payment.',
@@ -379,14 +375,14 @@ const BookingForm = ({ adventure, bookableType }) => {
           </div>
         </div>
         <button
-             type="submit"
-  disabled={loading}
-  className={`text-white bg-yellow-400 ${
-    loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
-  } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
->
-  {loading ? 'Booking...' : 'Book'}
-          </button>
+          type="submit"
+          disabled={loading}
+          className={`text-white bg-yellow-400 ${
+            loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
+          } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
+        >
+          {loading ? 'Booking...' : 'Book'}
+        </button>
       </form>
     </div>
   );

@@ -20,7 +20,7 @@ export default function GroupBookings({ id }) {
       message,
       group_climbs_id: id,
     };
-    notifyInfo()
+    notifyInfo();
     setLoading(true);
     fetch('https://lauwo-adventures-api.onrender.com/group_climb_bookings', {
       method: 'POST',
@@ -30,7 +30,7 @@ export default function GroupBookings({ id }) {
       body: JSON.stringify(formData),
     }).then((r) => {
       if (r.ok) {
-        toast.dismiss()
+        toast.dismiss();
         r.json().then((_data) => {
           notifySuccess();
           setName('');
@@ -38,7 +38,7 @@ export default function GroupBookings({ id }) {
           setMessage('');
         });
       } else {
-        toast.dismiss()
+        toast.dismiss();
         r.json().then((err) => {
           setErrors(err.errors);
           notifyError();
@@ -48,24 +48,21 @@ export default function GroupBookings({ id }) {
     });
   };
   const notifyInfo = () =>
-    toast.success(
-      'Proccessing data....',
-      {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-        style: {
-          backgroundColor: '#FFCE3C',
-          color: '#000',
-        },
-      }
-    );
-  
+    toast.success('Proccessing data....', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
+
   const notifySuccess = () =>
     toast.success(
       'Group Reservation received successfully.Expect an email from us with the specifics.',
@@ -144,14 +141,14 @@ export default function GroupBookings({ id }) {
           ></textarea>
         </div>
         <button
-             type="submit"
-  disabled={loading}
-  className={`text-white bg-yellow-400 ${
-    loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
-  } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
->
-  {loading ? 'Submitting...' : 'Submit'}
-          </button>
+          type="submit"
+          disabled={loading}
+          className={`text-white bg-yellow-400 ${
+            loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
+          } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
+        >
+          {loading ? 'Submitting...' : 'Submit'}
+        </button>
       </form>
     </div>
   );

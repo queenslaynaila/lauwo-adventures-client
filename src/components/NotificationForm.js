@@ -13,15 +13,15 @@ export default function NotificationForm({ mountain }) {
     if (loading) {
       return; // Ignore form submission if already loading
     }
-      notifyInfo()
-      setLoading(true);
+    notifyInfo();
+    setLoading(true);
     const formData = {
       name,
       email,
       message,
       title: mountain,
     };
-    
+
     fetch('https://lauwo-adventures-api.onrender.com/notifications', {
       method: 'POST',
       headers: {
@@ -30,7 +30,7 @@ export default function NotificationForm({ mountain }) {
       body: JSON.stringify(formData),
     }).then((r) => {
       if (r.ok) {
-        toast.dismiss()
+        toast.dismiss();
         r.json().then((_data) => {
           notifySuccess();
           setName('');
@@ -39,7 +39,7 @@ export default function NotificationForm({ mountain }) {
         });
       } else {
         r.json().then((err) => {
-          toast.dismiss()
+          toast.dismiss();
           setErrors(err.errors);
           notifyError();
         });
@@ -65,24 +65,21 @@ export default function NotificationForm({ mountain }) {
         },
       }
     );
-    const notifyInfo = () =>
-    toast.success(
-      'Proccessing data....',
-      {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-        style: {
-          backgroundColor: '#FFCE3C',
-          color: '#000',
-        },
-      }
-    );
+  const notifyInfo = () =>
+    toast.success('Proccessing data....', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+      style: {
+        backgroundColor: '#FFCE3C',
+        color: '#000',
+      },
+    });
   const error =
     (errors && errors.name && errors.name[0]) ||
     (errors && errors.email && errors.email[0]) ||
@@ -144,14 +141,14 @@ export default function NotificationForm({ mountain }) {
           ></textarea>
         </div>
         <button
-             type="submit"
-  disabled={loading}
-  className={`text-white bg-yellow-400 ${
-    loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
-  } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
->
-  {loading ? 'Submitting...' : 'Submit'}
-          </button>
+          type="submit"
+          disabled={loading}
+          className={`text-white bg-yellow-400 ${
+            loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
+          } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
+        >
+          {loading ? 'Submitting...' : 'Submit'}
+        </button>
       </form>
     </div>
   );

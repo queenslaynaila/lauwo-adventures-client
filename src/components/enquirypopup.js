@@ -13,7 +13,7 @@ export default function EnquiryPopUp() {
     if (loading) {
       return; // Ignore form submission if already loading
     }
-   
+
     const formData = {
       name,
       email,
@@ -35,7 +35,7 @@ export default function EnquiryPopUp() {
         color: '#000',
       },
     });
-     
+
     fetch('https://lauwo-adventures-api.onrender.com/inquiries', {
       method: 'POST',
       headers: {
@@ -136,14 +136,14 @@ export default function EnquiryPopUp() {
           ></textarea>
         </div>
         <button
-             type="submit"
-  disabled={loading}
-  className={`text-white bg-yellow-400 ${
-    loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
-  } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
->
-  {loading ? 'Submitting...' : 'Submit'}
-          </button>
+          type="submit"
+          disabled={loading}
+          className={`text-white bg-yellow-400 ${
+            loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
+          } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
+        >
+          {loading ? 'Submitting...' : 'Submit'}
+        </button>
       </form>
     </div>
   );

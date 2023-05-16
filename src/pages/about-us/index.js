@@ -20,14 +20,41 @@ export default function index() {
         <title>About Us | Lauwo Adventures</title>
         <meta
           name="description"
-          content="Lauwo Adventures is a local tour company operating in Kilimanjaro originating from the mountaineer family of 'Yohani Kinyala Lauwo' who was the first African guide to climb and conquer the summit of Mount Kilimanjaro."
+          content="Lauwo Adventures is a local Tanzanian tour operator specializing in mountain climbing expeditions and wildlife safaris. With a rich history rooted in the first African guide to conquer Mount Kilimanjaro, we offer unforgettable experiences, expert guides, and vibrant local cultural interactions. Choose us for personalized itineraries, superior safety standards, and a commitment to sustainable tourism. Join us in preserving nature and empowering communities through our responsible tourism initiatives. Contact us for an exceptional adventure in Tanzania."
         />
         <meta
           name="keywords"
-          content="Lauwo Adventures, tour company, Kilimanjaro, mountaineer, Yohani Kinyala Lauwo, porters, local communities, vocational training, Tanzania tourism industry,Mount meru, Tanzanian safaris, visit tanzania, freedom foundation tanzania, wildgem adventures"
+          content="Lauwo Adventures, Tanzania tours, mountain climbing expeditions, Kilimanjaro climbing, wildlife safaris, responsible tourism, local guides, cultural experiences, sustainable tourism, porter support program,Yohani Kinyala Lauwo,Mount Kilimanjaro historical ascent,First African guide to climb Kilimanjaro,African mountaineering history,Lauwo family and Mount Kilimanjaro,African pioneers in mountaineerin,Freedom foundation"
         />
-        <meta name="author" content="Lauwo Adventures" />
-        <meta name="google" content="translate" />
+        <meta
+          property="og:title"
+          content="Lauwo Adventures - Tanzania Tours: Mountain Climbing and Wildlife Safaris"
+        />
+        <meta
+          property="og:description"
+          content="Lauwo Adventures is a local Tanzanian tour operator specializing in mountain climbing expeditions and wildlife safaris. Choose us for personalized itineraries, superior safety standards, and a commitment to sustainable tourism. Join us in preserving nature and empowering communities."
+        />
+        <meta
+          property="og:image"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lauwo-adventures-client.vercel.app/about-us"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Lauwo Adventures - Tanzania Tours: Mountain Climbing and Wildlife Safaris"
+        />
+        <meta
+          name="twitter:description"
+          content="Lauwo Adventures is a local Tanzanian tour operator specializing in mountain climbing expeditions and wildlife safaris. Choose us for personalized itineraries, superior safety standards, and a commitment to sustainable tourism. Join us in preserving nature and empowering communities."
+        />
+        <meta
+          name="twitter:image"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
       </Head>
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"

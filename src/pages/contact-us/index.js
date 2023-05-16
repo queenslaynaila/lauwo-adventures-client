@@ -17,7 +17,7 @@ export default function Index() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
-    notifyInfo()
+    notifyInfo();
     e.preventDefault();
     const inquiry = {
       name: formData.name,
@@ -60,7 +60,7 @@ export default function Index() {
         color: '#000',
       },
     });
-    const notifyInfo = () =>
+  const notifyInfo = () =>
     toast.success('Processing...', {
       position: 'top-center',
       autoClose: 5000,
