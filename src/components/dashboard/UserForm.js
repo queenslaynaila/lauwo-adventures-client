@@ -11,6 +11,10 @@ const UserForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.password !== formData.confirmpassword) {
+      notifyPasswordError();
+      return; // Exit the function if passwords don't match
+    }
     const user = {
       admin: {
         email: formData.email,
@@ -68,10 +72,22 @@ const UserForm = () => {
     toast.error(' User Creation failed, Please try again.', {
       theme: 'colored',
     });
+    const notifyPasswordError = () =>
+    toast.error('Password and confirm password do not match.', {
+      theme: 'colored',
+    });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword((prevShowConfirmPassword) => !prevShowConfirmPassword);
   };
 
   return (
@@ -112,12 +128,20 @@ const UserForm = () => {
             <input
               className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
         focus:outline-none focus:border-yellow-500"
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
+        type={showPassword ? 'text' : 'password'}
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+             
             />
+             <button
+                className="absolute top-1 right-1 text-xs focus:outline-none"
+                type="button"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? 'Hide' : 'Show'}
+              </button>
           </div>
           <div className="relative mt-4">
             <label
@@ -129,12 +153,19 @@ const UserForm = () => {
             <input
               className="border-b-2 border-black lg:w-96 ms:w-64 xs:w-44 h-10 font-poly
         focus:outline-none focus:border-yellow-500"
-              type="password"
+        type={showConfirmPassword ? 'text' : 'password'}
               name="confirmpassword"
               value={formData.confirmpassword}
               onChange={handleChange}
               required
             />
+            <button
+                className="absolute top-1 right-1 text-xs focus:outline-none"
+                type="button"
+                onClick={toggleConfirmPasswordVisibility}
+              >
+                {showConfirmPassword ? 'Hide' : 'Show'}
+              </button>
           </div>
         </div>
 
