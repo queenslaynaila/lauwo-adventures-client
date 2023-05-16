@@ -255,10 +255,7 @@ export default function Mountain({ mountain, faqs }) {
                 <p className="  p-2 leading-8  mx-4 lg:mx-16">
                   {simpleFormat(route.highlights)}
                 </p>
-                <h1 className="text-center p-4 text-2xl font-bold capitalize">
-                  A breakdown of {route.route_name} Prices
-                </h1>
-
+                
                 <h1 className="text-center p-4 text-2xl font-bold capitalize">
                   {route.route_name} Packages
                 </h1>
