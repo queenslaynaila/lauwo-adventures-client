@@ -15,7 +15,7 @@ const images = [
     src: '/background.jpg',
     heading: 'Safaris in Tanzania',
     paragraph:
-      'Immerse yourself in the wonders of the African wilderness on our extraordinary wildlife safaris. Journey through vast savannahs, dense jungles, and untamed landscapes teeming with iconic wildlife. Witness herds of elephants roaming freely, spot majestic lions lazing under the African sun, and marvel at the grace of giraffes as they graze on treetops.  ',
+      'Immerse yourself in the wonders of the African wilderness on our extraordinary wildlife safaris. Journey through vast savannahs, dense jungles, and untamed landscapes teeming with iconic wildlife. Witness herds of elephants roaming freely.........  ',
     ctaText: 'Safari Tours',
     ctaLink: '/our-safari-packages',
   },
@@ -24,7 +24,7 @@ const images = [
     src: '/gq.jpg',
     heading: 'Our Safari Locations',
     paragraph:
-      "Indulge in the diversity of Tanzania's breathtaking safari locations. From the endless plains of the Serengeti to the wildlife-rich Ngorongoro Crater, each destination offers a unique and enchanting experience. Witness the annual wildebeest migration, spot the elusive Big Five, and immerse yourself in the rich cultural heritage of local tribes. ",
+      "Indulge in the diversity of Tanzania's breathtaking safari locations. From the endless plains of the Serengeti to the wildlife-rich Ngorongoro Crater, each destination offers a unique and enchanting experience. Witness the annual wildebeest migration, spot the elusive Big Five..... ",
     ctaText: 'Safari Locations',
     ctaLink: '/safari-locations',
   },
