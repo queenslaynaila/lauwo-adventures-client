@@ -281,7 +281,7 @@ export default function Mountain({ mountain, faqs }) {
                             <h2 className="mb-2 sm:text-lg font-bold font-poly tracking-wide text-gray-900 capitalize">
                               {route.route_name} {duration} Day Climb
                             </h2>
-                            <p className="leading-8">Price from:</p>
+                          
                             <p className="leading-8">
                               {' '}
                               {truncate(route.highlights, 100)}
