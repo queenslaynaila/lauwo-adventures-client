@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head'
 import Link from 'next/link';
 import EnquiryPopUp from '@/components/enquirypopup';
 import Popup from 'reactjs-popup';
@@ -54,6 +55,54 @@ export default function Index({ tips }) {
   };
   return (
     <div>
+      <Head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="keywords"
+          content="Kilimanjaro climb, Kilimanjaro route, Kilimanjaro planning, Kilimanjaro trek, Kilimanjaro packing list, Tanzania adventure, Mountain hiking, Mount Kilimanjaro, Lauwo Adventures"
+        />
+        <meta
+          name="description"
+          content="Choosing The Best Kilimanjaro Route. When planning your Kilimanjaro climb, it's important to consider various factors that contribute to the overall success and enjoyment of your expedition. Here are some key points to help you decide which Kilimanjaro route to choose. Plan your Kilimanjaro trek with Lauwo Adventures and ensure a safe and memorable experience."
+        />
+
+        <meta
+          property="og:title"
+          content="Choosing The Best Kilimanjaro Route"
+        />
+        <meta
+          property="og:description"
+          content="When planning your Kilimanjaro climb, it's important to consider various factors that contribute to the overall success and enjoyment of your expedition. Here are some key points to help you decide which Kilimanjaro route to choose. Plan your Kilimanjaro trek with Lauwo Adventures and ensure a safe and memorable experience."
+        />
+        <meta
+          property="og:image"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lauwo-adventures-client.vercel.app/planing"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Lauwo Adventures" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Choosing The Best Kilimanjaro Route"
+        />
+        <meta
+          name="twitter:description"
+          content="When planning your Kilimanjaro climb, it's important to consider various factors that contribute to the overall success and enjoyment of your expedition. Here are some key points to help you decide which Kilimanjaro route to choose. Plan your Kilimanjaro trek with Lauwo Adventures and ensure a safe and memorable experience."
+        />
+        <meta
+          name="twitter:image"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
+
+        <title>How to Plan Your Kilimanjaro Hike - Lauwo Adventures</title>
+      </Head>
+
       <div className="font-poly">
         <div
           className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
