@@ -29,6 +29,7 @@ const SafariPage = ({ faqs }) => {
   return (
     <>
       <Head>
+      <title>Discover Tanzanias top locations  | Lauwo Adventures</title>
         <meta
           property="og:title"
           content="Discover Tanzania's Safari Destinations with  Lauwo Adventures"
