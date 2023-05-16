@@ -31,8 +31,7 @@ const SafariPage = ({ faqs }) => {
       <Head>
         <meta
           property="og:title"
-          content="Discover Tanzania's Safari Destinations with 
-      Lauwo Adventures"
+          content="Discover Tanzania's Safari Destinations with  Lauwo Adventures"
         />
         <meta
           property="og:description"
@@ -40,9 +39,8 @@ const SafariPage = ({ faqs }) => {
         />
         <meta
           property="og:image"
-          content="https://example.com/your-image.jpg"
-        />
-        <meta property="og:url" content="https://example.com/your-page-url" />
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"/>
+        <meta property="og:url" content="https://lauwo-adventures-client.vercel.app/safari-locations" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
