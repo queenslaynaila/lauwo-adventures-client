@@ -135,52 +135,50 @@ export default function Mountain({ mountain, faqs }) {
         <div>
           <ul className="flex flex-wrap text-sm font-medium text-center gap-2 justify-center items-center text-gray-500   ">
             <li className="mr-2">
-              <Link
-                href={'#overview'}
+              <button
                 className={`inline-block p-4 rounded-lg ${
                   activeTab === 'overview'
-                    ? 'bg-yellow-700 text-white active '
-                    : 'hover:text-gray-600 hover:bg-gray-50  bg-yellow-500 text-white'
+                    ? 'bg-yellow-700 text-white'
+                    : 'hover:text-black hover:bg-gray-50 bg-yellow-500 text-white'
                 }`}
                 onClick={() => handleTabChange('overview')}
               >
                 Overview
-              </Link>
+              </button>
             </li>
-            {mountain.route_durations.length > 0 ?
-            (<li className="mr-2">
-              <Link
-                href={'#all'}
-                className={`inline-block p-4 rounded-lg ${
-                  activeTab === 'all'
-                    ? 'bg-yellow-700 text-white active '
-                    : 'hover:text-gray-600 hover:bg-gray-50  bg-yellow-500 text-white'
-                }`}
-                onClick={() => handleTabChange('all')}
-              >
-                All packages
-              </Link>
-            </li>):null}
-            
+            {mountain.route_durations.length > 0 ? (
+              <li className="mr-2">
+                <button
+                  className={`inline-block p-4 rounded-lg ${
+                    activeTab === 'all'
+                      ? 'bg-yellow-700 text-white'
+                      : 'hover:text-black hover:bg-gray-50 bg-yellow-500 text-white'
+                  }`}
+                  onClick={() => handleTabChange('all')}
+                >
+                  All packages
+                </button>
+              </li>
+            ) : null}
+
             {mountain.itinery ? (
               <li className="mr-2">
-                <Link
-                  href={'#itinery'}
+                <button
                   className={`inline-block p-4 rounded-lg ${
                     activeTab === 'itinery'
-                      ? 'bg-yellow-700 text-white active'
-                      : 'hover:text-gray-600 hover:bg-gray-50  bg-yellow-500 text-white'
+                      ? 'bg-yellow-700 text-white'
+                      : 'hover:text-black hover:bg-gray-50 bg-yellow-500 text-white'
                   }`}
                   onClick={() => handleTabChange('itinery')}
                 >
                   Itinery
-                </Link>
+                </button>
               </li>
             ) : null}
             {mountain.routes.map((route) => (
               <li className="mr-2 " key={route.id}>
-                <Link
-                  href={`#${route.route_name}`}
+                <button
+                  // href={`#${route.route_name}`}
                   className={`inline-block p-4 rounded-lg ${
                     activeTab === route.id
                       ? 'bg-yellow-700 text-white active'
@@ -189,34 +187,32 @@ export default function Mountain({ mountain, faqs }) {
                   onClick={() => handleTabChange(route.id)}
                 >
                   {route.route_name}
-                </Link>
+                </button>
               </li>
             ))}
             <li className="mr-2">
-              <Link
-                href={'#groups'}
+              <button
                 className={`inline-block p-4 rounded-lg ${
                   activeTab === 'groups'
-                    ? 'bg-yellow-700 text-white active'
-                    : 'hover:text-gray-600 hover:bg-gray-50  bg-yellow-500 text-white'
+                    ? 'bg-yellow-700 text-white'
+                    : 'hover:text-black hover:bg-gray-50 bg-yellow-500 text-white'
                 }`}
                 onClick={() => handleTabChange('groups')}
               >
                 Group Climbs
-              </Link>
+              </button>
             </li>
             <li className="mr-2">
-              <Link
-                href={'#faqs'}
+              <button
                 className={`inline-block p-4 rounded-lg ${
                   activeTab === 'faqs'
-                    ? 'bg-yellow-700 text-white active'
-                    : 'hover:text-gray-600 hover:bg-gray-50  bg-yellow-500 text-white'
+                    ? 'bg-yellow-700 text-white'
+                    : 'hover:text-black hover:bg-gray-50 bg-yellow-500 text-white'
                 }`}
                 onClick={() => handleTabChange('faqs')}
               >
                 FAQS
-              </Link>
+              </button>
             </li>
           </ul>
 
@@ -245,7 +241,7 @@ export default function Mountain({ mountain, faqs }) {
                   Plan Your Climb on The {route.route_name}
                 </h1>
                 <p className="  p-2 leading-8  mx-4 lg:mx-16">
-                  Difficulty:{route.difficulty}  
+                  Difficulty:{route.difficulty}
                 </p>
                 <p className="  p-2 leading-8  mx-4 lg:mx-16">
                   Height:{route.height}
@@ -477,9 +473,12 @@ export default function Mountain({ mountain, faqs }) {
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mx-6">
                   {filteredPackage.map((route, index) => (
-                    <Link href={`/mountain-trekking/${generateSlug(
+                    <Link
+                      href={`/mountain-trekking/${generateSlug(
                         mountain.mountain_name
-                      )}/${generateSlug2(route.title)}`} key={index}>
+                      )}/${generateSlug2(route.title)}`}
+                      key={index}
+                    >
                       <div className="p-4">
                         <div className="relative bg-white border border-gray-200 rounded-lg shadow">
                           <Image

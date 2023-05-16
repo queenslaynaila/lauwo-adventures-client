@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Packages({ exclusive, inclusive ,price}) {
+export default function Packages({ exclusive, inclusive, price }) {
   const inclusiveItems = inclusive.split(',');
   const exclusiveItems = exclusive.split(',');
 

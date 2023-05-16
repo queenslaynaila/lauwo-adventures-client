@@ -9,13 +9,12 @@ import { useState } from 'react';
 import SocialsButtons from '@/components/SocialsButtons';
 const menuTabs = ['Itinerary', 'Standard', 'Premium', 'Pricing', 'Book', 'Map'];
 const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
-   
-   const {standard_inclusive, standard_exclusive} = packages
-   const {premium_inclusive, premium_exclusive} = packages
-   const [activeTab, setActiveTab] = useState('Itinerary');
-   const handleTabChange = (tab) => {
+  const { standard_inclusive, standard_exclusive } = packages;
+  const { premium_inclusive, premium_exclusive } = packages;
+  const [activeTab, setActiveTab] = useState('Itinerary');
+  const handleTabChange = (tab) => {
     setActiveTab(tab);
-   };
+  };
 
   return (
     <>
@@ -59,19 +58,18 @@ const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
         </div>
         <div>
           <ul className="pb-4 flex flex-wrap text-sm font-medium text-center gap-2 justify-center items-center text-gray-500   ">
-            {menuTabs.map((route) => (
-              <li className="mr-2 " key={route}>
-                <Link
-                  href={`#${route}`}
+            {menuTabs.map((tab) => (
+              <li className="mr-2" key={tab}>
+                <button
                   className={`inline-block p-4 rounded-lg ${
-                    activeTab === route
-                      ? 'bg-yellow-700 text-white active'
-                      : 'hover:text-black hover:bg-gray-50  bg-yellow-500 text-white'
+                    activeTab === tab
+                      ? 'bg-yellow-700 text-white'
+                      : 'hover:text-black hover:bg-gray-50 bg-yellow-500 text-white'
                   }`}
-                  onClick={() => handleTabChange(route)}
+                  onClick={() => handleTabChange(tab)}
                 >
-                  {route}
-                </Link>
+                  {tab}
+                </button>
               </li>
             ))}
           </ul>
@@ -122,13 +120,21 @@ const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
           id={'Standard'}
           className={`tab-content ${activeTab === 'Standard' ? '' : 'hidden'}`}
         >
-          <Packages exclusive={standard_exclusive} inclusive={standard_inclusive} price={'STANDARD'}  />
+          <Packages
+            exclusive={standard_exclusive}
+            inclusive={standard_inclusive}
+            price={'STANDARD'}
+          />
         </div>
         <div
           id={'Premium'}
           className={`tab-content ${activeTab === 'Premium' ? '' : 'hidden'}`}
         >
-          <Packages   exclusive={premium_exclusive} inclusive={premium_inclusive}  price={'PREMIUM'}  />
+          <Packages
+            exclusive={premium_exclusive}
+            inclusive={premium_inclusive}
+            price={'PREMIUM'}
+          />
         </div>
         <SocialsButtons />
       </div>

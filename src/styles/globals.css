@@ -50,3 +50,12 @@
 .testimonial-controls button.active {
   background-color: gray;
 }
+.tab-content {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.tab-content.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

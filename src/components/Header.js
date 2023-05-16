@@ -101,12 +101,10 @@ const Header = () => {
 
       <div className="absolute top-1/2 transform -translate-y-1/2 left-0">
         <button onClick={handlePrevClick} className="mx-1">
-          <span className
-="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-yellow-500  hover:bg-yellow-800 ">
+          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-yellow-500  hover:bg-yellow-800 ">
             <svg
               aria-hidden="true"
-              className
-="w-5 h-5 text-white sm:w-6 sm:h-6  "
+              className="w-5 h-5 text-white sm:w-6 sm:h-6  "
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -115,24 +113,20 @@ const Header = () => {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth
-="2"
+                strokeWidth="2"
                 d="M15 19l-7-7 7-7"
               ></path>
             </svg>
-            <span className
-="sr-only">Previous</span>
+            <span className="sr-only">Previous</span>
           </span>
         </button>
       </div>
       <div className="absolute top-1/2 transform -translate-y-1/2 right-0 ">
         <button onClick={handleNextClick} className="mx-1">
-          <span className
-="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-yellow-500 hover:bg-yellow-800">
+          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-yellow-500 hover:bg-yellow-800">
             <svg
               aria-hidden="true"
-              className
-="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+              className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -141,13 +135,11 @@ const Header = () => {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth
-="2"
+                strokeWidth="2"
                 d="M9 5l7 7-7 7"
               ></path>
             </svg>
-            <span className
-="sr-only">Next</span>
+            <span className="sr-only">Next</span>
           </span>
         </button>
       </div>
