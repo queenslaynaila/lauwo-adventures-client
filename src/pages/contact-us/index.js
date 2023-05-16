@@ -89,7 +89,7 @@ export default function Index() {
         className="bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url(/background.jpg)' }}
       >
-        <div className="inset bg-black/90">
+        <div className="inset bg-black/50">
           <div>
             <div className=" p-8 ">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8   px-4  mt-20">
