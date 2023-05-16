@@ -8,54 +8,10 @@
     @apply font-poppins;
   }
 }
-.testimonial-section {
-  text-align: center;
-  margin-top: 50px;
-}
+ 
+ 
+ 
+ 
+ 
 
-.testimonial-box {
-  background-color: lightgray;
-  display: inline-block;
-  padding: 20px;
-  margin: 0 30px;
-}
-
-.testimonial-quote {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.testimonial-author {
-  margin-top: 10px;
-}
-
-.testimonial-rating {
-  margin-top: 5px;
-}
-
-.testimonial-controls {
-  margin-top: 20px;
-}
-
-.testimonial-controls button {
-  background-color: yellow;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  margin: 0 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.testimonial-controls button.active {
-  background-color: gray;
-}
-.tab-content {
-  transition: opacity 0.3s ease-in-out;
-  opacity: 1;
-}
-
-.tab-content.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+ 

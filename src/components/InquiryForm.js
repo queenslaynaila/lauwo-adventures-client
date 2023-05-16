@@ -48,7 +48,7 @@ const InquiryForm = () => {
   };
 
   return (
-    <section className="testimonial-section font-poly pb-8">
+    <section className=" text-center  font-poly pb-8">
       <div className="mx-50">
         <div className="flex justify-center items-center">
           <div className="border-t border-black w-1/3"></div>
@@ -75,7 +75,7 @@ const InquiryForm = () => {
           </p>
           <div className="testimonial-author p-8">
             {/* Rating stars */}
-            <span className="testimonial-rating">
+            <span className="mt-1">
               {Array.from(
                 { length: testimonials[activeIndex].rating },
                 (_, index) => (
@@ -95,7 +95,7 @@ const InquiryForm = () => {
               )}
             </span>
             <br />
-            <span className="testimonial-name">
+            <span className="mt-2">
               {testimonials[activeIndex].author}
             </span>
             <br />
@@ -115,7 +115,7 @@ const InquiryForm = () => {
         </div>
       </div>
       {/* Testimonial controls */}
-      <p className="text-gray-500 mt-2">
+      <p className="text-gray-500 mt-5">
         These reviews are from <strong>TripAdvisor</strong>
       </p>
 
