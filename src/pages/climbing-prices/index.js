@@ -223,7 +223,7 @@ export default function Mountain() {
                 <td className="px-6 py-4">$3000 PP</td>
                 <td className="px-6 py-4">$2850 PP</td>
               </tr>
-              
+
               <tr>
                 <td className="px-6 py-4">Rongai Route</td>
                 <td className="px-6 py-4">6 Days</td>

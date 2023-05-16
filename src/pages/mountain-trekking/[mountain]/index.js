@@ -4,6 +4,7 @@ import FaqCard from '@/components/FaqCard';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
+import { generateSlug2 } from '@/utils/generateSlug2';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import NotificationForm from '@/components/NotificationForm';
@@ -15,6 +16,18 @@ const menuTabs = ['Itinerary', 'Pricing', 'Inclusive', 'Exclusive', 'Book'];
 console.log(menuTabs);
 import SocialsButtons from '@/components/SocialsButtons';
 export default function Mountain({ mountain, faqs }) {
+  const [searchQuery, setSearchQuery] = useState('');
+  const filteredPackage = mountain.route_durations.filter((route) => {
+    const lowerCaseQuery = searchQuery.toLowerCase();
+    const lowerCaseTitle = route.title.toLowerCase();
+    const durationDays = route.duration_days.toString();
+
+    return (
+      lowerCaseTitle.includes(lowerCaseQuery) ||
+      durationDays.includes(lowerCaseQuery)
+    );
+  });
+
   const contentStyle = {
     width: '85%',
     maxHeight: '85%',
@@ -134,6 +147,21 @@ export default function Mountain({ mountain, faqs }) {
                 Overview
               </Link>
             </li>
+            {mountain.route_durations.length > 0 ?
+            (<li className="mr-2">
+              <Link
+                href={'#all'}
+                className={`inline-block p-4 rounded-lg ${
+                  activeTab === 'all'
+                    ? 'bg-yellow-700 text-white active '
+                    : 'hover:text-gray-600 hover:bg-gray-50  bg-yellow-500 text-white'
+                }`}
+                onClick={() => handleTabChange('all')}
+              >
+                All packages
+              </Link>
+            </li>):null}
+            
             {mountain.itinery ? (
               <li className="mr-2">
                 <Link
@@ -217,8 +245,7 @@ export default function Mountain({ mountain, faqs }) {
                   Plan Your Climb on The {route.route_name}
                 </h1>
                 <p className="  p-2 leading-8  mx-4 lg:mx-16">
-                  Difficulty:{route.difficulty} Rating:Challenging Height: Trail
-                  Conditions:
+                  Difficulty:{route.difficulty}  
                 </p>
                 <p className="  p-2 leading-8  mx-4 lg:mx-16">
                   Height:{route.height}
@@ -425,7 +452,66 @@ export default function Mountain({ mountain, faqs }) {
               </div>
             </div>
           </div>
+          <div
+            id={'all'}
+            className={`tab-content ${activeTab === 'all' ? '' : 'hidden'}`}
+          >
+            <div>
+              <div className="py-2 relative">
+                <div className="flex items-center justify-center gap-4">
+                  <hr className="sm:w-40 w-10 border border-black" />
+                  <h1 className="3xl:text-2xl xl:text-xl text-lg font-semibold p-4">
+                    ALL ROUTE PACKAGES
+                  </h1>
+                </div>
+                <div className="flex justify-center item-center">
+                  {' '}
+                  <input
+                    type="text"
+                    placeholder="Search by route name or  days in numbers."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="p-2 mb-4 border border-black rounded  sm:w-72 w-40"
+                  />
+                </div>
 
+                <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mx-6">
+                  {filteredPackage.map((route, index) => (
+                    <Link href={`/mountain-trekking/${generateSlug(
+                        mountain.mountain_name
+                      )}/${generateSlug2(route.title)}`} key={index}>
+                      <div className="p-4">
+                        <div className="relative bg-white border border-gray-200 rounded-lg shadow">
+                          <Image
+                            src={route.image_url}
+                            alt={route.title}
+                            width={800}
+                            height={600}
+                            className="h-64 w-full object-cover rounded-t-lg"
+                          />
+                          <div className="p-5 hover:bg-yellow-500">
+                            <h2 className="mb-2 sm:text-lg font-bold font-poly tracking-wide text-gray-900 capitalize">
+                              {route.title}
+                            </h2>
+                            <p className="leading-8">
+                              Price From: USD{' '}
+                              <span className="font-semibold">
+                                {route.one_three_price}
+                              </span>
+                            </p>
+                            <p className="leading-8">
+                              {' '}
+                              {truncate(route.description, 100)}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
           <div
             id={'faqs'}
             className={`tab-content ${activeTab === 'faqs' ? '' : 'hidden'}`}

@@ -191,15 +191,10 @@ const SafariPage = ({ faqs }) => {
                   alt="Responsible Tourism"
                   width={500}
                   height={500}
-                  
                   className={`w-full h-auto rounded-lg
                
-              ${
-                isLoading
-                  ? " blur-2xl  "
-                  : " blur-0 grayscale-0"
-              })`}
-          onLoadingComplete={() => setLoading(false)}
+              ${isLoading ? ' blur-2xl  ' : ' blur-0 grayscale-0'})`}
+                  onLoadingComplete={() => setLoading(false)}
                 />
               </div>
             </div>
