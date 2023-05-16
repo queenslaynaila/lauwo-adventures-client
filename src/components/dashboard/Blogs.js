@@ -78,7 +78,7 @@ export default function Blogs() {
   return (
     <div className="px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">New Blog Post</h1>
-
+           <p className='p-1'>Note, while you can make new blogs to show on the site, blogs are updated from the databse to the website after every 7 days to optimise the balance between speed and having relevant data.All blogs made before the 7 days expire, will be qeued in the website and will only reflect after the 7 days elapse.In regards to this, you can make a weekly blog schedule.</p>
       <form onSubmit={handleSubmit}>
         <ToastContainer />
         <div className="mb-4">

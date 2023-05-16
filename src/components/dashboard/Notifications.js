@@ -136,17 +136,15 @@ export default function Notifications() {
     <div className="px-4 py-8 w-full ">
       <ToastContainer />
       <h1 className="text-2xl font-bold mb-4">Group Climb Notifications</h1>
-       <p className='pb-2'>This section refers to users who want to be notified regarding our group climb schedules so they can plan accordingly.Follow up with them.THe title here represents the mountain they are inetrested in going for a group climb with.</p>
+       <p className='pb-2'>This section refers to users who want to be notified regarding our group climb schedules and specifically the mountains they want to go for a group climb in so they can plan accordingly.Follow up with them..</p>
       <input
         type="text"
         className="border p-2 rounded-md w-2/5 "
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
-        placeholder="Search by name, email or message"
+        placeholder="Search by name, email ,mountain or message"
       />
-      <p className="text-sm mt-2">
-        For record keeping delete an inquiry after replying to it{' '}
-      </p>
+      
       <div className="overflow-x-auto">
         <table
           {...getTableProps()}
@@ -173,34 +171,38 @@ export default function Notifications() {
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()} className="divide-y divide-white">
-            {page
-              .filter((row) => {
-                const { name, email, message } = row.values;
-                const searchRegex = new RegExp(searchValue, 'i');
-                return (
-                  searchRegex.test(name) ||
-                  searchRegex.test(email) ||
-                  searchRegex.test(message)
-                );
-              })
-              .map((row) => {
-                prepareRow(row);
-                return (
-                  <tr {...row.getRowProps()} key={row.id}>
-                    {row.cells.map((cell) => (
-                      <td
-                        className="p-3 "
-                        key={cell.id}
-                        {...cell.getCellProps()}
-                      >
-                        {cell.render('Cell')}
-                      </td>
-                    ))}
-                  </tr>
-                );
-              })}
-          </tbody>
+          
+<tbody {...getTableBodyProps()} className="divide-y divide-white">
+  {page
+    .filter((row) => {
+      const { name, email, message, title } = row.values;
+      const searchRegex = new RegExp(searchValue, 'i');
+      return (
+        searchRegex.test(name) ||
+        searchRegex.test(email) ||
+        searchRegex.test(message) ||
+        searchRegex.test(title)
+      );
+    })
+    .map((row) => {
+      prepareRow(row);
+      return (
+        <tr {...row.getRowProps()} key={row.id}>
+          {row.cells.map((cell) => (
+            <td
+              className="p-3 "
+              key={cell.id}
+              {...cell.getCellProps()}
+            >
+              {cell.render('Cell')}
+            </td>
+          ))}
+        </tr>
+      );
+    })}
+</tbody>
+
+
         </table>
       </div>
       <div className="inline-flex  mt-2">

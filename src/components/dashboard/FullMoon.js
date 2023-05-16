@@ -143,7 +143,7 @@ export default function GroupClimbs() {
         className="border p-2 rounded-md w-2/5 "
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
-        placeholder="Search by name, email or message"
+        placeholder="Search by name, arrival date, number of people,email."
       />
       <p className="text-sm mt-2">
         The following users have expressed interest in going for a full moon climb with lauwo.Follow up with them.{' '}
@@ -174,34 +174,38 @@ export default function GroupClimbs() {
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()} className="divide-y divide-white">
-            {page
-              .filter((row) => {
-                const { name, email, message } = row.values;
-                const searchRegex = new RegExp(searchValue, 'i');
-                return (
-                  searchRegex.test(name) ||
-                  searchRegex.test(email) ||
-                  searchRegex.test(message)
-                );
-              })
-              .map((row) => {
-                prepareRow(row);
-                return (
-                  <tr {...row.getRowProps()} key={row.id}>
-                    {row.cells.map((cell) => (
-                      <td
-                        className="p-3 "
-                        key={cell.id}
-                        {...cell.getCellProps()}
-                      >
-                        {cell.render('Cell')}
-                      </td>
-                    ))}
-                  </tr>
-                );
-              })}
-          </tbody>
+        
+<tbody {...getTableBodyProps()} className="divide-y divide-white">
+  {page
+    .filter((row) => {
+      const { name, email, arrivaldate, noofpeople } = row.values;
+      const searchRegex = new RegExp(searchValue, 'i');
+      return (
+        searchRegex.test(name) ||
+        searchRegex.test(email) ||
+        searchRegex.test(arrivaldate) ||
+        searchRegex.test(noofpeople.toString())
+      );
+    })
+    .map((row) => {
+      prepareRow(row);
+      return (
+        <tr {...row.getRowProps()} key={row.id}>
+          {row.cells.map((cell) => (
+            <td
+              className="p-3 "
+              key={cell.id}
+              {...cell.getCellProps()}
+            >
+              {cell.render('Cell')}
+            </td>
+          ))}
+        </tr>
+      );
+    })}
+</tbody>
+
+
         </table>
       </div>
       <div className="inline-flex  mt-2">
