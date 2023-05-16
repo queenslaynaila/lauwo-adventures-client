@@ -27,14 +27,50 @@ const SafariPage = ({ faqs }) => {
   return (
     <>
       <Head>
-        <title>Explore the World of Safaris | lauwo Adventures</title>
+        <title>Camping Safaris | lauwo Adventures</title>
+        <meta
+          name="keywords"
+          content="Tanzania camping safaris, budget safaris, camping safari experience, African wilderness, wildlife adventure, camping in Tanzania, camping gear, safari planning tips, custom camping safari, Lauwo Adventures"
+        />
         <meta
           name="description"
-          content="Discover exciting safari locations, get answers to frequently asked questions, and learn how to plan your dream safari adventure."
+          content="Welcome to Lauwo Adventures, your gateway to unforgettable camping safaris in Tanzania. Immerse yourself in the raw beauty of Tanzania's wildlife and landscapes with our exceptional budget camping safaris. Experience the thrill of being close to nature, surrounded by the sounds of the African wilderness. Our camping safaris provide all the necessary gear and freshly cooked food, ensuring a stress-free and memorable adventure. Pack light, follow safety rules, respect the environment, and be prepared for basic facilities. Customize your camping safari with Lauwo Adventures for a personalized and authentic experience in Tanzania's breathtaking wilderness."
         />
+
         <meta name="robots" content="index, follow" />
-        <meta name="twitter:title" content="Explore the World of Safaris" />
-        <meta name="twitter:image" content="URL of your Twitter image" />
+        <meta
+          property="og:title"
+          content="Welcome To Lauwo Adventures: Your Gateway To Unforgettable Camping Safaris In Tanzania"
+        />
+        <meta
+          property="og:description"
+          content="Immerse yourself in the raw beauty of Tanzania's wildlife and landscapes with our exceptional camping safaris. Experience the thrill of being close to nature, as you listen to the distant roars of lions and the laughter of hyenas while nestled in your comfortable tent. With Lauwo Adventures, we take care of every detail, ensuring a stress-free and unforgettable adventure for you."
+        />
+        <meta
+          property="og:image"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lauwo-adventures-client.vercel.app/camping-safaris"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Lauwo Adventures" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Welcome To Lauwo Adventures: Your Gateway To Unforgettable Camping Safaris In Tanzania"
+        />
+        <meta
+          name="twitter:description"
+          content="Immerse yourself in the raw beauty of Tanzania's wildlife and landscapes with our exceptional camping safaris. Experience the thrill of being close to nature, as you listen to the distant roars of lions and the laughter of hyenas while nestled in your comfortable tent."
+        />
+        <meta
+          name="twitter:image"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 

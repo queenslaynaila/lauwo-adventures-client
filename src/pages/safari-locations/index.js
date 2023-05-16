@@ -29,7 +29,7 @@ const SafariPage = ({ faqs }) => {
   return (
     <>
       <Head>
-      <title>Discover Tanzanias top locations  | Lauwo Adventures</title>
+        <title>Discover Tanzanias top locations | Lauwo Adventures</title>
         <meta
           property="og:title"
           content="Discover Tanzania's Safari Destinations with  Lauwo Adventures"
@@ -40,8 +40,12 @@ const SafariPage = ({ faqs }) => {
         />
         <meta
           property="og:image"
-          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"/>
-        <meta property="og:url" content="https://lauwo-adventures-client.vercel.app/safari-locations" />
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lauwo-adventures-client.vercel.app/safari-locations"
+        />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
