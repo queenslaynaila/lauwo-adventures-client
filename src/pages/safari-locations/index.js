@@ -29,15 +29,57 @@ const SafariPage = ({ faqs }) => {
   return (
     <>
       <Head>
-        <title>Explore the World of Safaris | lauwo Adventures</title>
+        <meta
+          property="og:title"
+          content="Discover Tanzania's Safari Destinations with 
+      Lauwo Adventures"
+        />
+        <meta
+          property="og:description"
+          content="Embark on a thrilling safari adventure with Lauwo Adventures and explore the breathtaking landscapes of Arusha National Park, Tarangire National Park, Lake Manyara National Park, and Serengeti National Park. Encounter diverse wildlife, witness the Great Migration, and immerse yourself in the rich Maasai culture."
+        />
+        <meta
+          property="og:image"
+          content="https://example.com/your-image.jpg"
+        />
+        <meta property="og:url" content="https://example.com/your-page-url" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Discover Tanzania's Safari Destinations with Lauwo Adventures"
+        />
+        <meta
+          name="twitter:description"
+          content="Embark on a thrilling safari adventure with Lauwo Adventures and explore the breathtaking landscapes of Arusha National Park, Tarangire National Park, Lake Manyara National Park, and Serengeti National Park. Encounter diverse wildlife, witness the Great Migration, and immerse yourself in the rich Maasai culture."
+        />
+        <meta
+          name="twitter:image"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
+        <meta name="twitter:url" content="https://example.com/your-page-url" />
+
+        <meta
+          name="keywords"
+          content="Tanzania safari, Arusha National Park, Tarangire National Park, Lake Manyara National Park, Serengeti National Park, Great Migration, Wildlife adventure, Ngorongoro Crater, Maasai culture, Safari packages, Game viewing, Birdwatching, Serengeti adventure, Responsible tourism, African safari experience"
+        />
         <meta
           name="description"
-          content="Discover exciting safari locations, get answers to frequently asked questions, and learn how to plan your dream safari adventure."
+          content="Discover the breathtaking landscapes of Arusha National Park in Tanzania. Immerse yourself in its diverse ecosystems, from vast grasslands to lush forests and majestic volcanic mountains. Encounter a rich array of wildlife, including giraffes, buffalos, zebras, colobus monkeys, and over 400 bird species. Engage in thrilling activities such as mountain climbing, canoeing, guided nature walks, horseback riding, and game drives. Experience the wonders of Arusha National Park with Lauwo Adventures and create unforgettable safari memories."
         />
-        <meta name="robots" content="index, follow" />
-        <meta name="twitter:title" content="Explore the World of Safaris" />
-        <meta name="twitter:image" content="URL of your Twitter image" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Experience the wonders of Tarangire National Park in Tanzania. Discover the captivating beauty of its distinct dry and wet seasons. Observe the mesmerizing wildlife gatherings along the Tarangire River during the dry season, with clear sightings of elephants and lions. Embrace the lush greenery and exceptional birdwatching opportunities during the wet season. Enjoy thrilling game drives, immerse yourself in nature, and embark on an unforgettable safari journey in Tarangire National Park with Lauwo Adventures."
+        />
+        <meta
+          name="description"
+          content="Uncover the enchanting landscapes of Lake Manyara National Park in Tanzania. Delight in its diverse habitats, from lush forests and picturesque wetlands to vast savannas. Witness the remarkable wildlife, including elephants, giraffes, zebras, hippos, and a myriad of bird species. Be captivated by the elusive tree-climbing lions, a rare sighting in Tanzania. Engage in thrilling game drives, embark on birdwatching excursions, indulge in walking safaris, and immerse yourself in the local Maasai culture. Discover the scenic wonders of Lake Manyara National Park with Lauwo Adventures."
+        />
+        <meta
+          name="description"
+          content="Embark on an extraordinary safari adventure in Serengeti National Park, Tanzania. Marvel at the awe-inspiring landscapes and the remarkable diversity of its ecosystem. Witness the legendary Great Migration as millions of wildebeest, zebras, and gazelles traverse the vast plains, accompanied by predators in pursuit. Choose the dry season for optimal game viewing, with animals gathering around rivers and waterholes, or the lush green oasis of the wet season, perfect for witnessing the calving season and exceptional birdlife. Immerse yourself in the cultural heritage of the Maasai communities and create lasting memories in the remarkable Serengeti National Park with Lauwo Adventures."
+        />
       </Head>
 
       <div className="font-poly">

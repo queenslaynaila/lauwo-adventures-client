@@ -29,18 +29,45 @@ const SafariPage = ({ faqs }) => {
     <>
       <Head>
         <title>Plan Your Dream Safari Adventure | Lauwo Adventures</title>
-        <meta name="description" content="Discover exciting safari destinations, find answers to commonly asked questions, and gain valuable insights to help you plan your dream safari adventure." />
-        <meta name="keywords" content="safari, Tanzania safari, African wildlife, safari planning, safari destinations,Safari destinations,Wildlife exploration,Best time to go on a safari,Safari itineraries,Safari lodges and accommodations,Safari activities and experiences,Safari budgeting and costs,Safari packing list,Safari transportation options,Safari guides and tour operators,Safari safety tips,Safari photography tips,Safari conservation and responsible tourism,Safari visas and travel documents,Safari trip insurance" />
-        <meta property="og:title" content="Plan Your Dream Safari Adventure | Lauwo Adventures" />
-        <meta property="og:description" content="Discover exciting safari destinations, find answers to commonly asked questions, and gain valuable insights to help you plan your dream safari adventure." />
-        <meta property="og:image" content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg" />
-        <meta property="og:url" content="https://lauwo-adventures-client.vercel.app/planning-a-safari"/>
+        <meta
+          name="description"
+          content="Discover exciting safari destinations, find answers to commonly asked questions, and gain valuable insights to help you plan your dream safari adventure."
+        />
+        <meta
+          name="keywords"
+          content="safari, Tanzania safari, African wildlife, safari planning, safari destinations,Safari destinations,Wildlife exploration,Best time to go on a safari,Safari itineraries,Safari lodges and accommodations,Safari activities and experiences,Safari budgeting and costs,Safari packing list,Safari transportation options,Safari guides and tour operators,Safari safety tips,Safari photography tips,Safari conservation and responsible tourism,Safari visas and travel documents,Safari trip insurance"
+        />
+        <meta
+          property="og:title"
+          content="Plan Your Dream Safari Adventure | Lauwo Adventures"
+        />
+        <meta
+          property="og:description"
+          content="Discover exciting safari destinations, find answers to commonly asked questions, and gain valuable insights to help you plan your dream safari adventure."
+        />
+        <meta
+          property="og:image"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://lauwo-adventures-client.vercel.app/planning-a-safari"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Lauwo Adventures" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Plan Your Dream Safari Adventure | Lauwo Adventures" />
-        <meta name="twitter:description" content="Discover exciting safari destinations, find answers to commonly asked questions, and gain valuable insights to help you plan your dream safari adventure." />
-        <meta name="twitter:image" content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg" />
+        <meta
+          name="twitter:title"
+          content="Plan Your Dream Safari Adventure | Lauwo Adventures"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover exciting safari destinations, find answers to commonly asked questions, and gain valuable insights to help you plan your dream safari adventure."
+        />
+        <meta
+          name="twitter:image"
+          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
+        />
       </Head>
 
       <div className="font-poly">
