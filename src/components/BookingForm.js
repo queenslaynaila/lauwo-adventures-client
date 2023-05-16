@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const BookingForm = ({ adventure, bookableType }) => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -20,6 +21,10 @@ const BookingForm = ({ adventure, bookableType }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (loading) {
+      return; // Ignore form submission if already loading
+    }
+    setLoading(true);
     const booking = {
       first_name: formData.firstName,
       last_name: formData.lastName,
@@ -76,6 +81,7 @@ const BookingForm = ({ adventure, bookableType }) => {
           }, 2000);
         });
       }
+      setLoading(false);
     });
   };
 
@@ -373,11 +379,14 @@ const BookingForm = ({ adventure, bookableType }) => {
           </div>
         </div>
         <button
-          className="bg-primary text-black font-poly font-bold text-lg mt-10 px-10 py-2 rounded-lg hover:bg-yellow-600 h:text-white"
-          type="submit"
-        >
-          Book
-        </button>
+             type="submit"
+  disabled={loading}
+  className={`text-white bg-yellow-400 ${
+    loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
+  } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
+>
+  {loading ? 'Booking...' : 'Book'}
+          </button>
       </form>
     </div>
   );

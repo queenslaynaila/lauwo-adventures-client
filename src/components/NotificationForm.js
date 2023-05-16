@@ -7,10 +7,14 @@ export default function NotificationForm({ mountain }) {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
-
+  const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (loading) {
+      return; // Ignore form submission if already loading
+    }
       notifyInfo()
+      setLoading(true);
     const formData = {
       name,
       email,
@@ -40,6 +44,7 @@ export default function NotificationForm({ mountain }) {
           notifyError();
         });
       }
+      setLoading(false);
     });
   };
   const notifySuccess = () =>
@@ -139,11 +144,14 @@ export default function NotificationForm({ mountain }) {
           ></textarea>
         </div>
         <button
-          type="submit"
-          className="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600"
-        >
-          Submit
-        </button>
+             type="submit"
+  disabled={loading}
+  className={`text-white bg-yellow-400 ${
+    loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-800'
+  } focus:ring-4 focus:outline-none focus:ring-yellow-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center`}
+>
+  {loading ? 'Submitting...' : 'Submit'}
+          </button>
       </form>
     </div>
   );
