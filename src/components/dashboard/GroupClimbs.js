@@ -82,6 +82,7 @@ export default function GroupClimbs() {
   } = tableInstance;
 
   const handleDelete = () => {
+    console.log(selectedRows)
     Promise.all(
       selectedRows.map((enquiry) =>
         fetch(
