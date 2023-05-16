@@ -24,72 +24,30 @@ export default function planningform() {
         <meta name="twitter:title" content="planning form" />
       </Head>
       <div
-        className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
+          className="h-[50vh] lg:h-[60vh] bg-cover bg-image bg-center bg-no-repeat flex items-center justify-center bg-gray-400 bg-blend-multiply"
         style={{ backgroundImage: "url('/safari.jpg')" }}
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))',
-          }}
-        ></div>
-        <div className="relative container mx-auto p-4 flex mt-8 items-end">
-          <div>
-            <div className="float-left py-10 px-5 my-5 ">
-              <div className="heading mb-3 text-2xl md:text-4xl text-white">
-                Tailor Your Tanzania Adventure
-              </div>
-              <div className="text leading-normal text-white">
-                Tell us about your budget , time prefernces , likes and dislikes
-                and we will customize a free travel prposal for you.
-              </div>
+         <div className="relative container p-4 mt-16">
+          <div className="py-10 px-5 my-5 text-center">
+            <div className="  my-3 pb-4 pt-2 md:text-2xl text-white text-lg font-bold leading-[50px] mx-auto max-w-xl uppercase">
+              TAILOR YOUR TANZANIAN ADVENTURE
             </div>
-            <div className="cta clear-left px-5">
-              <div className="flex">
-                <Link
-                  className="no-underline mr-2 btn btn-outline-primary block sm:inline-block global-transition text-white"
-                  href="/travelconsideration"
-                >
-                  <button className="text-white border border-yellow-500 hover:bg-yellow-500 hover:text-white rounded-md px-4 py-2 flex items-center">
-                    <span className="mr-2">Plan A Tanzanian Visit </span>
-                    <span className="fa fa-arrow-right"></span>
-                  </button>
-                </Link>
-              </div>
+            <div className="text leading-normal text-white mx-auto max-w-xl">
+              FROM GROUP CLIMBS, CULTURAL TOURS, DAY TRIPS AND SAFARIS
             </div>
           </div>
         </div>
+      
+      </div>
+      <div className='p-10 text-center'>
+        <h2 className='font-bold text-xl p-2 pb-4'>Your Tanzanian-adventure starts here..</h2>
+        <h2 className='font-bold text-xl p-2 pb-4'>Experience a journey that is tailored just for you!.</h2>
+        <p className='leading-8'>At Lauwo Adventures, we specialize in creating personalized and unforgettable experiences with a personal touch. With your own dedicated adventure specialist, we work closely with you to tailor your dream trip. Combining your preferences and desires with our extensive knowledge of the destination, we design the perfect itinerary for everyone. As experts solely focused on Tanzania and based locally, we know all the hidden gems and must-visit places. Whether you seek  an adventurous safari or climb, we make it possible. </p>
       </div>
 
-      <div className="p-2 bg-yellow-500 flex items-center justify-between">
-        <p className="text-white lg:ml-12">Trusted Tour Company in Tanzania.</p>
-        <div>
-          <Popup
-            trigger={
-              <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-                Enquire
-              </button>
-            }
-            modal
-            nested
-            closeOnDocumentClick
-            contentStyle={contentStyle}
-          >
-            {(close) => (
-              <div className="modal">
-                <button className="close " onClick={close}>
-                  &times;
-                </button>
-                <EnquiryPopUp />
-              </div>
-            )}
-          </Popup>
-        </div>
-      </div>
-      <div className=" w-full ">
-        <h1 className="text-black p-5  text-center text-lg lg:text-4xl">
-          Our Team will customize a trip for you
-        </h1>
+       
+      <div  className="  bg-cover bg-image bg-center bg-no-repeat  p-10   "    style={{ backgroundImage: "url('/lauwosafari.jpg')" }}>
+      
         <PlanForm />
       </div>
     </div>
