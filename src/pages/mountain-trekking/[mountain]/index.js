@@ -133,7 +133,7 @@ export default function Mountain({ mountain, faqs }) {
 
       <div>
         <div>
-          <ul className="flex flex-wrap text-sm font-medium text-center gap-2 justify-center items-center text-gray-500   ">
+          <ul className="pb-4 flex flex-wrap text-sm font-medium text-center gap-2 justify-center items-center text-gray-500   ">
             <li className="mr-2">
               <button
                 className={`inline-block p-4 rounded-lg ${
