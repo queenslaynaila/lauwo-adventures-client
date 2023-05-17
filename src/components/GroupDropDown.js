@@ -10,7 +10,7 @@ const GroupDropDown = ({ setIsOpen }) => {
   return (
     <div className="relative flex flex-col items-center">
       <button
-        className="flex flex-row items-center justify-center"
+        className="flex flex-row items-center justify-center uppercase"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >
         GroupClimbs
@@ -29,7 +29,7 @@ const GroupDropDown = ({ setIsOpen }) => {
           <div key={adventure.id} className="mb-2 py-1 mt-2">
             <Link
               href={`/${generateSlug(adventure.name)}`}
-              className="capitalize"
+              className="uppercase"
               onClick={() => {
                 setIsOpen(false);
                 setIsDropdownOpen(false);
