@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import Link from 'next/link';
 
@@ -43,7 +43,21 @@ const Header = () => {
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+  useEffect(() => {
+    // Function to change the current image after a delay
+    const changeImage = () => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    };
+    // Set the interval to change the image every 3 seconds (adjust as needed)
+    const interval = setInterval(changeImage, 5000);
 
+    // Clean up the interval when the component is unmounted or the image list changes
+    return () => clearInterval(interval);
+  }, []);
+
+   
   const currentImage = images[currentImageIndex];
 
   return (
