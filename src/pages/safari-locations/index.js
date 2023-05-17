@@ -188,7 +188,7 @@ const SafariPage = ({ faqs }) => {
               <div className="w-full md:w-1/2 p-4">
                 <Image
                   src={location.image}
-                  alt="Responsible Tourism"
+                  alt= {location.title}
                   width={500}
                   height={500}
                   className={`w-full h-auto rounded-lg
