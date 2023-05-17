@@ -46,11 +46,7 @@ const Safaris = ({ safaris }) => {
                         {safari.name}
                       </h3>
                     </div>
-                    <div className="absolute bottom-0 px-1 left-0  bg-yellow-300">
-                      <div className="text-lg font-medium text-black">
-                        From ${safari.budget_price}
-                      </div>
-                    </div>
+                     
                   </div>
                 </Link>
               ))}
