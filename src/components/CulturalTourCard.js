@@ -3,12 +3,13 @@ import { generateSlug } from '@/utils/generateSlug';
 import Image from 'next/image';
 
 function CulturalTourCard({ tour }) {
+  console.log(tour)
   return (
     <div>
       <Link href={`/cultural-tours/${generateSlug(tour.name)}`}>
         <div className="relative card overflow-hidden rounded-lg shadow-md hover:shadow-lg transform transition-transform hover:-translate-y-1 cursor-pointer h-80">
           <Image
-            src="/marangucu.jpg"
+            src={tour.image_url}
             className="card__image w-full h-full object-cover"
             height={500}
             width={500}
