@@ -12,7 +12,7 @@ import GroupBookings from '@/components/GroupBookings';
 import 'reactjs-popup/dist/index.css';
 import { truncate } from '@/utils/truncate';
 import simpleFormat from '@/utils/simpleFormat';
-import simpleFormat2 from '@/utils/simple';
+ 
 const menuTabs = ['Itinerary', 'Pricing', 'Inclusive', 'Exclusive', 'Book'];
 console.log(menuTabs);
 import SocialsButtons from '@/components/SocialsButtons';
