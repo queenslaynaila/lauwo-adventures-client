@@ -92,23 +92,7 @@ const Safari = ({ safari }) => {
                   )}
                 </div>
               ))}
-              <div className=" flex-grow flex flex-wrap lg:flex-col mb-2">
-                <div className="w-full capitalize p-2 flex items-center">
-                  Budget:
-                  <FaDollarSign />
-                  {safari.budget_price}
-                </div>
-                <div className="w-full capitalize p-2 flex items-center">
-                  Mid Range:
-                  <FaDollarSign />
-                  {safari.midrange_price}
-                </div>
-                <div className="w-full capitalize p-2 flex items-center">
-                  Luxury:
-                  <FaDollarSign />
-                  {safari.luxury_price}
-                </div>
-              </div>
+              
               <div className="flex  items-center justify-center">
                 <Popup
                   trigger={

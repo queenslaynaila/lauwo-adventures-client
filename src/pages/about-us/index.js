@@ -398,7 +398,7 @@ export default function index() {
               Facebook
             </a>
             <a
-              href="https://www.tripadvisor.com/lauwoadventures"
+              href="https://www.tripadvisor.com/Attraction_Review-g317084-d17424491-Reviews-Lauwo_Adventures-Moshi_Kilimanjaro_Region.html"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline"

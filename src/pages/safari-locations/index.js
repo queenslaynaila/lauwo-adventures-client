@@ -298,7 +298,7 @@ const SafariPage = ({ faqs }) => {
 
             <div className="text-center mt-6">
               <Link
-                href="/safari-packages"
+                href="/our-safari-packages"
                 className="text-blue-500 hover:underline"
               >
                 View All Safari Packages
