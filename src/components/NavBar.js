@@ -33,7 +33,7 @@ const NavBar = () => {
       }
     >
       <Link href="/" className="flex items-center ml-10">
-        <Image src="/logo.png" width={50} height={50} alt="logo" />
+        <Image src="/logo.webp" width={50} height={50} alt="logo" />
       </Link>
       <div className="absolute right-6 tablet:hidden top-6 scale-150 ">
         <HiOutlineMenuAlt2 onClick={toggle} className="md:text-4xl" />
