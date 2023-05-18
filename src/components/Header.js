@@ -12,7 +12,7 @@ const images = [
     ctaLink: '/mountain-trekking/mount-kilimanjaro',
   },
   {
-    src: '/background.jpg',
+    src: '/background.webp',
     heading: 'Safaris in Tanzania',
     paragraph:
       'Immerse yourself in the wonders of the African wilderness on our extraordinary wildlife safaris. Journey through vast savannahs, dense jungles, and untamed landscapes teeming with iconic wildlife. Witness herds of elephants roaming freely.........  ',
@@ -21,7 +21,7 @@ const images = [
   },
 
   {
-    src: '/gq.jpg',
+    src: '/gq.webp',
     heading: 'Our Safari Locations',
     paragraph:
       "Indulge in the diversity of Tanzania's breathtaking safari locations. From the endless plains of the Serengeti to the wildlife-rich Ngorongoro Crater, each destination offers a unique and enchanting experience. Witness the annual wildebeest migration, spot the elusive Big Five..... ",

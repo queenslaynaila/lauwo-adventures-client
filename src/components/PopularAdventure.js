@@ -23,7 +23,7 @@ const cardData = [
   {
     id: 4,
     title: 'Planning to Go On a Safari Check Our Top Safari Locations',
-    image: '/background.jpg',
+    image: '/background.webp',
     link: '/safari-locations',
   },
   {

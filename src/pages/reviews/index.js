@@ -103,7 +103,7 @@ const Gallery = () => {
   return (
     <div
       className="bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: 'url(/background.jpg)' }}
+      style={{ backgroundImage: 'url(/background.webp)' }}
     >
       <div className="inset bg-black/50">
         <h1 className="text-center lg:text-3xl sm:text-lg font-bold font-poly mb-10 text-white pt-28">

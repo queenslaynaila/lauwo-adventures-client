@@ -87,7 +87,7 @@ export default function Index() {
     <div className="font-poly">
       <div
         className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/background.jpg)' }}
+        style={{ backgroundImage: 'url(/background.webp)' }}
       >
         <div className="inset bg-black/50">
           <div>

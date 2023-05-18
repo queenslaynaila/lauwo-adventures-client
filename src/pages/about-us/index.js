@@ -180,7 +180,7 @@ export default function index() {
               <div className="w-full md:w-1/2 p-4 ">
                 <div className="relative">
                   <Image
-                    src="/background.jpg"
+                    src="/background.webp"
                     alt="Satisfied Safari Goers"
                     width={300}
                     height={300}
