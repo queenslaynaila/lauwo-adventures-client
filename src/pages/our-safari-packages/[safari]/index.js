@@ -41,7 +41,7 @@ const Safari = ({ safari }) => {
       </Head>
       <div
         className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/lauwosafari.jpg)' }}
+        style={{ backgroundImage: 'url(/lauwosafari.webp)' }}
       >
         <div className="inset bg-black/80">
           <div className="border-l-2 border-black h-full text-white">
