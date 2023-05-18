@@ -17,7 +17,7 @@ export default function Index({ routes }) {
     <div className="font-poly">
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
-        style={{ backgroundImage: "url('/kilimanjaro.jpg')" }}
+        style={{ backgroundImage: "url('/kilimanjaro.webp')" }}
       >
         <div
           className="absolute bg-black/80 inset-0"

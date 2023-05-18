@@ -16,7 +16,7 @@ export default function index() {
     <div className="font-poly">
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
-        style={{ backgroundImage: "url('/tanzania.jpg')" }}
+        style={{ backgroundImage: "url('/tanzania.webp')" }}
       >
         <div
           className="absolute inset-0"

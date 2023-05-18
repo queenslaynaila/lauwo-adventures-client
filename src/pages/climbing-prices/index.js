@@ -7,7 +7,7 @@ export default function Mountain() {
       <header
         className="h-[50vh] lg:h-[60vh] bg-cover bg-image bg-center bg-no-repeat flex items-center justify-center bg-gray-400 bg-blend-multiply"
         style={{
-          backgroundImage: `url(kilimanjaro.jpg)`,
+          backgroundImage: `url(kilimanjaro.webp)`,
         }}
       >
         <div className="relative container p-4 mt-16">

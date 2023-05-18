@@ -7,7 +7,7 @@ export default function RouteCard({ route }) {
     <div className=" font-poly ">
       <div className="flex items-center justify-center">
         <Image
-          src="/peakfinder.png"
+          src="/peakfinder.webp"
           alt="nnn"
           height={50}
           width={50}

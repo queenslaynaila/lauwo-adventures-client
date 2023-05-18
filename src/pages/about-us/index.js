@@ -154,7 +154,7 @@ export default function index() {
               <div className="w-full md:w-1/2 p-4">
                 <div className="relative">
                   <Image
-                    src="/climbers.jpg"
+                    src="/climbers.webp"
                     alt="Satisfied Mountain Climber"
                     width={300}
                     height={300}
@@ -355,7 +355,7 @@ export default function index() {
             </div>
             <div className="w-full md:w-1/2 p-4">
               <Image
-                src="/porter.jpg"
+                src="/porter.webp"
                 alt="Community Program"
                 width={500}
                 height={500}

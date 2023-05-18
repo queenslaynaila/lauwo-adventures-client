@@ -5,19 +5,19 @@ const cardData = [
   {
     id: 1,
     title: 'Experience Africas Majestic Peak With Our Kilimanjaro Climb',
-    image: '/kilimanjaro.jpg',
+    image: '/kilimanjaro.webp',
     link: '/mountain-trekking/mount-kilimanjaro',
   },
   {
     id: 2,
     title: 'Are you a Solo Traveller ? Join A  Group Climb',
-    image: '/climbers.jpg',
+    image: '/climbers.webp',
     link: '/kilimanjaro-group-climb',
   },
   {
     id: 3,
     title: ' Gettin Started on Your First Climb ? Plan Your Climb With Lauwo',
-    image: '/kilimanjarosunset.jpg',
+    image: '/kilimanjarosunset.webp',
     link: '/planing',
   },
   {
@@ -30,7 +30,7 @@ const cardData = [
     id: 5,
     title:
       'Safari Packages To get You Started on Your Tanzanian Safari Adventure',
-    image: '/safari-1.jpg',
+    image: '/safari-1.webp',
     link: '/our-safari-packages',
   },
   {
@@ -42,19 +42,19 @@ const cardData = [
   {
     id: 7,
     title: 'Travel Tips With Luawo To get You Started And Prepared',
-    image: '/tanzania.jpg',
+    image: '/tanzania.webp',
     link: '/travelconsideration',
   },
   {
     id: 8,
     title: 'Experience Tanzania In A Day With Our Day Trips',
-    image: '/kikuletwahostsprings.jpg',
+    image: '/kikuletwahostsprings.webp',
     link: '/day-trips',
   },
   {
     id: 9,
     title: 'Learn More About Local Culture With Our Cultural Tours',
-    image: '/maasai.jpg',
+    image: '/maasai.webp',
     link: '/cultural-tours',
   },
 ];

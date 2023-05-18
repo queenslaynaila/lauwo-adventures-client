@@ -85,7 +85,7 @@ export default function PasswordReset() {
   return (
     <div
       className="flex flex-col items-center justify-center h-screen font-poly"
-      style={{ backgroundImage: 'url(/g-3.jpg)' }}
+      style={{ backgroundImage: 'url(/g-3.webp)' }}
     >
       <div className="container mx-auto px-4 h-full ">
         <div className="flex content-center items-center justify-center h-full ">

@@ -38,7 +38,7 @@ export default function Trip({ trip }) {
       </Head>
       <div
         className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/g-3.jpg)' }}
+        style={{ backgroundImage: 'url(/g-3.webp)' }}
       >
         <div className="inset bg-black/80">
           <div className="border-l-2 border-black h-1/2 text-white ">

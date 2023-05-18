@@ -95,7 +95,7 @@ const Dashboard = () => {
 
   return (
     <div
-      style={{ backgroundImage: `url(/safari-1.jpg)` }}
+      style={{ backgroundImage: `url(/safari-1.webp)` }}
       className="font-poly"
     >
       <div className="grid grid-cols-1  ">

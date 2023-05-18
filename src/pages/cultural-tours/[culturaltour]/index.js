@@ -32,12 +32,12 @@ function Tour({ tour }) {
       </Head>
       <div
         className="bg-cover bg-center  inset-0 bg-black bg-opacity-100"
-        style={{ backgroundImage: `url(/background1.jpg)` }}
+        style={{ backgroundImage: `url(/background1.webp)` }}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
           <div className="relative h-80 md:h-auto mt-20">
             <Image
-              src="/culture.jpg"
+              src="/culture.webp"
               alt={tour.name}
               layout="fill"
               objectFit="cover"

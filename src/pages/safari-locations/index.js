@@ -88,7 +88,7 @@ const SafariPage = ({ faqs }) => {
       <div className="font-poly">
         <div
           className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
-          style={{ backgroundImage: "url('/safari.jpg')" }}
+          style={{ backgroundImage: "url('/safari.webp')" }}
         >
           <div
             className="absolute inset-0"

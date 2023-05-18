@@ -12,7 +12,7 @@
   {
     "title": "Lake Manyara National Park",
     "description": "Lake Manyara National Park, a gateway to Tanzania's northern circuit national parks, spans 330 square kilometers (127 square miles) and offers an enchanting experience year-round. The park's diverse landscapes, including forests, wetlands, and savannas, create a captivating backdrop for wildlife enthusiasts. The best time to visit Lake Manyara National Park is during the dry season from June to October.Home to Lake Manyara, an alkaline lake covering two-thirds of the park, this area boasts an abundance of wildlife. Visitors can spot elephants, giraffes, zebras, hippos, baboons, and an array of bird species. The park's iconic tree-climbing lions add to its allure and provide a rare sighting in Tanzania.Activities within the park include thrilling game drives, bird watching, walking safaris, and cultural tours to neighboring Maasai villages. Majestic features like the Rift Valley escarpment, the Mahogany Forest, groundwater forests, and the rejuvenating Maji Moto hot springs offer breathtaking scenery.Lake Manyara National Park appeals to nature lovers, photographers, and those seeking an authentic African safari experience.",
-    "image": "/manyara2.jpg"
+    "image": "/manyara2.webp"
   },
   {
     "title": "Serengeti National Park",
@@ -22,12 +22,12 @@
   {
     "title": "Gombe Stream National Park",
     "description": "Gombe National Park, nestled on the shores of Lake Tanganyika in western Tanzania, is a captivating haven of biodiversity and a sanctuary for the fascinating chimpanzees. This small but remarkable national park gained international recognition through the groundbreaking research of Dr. Jane Goodall, who studied the chimpanzees here, unraveling their intricate social behaviors and providing invaluable insights into their lives. The park's lush tropical rainforest, interspersed with grasslands and woodlands, creates a mesmerizing backdrop for visitors. Exploring Gombe offers an extraordinary opportunity to trek through the dense forest, guided by experienced rangers, and witness the chimpanzees in their natural habitat. The vibrant birdlife, including the endemic Gombe sunbird, adds to the park's allure, captivating birdwatchers from around the world. Gombe National Park is a testament to the delicate balance of nature and the enduring connection between humans and our closest relatives in the animal kingdom, leaving visitors with a profound appreciation for the wonders of the natural world.",
-    "image": "/hippo.jpg"
+    "image": "/hippo.webp"
   },
   {
     "title": "Kitulo National Park",
     "description": "Kitulo National Park, aptly dubbed the Serengeti of Flowers, is a hidden gem nestled in the southern highlands of Tanzania. This captivating national park boasts a stunning floral spectacle that unfolds against a backdrop of majestic mountains and rolling grasslands. Known for its vibrant and diverse wildflowers, including orchids, lilies, and daisies, Kitulo offers a kaleidoscope of colors and fragrances that is unparalleled. The park's floral displays are at their peak from December to April, creating a breathtaking carpet of blossoms that stretches as far as the eye can see. Beyond its floral splendor, Kitulo National Park is also home to a variety of wildlife, including endangered species like the Kitulo leopard and the rare Kipengere seedeater. With its serene beauty, picturesque landscapes, and remarkable biodiversity, Kitulo National Park is a haven for nature lovers, botany enthusiasts, and those seeking a tranquil escape amidst Tanzania's stunning natural wonders.",
-    "image": "/kitulo.jpeg"
+    "image": "/kitulo.webp"
   },
   {
     "title": "Mikumi National Park",
@@ -42,16 +42,16 @@
   {
     "title": "Lake Natron",
     "description": "Lake natron is a unique and fascinating saline lake located in northern Tanzania, near the border with Kenya. It is known for its extraordinary natural beauty and its remarkable geological and ecological characteristics. The lake is fed by mineral-rich hot springs and has high levels of alkalinity, making it inhospitable for most aquatic life. However, these extreme conditions create a surreal environment that supports the growth of a specific type of bacteria and algae, giving the lake its distinctive red or pink hue. Lake Natron is also renowned as a breeding ground for lesser flamingos, which gather in enormous numbers to nest and feed on the lake's abundant cyanobacteria. This remarkable spectacle attracts nature enthusiasts and birdwatchers from around the world. The area surrounding the lake offers breathtaking landscapes, with the active Ol Doinyo Lengai volcano serving as a dramatic backdrop.The region is sparsely populated, and the Maasai people who inhabit the area have maintained their traditional way of life, coexisting harmoniously with the natural environment. Visitors to Lake Natron have the opportunity to engage in cultural interactions with the Maasai community and learn about their customs and traditions.",
-    "image": "/natron.jpg"
+    "image": "/natron.webp"
   },
   {
     "title": "Ruaha National Park",
     "description": "Ruaha national park is a captivating wilderness area situated in Tanzania, East Africa. With its sprawling expanse of approximately 20,226 square kilometers, it holds the title of being the largest national park in the country. The park is named after the Great Ruaha River, which winds its way through its rugged terrain, creating a lifeline for the abundant wildlife that calls this place home. Ruaha National Park boasts a diverse ecosystem, characterized by vast grassy plains, dense woodlands, and rugged hills. It is renowned for its impressive population of African elephants, making it one of the best places in Africa to witness these majestic creatures up close. Additionally, the park is home to a wide range of wildlife, including lions, leopards, giraffes, zebras, and various antelope species. Visitors can embark on exhilarating game drives, guided walks, or even take to the skies for a breathtaking aerial view of the park's natural wonders. Ruaha National Park offers a truly authentic African safari experience, combining awe-inspiring landscapes with an abundance of wildlife encounters, making it a must-visit destination for nature lovers and adventure seekers alike.",
-    "image": "/g-4.jpg"
+    "image": "/g-4.webp"
   },
   {
     "title": "Mkomazi National Park",
     "description": "Ruaha national park is a captivating wilderness area situated in Tanzania, East Africa. With its sprawling expanse of approximately 20,226 square kilometers, it holds the title of being the largest national park in the country. The park is named after the Great Ruaha River, which winds its way through its rugged terrain, creating a lifeline for the abundant wildlife that calls this place home. Ruaha National Park boasts a diverse ecosystem, characterized by vast grassy plains, dense woodlands, and rugged hills. It is renowned for its impressive population of African elephants, making it one of the best places in Africa to witness these majestic creatures up close. Additionally, the park is home to a wide range of wildlife, including lions, leopards, giraffes, zebras, and various antelope species. Visitors can embark on exhilarating game drives, guided walks, or even take to the skies for a breathtaking aerial view of the park's natural wonders. Ruaha National Park offers a truly authentic African safari experience, combining awe-inspiring landscapes with an abundance of wildlife encounters, making it a must-visit destination for nature lovers and adventure seekers alike.",
-    "image": "/g-3.jpg"
+    "image": "/g-3.webp"
   }
 ]

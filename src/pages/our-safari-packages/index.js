@@ -16,7 +16,7 @@ const Safaris = ({ safaris }) => {
 
       <div
         className="h-full bg-no-repeat bg-center bg-cover"
-        style={{ backgroundImage: 'url(/serengeti.jpg)' }}
+        style={{ backgroundImage: 'url(/serengeti.webp)' }}
       >
         <div className="h-full w-full bg-black bg-opacity-80">
           <div className="flex flex-col items-center justify-center h-full w-full ">

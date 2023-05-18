@@ -106,7 +106,7 @@ export default function Index({ tips }) {
       <div className="font-poly">
         <div
           className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
-          style={{ backgroundImage: "url('/mountain2.jpg')" }}
+          style={{ backgroundImage: "url('/mountain2.webp')" }}
         >
           <div
             className="absolute bg-black/80 inset-0"

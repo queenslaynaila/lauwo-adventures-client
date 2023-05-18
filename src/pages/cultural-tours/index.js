@@ -16,7 +16,7 @@ function Tours({ tours }) {
     <div className="font-poly">
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
-        style={{ backgroundImage: "url('/maasai.jpg')" }}
+        style={{ backgroundImage: "url('/maasai.webp')" }}
       >
         <div
           className="absolute inset-0"

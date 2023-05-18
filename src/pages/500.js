@@ -2,7 +2,7 @@ import Link from 'next/link';
 const Custom500 = () => {
   return (
     <div className="font-poly">
-      <header className="h-screen bg-[#1a1a1a] bg-cover bg-center bg-no-repeat bg-fixed w-full bg-[url('/g-4.jpg')]">
+      <header className="h-screen bg-[#1a1a1a] bg-cover bg-center bg-no-repeat bg-fixed w-full bg-[url('/g-4.webp')]">
         <div className="bg-black/50 h-screen flex flex-col justify-center items-center">
           <h1 className="text-4xl font-poly font-bold w-8/12 sm:w-6/12 text-white text-center leading-[50px] hover:text-yellow-400">
             Server Error
