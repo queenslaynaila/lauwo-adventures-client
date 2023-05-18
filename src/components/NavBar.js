@@ -6,6 +6,7 @@ import MobileMenu from './MobileMenu';
 import SafariDropDown from './SafariDropDown';
 import AdventuresDropDown from './AdventuresDropDown';
 import GroupDropDown from './GroupDropDown';
+import TourDropDown from './ToursDropDown';
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -42,15 +43,17 @@ const NavBar = () => {
           <AdventuresDropDown setIsOpen={setIsOpen} />
         </li>
         <li>
+          <GroupDropDown setIsOpen={setIsOpen} />
+        </li>
+        <li>
           <Link href="/planing">Plan Your Climb</Link>
         </li>
         <li>
           <SafariDropDown setIsOpen={setIsOpen} />
         </li>
         <li>
-          <Link href="/day-trips">DayTrips</Link>
+            <TourDropDown setIsOpen={setIsOpen} />
         </li>
-
         <li>
           <Link href="/about-us">About</Link>
         </li>
@@ -61,9 +64,7 @@ const NavBar = () => {
           <Link href="/contact-us">Contact Us</Link>
         </li>
 
-        <li>
-          <GroupDropDown setIsOpen={setIsOpen} />
-        </li>
+        
         <li>
           <Link href="/blogs">Blogs</Link>
         </li>

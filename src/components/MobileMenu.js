@@ -2,7 +2,8 @@ import { IoCloseSharp } from 'react-icons/io5';
 import Link from 'next/link';
 import AdventuresDropDown from './AdventuresDropDown';
 import SafariDropDown from './SafariDropDown';
-
+import TourDropDown from './ToursDropDown';
+import GroupDropDown from './GroupDropDown';
 const MobileMenu = ({ isOpen, toggle }) => {
   return (
     isOpen && (
@@ -13,22 +14,22 @@ const MobileMenu = ({ isOpen, toggle }) => {
         <li>
           <AdventuresDropDown />
         </li>
-
+        <li>
+          <GroupDropDown  />
+        </li>
         <li>
           <Link href="/planing">Plan Your Climb</Link>
         </li>
-
         <li>
-          <Link href="/day-trips">DayTrips</Link>
+          <SafariDropDown />
         </li>
-
+        <li>
+          <TourDropDown />
+        </li>
         <li>
           <Link href="/about-us" onClick={toggle}>
             About
           </Link>
-        </li>
-        <li>
-          <SafariDropDown />
         </li>
         <li>
           <Link href="/reviews">Reviews</Link>
@@ -41,9 +42,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
             Blog
           </Link>
         </li>
-        <li>
-          <Link href="/kilimanjaro-group-climb">GroupClimbs</Link>
-        </li>
+         
       </ul>
     )
   );
