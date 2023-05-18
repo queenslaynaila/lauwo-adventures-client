@@ -1,47 +1,9 @@
 import Image from 'next/image';
-
-import { truncate } from '@/utils/truncate';
+import blogs from '@/data/blogs.json'
 import { generateSlug } from '@/utils/generateSlug';
 import Link from 'next/link';
-import useSWR from 'swr';
-
-import { FaSpinner, FaExclamationCircle } from 'react-icons/fa';
+ 
 function Blogs() {
-  const url = 'https://lauwo-adventures-api.onrender.com/latest_blogs';
-  const fetcher = (url) => fetch(url).then((res) => res.json());
-  const {
-    data: blogs,
-    error,
-    isLoading,
-  } = useSWR(url, fetcher, {
-    fallback: true,
-    revalidateOnMount: true,
-    refreshInterval: 7 * 24 * 60 * 60 * 1000,
-  });
-
-  if (error)
-    return (
-      <div className="text-center mb-2 ">
-        <div>
-          <FaExclamationCircle className="inline w-10 h-10 mr-2 text-red-500 fill-yellow-400 font-poly" />
-          <span>
-            Oops! Something went wrong while fetching the blogs. Please try
-            again later.
-          </span>
-        </div>
-      </div>
-    );
-  if (isLoading || !blogs) {
-    return (
-      <div className="text-center mb-2">
-        <div role="status">
-          <FaSpinner className="inline w-10 h-10 mr-2 text-gray-200 animate-spin  fill-yellow-400" />
-          <span className="sr-only">Loading...</span>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className=" font-poly p-4 ">
       <div>
@@ -81,7 +43,7 @@ function Blogs() {
                   {blog.title}
                 </h2>
                 <p className="mb-3 mt-2 text-gray-800 text-xs 2xl:text-base 2xl:leading-10 lg:text-sm lg:leading-7">
-                  {truncate(blog.content, 100)}
+                  {blog.content}
                 </p>
                 <div className="flex justify-between sm:gap-20 gap-4">
                   <a
