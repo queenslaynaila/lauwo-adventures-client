@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const images = [
   {
-    src: '/kilimanjarosunrise.jpg',
+    src: '/test.webp',
     heading: 'Climb Mount Kilimanjaro',
     paragraph:
       'Embark on an epic journey to the roof of Africa and conquer the majestic Kilimanjaro. Scale its towering peaks, traverse breathtaking landscapes, and challenge yourself to reach new heights. Our experienced guides will lead you through diverse ecosystems...',
