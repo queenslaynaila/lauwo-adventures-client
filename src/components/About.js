@@ -4,7 +4,7 @@ function About() {
   return (
     <div
       className="flex items-center justify-center min-h-screen bg-fixed bg-center bg-cover"
-      style={{ backgroundImage: `url(/lauwosafari.jpg)` }}
+      style={{ backgroundImage: `url(/lauwosafari.webp)` }}
       id="about"
     >
       <div className="p-5 -mt-10 md:mt-0 flex items-center justify-center h-full font-poly">
