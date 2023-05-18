@@ -28,7 +28,7 @@ export default function Why() {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
           <div className="flex flex-col items-center">
             <Image
-              src="/trip.png"
+              src="/trip.webp"
               alt="Tailor Made Tours"
               className="w-20 h-20 mb-4  bg-yellow-500  p-2 "
               height={80}
@@ -51,7 +51,7 @@ export default function Why() {
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="/itinerary.png"
+              src="/itinerary.webp"
               alt="Custom Itineraries"
               className="w-20 h-20 mb-4 bg-yellow-500 p-2"
               height={80}
@@ -73,7 +73,7 @@ export default function Why() {
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="/advise.png"
+              src="/advise.webp"
               alt="24/7 Expert Advice"
               className="w-20 h-20 mb-4 bg-yellow-500 p-2"
               height={80}
@@ -95,7 +95,7 @@ export default function Why() {
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="/guide.png"
+              src="/guide.webp"
               alt="Experienced Guides"
               className="w-20 h-20 mb-4 bg-yellow-500 p-2 "
               height={80}
@@ -116,7 +116,7 @@ export default function Why() {
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="/authentic.png"
+              src="/authentic.webp"
               alt="Authentic Experiences"
               className="w-20 h-20 mb-4  bg-yellow-500 p-2"
               height={80}
@@ -131,7 +131,7 @@ export default function Why() {
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="/customer.png"
+              src="/customer.webp"
               alt="Customer Satisfaction"
               className="w-20 h-20 mb-4  bg-yellow-500 p-2"
               height={80}
