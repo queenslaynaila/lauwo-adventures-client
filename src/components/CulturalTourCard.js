@@ -3,7 +3,7 @@ import { generateSlug } from '@/utils/generateSlug';
 import Image from 'next/image';
 
 function CulturalTourCard({ tour }) {
-  console.log(tour)
+  console.log(tour);
   return (
     <div>
       <Link href={`/cultural-tours/${generateSlug(tour.name)}`}>

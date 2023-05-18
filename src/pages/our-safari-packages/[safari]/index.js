@@ -7,7 +7,6 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import BookingForm from '@/components/BookingForm';
 
-
 const Safari = ({ safari }) => {
   const bookableType = 'Safari';
   const contentStyle = {
@@ -83,11 +82,13 @@ const Safari = ({ safari }) => {
                     <p className="mb-4 text-sm leading-6">
                       {itinerary.description}
                     </p>
-                    {itinerary.accommodation ?  <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
-                      <FaHotel className="text-xl" />
-                      {itinerary.accommodation }
-                    </p> :null }
-                   
+                    {itinerary.accommodation ? (
+                      <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
+                        <FaHotel className="text-xl" />
+                        {itinerary.accommodation}
+                      </p>
+                    ) : null}
+
                     <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
                       <GiMeal className="text-xl" />
                       {itinerary.mealplan}
@@ -98,7 +99,7 @@ const Safari = ({ safari }) => {
                   )}
                 </div>
               ))}
-              
+
               <div className="flex  items-center justify-center">
                 <Popup
                   trigger={

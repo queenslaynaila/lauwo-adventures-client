@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
@@ -6,12 +6,41 @@ import groups from '@/data/groups.json';
 
 const GroupDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  const handleToggleDropdown = () => {
+    setIsDropdownOpen((prevIsDropdownOpen) => !prevIsDropdownOpen);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target) &&
+      !buttonRef.current.contains(event.target)
+    ) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isDropdownOpen) {
+      document.addEventListener('click', handleOutsideClick);
+    } else {
+      document.removeEventListener('click', handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isDropdownOpen]);
 
   return (
     <div className="relative flex flex-col items-center">
       <button
         className="flex flex-row items-center justify-center uppercase"
-        onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
+        ref={buttonRef}
+        onClick={handleToggleDropdown}
       >
         GroupClimbs
         {isDropdownOpen ? (
@@ -26,7 +55,9 @@ const GroupDropDown = ({ setIsOpen }) => {
         }`}
       >
         {groups.map((adventure) => (
-          <div key={adventure.id} className="mb-2 py-1 mt-2">
+          <div key={adventure.id} className="mb-2 py-1 mt-2"
+            ref={dropdownRef}
+          >
             <Link
               href={`/${generateSlug(adventure.name)}`}
               className="uppercase"

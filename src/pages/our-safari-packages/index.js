@@ -46,7 +46,6 @@ const Safaris = ({ safaris }) => {
                         {safari.name}
                       </h3>
                     </div>
-                     
                   </div>
                 </Link>
               ))}

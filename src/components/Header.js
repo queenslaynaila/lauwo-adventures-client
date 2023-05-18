@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import Link from 'next/link';
 
@@ -57,7 +57,6 @@ const Header = () => {
     return () => clearInterval(interval);
   }, []);
 
-   
   const currentImage = images[currentImageIndex];
 
   return (

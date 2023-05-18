@@ -12,7 +12,7 @@ import GroupBookings from '@/components/GroupBookings';
 import 'reactjs-popup/dist/index.css';
 import { truncate } from '@/utils/truncate';
 import simpleFormat from '@/utils/simpleFormat';
- 
+
 const menuTabs = ['Itinerary', 'Pricing', 'Inclusive', 'Exclusive', 'Book'];
 console.log(menuTabs);
 import SocialsButtons from '@/components/SocialsButtons';
@@ -39,7 +39,7 @@ export default function Mountain({ mountain, faqs }) {
   const [activeTab, setActiveTab] = useState('overview');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
-   console.log(mountain.itinery)
+  console.log(mountain.itinery);
   useEffect(() => {
     const fetchGroupClimbs = async () => {
       try {
@@ -322,19 +322,22 @@ export default function Mountain({ mountain, faqs }) {
               </p>
             </div>
           </div>
-          {mountain.itinery ?
+          {mountain.itinery ? (
             <div
-            id={'itinery'}
-            className={`tab-content ${activeTab === 'itinery' ? '' : 'hidden'}`}
-          >
-            <div>
-              <h1 className="text-center p-4 text-2xl font-bold">Itinery</h1>
-              <p className="  p-2 leading-8  mx-4 lg:mx-16">
-              {simpleFormat (mountain.itinery)}
-              </p>
+              id={'itinery'}
+              className={`tab-content ${
+                activeTab === 'itinery' ? '' : 'hidden'
+              }`}
+            >
+              <div>
+                <h1 className="text-center p-4 text-2xl font-bold">Itinery</h1>
+                <p className="  p-2 leading-8  mx-4 lg:mx-16">
+                  {simpleFormat(mountain.itinery)}
+                </p>
+              </div>
             </div>
-          </div> :null }
-         
+          ) : null}
+
           <div
             id={'groups'}
             className={`tab-content ${activeTab === 'groups' ? '' : 'hidden'}`}

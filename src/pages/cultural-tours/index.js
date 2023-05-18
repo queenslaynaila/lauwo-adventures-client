@@ -66,7 +66,7 @@ function Tours({ tours }) {
           <Popup
             trigger={
               <button className="text-white border  border-white-500 hover:bg-yellow-800 hover:text-white rounded-md px-4 py-2">
-                Enquire 
+                Enquire
               </button>
             }
             modal
