@@ -53,7 +53,7 @@ const SafariDropDown = ({ setIsOpen }) => {
       {isDropdownOpen && (
         <div
           ref={dropdownRef}
-          className="dropdown absolute top-10 bg-white text-black text-center w-52 h-38 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light"
+          className="dropdown absolute top-10 bg-white text-black text-center w-52 h-38 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light z-10"
         >
           {safaris.map((safari) => (
             <div key={safari.id} className="mb-2 py-1 mt-2">

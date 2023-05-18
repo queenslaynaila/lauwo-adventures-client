@@ -51,7 +51,7 @@ const AdventuresDropDown = ({ setIsOpen }) => {
         )}
       </button>
       {isDropdownOpen && (
-        <div className="dropdown absolute top-10 bg-white text-black text-center w-52 h-38 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light">
+        <div className="dropdown absolute top-10 bg-white text-black text-center w-52 h-38 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light z-10">
           {adventures.map((adventure) => (
             <div key={adventure.id} className="mb-2 py-1 mt-2"
               ref={dropdownRef}

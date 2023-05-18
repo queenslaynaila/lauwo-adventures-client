@@ -50,7 +50,7 @@ const GroupDropDown = ({ setIsOpen }) => {
         )}
       </button>
       <div
-        className={`absolute top-10 bg-white text-black text-center w-52 h-38 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light ${
+        className={`absolute top-10 bg-white text-black text-center w-52 h-38 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg z-10 font-light ${
           isDropdownOpen ? 'block' : 'hidden'
         }`}
       >
