@@ -2,9 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
-import safaris from '@/data/safaris.json';
+import tours from '@/data/tours.json';
 
-const SafariDropDown = ({ setIsOpen }) => {
+const TourDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
@@ -36,14 +36,14 @@ const SafariDropDown = ({ setIsOpen }) => {
   }, [isDropdownOpen]);
 
   return (
-    <div className="relative flex flex-col items-center  "
+    <div className="relative flex flex-col items-center "
     >
       <button
         ref={buttonRef}
-        className="flex flex-row items-center justify-center"
+        className="flex flex-row items-center justify-center "
         onClick={handleToggleDropdown}
       >
-        Safaris
+         Tours
         {isDropdownOpen ? (
           <AiOutlineCaretUp className="ml-1" />
         ) : (
@@ -55,11 +55,11 @@ const SafariDropDown = ({ setIsOpen }) => {
           ref={dropdownRef}
           className="dropdown absolute top-10 bg-white text-black text-center w-52 h-38 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light z-10"
         >
-          {safaris.map((safari) => (
+          {tours.map((safari) => (
             <div key={safari.id} className="mb-2 py-1 mt-2">
               <Link
                 href={`/${generateSlug(safari.name)}`}
-               
+             
                 onClick={() => {
                   setIsOpen(false);
                   setIsDropdownOpen(false);
@@ -76,4 +76,4 @@ const SafariDropDown = ({ setIsOpen }) => {
   );
 };
 
-export default SafariDropDown;
+export default TourDropDown;

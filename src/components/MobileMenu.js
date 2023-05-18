@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AdventuresDropDown from './AdventuresDropDown';
 import SafariDropDown from './SafariDropDown';
 import GroupDropDown from './GroupDropDown';
-
+import TourDropDown from './TourDropDown';
 const MobileMenu = ({ isOpen, toggle }) => {
   return (
     isOpen && (
@@ -15,19 +15,17 @@ const MobileMenu = ({ isOpen, toggle }) => {
           <AdventuresDropDown />
         </li>
         <li>
+          <Link href="/planing">Plan Your Climb</Link>
+        </li>
+        <li>
           <GroupDropDown />
         </li>
         <li>
           <SafariDropDown />
         </li>
         <li>
-          <Link href="/planing">Plan Your Climb</Link>
+          <TourDropDown />
         </li>
-
-        <li>
-          <Link href="/day-trips">DayTrips</Link>
-        </li>
-
         <li>
           <Link href="/about-us" onClick={toggle}>
             About

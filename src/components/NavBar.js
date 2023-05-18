@@ -6,6 +6,7 @@ import MobileMenu from './MobileMenu';
 import SafariDropDown from './SafariDropDown';
 import AdventuresDropDown from './AdventuresDropDown';
 import GroupDropDown from './GroupDropDown';
+import TourDropDown from './TourDropDown';
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -27,8 +28,8 @@ const NavBar = () => {
     <nav
       className={
         isScrolled
-          ? 'fixed uppercase w-full shadow-sm flex justify-between p-4 items-center text-white bg-black/80 z-10'
-          : 'fixed uppercase w-full shadow-sm flex justify-between p-4 items-center text-white z-10'
+          ? 'fixed  w-full shadow-sm flex justify-between p-4 items-center text-white bg-black/80 z-10'
+          : 'fixed  w-full shadow-sm flex justify-between p-4 items-center text-white z-10'
       }
     >
       <Link href="/" className="flex items-center ml-10">
@@ -45,12 +46,14 @@ const NavBar = () => {
           <Link href="/planing">Plan Your Climb</Link>
         </li>
         <li>
+          <GroupDropDown setIsOpen={setIsOpen} />
+        </li>
+        <li>
           <SafariDropDown setIsOpen={setIsOpen} />
         </li>
         <li>
-          <Link href="/day-trips">DayTrips</Link>
+          <TourDropDown setIsOpen={setIsOpen} />
         </li>
-
         <li>
           <Link href="/about-us">About</Link>
         </li>
@@ -60,10 +63,7 @@ const NavBar = () => {
         <li>
           <Link href="/contact-us">Contact Us</Link>
         </li>
-
-        <li>
-          <GroupDropDown setIsOpen={setIsOpen} />
-        </li>
+       
         <li>
           <Link href="/blogs">Blogs</Link>
         </li>

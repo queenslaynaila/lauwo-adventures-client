@@ -1,10 +1,18 @@
 [
   {
     "id": 1,
-    "name": "culturaltour locations"
+    "name": "Day Trips"
   },
   {
     "id": 2,
-    "name": "culturaltour packages"
+    "name": "Cultural Tours"
+  },
+  {
+    "id": 2,
+    "name": "Cycling Tours"
+  },
+  {
+    "id": 2,
+    "name": "Zanzibar"
   }
 ]

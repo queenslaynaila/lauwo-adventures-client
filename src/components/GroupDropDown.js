@@ -38,7 +38,7 @@ const GroupDropDown = ({ setIsOpen }) => {
   return (
     <div className="relative flex flex-col items-center">
       <button
-        className="flex flex-row items-center justify-center uppercase"
+        className="flex flex-row items-center justify-center "
         ref={buttonRef}
         onClick={handleToggleDropdown}
       >
@@ -60,7 +60,7 @@ const GroupDropDown = ({ setIsOpen }) => {
           >
             <Link
               href={`/${generateSlug(adventure.name)}`}
-              className="uppercase"
+             
               onClick={() => {
                 setIsOpen(false);
                 setIsDropdownOpen(false);

@@ -37,9 +37,9 @@ const AdventuresDropDown = ({ setIsOpen }) => {
 
   return (
     <div
-      className="relative flex flex-col items-center uppercase"
+      className="relative flex flex-col items-center "
     >
-      <button className="flex flex-row items-center justify-center uppercase"
+      <button className="flex flex-row items-center justify-center "
         ref={buttonRef}
         onClick={handleToggleDropdown}
       >
@@ -58,7 +58,7 @@ const AdventuresDropDown = ({ setIsOpen }) => {
             >
               <Link
                 href={`/mountain-trekking/${generateSlug(adventure.name)}`}
-                className="uppercase"
+                
                 onClick={() => {
                   setIsOpen(false);
                   setIsDropdownOpen(false);
