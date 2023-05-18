@@ -27,8 +27,8 @@ const NavBar = () => {
     <nav
       className={ 
         isScrolled
-          ? 'fixed uppercase w-full shadow-sm flex justify-between p-4 items-center text-white bg-black/80 z-10'
-          : 'fixed uppercase w-full shadow-sm flex justify-between p-4 items-center text-white z-10'
+          ? 'fixed w-full shadow-sm flex justify-between p-4 items-center text-white bg-black/80 z-10'
+          : 'fixed w-full shadow-sm flex justify-between p-4 items-center text-white z-10'
       }
     >
       <Link href="/" className="flex items-center ml-10">

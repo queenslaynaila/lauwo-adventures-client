@@ -2,18 +2,18 @@ import { useState } from 'react';
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
-import groups from '@/data/groups.json';
+import days from '@/data/days.json';
 
-const GroupDropDown = ({ setIsOpen }) => {
+const DestinationsDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex flex-col items-center uppercase">
       <button
-        className="flex flex-row items-center justify-center "
+        className="flex flex-row items-center justify-center uppercase"
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >
-        GroupClimbs
+        Tours
         {isDropdownOpen ? (
           <AiOutlineCaretUp className="ml-1" />
         ) : (
@@ -25,11 +25,11 @@ const GroupDropDown = ({ setIsOpen }) => {
           isDropdownOpen ? 'block' : 'hidden'
         }`}
       >
-        {groups.map((adventure) => (
-          <div key={adventure.id} className="mb-2 py-1 mt-2">
+        {days.map((adventure) => (
+          <div key={adventure.id} className="mb-2 py-1 mt-2 ">
             <Link
               href={`/${generateSlug(adventure.name)}`}
-              
+              className="uppercase"
               onClick={() => {
                 setIsOpen(false);
                 setIsDropdownOpen(false);
@@ -45,4 +45,4 @@ const GroupDropDown = ({ setIsOpen }) => {
   );
 };
 
-export default GroupDropDown;
+export default DestinationsDropDown;

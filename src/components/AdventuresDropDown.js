@@ -8,9 +8,9 @@ const AdventuresDropDown = ({ setIsOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <div className="relative flex flex-col items-center uppercase">
+    <div className="relative flex flex-col items-center ">
       <button
-        className="flex flex-row items-center justify-center uppercase"
+        className="flex flex-row items-center justify-center "
         onClick={() => setIsDropdownOpen((isDropdownOpen) => !isDropdownOpen)}
       >
         Trekking
@@ -29,7 +29,7 @@ const AdventuresDropDown = ({ setIsOpen }) => {
           <div key={adventure.id} className="mb-2 py-1 mt-2 ">
             <Link
               href={`/mountain-trekking/${generateSlug(adventure.name)}`}
-              className="uppercase"
+             
               onClick={() => {
                 setIsOpen(false);
                 setIsDropdownOpen(false);
