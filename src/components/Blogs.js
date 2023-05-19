@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import blogs from '@/data/blogs.json'
+import blogs from '@/data/blogs.json';
 import { generateSlug } from '@/utils/generateSlug';
 import Link from 'next/link';
- 
+
 function Blogs() {
   return (
     <div className=" font-poly p-4 ">

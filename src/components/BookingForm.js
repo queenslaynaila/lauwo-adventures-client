@@ -43,46 +43,52 @@ const BookingForm = ({ adventure, bookableType }) => {
     };
     notifyInfo();
     fetch('https://lauwo-adventures-api.onrender.com/bookings', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(booking),
-    }).then((r) => {
-      if (r.ok) {
-        toast.dismiss();
-        r.json().then((_data) => {
-          notifySuccess();
-          setFormData({
-            firstName: '',
-            lastName: '',
-            email: '',
-            phoneNumber: '',
-            country: '',
-            travelPeriod: '',
-            noOfTravellers: 0,
-            noOfAdults: 0,
-            noOfChildren: 0,
-            noOfSmallChildren: 0,
-            additionalInfo: '',
-            route_duration_id: 0,
-          });
-          setTimeout(() => {
-            window.location.reload();
-          }, 2000);
-        });
-      } else {
-        toast.dismiss();
-        r.json().then((err) => {
-          console.error(err);
-          notifyError();
-          setTimeout(() => {
-            window.location.reload();
-          }, 2000);
-        });
-      }
-      setLoading(false);
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(booking),
+})
+  .then((r) => {
+    setLoading(false); // Update loading state
+
+    if (r.ok) {
+      toast.dismiss();
+      return r.json();
+    } else {
+      toast.dismiss();
+      throw new Error('Failed to submit the form.');
+    }
+  })
+  .then((_data) => {
+    notifySuccess();
+    setFormData({
+      // Reset form fields
+      firstName: '',
+      lastName: '',
+      email: '',
+      phoneNumber: '',
+      country: '',
+      travelPeriod: '',
+      noOfTravellers: 0,
+      noOfAdults: 0,
+      noOfChildren: 0,
+      noOfSmallChildren: 0,
+      additionalInfo: '',
+      route_duration_id: 0,
     });
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
+  })
+  .catch((err) => {
+    console.error(err);
+    notifyError();
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
+  });
+
   };
 
   const notifyInfo = () =>

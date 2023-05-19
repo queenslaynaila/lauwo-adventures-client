@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { generateSlug } from '@/utils/generateSlug';
 import Image from 'next/image';
 
-function CulturalTourCard({ tour }) {
+function CyclingCard({ tour }) {
   console.log(tour);
   return (
     <div>
-      <Link href={`/cultural-tours/${generateSlug(tour.name)}  `}>
+      <Link href={`/cycling-tours/${generateSlug(tour.name)}  `}>
         <div className="relative card overflow-hidden rounded-lg shadow-md hover:shadow-lg transform transition-transform hover:-translate-y-1 cursor-pointer h-80">
           <Image
-            src={tour.image_url || tour.imageUrl}
+            src={tour.imageUrl}
             className="card__image w-full h-full object-cover"
             height={500}
             width={500}
@@ -32,4 +32,4 @@ function CulturalTourCard({ tour }) {
   );
 }
 
-export default CulturalTourCard;
+export default CyclingCard;

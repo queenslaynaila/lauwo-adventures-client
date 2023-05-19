@@ -55,12 +55,9 @@ const GroupDropDown = ({ setIsOpen }) => {
         }`}
       >
         {groups.map((adventure) => (
-          <div key={adventure.id} className="mb-2 py-1 mt-2"
-            ref={dropdownRef}
-          >
+          <div key={adventure.id} className="mb-2 py-1 mt-2" ref={dropdownRef}>
             <Link
               href={`/${generateSlug(adventure.name)}`}
-             
               onClick={() => {
                 setIsOpen(false);
                 setIsDropdownOpen(false);

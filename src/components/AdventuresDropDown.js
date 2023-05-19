@@ -36,10 +36,9 @@ const AdventuresDropDown = ({ setIsOpen }) => {
   }, [isDropdownOpen]);
 
   return (
-    <div
-      className="relative flex flex-col items-center "
-    >
-      <button className="flex flex-row items-center justify-center "
+    <div className="relative flex flex-col items-center ">
+      <button
+        className="flex flex-row items-center justify-center "
         ref={buttonRef}
         onClick={handleToggleDropdown}
       >
@@ -53,12 +52,13 @@ const AdventuresDropDown = ({ setIsOpen }) => {
       {isDropdownOpen && (
         <div className="dropdown absolute top-10 bg-white text-black text-center w-52 h-38 flex flex-col items-center justify-center capitalize rounded-sm shadow-lg font-light z-10">
           {adventures.map((adventure) => (
-            <div key={adventure.id} className="mb-2 py-1 mt-2"
+            <div
+              key={adventure.id}
+              className="mb-2 py-1 mt-2"
               ref={dropdownRef}
             >
               <Link
                 href={`/mountain-trekking/${generateSlug(adventure.name)}`}
-                
                 onClick={() => {
                   setIsOpen(false);
                   setIsDropdownOpen(false);

@@ -36,14 +36,13 @@ const TourDropDown = ({ setIsOpen }) => {
   }, [isDropdownOpen]);
 
   return (
-    <div className="relative flex flex-col items-center "
-    >
+    <div className="relative flex flex-col items-center ">
       <button
         ref={buttonRef}
         className="flex flex-row items-center justify-center "
         onClick={handleToggleDropdown}
       >
-         Tours
+        Tours
         {isDropdownOpen ? (
           <AiOutlineCaretUp className="ml-1" />
         ) : (
@@ -59,7 +58,6 @@ const TourDropDown = ({ setIsOpen }) => {
             <div key={safari.id} className="mb-2 py-1 mt-2">
               <Link
                 href={`/${generateSlug(safari.name)}`}
-             
                 onClick={() => {
                   setIsOpen(false);
                   setIsDropdownOpen(false);
