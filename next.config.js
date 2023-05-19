@@ -16,23 +16,6 @@ const nextConfig = {
     ],
   },
   distDir: 'build',
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-          {
-            key: 'Expires',
-            value: new Date(Date.now() + 31536000000).toUTCString(),
-          },
-        ],
-      },
-    ];
-  },
-};
+}
 
 module.exports = nextConfig;
