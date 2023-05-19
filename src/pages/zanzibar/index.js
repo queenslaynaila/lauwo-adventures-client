@@ -159,37 +159,36 @@ export default function index() {
         </p>
       </div>
       <div>
-        <h2 className="text-center p-4 text-2xl font-bold">
-         Why Zanzibar ?
-        </h2>
+        <h2 className="text-center p-4 text-2xl font-bold">Why Zanzibar ?</h2>
         {zanzibar.map((location, index) => (
-  <div
-    key={index}
-    className={`flex flex-wrap justify-center mx-4 lg:mx-16 ${
-      index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-    }`}
-  >
-    <div className="w-full md:w-1/2 p-4">
-      <div className="flex flex-col h-full justify-center">
-        <h2 className="text-lg mb-2 font-semibold">{location.title}</h2>
-        <p className="mb-4 leading-8">{location.description}</p>
-      </div>
-    </div>
-    <div className="w-full md:w-1/2 p-4">
-      <div className="flex justify-center items-center h-full">
-        <Image
-          src={location.image}
-          alt={location.title}
-          width={500}
-          height={500}
-          className={`rounded-lg w-full h-auto ${isLoading ? 'blur-2xl' : 'blur-0 grayscale-0'}`}
-          onLoadingComplete={() => setLoading(false)}
-        />
-      </div>
-    </div>
-  </div>
-))}
-
+          <div
+            key={index}
+            className={`flex flex-wrap justify-center mx-4 lg:mx-16 ${
+              index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+            }`}
+          >
+            <div className="w-full md:w-1/2 p-4">
+              <div className="flex flex-col h-full justify-center">
+                <h2 className="text-lg mb-2 font-semibold">{location.title}</h2>
+                <p className="mb-4 leading-8">{location.description}</p>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2 p-4">
+              <div className="flex justify-center items-center h-full">
+                <Image
+                  src={location.image}
+                  alt={location.title}
+                  width={500}
+                  height={500}
+                  className={`rounded-lg w-full h-auto ${
+                    isLoading ? 'blur-2xl' : 'blur-0 grayscale-0'
+                  }`}
+                  onLoadingComplete={() => setLoading(false)}
+                />
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
       <SocialsButtons />
     </div>
