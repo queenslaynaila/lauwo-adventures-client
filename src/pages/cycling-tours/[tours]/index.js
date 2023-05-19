@@ -86,7 +86,7 @@ const Safari = ({ tour }) => {
                     {itinerary.accommodation ? (
                       <p className="mb-4 flex items-center gap-3 text-sm  mt-4">
                         <FaHotel className="text-xl" />
-                       Accommodation: {itinerary.accommodation}
+                        Accommodation: {itinerary.accommodation}
                       </p>
                     ) : null}
 
@@ -138,7 +138,9 @@ const Safari = ({ tour }) => {
 export default Safari;
 
 export async function getStaticPaths() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/cycling_tours');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/cycling_tours'
+  );
   const tours = await res.json();
   const paths = tours.map((tour) => ({
     params: { tours: generateSlug(tour.name), id: tour.id },
@@ -147,7 +149,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/cycling_tours');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/cycling_tours'
+  );
   const tours = await res.json();
   const foundTour = tours.find(
     (tourItem) => generateSlug(tourItem.name) === params.tours

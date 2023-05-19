@@ -139,7 +139,7 @@ function Tours({ tours }) {
                   width={500}
                   alt="ff"
                   src={image.src}
-                  className='rounded-lg'
+                  className="rounded-lg"
                   style={{
                     display: currentImageIndex === index ? 'block' : 'none',
                   }}
@@ -184,7 +184,9 @@ function Tours({ tours }) {
 export default Tours;
 
 export async function getStaticProps() {
-  const res = await fetch('https://lauwo-adventures-api.onrender.com/cycling_tours');
+  const res = await fetch(
+    'https://lauwo-adventures-api.onrender.com/cycling_tours'
+  );
   const tours = await res.json();
   return {
     props: { tours },
