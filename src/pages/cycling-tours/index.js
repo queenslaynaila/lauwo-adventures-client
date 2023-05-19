@@ -184,7 +184,7 @@ function Tours({ tours }) {
 export default Tours;
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/cycling_tours');
+  const res = await fetch('https://lauwo-adventures-api.onrender.com/cycling_tours');
   const tours = await res.json();
   return {
     props: { tours },
