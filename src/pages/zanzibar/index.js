@@ -149,10 +149,10 @@ export default function index() {
           archipelago is also home to the historic Stone Town, a UNESCO World
           Heritage Site, where narrow streets wind through ancient buildings,
           bustling markets, and reminders of its vibrant history as a center for
-          trade. Zanzibar's spice plantations infuse the air with aromatic
+          trade. Zanzibar&apos;s spice plantations infuse the air with aromatic
           scents, and the warm and welcoming locals, influenced by a blend of
           Arab, Persian, Indian, and African cultures, offer a glimpse into the
-          island's unique cultural fusion. Whether indulging in beachside
+          island&apos;s unique cultural fusion. Whether indulging in beachside
           relaxation, exploring the historical wonders, or immersing oneself in
           the vibrant atmosphere, Zanzibar promises an unforgettable experience
           for all who visit
