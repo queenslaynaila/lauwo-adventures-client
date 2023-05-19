@@ -8,7 +8,7 @@ import 'reactjs-popup/dist/index.css';
 import zanzibar from '@/data/zanzibar.json';
 import SocialsButtons from '@/components/SocialsButtons';
 import EnquiryPopUp from '@/components/enquirypopup';
-export default function index() {
+export default function Index() {
   const [isLoading, setLoading] = useState(true);
   const contentStyle = {
     width: '85%',
