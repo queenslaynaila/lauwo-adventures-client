@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="bg-black w-full" id="contact">
       <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-5 gap-4 p-5">
         <div className="col-span-1 mt-4 mb-4 sm:border-r-2 sm:border-gray-200 flex justify-center items-center">
-          <Image src="/logo.png" width={50} height={50} alt="logo" />
+          <Image src="/logo.webp" width={50} height={50} alt="logo" />
         </div>
         <div className="lg:col-span-1 sm:col-span-2 col-span-1 mt-4 mb-8 sm:border-r-2 sm:border-gray-200">
           <h1 className="text-white font-poly font-bold text-xl uppercase text-center">
