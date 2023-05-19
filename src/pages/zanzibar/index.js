@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Head from 'next/head';
+ 
 import Popup from 'reactjs-popup';
 import { useState } from 'react';
 import 'reactjs-popup/dist/index.css';
@@ -19,54 +19,7 @@ export default function Index() {
 
   return (
     <div className="font-poly">
-      <Head>
-        <title>About Zanzibar | Lauwo Adventures</title>
-        <meta
-          name="description"
-          content="Zanzibar, an enchanting archipelago off the coast of Tanzania, is a
-          tropical paradise that captivates visitors with its stunning beauty
-          and rich cultural heritage. With its white sandy beaches,
-          crystal-clear turquoise waters, and swaying palm trees, Zanzibar
-          offers a perfect escape for beach lovers and water enthusiasts. The
-          archipelago is also home to the historic Stone Town, a UNESCO World
-          Heritage Site, where narrow streets wind through ancient buildings,
-          bustling markets, and reminders of its vibrant history as a center for
-          trade.."
-        />
-        <meta
-          name="keywords"
-          content="Lauwo Adventures, Tanzania tours, mountain climbing expeditions, Kilimanjaro climbing, wildlife safaris, responsible tourism, local guides, cultural experiences, sustainable tourism, porter support program,Yohani Kinyala Lauwo,Mount Kilimanjaro historical ascent,First African guide to climb Kilimanjaro,African mountaineering history,Lauwo family and Mount Kilimanjaro,African pioneers in mountaineerin,Freedom foundation"
-        />
-        <meta
-          property="og:title"
-          content="Lauwo Adventures - Tanzania Tours: Mountain Climbing and Wildlife Safaris"
-        />
-        <meta
-          property="og:description"
-          content="Lauwo Adventures is a local Tanzanian tour operator specializing in mountain climbing expeditions and wildlife safaris. Choose us for personalized itineraries, superior safety standards, and a commitment to sustainable tourism. Join us in preserving nature and empowering communities."
-        />
-        <meta
-          property="og:image"
-          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
-        />
-        <meta
-          property="og:url"
-          content="https://lauwo-adventures-client.vercel.app/about-us"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Lauwo Adventures - Tanzania Tours: Mountain Climbing and Wildlife Safaris"
-        />
-        <meta
-          name="twitter:description"
-          content="Lauwo Adventures is a local Tanzanian tour operator specializing in mountain climbing expeditions and wildlife safaris. Choose us for personalized itineraries, superior safety standards, and a commitment to sustainable tourism. Join us in preserving nature and empowering communities."
-        />
-        <meta
-          name="twitter:image"
-          content="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/09/4a/80/8c.jpg"
-        />
-      </Head>
+     
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center h-3/4"
         style={{ backgroundImage: "url('/hut.avif')" }}
@@ -160,35 +113,7 @@ export default function Index() {
       </div>
       <div>
         <h2 className="text-center p-4 text-2xl font-bold">Why Zanzibar ?</h2>
-        {zanzibar.map((location, index) => (
-          <div
-            key={index}
-            className={`flex flex-wrap justify-center mx-4 lg:mx-16 ${
-              index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-            }`}
-          >
-            <div className="w-full md:w-1/2 p-4">
-              <div className="flex flex-col h-full justify-center">
-                <h2 className="text-lg mb-2 font-semibold">{location.title}</h2>
-                <p className="mb-4 leading-8">{location.description}</p>
-              </div>
-            </div>
-            <div className="w-full md:w-1/2 p-4">
-              <div className="flex justify-center items-center h-full">
-                <Image
-                  src={location.image}
-                  alt={location.title}
-                  width={500}
-                  height={500}
-                  className={`rounded-lg w-full h-auto ${
-                    isLoading ? 'blur-2xl' : 'blur-0 grayscale-0'
-                  }`}
-                  onLoadingComplete={() => setLoading(false)}
-                />
-              </div>
-            </div>
-          </div>
-        ))}
+     
       </div>
       <SocialsButtons />
     </div>
