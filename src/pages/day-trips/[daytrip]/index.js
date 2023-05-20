@@ -78,7 +78,7 @@ export default function Trip({ trip }) {
                 {trip.name}
               </div>
               <div className="heading pt-6 text-xl md:text-2xl text-white">
-                Book Now and Enjoy a glimpse of Tanzania&apos;s culture
+                Book Now and Enjoy a glimpse of Tanzania in a day.
               </div>
             </div>
           </div>
