@@ -5,15 +5,33 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function LoginPage() {
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
   const [rememberMe, setRememberMe] = useState(false);
-  const notifySuccess = () => {
-    toast.success('Login successful,Redirecting..!', {
+  const router = useRouter();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (isLoading) {
+      return; // Ignore form submission if already loading
+    }
+    const adminData = {
+      admin: {
+        email: formData.email,
+        password: formData.password,
+        remember_me: true,
+      },
+    };
+    setIsLoading(true);
+    toast.info('Logging you in...', {
       position: 'top-center',
-      autoClose: 2500,
+      autoClose: false,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -25,65 +43,73 @@ export default function LoginPage() {
         color: '#000',
       },
     });
-  };
 
-  const notifyError = () =>
-    toast.error('Invalid email or password', {
-      position: 'top-center',
-      autoClose: 2500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'colored',
-    });
-
-  const router = useRouter();
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const adminData = {
-      admin: {
-        email: formData.email,
-        password: formData.password,
-        remember_me: true,
-      },
-    };
-    fetch('https://lauwo-adventures-api.onrender.com/admins/sign_in', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(adminData),
-    })
-      .then((r) => {
-        if (r.ok) {
-          r.json().then((_data) => {
-            notifySuccess();
-            setTimeout(() => {
-              router.push('admin/dashboard');
-            }, 2500);
-            localStorage.setItem('token', r.headers.get('Authorization'));
-            setFormData({
-              password: '',
-              email: '',
-            });
-          });
-        } else {
-          r.json().then(() => {
-            notifyError();
-          });
+    try {
+      const response = await fetch(
+        'https://lauwo-adventures-api.onrender.com/admins/sign_in',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(adminData),
         }
-      })
-      .catch((error) => {
-        console.log(error);
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        toast.dismiss(); // Close the info notification
+        toast.success('Login successful, Redirecting...', {
+          position: 'top-center',
+          autoClose: 2500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+          style: {
+            backgroundColor: '#FFCE3C',
+            color: '#000',
+          },
+        });
+        setTimeout(() => {
+          router.push('admin/dashboard');
+        }, 1500);
+        localStorage.setItem('token', response.headers.get('Authorization'));
+        setFormData({
+          password: '',
+          email: '',
+        });
+      } else {
+        toast.dismiss(); // Close the info notification
+        toast.error('Invalid email or password', {
+          position: 'top-center',
+          autoClose: 2500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      toast.dismiss(); // Close the info notification
+      toast.error('An error occurred. Please try again.', {
+        position: 'top-center',
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
       });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -148,10 +174,15 @@ export default function LoginPage() {
 
                   <div className="text-center mt-6">
                     <button
-                      className="bg-yellow-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                      disabled={isLoading}
                       type="submit"
+                      className={`text-white bg-yellow-400 ${
+                        isLoading
+                          ? 'bg-yellow-400 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150 cursor-not-allowed'
+                          : 'bg-yellow-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150'
+                      } `}
                     >
-                      Sign In
+                      {isLoading ? 'Loading...' : 'Sign In'}
                     </button>
                   </div>
                 </form>
