@@ -210,7 +210,7 @@ export default function Trip({ trip }) {
             </div>
           </div>
         </div>
-      </div>   
+      </div>
     </div>
   );
 }

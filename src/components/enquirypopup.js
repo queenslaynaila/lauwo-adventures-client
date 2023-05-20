@@ -13,7 +13,6 @@ export default function EnquiryPopUp() {
     if (loading) {
       return; // Ignore form submission if already loading
     }
-
     const formData = {
       name,
       email,
