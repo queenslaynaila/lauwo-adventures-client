@@ -55,7 +55,7 @@ export default function Index({ faqs, dayTrips }) {
 
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
-        style={{ backgroundImage: "url('/daylake.webp')" }}
+        style={{ backgroundImage: "url('/r.jpg')" }}
       >
         <div
           className="absolute inset-0"
