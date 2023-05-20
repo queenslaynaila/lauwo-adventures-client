@@ -1,18 +1,18 @@
 import { getServerSideSitemapLegacy } from 'next-sitemap';
 import { generateSlug } from '@/utils/generateSlug';
 export const getServerSideProps = async (ctx) => {
-  const safaris = await fetch(
-    'https://lauwo-adventures-api.onrender.com/safaris'
+  const blogs = await fetch(
+    'https://lauwo-adventures-api.onrender.com/blogs'
   ).then((res) => res.json());
 
-  const safariSitemaps = safaris.map((item) => ({
-    loc: `${process.env.NEXT_PUBLIC_DOMAIN_URL}our-safari-packages/${generateSlug(
+  const blogsSitemaps = blogs.map((item) => ({
+    loc: `${process.env.NEXT_PUBLIC_DOMAIN_URL}blogs/${generateSlug(
       item.name
     )}`,
     lastmod: new Date().toISOString(),
   }));
 
-  const fields = [...safariSitemaps];
+  const fields = [...blogsSitemaps];
 
   return getServerSideSitemapLegacy(ctx, fields);
 };

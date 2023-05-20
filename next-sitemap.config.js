@@ -1,6 +1,6 @@
 const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
 module.exports = {
-  siteUrl,
+  siteUrl:'https://lauwo-adventures-client.vercel.app/',
   exclude: ['/404,/admin'],
   generateRobotsTxt: true,
   sourceDir: './build',
