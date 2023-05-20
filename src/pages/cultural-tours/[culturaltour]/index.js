@@ -1,15 +1,13 @@
-import Image from 'next/image';
 import Popup from 'reactjs-popup';
 import BookingForm from '@/components/BookingForm';
 import Head from 'next/head';
-import Link from 'next/link';
 import { useState } from 'react';
 import { GiDuration } from 'react-icons/gi';
 import { BiTime } from 'react-icons/bi';
 import { MdOutlineEmojiTransportation, MdPerson2 } from 'react-icons/md';
 import { RiReservedFill } from 'react-icons/ri';
 import { generateSlug } from '@/utils/generateSlug';
-import { FaCheck, FaTimes, FaDollarSign } from 'react-icons/fa';
+import { FaCheck, FaTimes } from 'react-icons/fa';
 function Tour({ tour }) {
   const MAX_DESCRIPTION_WORDS = 40;
 
