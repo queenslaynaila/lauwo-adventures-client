@@ -26,6 +26,7 @@ import MountainBookings from '@/components/dashboard/MountainBookings';
 import SafariBookings from '@/components/dashboard/SafariBookings';
 import DaytripBookings from '@/components/dashboard/DaytripBookings';
 import CulturalBookings from '@/components/dashboard/CulturalBookings';
+import CyclingBookings from '@/components/dashboard/CyclingBookings';
 import ViewBlogs from '@/components/dashboard/ViewBlogs';
 import FullMoon from '@/components/dashboard/FullMoon';
 import { ToastContainer, toast } from 'react-toastify';
@@ -273,6 +274,23 @@ const Dashboard = () => {
                           </span>
                         </a>
                       </li>
+                      <li className="mt-1">
+                        <a
+                          href="#"
+                          onClick={() => handleSectionClick('cyclingbookings')}
+                          className={`block py-2 px-4 rounded-lg nav-link hover:bg-gray-100 hover:text-black ${
+                            activeSection === 'cyclingbookings'
+                              ? 'bg-gray-100 text-gray-900'
+                              : ''
+                          }`}
+                        >
+                          <RiSafariFill className="inline-block mr-1 font-bold" />
+
+                          <span className="hidden lg:inline-block">
+                            Cycling Bookings
+                          </span>
+                        </a>
+                      </li>
                     </ul>
                   )}
                 </li>
@@ -398,6 +416,7 @@ const Dashboard = () => {
               {activeSection === 'groupclimbs' && <GroupClimbs />}
               {activeSection === 'notifications' && <Notifications />}
               {activeSection === 'fullmoon' && <FullMoon />}
+              {activeSection === 'cyclingbookings' && <CyclingBookings />}
             </div>
           </div>
         </div>
