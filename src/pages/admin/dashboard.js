@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { TbBrandBooking } from 'react-icons/tb';
@@ -12,7 +12,7 @@ import {
 } from 'react-icons/bs';
 
 import { RiSafariFill } from 'react-icons/ri';
-import { GiTakeMyMoney } from 'react-icons/gi';
+
 import { FaBlogger, FaMountain } from 'react-icons/fa';
 import Settings from '@/components/dashboard/Settings';
 import Blogs from '@/components/dashboard/Blogs';
