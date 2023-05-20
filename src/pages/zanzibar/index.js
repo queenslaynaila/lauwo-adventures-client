@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
- 
+
 import Popup from 'reactjs-popup';
 import { useState } from 'react';
 import 'reactjs-popup/dist/index.css';
@@ -19,7 +19,6 @@ export default function Index() {
 
   return (
     <div className="font-poly">
-     
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center h-3/4"
         style={{ backgroundImage: "url('/hut.avif')" }}
