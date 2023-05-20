@@ -74,10 +74,10 @@ export default function Trip({ trip }) {
         <div className="relative container mx-auto p-4 flex mt-8 items-end">
           <div>
             <div className="float-left py-10 px-5 my-5 ">
-              <div className="heading mt-16  text-2xl md:text-4xl text-white capitalize">
+              <div className="heading mt-16  text-2xl md:text-4xl text-white capitalize z-10">
                 {trip.name}
               </div>
-              <div className="heading pt-6 text-xl md:text-2xl text-white">
+              <div className="heading pt-6 text-xl md:text-2xl text-white z-10">
                 Book Now and Enjoy a glimpse of Tanzania in a day.
               </div>
             </div>
