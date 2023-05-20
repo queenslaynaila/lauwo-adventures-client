@@ -6,7 +6,7 @@ export const getServerSideProps = async (ctx) => {
   ).then((res) => res.json());
 
   const blogsSitemaps = blogs.map((item) => ({
-    loc: `${process.env.NEXT_PUBLIC_DOMAIN_URL}blogs/${generateSlug(
+    loc: `https://lauwo-adventures-client.vercel.app/blogs/${generateSlug(
       item.name
     )}`,
     lastmod: new Date().toISOString(),

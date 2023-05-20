@@ -6,7 +6,7 @@ export const getServerSideProps = async (ctx) => {
   ).then((res) => res.json());
 
   const dayTripsSitemaps = dayTrips.map((item) => ({
-    loc: `${process.env.NEXT_PUBLIC_DOMAIN_URL}day-trips/${generateSlug(
+    loc: `https://lauwo-adventures-client.vercel.app/day-trips/${generateSlug(
       item.name
     )}`,
     lastmod: new Date().toISOString(),

@@ -7,7 +7,7 @@ export const getServerSideProps = async (ctx) => {
   ).then((res) => res.json());
 
   const mountainSitemaps = mountains.map((item) => ({
-    loc: `${process.env.NEXT_PUBLIC_DOMAIN_URL}mountain-trekking/${generateSlug(
+    loc: `https://lauwo-adventures-client.vercel.app/mountain-trekking/${generateSlug(
       item.mountain_name
     )}`,
     lastmod: new Date().toISOString(),

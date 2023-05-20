@@ -10,9 +10,7 @@ export const getServerSideProps = async (ctx) => {
     .flatMap((mountain) =>
       mountain.routes.map((route) =>
         route.durations.map((duration) => ({
-          loc: `${
-            process.env.NEXT_PUBLIC_DOMAIN_URL
-          }mountain-trekking/${generateSlug(
+          loc: `https://lauwo-adventures-client.vercel.app/mountain-trekking/${generateSlug(
             mountain.mountain_name
           )}/${generateSlug(route.route_name)}-${duration}-days`,
           lastmod: new Date().toISOString(),
