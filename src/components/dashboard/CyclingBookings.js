@@ -52,7 +52,7 @@ export default function CyclingBookings() {
       { Header: 'Phone', accessor: 'phone_number' },
       { Header: 'Country', accessor: 'country' },
       { Header: 'Travel Duration', accessor: 'travel_period' },
-      { Header: 'Tour', accessor: 'bookable.cultural_tour.name' },
+      { Header: 'Tour', accessor: 'bookable.cycling_tour.name' },
       { Header: 'Total Travellers', accessor: 'no_of_travellers' },
       { Header: 'Adults', accessor: 'no_of_adults' },
       { Header: 'Children', accessor: 'no_of_children' },
