@@ -9,7 +9,7 @@ import { useState } from 'react';
 import SocialsButtons from '@/components/SocialsButtons';
 const menuTabs = ['Itinerary', 'Standard', 'Premium', 'Pricing', 'Book', 'Map'];
 const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
-  console.log(itineries);
+  console.log(packages);
   const { standard_inclusive, standard_exclusive } = packages;
   const { premium_inclusive, premium_exclusive } = packages;
   const [activeTab, setActiveTab] = useState('Itinerary');
@@ -104,9 +104,7 @@ const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
           className={`tab-content ${activeTab === 'Book' ? '' : 'hidden'}`}
         >
           <div>
-            <h1 className="bg-white py-4 text-center text-3xl font-bold uppercase mt-2 ">
-              Book {route.route_name} {duration} DAYS
-            </h1>
+             
 
             <BookingForm adventure={packages} bookableType={'RouteDuration'} />
           </div>

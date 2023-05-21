@@ -138,8 +138,9 @@ const BookingForm = ({ adventure, bookableType }) => {
     <div className="flex flex-col items-center justify-center font-poly h-full p-6 relative">
       <ToastContainer />
       <h5 className="text-2xl mb-4 font-bold font-poly capitalize">
-        Book {adventure.name}
-      </h5>
+  Book {adventure.name ? adventure.name : `${adventure.route_name} ${adventure.duration_days} Days`}
+</h5>
+
       <form
         className="flex flex-col items-center justify-center"
         onSubmit={handleSubmit}
