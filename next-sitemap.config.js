@@ -1,22 +1,14 @@
-const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL;
+const siteUrl = "https://lauwo-adventures-client.vercel.app/";
 module.exports = {
-  siteUrl:'https://lauwo-adventures-client.vercel.app/',
-  exclude: ['/404,/admin'],
+  siteUrl ,
+  exclude: ['/admin'],
   generateRobotsTxt: true,
-  sourceDir: './build',
-  robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: '*',
-        disallow: ['/404,/admin'],
-      },
-    ],
-    additionalSitemaps: [
-      `${siteUrl}sitemap.xml`,
-      `${siteUrl}mountains-sitemap.xml`,
-      `${siteUrl}mountain-routes-sitemap.xml`,
-      `${siteUrl}safaris-sitemap.xml`,
-      `${siteUrl}day-trips-sitemap.xml`,
-    ],
+  robotsTxtOptions:{
+     policies:[
+      {userAgent:"*",disallow:"/admin"},
+      {userAgent:"*",allow:"/"},
+     ]
   },
+  sourceDir: './build',
+  
 };

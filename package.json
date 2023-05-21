@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "PORT=4000 cross-env NODE_OPTIONS='--inspect'  next dev",
     "build": "next build",
-    "sitemap": "next-sitemap --next-sitemap.config.js",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write ."

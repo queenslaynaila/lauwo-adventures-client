@@ -1,13 +1,13 @@
 # *
 User-agent: *
-Disallow: /404,/admin
+Disallow: /admin
+
+# *
+User-agent: *
+Allow: /
 
 # Host
 Host: https://lauwo-adventures-client.vercel.app/
 
 # Sitemaps
 Sitemap: https://lauwo-adventures-client.vercel.app/sitemap.xml
-Sitemap: https://lauwo-adventures-client.vercel.app/mountains-sitemap.xml
-Sitemap: https://lauwo-adventures-client.vercel.app/mountain-routes-sitemap.xml
-Sitemap: https://lauwo-adventures-client.vercel.app/safaris-sitemap.xml
-Sitemap: https://lauwo-adventures-client.vercel.app/day-trips-sitemap.xml

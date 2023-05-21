@@ -104,8 +104,6 @@ const RouteSection = ({ route, duration, itineries, packages, mountain }) => {
           className={`tab-content ${activeTab === 'Book' ? '' : 'hidden'}`}
         >
           <div>
-             
-
             <BookingForm adventure={packages} bookableType={'RouteDuration'} />
           </div>
         </div>
