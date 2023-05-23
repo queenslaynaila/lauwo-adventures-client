@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Cookies from "js-cookie";
 import {
   useTable,
   useSortBy,
@@ -84,7 +85,7 @@ export default function ViewBlogs() {
           method: 'DELETE',
           headers: {
             'content-type': 'application/json',
-            authorization: localStorage.getItem('token'),
+            authorization: Cookies.get('token'),
           },
         }).then((response) => {
           if (response.ok) {

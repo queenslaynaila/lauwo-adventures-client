@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Cookies from "js-cookie";
 import { useRouter } from 'next/router';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { TbBrandBooking } from 'react-icons/tb';
@@ -76,14 +77,14 @@ const Dashboard = () => {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
-        authorization: localStorage.getItem('token'),
+        authorization:Cookies.get('token'),
       },
     })
       .then((response) => {
         if (!response.ok) {
           notifyError();
         }
-        localStorage.removeItem('token');
+        Cookies.remove('token');
         notifySuccess();
         setTimeout(() => {
           router.push('/admin');

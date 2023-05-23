@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Cookies from "js-cookie";
 
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -76,7 +77,7 @@ export default function LoginPage() {
         setTimeout(() => {
           router.push('admin/dashboard');
         }, 1500);
-        localStorage.setItem('token', response.headers.get('Authorization'));
+        Cookies.set('token',response.headers.get('Authorization'))
         setFormData({
           password: '',
           email: '',

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Cookies from "js-cookie";
 export default function Blogs() {
   const [post, setPost] = useState({
     title: '',
@@ -59,7 +59,7 @@ export default function Blogs() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        authorization: localStorage.getItem('token'),
+        authorization: Cookies.get('token'),
       },
       body: JSON.stringify(post),
     }).then((r) => {
