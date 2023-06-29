@@ -16,7 +16,7 @@ const Users = () => {
     margin: 'auto',
   };
   useEffect(() => {
-    fetch('https://lauwo-adventures-api.onrender.com/admins')
+    fetch('https://lauwo-adventures-api.onrender.com/admins/index')
       .then((response) => response.json())
       .then((data) => setAdmins(data))
       .catch((error) => console.error(error));
