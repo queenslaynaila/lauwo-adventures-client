@@ -89,6 +89,7 @@ const Dashboard = () => {
         }, 2500);
       })
       .catch((error) => {
+        notifyError()
         console.error('There was a problem with the sign out request:', error);
       });
   }
