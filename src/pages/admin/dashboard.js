@@ -81,9 +81,7 @@ const Dashboard = () => {
       },
     })
       .then((response) => {
-        if (!response.ok) {
-          notifyError();
-        }
+         console.log(response)
         Cookies.remove('token');
         notifySuccess();
         setTimeout(() => {
