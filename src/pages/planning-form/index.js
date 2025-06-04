@@ -59,7 +59,7 @@ export default function planningform() {
 
       <div
         className="  bg-cover bg-image bg-center bg-no-repeat  p-10   "
-        style={{ backgroundImage: "url('/lauwosafari.webp')" }}
+        style={{ backgroundImage: "url('https://res.cloudinary.com/dxiesjxos/image/upload/v1749045107/lauwoadventures/hero/lauwosafari_cibb2x.webp')" }}
       >
         <PlanForm />
       </div>
