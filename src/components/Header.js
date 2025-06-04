@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const images = [
   {
-    src: '/test.webp',
+    src: 'https://res.cloudinary.com/dxiesjxos/image/upload/v1749044652/lauwoadventures/hero/mtkilimanjaro.webp',
     heading: 'Climb Mount Kilimanjaro',
     paragraph:
       'Embark on an epic journey to the roof of Africa and conquer the majestic Kilimanjaro. Scale its towering peaks, traverse breathtaking landscapes, and challenge yourself to reach new heights. Our experienced guides will lead you through diverse ecosystems...',
@@ -12,7 +12,7 @@ const images = [
     ctaLink: '/mountain-trekking/mount-kilimanjaro',
   },
   {
-    src: '/background.webp',
+    src: 'https://res.cloudinary.com/dxiesjxos/image/upload/v1749044651/lauwoadventures/hero/safari.webp',
     heading: 'Safaris in Tanzania',
     paragraph:
       'Immerse yourself in the wonders of the African wilderness on our extraordinary wildlife safaris. Journey through vast savannahs, dense jungles, and untamed landscapes teeming with iconic wildlife. Witness herds of elephants roaming freely.........  ',
@@ -21,7 +21,7 @@ const images = [
   },
 
   {
-    src: '/gq.webp',
+    src: 'https://res.cloudinary.com/dxiesjxos/image/upload/v1749044648/lauwoadventures/hero/saflocation.webp',
     heading: 'Our Safari Locations',
     paragraph:
       "Indulge in the diversity of Tanzania's breathtaking safari locations. From the endless plains of the Serengeti to the wildlife-rich Ngorongoro Crater, each destination offers a unique and enchanting experience. Witness the annual wildebeest migration, spot the elusive Big Five..... ",

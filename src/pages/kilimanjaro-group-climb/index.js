@@ -50,7 +50,7 @@ export default function Index() {
     <div className="font-poly">
       <div
         className="relative bg-no-repeat bg-center bg-cover flex justify-center items-center"
-        style={{ backgroundImage: 'url(/test.webp)' }}
+        style={{ backgroundImage: 'url(https://res.cloudinary.com/dxiesjxos/image/upload/v1749044652/lauwoadventures/hero/mtkilimanjaro.webp)' }}
       >
         <div
           className="absolute bg-black/80 inset-0"
